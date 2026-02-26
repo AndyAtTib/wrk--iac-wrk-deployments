@@ -1,0 +1,50 @@
+creation_rules:
+  # regex formatting:
+  #   encrypted_regex must be formatted in a single-quoted string, with `'^(`
+  #   at the beginning and `)$'` at the end. Each key must be on a separate line
+  #   surrounded by `|`. This is the only way to workaround the yaml parser swapping newlines
+  #   for spaces when using multi-line strings. Block style and chomping indicators will not work.
+
+  - path_regex: '^(.+/)?az-[mc]-vm-fleet--.+\.sops\.tfvars\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^(
+    |subscription_id|
+    |region|
+    |naming|
+    |rgs_.+|
+    |vnet_config|
+    |vnet_config_default_config|
+    |nsgr_ssh_inet_src_ipranges|
+    |vm_ssh_key_path|
+    |standard_os|
+    |os_.+|
+    )$'
+
+  - path_regex: '^(.+/)?.+.\.cloud-config\.yaml$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^(
+    |content|
+    )$'
+
+  - path_regex: '^(.+/)?dep\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^(
+    |st_id|
+    )$'
+
+  - path_regex: '^(.+/)?cidr-allocations(--.+)?\.sops\.yaml$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^(
+    |name|
+    |org|
+    |cidr|
+    |bits|
+    )$'
+
+  - path_regex: '^(.+/)?\.env$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
+
+  - path_regex: '^(.+/)?(az-)?[mc]-.+\.sops\.tfvars\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
