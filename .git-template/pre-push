@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+stage=$(basename "$0")
+script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+eval "$(cat $script_dir/common-pre-commit-run.sh)"
