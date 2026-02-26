@@ -1,0 +1,45 @@
+name: Checkout PR merge parents and branch commits
+description: 'Checks out the PR merge parents and branch commits'
+inputs:
+  do-initial-checkout:
+    description: "Set to true to do an initial checkout, i.e. this is run as a local action"
+    required: false
+    default: 'false'
+#outputs:
+runs:
+  using: "composite"
+  steps:
+    - name: Fail if not unmerged PR
+      if: ${{ github.event_name != 'pull_request' || github.event.pull_request.merged == true }}
+      run: |
+        echo "must be a pull_request event with .merged == false"
+        exit 1
+      shell: bash
+
+    - name: Checkout PR HEAD first parent
+      if: ${{ inputs.do-initial-checkout == 'true' }}
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      with:
+        # this fetches the proposed merge head, and the HEAD^ which should be the base branch,
+        #   and HEAD^2 which should be the PR branch
+        fetch-depth: 2
+
+    # fetches the commits in the PR branch, for the number of commits in the branch
+    - name: Checkout required commits and confirm ancestor
+      id: ffwd
+      run: |
+        count="$(( ${{ github.event.pull_request.commits }} + 1 ))"
+        echo "total PR commits+1: $count"
+
+        echo "::group::git log --all --graph --pretty=oneline"
+        git log --all --graph --pretty=oneline
+        echo "::endgroup::"
+
+        echo "::group::git fetch --no-tags --depth=$count origin +${{ github.event.pull_request.head.sha }}:refs/remotes/origin/${{ github.event.pull_request.head.ref }}"
+        git fetch --no-tags --depth=$count origin +${{ github.event.pull_request.head.sha }}:refs/remotes/origin/${{ github.event.pull_request.head.ref }}
+        echo "::endgroup::"
+
+        echo "::group::git log --all --graph --pretty=oneline"
+        git log --all --graph --pretty=oneline
+        echo "::endgroup::"
+      shell: bash
