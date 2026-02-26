@@ -1,0 +1,36 @@
+configs:
+  description: 0.1.0-tfapply.1+62.Branch.tfapply.Sha.9f367c7d452ed47b2762d01f6831dc2cf68f18d6
+  version: 9f367c7d452ed47b2762d01f6831dc2cf68f18d6
+layers:
+  "1":
+    config: helpers/sample
+    entry_point: apply-sample.sh
+    tfvar_files:
+      - az-c-sample-001.sops.tfvars.yaml
+    st_id: ENC[AES256_GCM,data:ztNt1Fema3vS9csambGX5+vy0XY/hRzwCJ0R2goA5KimFd7NilaIC/D9/8RRL0Y78mXLBWt7gSLxHl+2e3bhfdaW9Oz/dQCxrX1npOIyCsms5+TBPCVUWpZ5ah9nih9lSxNu6XEIr+wN5k1OxdmYm+D6EUprXq9033uJup1JJ2n5cWG3zML78UfEUFMnrky5tt1blUqLXTT8RfvlgA==,iv:tNFFJ3P2ZVy5LtwcAlJH4+Y2EU+OjZptU0qUGZwGav0=,tag:vzeqEaMupCHyAmbzEjO1ww==,type:str]
+    apply_args:
+      e: sample001
+sops:
+  lastmodified: "2026-05-14T21:51:22Z"
+  mac: ENC[AES256_GCM,data:uPvuT038lzpI1cpHTFKJIp5Bn0psrsn/tfTO3z66Gy1MT/IxmaMcAB2EeK/ePVqOK/7lY9a7gwE6hgz1btcPM84oPXqfM09MJt4uXzJ5A1Y9d7hNnKfTRp4Phg872iGJ756UNphvIPTlXKDms15to11Lfz7/DI5o6AndOxVmNgs=,iv:JaoZzalXN8RiTT5sN3Pk9pGNXKWkcbBN8lNYhLeoKLE=,tag:TpC71FhivJMc3mTam2CLBA==,type:str]
+  pgp:
+    - created_at: "2026-05-14T21:51:22Z"
+      enc: |-
+        -----BEGIN PGP MESSAGE-----
+
+        hQGMA4KMO5ZgOOZwAQv+JYvQQtxZKYuYn4hHiBBGHX2NmF8XjynUy8xaTa11VMss
+        hKVmCEPmph+5jKNVX6DBh2rQ5K95lHLJdv5+ceSQUeOm7qh0mmFIuvexpRPpQTyy
+        NUB21yDlFg9EsUsAki0elKPy4qi3gs0JOGXKgf0va04OAeHIywDntkpxDC5ECo3L
+        Enf2iykyxHJHkxmpUqF7wTqInOYg4YQgJrSrPl+89Ki6NZc+xFCNorVE0oLHYtb2
+        6ph380QzfXU8VQDRDbE7fF+GfjB8ZrmUgKg954VPZk0TSWPCURMy2lOnaB3Rwc/5
+        QW7ftRqlk2S1gtIpNaIOc7KFofxXKNR64ztq46CYzznaH0hDk385AAjO6NLEAuRg
+        7cSoliBPLzSW+a51DWB0AFG0Nyfx1BBi32ikm8JLX1dtpRrGzZz58VxW/GrjVP1t
+        tfkvsxmzxNVk1bSWM8lq8L5a1trmZaE3p+wAsRGf7t25Hlnmn+kPdJ7DEjmljUBf
+        EBCjxHiEWrxZOqy8BwDj0l4BEptxsU1SXqHbLamTD628x83nCqxcDl5qyZuLP9F8
+        Fq5B5RP0hUHPo9Cf4MyOraZ5Yg1U/jcRxgx5ldbwi41EKqREsG54Ci0ytKlZkmCN
+        RxgBO/DB47AcHlSMJKMI
+        =X2TE
+        -----END PGP MESSAGE-----
+      fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+  encrypted_regex: ^( |st_id| )$
+  version: 3.12.1
