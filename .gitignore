@@ -284,3 +284,20 @@ backend.tf.json
 *.dec.*
 .dec*
 .dec*.*
+
+# pre-commit hooks must have lf endings
+.git-template/commit-msg text eol=lf
+.git-template/common-pre-commit-run.sh text eol=lf
+.git-template/pre-commit text eol=lf
+.git-template/pre-push text eol=lf
+
+# set *.tfvars.json files in any child folder of envs, which is in the root of the repo, to be text with diff=sopsdiffer
+# this needs ~/.gitconfig to have the entry:
+#   git config --local diff.sopsdiffer.textconv "sops --config $(git rev-parse --show-toplevel)/envs/.dec.sops.yaml -d "
+# or
+# [diff "sopsdiffer"]
+#     textconv = "sops decrypt --config empty-or-other.yaml -d "
+# envs/**/env.json text diff=sopsdiffer eol=lf
+# envs/**/*.sops.tfvars.json text diff=sopsdiffer eol=lf
+# envs/**/*.sops.cloud-config.yaml text diff=sopsdiffer eol=lf
+# envs/**/.env text diff=sopsdiffer eol=lf
