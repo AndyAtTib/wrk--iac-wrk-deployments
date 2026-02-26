@@ -1,0 +1,28 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# Top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Set default charset and indentation style
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+# tf files must be utf-8
+# https://developer.hashicorp.com/terraform/language/files#text-encoding
+[*.tf]
+charset = utf-8
+
+[*.go]
+charset = utf-8
+indent_size = 4
+
+# Max line length for markdown
+[*.md]
+max_line_length = 80
