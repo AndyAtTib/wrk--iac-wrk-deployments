@@ -1,30 +1,32 @@
 summaries:
-  - ENC[AES256_GCM,data:5Cp1LPUujktTpseSaLoX8Ag4v+kV8FYbMBXYOH7Tvi7ZmXGdBbkh7yU=,iv:hlCeOm9cLx3heUJ/Z90Pflwdi9OoEB8GtqEdOKoeQJs=,tag:Ot2Z4z9rXB/h68xLY4Yz2A==,type:str]
+    - ENC[AES256_GCM,data:CJLLxCjTa8hKyeNfYwtYFd5WnKmVsaEl8jkOzSnYUcwhCTMlLY7bxoJ3kYIa05TpTw==,iv:ph7URgSxNsqh4q6beXlMVXtE+M1byEL8IRPeKQUGgKk=,tag:lbS2PljJOtrZc7vQyYoglg==,type:str]
 deployments:
-  - name: ENC[AES256_GCM,data:9v6K2KdY,iv:eABol+5SL7GC3eJube/Qe0v3d7kj2XQr1QaKDPDi9as=,tag:/8p95M5JECbC9O+X7cQGuQ==,type:str]
-    org: ENC[AES256_GCM,data:aaBoIofmafX/Zfmjbtx+,iv:DBODdHfyzF1I7dP3AMReQa1fuukZWzftE/qnOG6egw0=,tag:4u3mdXZNT/q4Pqme3UI0xA==,type:str]
-    cidr: ENC[AES256_GCM,data:7BDhHOTlhth+xXc=,iv:WZtmaCA5wIrVqc6Tp2itVSGasNDESXZxIFILNKwxlVw=,tag:T23E36RvriQmXFn5U9WL/w==,type:str]
+    - name: ENC[AES256_GCM,data:h7ltV7KkoYiWhaU24adboX2/5Mgpes54cAEFWIQL,iv:FkTjOOxwIqjqhRJpGdGXtfwbNQifpuCa78/wHMOX1+8=,tag:g+xeFClIG6d54ho0jgSNaQ==,type:str]
+      cidr: ENC[AES256_GCM,data:wWr06mS+5K/KoQI=,iv:NEnFdW5yXgfIb29JcgJ+K1gfJHMh/GmqBtZvT0sV+to=,tag:Yi9BF40qOOu2j8zilYJCcA==,type:str]
+      subnets:
+        - ENC[AES256_GCM,data:3roWOowed/CDm/A=,iv:gdQh+5qBJ/ZbuEfYSn/0N5/6FBVPHjtr8v9VDWxKM9s=,tag:DvQuzsHJE8/o8E9Oj8hjXw==,type:str]
+        - ENC[AES256_GCM,data:MlUT2HXhat1lM6U=,iv:UAeNQyhNSRMH2lMGdwc3nfETOiHWMyCT+SF4m4kmJn0=,tag:UXHEL/POrY2sbABr4LxyDw==,type:str]
 sops:
-  lastmodified: "2026-05-14T21:49:26Z"
-  mac: ENC[AES256_GCM,data:nXN2sXVr7kjf8BC9y4YcXV4nxaWWgvbr9gMld7ND4OgRuehMypnGO6bJmvxFnH+CsoPB2xYt6oKbei8CigDIfET9XMFkQJrqQ0UwNKtkdOi8b5rIsVfLcemEc4toUzJlbdDiwjhEPL0FOpLCbwVtG8oSJ0PTfOFgHIf4uVQ5eCk=,iv:xyMuk4NmMmgcwaHJhRANIANW2+8a/1/15AQVTjdw+Vg=,tag:mSCFX3RRfgUHI6Lte5GK6Q==,type:str]
-  pgp:
-    - created_at: "2026-05-14T21:49:26Z"
-      enc: |-
-        -----BEGIN PGP MESSAGE-----
+    lastmodified: "2026-05-14T21:51:26Z"
+    mac: ENC[AES256_GCM,data:GjvAukJFz/GjzTP9rUS18OjSd9RaTo8TsVnELv6nivdBcmSdjhzyB2vLzjYBsXkIo7q8IIBSjNRH13lLK27snCRTk3xIjsfqfUM25FfIbKJdoU+0Z6DkY0ppBzimt33LGWjvtebIFVrn2JEGU3Tr7p2qFfCr53S413EhaLOl3yY=,iv:qN5BWROmS4mEHvd9w7jyj7loP2VcJ35sHJz9vb/FCk0=,tag:BEtGoIr41pn4jw6rWvgb2g==,type:str]
+    pgp:
+        - created_at: "2026-05-14T21:49:26Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
 
-        hQGMA4KMO5ZgOOZwAQwAs0znjNtjJWWME+vqMKW4U6aJ91i/uukGEueTEtJelQyh
-        5epQMUhvq4hE2jRDibbyavPVusI5lvFT6Iduc2EVx8J6r5CjMGwyU9RENtq+qLOQ
-        QXYkx0CmtCmj4X7tDWYZf99PDH0OBvHjZXVInF7OqlHQQM900UlhnfnJLoR9XMZH
-        2F+8UYDpeCLZeO9lepoAmts5nBORsvtIbqfgYzuHUMS9O3krcejEvLU3g7U0/rPp
-        iYVErDSOOMofBLBRmKAQV5mAvqmrTYZPobF3MZbSCtMBduDsvfDc8H/QD4lPLahJ
-        iN0dQCZC0f/L2Y8bQCf66Hsc3fuFUbfjkecgb4EPwTrsvEQMGiIRLAG9LF2ZrGQe
-        aA/aMHwFcQlQm5egF8cOizqdlcLND7V2B5v/zMPs0fdDBwegv0eBOfLy/nLS6i4s
-        sT2+kgBIwOjTlS+EHLWSdz1CJglyqLosxfP4t5B8jXrfTAA7mCfH3Ybcyh4dQSS9
-        ihbWvDFn0r0CPRk0dOLT0l4B3168AfZY2rDb7l5+/l6NnSzY++dYcg6SMayzKgmt
-        hXdbtrwS5LZkCuL1pXRPJzPI/XSnFZkGv8Dmb6wZhjcwaJQOlX6iU5X+Z4pFnX/O
-        Mo+Ks5Y8yK++Khc4qAqi
-        =yuMv
-        -----END PGP MESSAGE-----
-      fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
-  encrypted_regex: ^.+$
-  version: 3.12.1
+            hQGMA4KMO5ZgOOZwAQwAs0znjNtjJWWME+vqMKW4U6aJ91i/uukGEueTEtJelQyh
+            5epQMUhvq4hE2jRDibbyavPVusI5lvFT6Iduc2EVx8J6r5CjMGwyU9RENtq+qLOQ
+            QXYkx0CmtCmj4X7tDWYZf99PDH0OBvHjZXVInF7OqlHQQM900UlhnfnJLoR9XMZH
+            2F+8UYDpeCLZeO9lepoAmts5nBORsvtIbqfgYzuHUMS9O3krcejEvLU3g7U0/rPp
+            iYVErDSOOMofBLBRmKAQV5mAvqmrTYZPobF3MZbSCtMBduDsvfDc8H/QD4lPLahJ
+            iN0dQCZC0f/L2Y8bQCf66Hsc3fuFUbfjkecgb4EPwTrsvEQMGiIRLAG9LF2ZrGQe
+            aA/aMHwFcQlQm5egF8cOizqdlcLND7V2B5v/zMPs0fdDBwegv0eBOfLy/nLS6i4s
+            sT2+kgBIwOjTlS+EHLWSdz1CJglyqLosxfP4t5B8jXrfTAA7mCfH3Ybcyh4dQSS9
+            ihbWvDFn0r0CPRk0dOLT0l4B3168AfZY2rDb7l5+/l6NnSzY++dYcg6SMayzKgmt
+            hXdbtrwS5LZkCuL1pXRPJzPI/XSnFZkGv8Dmb6wZhjcwaJQOlX6iU5X+Z4pFnX/O
+            Mo+Ks5Y8yK++Khc4qAqi
+            =yuMv
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^.+$
+    version: 3.12.1
