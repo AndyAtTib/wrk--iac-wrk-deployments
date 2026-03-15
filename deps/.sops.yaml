@@ -1,3 +1,11 @@
+stores:
+  json:
+    indent: 2
+  json_binary:
+    indent: 2
+  yaml:
+    indent: 2
+
 creation_rules:
   # regex formatting:
   #   encrypted_regex must be formatted in a single-quoted string, with `'^(`
