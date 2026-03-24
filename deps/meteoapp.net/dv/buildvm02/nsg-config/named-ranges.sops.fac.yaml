@@ -1,0 +1,31 @@
+# Terraform will be unable to decode this file if it does not contain valid YAML
+# You can retain `---` (start of the document) to indicate an empty document.
+vm_admins:
+  - description: ENC[AES256_GCM,data:ER2x+bJlaTstLakRivLZ+PDmVAHDC+5JEmcJVeKY,iv:j/hwebMTTyPIIDF4xcVFXKrU0hMDPSUQCo1A6t/sovE=,tag:zodrcoixkZyei2h4fUCjaA==,type:str]
+    value: ENC[AES256_GCM,data:JXOlBsNjiwL/hX9nPkh7reQ=,iv:p9HoPPUv8X/oCyJy4KS101MEh7xTZShFMNAT7/ogNBE=,tag:eSfNkt9KyDFwp0PMn+gOYg==,type:str]
+  - description: ENC[AES256_GCM,data:3s6ve2v9FbAuLmmkc30qfxG9h4h7CMS3xUF11iSrPXNlPmjX0A==,iv:OUZ8N23v95B8+46Av6vCuWESNiPrhAIt4ieUBZKRJXM=,tag:ynUg6biInFwDeGxe/+YRWA==,type:str]
+    value: ENC[AES256_GCM,data:HGPDTqUubYHpkSTYD7uxW7k=,iv:XtJbWRedzswnCy+KSV4UlzLVqkLskdMq+a7O2L03hG8=,tag:reNjTYcyxNft8ox5B/xtsw==,type:str]
+sops:
+  lastmodified: "2026-05-14T21:59:42Z"
+  mac: ENC[AES256_GCM,data:rkN5IoVXpVOzbWeQwIE1xDhtvS//ANixZqDeUCLAUmWbSjTV9sKLHvuT3R+8zQLWuVnJ5IViJEQk7hG9Pan+4ObUM5Ke9hmWsrXTVtEsRJ1Fpt6Nw0KE+CSNHdfo0nwQTaTCvUkISNdD21gXeaqsj0z1gbNlnmX4ZVPAfnr/oHQ=,iv:6QPXelnW17/VKTHuMci78d+undd4XRaNggAbzdTgRZ4=,tag:ezbbdKKFPgL6p1ATYNdq7Q==,type:str]
+  pgp:
+    - created_at: "2026-05-14T21:59:42Z"
+      enc: |-
+        -----BEGIN PGP MESSAGE-----
+
+        hQGMA4KMO5ZgOOZwAQv7BjE4Nxr5F7eIlM04SBrVgdKtcPwYHKBiUpmsgdZr4Wqo
+        fEXt/n359pQWZU358Xq6a0V//2DC/2xIUEye0zzA47rPms+hET4ZlWx/tzPFpBfZ
+        B2SbJeGyzSv77cmXK6Eoe/Uwf2h5vVgY67Ok7q6qUK3/BcWgPhxCWQ0H14LxtlSI
+        5qrz75p1Csm2jUr6hnQJaWM3MKeFUF0aOjnk1B/zgBo8/KiOUqxxF54ztXuHOJDr
+        hLRquCcPKDRg5T9q42jsvT29A8wT7CT5u0CHpsRhcq/OylDHOYFXg/ivXkX60EC2
+        Yf990+sEDWAbQKcuz2rG/fmGmTeRZrXNuT9fLsrs4zIsHfhdL0vQIBhViI27oItd
+        IYot0+ooOVsAmzwnr+ol348gRGL9aMqCiAKi1QpR1QkbvnBr43LXRndN99JrDCDD
+        4P1Yg90weuS5TLnhrKPUmnjtMSURY9OmEaheVwwzANWVBFq7S9h9cQgNmYPkCDyD
+        BWDmpm1aXDw+k9UfNUZo0lwB0pl9y1/lQIzysXGRW+xy3rOkrk8nrzMFWlyEHJir
+        WJHhL0SN8+FODhWYJVEk3/ir1KEleKZRZx4F7YMnZlHb4MMVloopMjYZpRW8/h+2
+        P8pj6Cf7G68UHcY7DA==
+        =IT0j
+        -----END PGP MESSAGE-----
+      fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+  encrypted_regex: ^.+$
+  version: 3.12.1

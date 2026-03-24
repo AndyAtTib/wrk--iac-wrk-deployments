@@ -5,9 +5,13 @@ accounts:
               name: ENC[AES256_GCM,data:zO/NE2BQlbqv1Fl+a5pd+O9U/OK/CXs=,iv:xAy8ITXyKYnlhDsDQ4KnTBw7+EE4yDkC7j4H6MMrBg8=,tag:BywO9ByNFuP4iTGDTjwu/A==,type:str]
               snets:
                 - ENC[AES256_GCM,data:70sVq/BilOUyOJZpNZI1KFAqRPTcFarMweGcU30hm0OwuWF5DQn+sAP9GhZJuQpjTOT2saeT3W+nLx0qY01MENtzKmr6l6QOkSXA6iFZLp9e5bymHuJ6+c7FCfgXCX4bKUWC6bQLR2wdviLRW+ovKbcpRObFoR/r+FGfI+SIJcDG+NJq6G7N/V6wcOdPpTHGMuLXuR60P+dm5xv7svuyQWfBq6mg9GS/wUxhOrJplR67pYRV3+Xy99XfodHVLmpBO6o=,iv:cY57J9WitIvdCtEP8JTMfbGjeOItroYkYue/cCyp1lY=,tag:9CKvf2u7h9O0LYuKvVSbqw==,type:str]
+            - bvm: ENC[AES256_GCM,data:zT4P4cQZsy1qr91DKm/9,iv:w9A2Wmk1koiWruL2YJjBP1PhQwicY0eix2N5e+SJ2no=,tag:PGwLoRdBowuglZMond8jDQ==,type:str]
+              name: ENC[AES256_GCM,data:p8NDo/f2/F8QU24dA9bg8tjLiNp7ed8=,iv:HXFw4cNEa15po6wUERSKmFDHdO5/xbrgXL+sZWnitCs=,tag:hAzeVuuOm3pu3oM9urIV7A==,type:str]
+              snets:
+                - ENC[AES256_GCM,data:Bu/EOXcQX+1hFYbyDmUTzpxZnvhlQ2VrEy3dCMSD0f1eqqxhDV4c8HUeuc7ieHxNY0w3w2AE/a0fJy9+USHPzPKOH11Iqiu4epH194X92j1eJmi0bWf+OL3ylT+4njNIFRdP5O2THozZcX0z1B+dv8SJeXBU880dE2yr6WElRYIBL1B4dplGtmPyzETdqVKo4USI4EHc5Wv0lNA5j58Xz+t5+MTlxMzoHRrDVt4SAb9lXWgdwAA0rrHLPu9E0Wvo3Zo=,iv:Qx/0eZbtD/iTwd9tKFFYv0PhJkyqt+CmmTAKwsbX7CA=,tag:OW4ttoN6YmOgjUz8esJ6MQ==,type:str]
 sops:
-    lastmodified: "2026-05-14T21:57:56Z"
-    mac: ENC[AES256_GCM,data:goVyA/uJ8yJsXdhDvsKwJg/COJz62kMPa9TPHcImHT23/ecXQ7F80d5RPfq9VQosCPiQV1eM8svfrk/s53giBbPSSQzWSMy1jjhkDmkS3oqtt196UAPuHXQl2mYvtcEQaNfsE/LKjWbInYGTox/PXW7CfxsyChmjXNZuNLa4800=,iv:Jo4773eDkKL6v2a17QuIUrQivyimURGPw5cUMOGELTs=,tag:W9b0cvQRH+8gAOH2UZQUNw==,type:str]
+    lastmodified: "2026-05-14T21:59:22Z"
+    mac: ENC[AES256_GCM,data:a2PKewubUFpuoKGm5SJ+58z7s2VjPIZpuzCvK+Fla5OiT3ac56KHu/1Qob6G9RWTJZBeaaqfBZt+OEXLTdnY7qwhzvNS3CI0GRaZylO+fMfjyvVtWGPuwnWIg8to3nDH1VylMlNMPfik9D80UiEaxcDJDLMt631rp5dPhxMP1AA=,iv:aPK5o8A1iURyXeWwOFOmQEE/5tDgqSnT4GAnCQrahjo=,tag:gHvIAbvxiPJw7EfQymlF8Q==,type:str]
     pgp:
         - created_at: "2026-05-14T21:52:08Z"
           enc: |-
