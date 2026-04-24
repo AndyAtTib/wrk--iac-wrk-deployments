@@ -38,7 +38,7 @@ kv_policy_assignments:
     cert_secretuser: []
     cert_user: []
 storage_use_azuread: ENC[AES256_GCM,data:LmLvLg==,iv:G0+u+MkwjzjNmpsYMDGoAbTHHRZpOwm/NR2pgId/hDk=,tag:c0W2jmfiXD8n+8wV+lOl/Q==,type:bool]
-dns_zone_id: ENC[AES256_GCM,data:Pqgrj9mXGniJMTso6d/f+qd9fUCj4GDQPvBIkQxuwVNf3Tsc/2W39kkOBk8RsJXodOlEiD6kQLHMP8yXVDEm4KjFCDY7ViFEDpzoVLIm0KFFBJn3/mn+OZ/w80Dhh/9/UdainQNqBSuNdCBfwn1QjJ7NYAbkrAenkDN3hhUYA2R511dAWpoJ63D9Gj+asQmSag==,iv:1uMPqMwwnD27/ktJSHe2Bmpqm8vKKgu3wERofJhM2Oc=,tag:pCwW0XK1Jm//h335+4OyPw==,type:str]
+dns_zone_id: ENC[AES256_GCM,data:DuQwWEElsZ4ls1XG+UHgs0NygcXYaGj2uXm/VB9jiZDAvbA2/o2RRIgJ4Iesgn/oZnlxUnrcknEw+xenCKR3H4T5rmQwY5biayc6O8Lj8KiqAY4G3G34BVj0CYKh3cz5+/OQyDrmKYrhfSo+iTd4yx4YyyrXUek02O0CS834CAF98gxQ4UaOqnuV7Ut4pjvw8A==,iv:RTltXiwXU/AznYRB/dCzXu2c6uRcGEpt+0I9ObjRw+E=,tag:PuzjlIRV4U/RPGeOnLmEoA==,type:str]
 dns_record_name: ENC[AES256_GCM,data:4xx3dno=,iv:+EgcK3iP+OWUGJ3vKJJFW4s6aQIZGQBnEY6PWseG0H4=,tag:kWahVjQ5I7+Dq4EZSnFhJw==,type:str]
 build_vm_subnet_ids:
     - ENC[AES256_GCM,data:8Be/9V3sza+H/hcV8j6hq9SyB7nUAYIc3CHnoIs9G76LDfjtpgjAAAkfDbDOzZFE3YQqrUWcrKiCiGmG6cHqJzSPk2v62HNn1legh1FOiBlhJX74SZbTfxW1b1EOi8wR8/OrcYzOhT/VCfBpgL8zuaP9lWXx31jtb3oj1cTmHIm2S+VwGf2NSwGyMtW1X79Er1CSngvn1xrsl06gVgbaPIKfyOMS6BXsY9Exi6CQXnWx2k/fI5HYwlO35A48CzavfTQ=,iv:fymaN3MuNSqj8NBYtFUhRMi2sJCZ3vjnFgYx7m3R4/0=,tag:7Js4TGxpscE26QHsS/4ZQg==,type:str]
@@ -48,8 +48,8 @@ subnet_address_prefixes:
     - ENC[AES256_GCM,data:aE4mxKsxDhyaBK0=,iv:wRDk1/6XuVX2+QuerGCl/vggO2R6LlFuqItljt7hxFk=,tag:1EJjP74ak3NhkZUQz2DpGA==,type:str]
     - ENC[AES256_GCM,data:nPIbZtMcDL4zN5Mp,iv:dNr5isDUgI4QYnLaiSRss/SoZwjp7GqX4ubyVlEp9PA=,tag:78P0rBoEsUYUpCkjXOnP7g==,type:str]
 sops:
-    lastmodified: "2026-05-14T22:04:15Z"
-    mac: ENC[AES256_GCM,data:uEPzlosMIEJP+pf9ZNqP1C89nRSp1MmmbUmdNHXK6w3vKNzN0Mc1UmOVex+m6YDD1Bql1fJCfIJBnmyjP/77qEHFqGScYe08fiQahZrvrP1v76SIba0dCC+TJ+vXZ5Q/RcTGr7B+M7HQ9HE7WCRN57UqaOfeGmJVtwJ7uRdnZvU=,iv:Db5lzRl4u+rGV2ZHbj0vyAOytoAPx4YICrJbAlV1nfg=,tag:Deioyf5CHGX0aSiu7cXf7g==,type:str]
+    lastmodified: "2026-05-14T22:08:07Z"
+    mac: ENC[AES256_GCM,data:0pqJtuspqHwIfX+SSetzYaZjKHgLZodK8P7Jz5HjTrWBsPoA6Z80SmOC/3QOyzDtlOsDUMYY812XhUQ8LsJ52quu055DaQM9Q8kE7nDq64PSOuoJl8HiXGelN+mnHyZr081SkBNQGnJOvfmipnwjsq+CwjptMU2rj6UNdps9mzc=,iv:M0KumJSJO+OUp8iUtW2s+BElDMWTKV16NnWXA+eO/dM=,tag:ZYF13uwCudpzGur4JUCETw==,type:str]
     pgp:
         - created_at: "2026-05-14T22:03:23Z"
           enc: |-
