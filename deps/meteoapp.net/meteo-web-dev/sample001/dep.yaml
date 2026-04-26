@@ -1,0 +1,37 @@
+deployment_name: meteo-web-dev-sample001
+configs:
+    description: 1.0.0+Branch.master.Sha.978f28b3383e7962521897df0b0f40f268c8e4f7
+    version: 978f28b3383e7962521897df0b0f40f268c8e4f7
+layers:
+    "1":
+        config: helpers/sample
+        entry_point: apply.sh
+        tfvar_files:
+            - az-c-sample-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:xzEte7m/slQG4KjjESeDiK/s+GyzzPPnRxUwiMks8LkUkA8WqH9J2MEnvCUS6F5v4DV7nQ0DOjM3sNXdgz+xNCEN5Ls4feWCWrvqx/VXrNQbvjysNcGsOnENbBShGWYstAGwRwG+tW3MxOXsUzy7vw+W4RrCeM6N0FG60OTUJRcl9Y7LoYAb4aw3at4z0PwpEOU3qVyzw8IgfVS22w==,iv:aW2lWidFVroQ5OJVbHxXw7dxN1O4XMBQqLkbU2J63xw=,tag:hZPSOwmI8vY9W1B0Dm19ww==,type:str]
+        apply_args:
+            e: sample
+sops:
+    lastmodified: "2026-06-09T20:01:15Z"
+    mac: ENC[AES256_GCM,data:AygLlnomni+HPbgZmxhS9IkFQ7Hb8X2BLFmfwFPuhqCYpSOxQj7b5p8bvFQNzSwCbJ5Gk7VWx2v5Nay+s0oMM4GFeuoaAtUbTpsNwFzmwkPzUoQmc0uC+8ff8HFq7x0Zv2LytuuBVGjDVjiAwWxdbAGDrbmzLNYie1fpyK/FSpY=,iv:i43wluVnR6CYAC5dH9oTRjpOr5fa3JBiJ53auc4lz1I=,tag:uq8ccnaUgzHbwxWf97A7PQ==,type:str]
+    pgp:
+        - created_at: "2026-05-14T22:07:29Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQv+OGg+pUk4mEeW8PAPQhO4or5ent3IKPmDnRkQGQ9JaBKl
+            r8o+1bJyERRy0PN6SxDAdsclILYj4GG2u0N9gUj/Wuv7ncgK6/KJPK9XqO4jRnwj
+            XDk71F1Xw02TYnXIPXcApaYT95eZK42HEEsmIMVMrw6R/GsQiE0VgWiVZiP2maLG
+            w54k1GjoQwWu4LkV3pnVp/6S870EHEo2sDrKXcsvBKd/B1c0J4v78oVV26mPnq+v
+            XPFS9njZpgSEx4WhNAB4pk/qx88/RcOzbXbbohqZx95hwfNqp4dBXjDCCzB9CEW7
+            e1bWxinMhDoDXRCQ7lmqrK7Yi1YqAIsJu6NvxuNhCYNOGhI53FPnIl1gmtgO9Mfp
+            ZMeiVryJWvx/GkzQpTMw7XPnvM7JRT9YPZcYQV9IL80n0SdpYGE5ERM0M9BSUrbS
+            lMrU/yZ8DEzr1cgVghpyAjIhEwErznrhwtl4lBf1N1QS/KdyDYHatOuJ28Pd1FPI
+            +IRiNyIqxC06Or5l5R3q0lwBpFbTSRrfCy4wZYnZ8skb+NoT18vzC6ILXn2A+6xT
+            qtjM63sxTReoMIfgyfAtDOVw1ivGmPOfmK71FinJvno7v3lhajx/8/We+fGoH9Br
+            iVud1QtNI/BgA9R+LA==
+            =lXkQ
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^( |st_id| )$
+    version: 3.12.1
