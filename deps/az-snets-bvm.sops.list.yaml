@@ -1,13 +1,13 @@
 accounts:
     meteoapp_net:
-        METEO-web-dev:
-            - bvm: ENC[AES256_GCM,data:zT4P4cQZsy1qr91DKm/9,iv:w9A2Wmk1koiWruL2YJjBP1PhQwicY0eix2N5e+SJ2no=,tag:PGwLoRdBowuglZMond8jDQ==,type:str]
-              name: ENC[AES256_GCM,data:p8NDo/f2/F8QU24dA9bg8tjLiNp7ed8=,iv:HXFw4cNEa15po6wUERSKmFDHdO5/xbrgXL+sZWnitCs=,tag:hAzeVuuOm3pu3oM9urIV7A==,type:str]
+        METEO-web-prod:
+            - bvm: ENC[AES256_GCM,data:LO/aiINC7yB07Zgigoo2AC2UjEYadRq5p6ii,iv:bPd4cY9H+njNk4EYN3BaG5xTgGIbO6X/OBu8XqSLU3o=,tag:z77mOe9vMtpT52oBaWicKw==,type:str]
+              name: ENC[AES256_GCM,data:zvOZpxVaD4fuIpa7kJgL0FnbE/d1ltI=,iv:2QPPIkXokefCaHFcx9VMi4n/3zfgTIie5EU/eAjV1c4=,tag:FXnBlmwXSKXfo6mT+/bf2Q==,type:str]
               snets:
-                - ENC[AES256_GCM,data:Bu/EOXcQX+1hFYbyDmUTzpxZnvhlQ2VrEy3dCMSD0f1eqqxhDV4c8HUeuc7ieHxNY0w3w2AE/a0fJy9+USHPzPKOH11Iqiu4epH194X92j1eJmi0bWf+OL3ylT+4njNIFRdP5O2THozZcX0z1B+dv8SJeXBU880dE2yr6WElRYIBL1B4dplGtmPyzETdqVKo4USI4EHc5Wv0lNA5j58Xz+t5+MTlxMzoHRrDVt4SAb9lXWgdwAA0rrHLPu9E0Wvo3Zo=,iv:Qx/0eZbtD/iTwd9tKFFYv0PhJkyqt+CmmTAKwsbX7CA=,tag:OW4ttoN6YmOgjUz8esJ6MQ==,type:str]
+                - ENC[AES256_GCM,data:sz7otRxtHAcVUh1WjtE2yC+BmLeb7+Hwp1VTPuOZE9lYXE3N8Y2jnLAHx0+XDB1kd9Rkn189nN+j5c6BZbtx5W6nUGhpD6M08+i4WLqdEA5YhwoXwNH4pYQv1WyycNDcUKDHkEHzminePT5rqucA/zccV2KLWvz4dXW6bofuekbu2m+xQm2H5OUjnxs5w7hDY8DfWd+OyC+6++0Z8USFrLrUDISF5QF5ckRsT7+ciTdwRuckeRKtvbV/UzExlkAvlSY=,iv:XBBWZwE9/AZPCyBvIrkOr/+vlKyfGaza/b19x1j+lJ8=,tag:TTr6aoFIFcHFWUvCJiHdeA==,type:str]
 sops:
-    lastmodified: "2026-05-14T22:01:16Z"
-    mac: ENC[AES256_GCM,data:DLnz3gJ4FeQGU3kaKYsOwOq78BtG5EeVVUNne8hai2yubMGCiO6a31WNXw5wW3VjBUWlhnoIwIf1pikI5ayiwAMZvb9W1dUMulfpZ6riN2V6MS+LiePz15RNsAII/7F/mHtSphK3NsgaDCBn4RkncGBxmPKW4pdsP/Xx9qGqzZE=,iv:wWkBjx6jl5L2a/yfHp9rHnWCTbRHp85tnIXpGd5QrLo=,tag:tek9O3kmItvZ7GDJ4GQl/A==,type:str]
+    lastmodified: "2026-05-14T22:49:38Z"
+    mac: ENC[AES256_GCM,data:6I+2+xnaHWSmAHTMkmo/tP3KS4cDzJWJDe4QKAC/XBp/YOAWScRRJ3rw9JeRyxnMjr9bpuFaEOIEuzk1DuajbxJmptzGp2s32n2Zrc/+CNkl1zVVkUNPn8E9WEEt4A8JPVd84DzPr1vB+rBpyOmf1zBdNNVpy583dP5pu4SSouo=,iv:t7kllBQXtjAf2NZHAfTLll36yI1LiXgGPhaQIgj+Tek=,tag:ajCuHTWrFrgniUiz/cHjEg==,type:str]
     pgp:
         - created_at: "2026-05-14T21:52:08Z"
           enc: |-
