@@ -8,6 +8,9 @@ accounts:
             - user_label: ENC[AES256_GCM,data:ptFnVYpCcD4IpBjrGyho5A5twG6lX6KmaMeq5NxJfkvA70Y=,iv:CIhSgsdUjkZFU3mpiliPWQrJhNUwJiRzoxlp4SJQcNc=,tag:dCCla+HT/xS4u1+nl1hk3g==,type:str]
               id: ENC[AES256_GCM,data:pF/iiN4o0doZgD8VcW88azj4vPVWXlNwjViJlpurUrYC7Slh,iv:5rwN26l4EFVRHSz3gWfst8acRhuA9ucZBxbFwzUcdFo=,tag:6H2B2EAI7VQPSZHL++wBfQ==,type:str]
         - managed_identity_principals:
+            - user_label: ENC[AES256_GCM,data:jpbbc9WGmsk758zNTRA73hBp3riKrr9p,iv:3QCLtlnMUXep+H34bybZVl1wRnx5NZhHMwmiPmHiRlQ=,tag:Qw68p4DhFG2jkgtXOglNyA==,type:str]
+              id: ENC[AES256_GCM,data:jW13VPJvyPmjfCS3xr+K9unYw8eaFSS9c2rdwPYBCTA/snDd,iv:XOCEajfOn8EehYYikJGKWbXULcPBCMd7DrWCZlCjdY0=,tag:8HRF3V/PDCfGEI9N2/tr4Q==,type:str]
+              subscription: ENC[AES256_GCM,data:wE3t6o1AVReRtitQRo0=,iv:KfBCA/OH319gbHi/yoJtJ9D/UmdqhlJGKwXNQxy6R9A=,tag:LgGF1vnrkAGaTObFa0VRKw==,type:str]
             - user_label: ENC[AES256_GCM,data:oQ3G57EtDxMfta4RRdDnarV1u7ynJhez,iv:msxrMgh5v6jZDaj7LqgujA50OmUGLM4N9qRA2BnjX+E=,tag:GGEcLme5WsLRfA5mqhHa0A==,type:str]
               id: ENC[AES256_GCM,data:485HE3cicc6AVJbV5hVBcftkm2JZaYwvu+bWk1P0sgLYLQ3Z,iv:Hr3/Z7XLfa/CTgDzktK0Hj/v8QprlgA1Wscbv9sU3n8=,tag:lGmF7tFaXAvbYxyZu3fmGg==,type:str]
               subscription: ENC[AES256_GCM,data:wE3t6o1AVReRtitQRo0=,iv:KfBCA/OH319gbHi/yoJtJ9D/UmdqhlJGKwXNQxy6R9A=,tag:LgGF1vnrkAGaTObFa0VRKw==,type:str]
@@ -15,6 +18,8 @@ accounts:
               id: ENC[AES256_GCM,data:0encW3dTLzakvdeRJxaWcQ+kzrgYt47z/M0vBQlFRqjiG81I,iv:MPsbapjsCQMzqswzQSRCV2IXl9ErPY8ZnFssEvmeLQk=,tag:LQeu5BM8rJ7Pdg+Li8Gv5Q==,type:str]
               subscription: ENC[AES256_GCM,data:lPh6bN5386qM+Rg18g==,iv:Mro2Eq1zQ6pz02eXOytOC02xdByJVjsrLp/TUtBzgP0=,tag:y0r/Fc6vyPUfrrzr6Rn1mA==,type:str]
         - service_principals:
+            - user_label: ENC[AES256_GCM,data:VIdawYBZODNVhOxog/JROJh4ncU2j+07H+zBykpJgZm/SZfJuaI=,iv:mfgRjISdERIDR6+7QdhFeno3x5P2bWcvQqg78tAYhNQ=,tag:JASD2+SxMKttttQm5UtH+w==,type:str]
+              id: ENC[AES256_GCM,data:E8Xf5EU/liMUSPFNwbYTsbNRxznI3xdsLlEPNSm+f/F6gbbe,iv:Z1T0jdxV3q+XhFD1O6iAz/ddFwF4pl2V2fmRG7lOUr8=,tag:m6tSuObRKlV/rtP6cn3tdA==,type:str]
             - user_label: ENC[AES256_GCM,data:s7+mbv9Uk3IfAfVEJLsypipOfrvQ9HaXYJwCA8ylWbfI9IXwFg8=,iv:s8lQNU7TlGjiYOo6O6Lsie+dP829ZEKWA641eQpLSwY=,tag:SIckX6NzEYEzSYINK+xw7Q==,type:str]
               id: ENC[AES256_GCM,data:0eXLEzoobrnpFWZHuqofjeYI8818ri0Q73ARp/axITe7s/Tv,iv:8qpPqfSyTwfNw+bXjPkJlAfcPRI19xS3K6t+sYW841M=,tag:cFBs6WaHyhV2QAEd3G9Byg==,type:str]
             - user_label: ENC[AES256_GCM,data:B2XW4HT1Ib/pIBERj6kV6kYe5D2TBcc8bIKVnc4unCSqCcq7imI=,iv:5yGg4oqDBChM2mBtygcNH2yDUmWa+OsX3/3T6c9RwzY=,tag:9dyMr0o2Sx0I8CNf3Kw0MA==,type:str]
@@ -32,8 +37,8 @@ accounts:
         - managed_identity_principals: []
         - service_principals: []
 sops:
-    lastmodified: "2026-05-14T22:49:27Z"
-    mac: ENC[AES256_GCM,data:H5zHQNcidVzN6QBrp6rjiPAFq4FNpiCSHLu16kW7CxYtURNZEtKvJxvaYTduqscipwEAZTomEVii4jg8FFhln2H4rgF30qXYYF4PMgwCmKXyExc2c2pcuhj9/LYBl1fG7P1NJFSnMpOYZ6mevSTtOagV0NNk15tVRNdbyB2pZh8=,iv:828SMeR/4ubhOZfQZ5WpTOsRs69H4cGNNbeu8G4ya94=,tag:7pmmP1ydOl822C4rus54Bg==,type:str]
+    lastmodified: "2026-05-14T22:50:47Z"
+    mac: ENC[AES256_GCM,data:JoHb7H0vwFOkW+zk41SJdFIRrIGieZJTZUtKqyMnYRQ5w87W5eK1MFsMYmIdGwnk+xkR/L0mpPPh73BpqSIl90eCHxljm4jHa+0CZ8hggclxDfC6MTUABwMgaGjq8sHQlUsrJ9DRI6hEMEA0/IMs04T2odeCQI5i8sEu/lwIa54=,iv:fge8VbQbqZcnOiBTTGt1H6AuhZhFvETW4RlC089xA1M=,tag:hS79t5qRmDmNVr/3QagvaA==,type:str]
     pgp:
         - created_at: "2026-05-14T21:51:08Z"
           enc: |-
