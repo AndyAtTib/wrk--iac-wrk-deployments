@@ -53,6 +53,10 @@ creation_rules:
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
     encrypted_regex: '^.+$'
 
+  - path_regex: '^(.+/)?.+\.sops\.(list)\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
+
   - path_regex: '^(.+/)?(az-)?[mc]-.+\.sops\.(tfvars|fac)\.(yaml|json)$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
     encrypted_regex: '^.+$'
