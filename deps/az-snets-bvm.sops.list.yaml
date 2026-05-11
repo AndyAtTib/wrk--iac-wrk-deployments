@@ -5,13 +5,9 @@ accounts:
               name: ENC[AES256_GCM,data:GAzsgfQ9T+QjIwwd1d/B5otGpZq2nKw=,iv:z/joZXZ/e8n18kfpdvJumwg69ql6jodLduL/tVljmYY=,tag:rOtw/IzHv2Ko4OuWqjLTJQ==,type:str]
               snets:
                 - ENC[AES256_GCM,data:5qPSHZUqu94MJlsI50QJTiYGXUny2hlHynE/3Rw/JC7/OydnTqboH91A24tPgEv+7Y3JaMVkg9eQRTnLUCYdjaCg0RIz1F34nhnWvCy97diql7ui5Mw6ZSScrb0d90zDwnmYYMYVaDxuEgMVKGV/1PDkjFS8FfgPA3gRG2lsPEcSAW687yF+dap6thV8QO5FHHiKpnjvwCp33jnMuJl9WUVw5Fjy4jRDG2SWuZUHarxa9N6K3ZhWMwmFjiJDIIGkvOI=,iv:CN38jASwxuWKJ8kv3qOjJIHiKDuLTb9udEw+VRPm5nM=,tag:1pOLgLpu6DovHxyHvyhQog==,type:str]
-            - bvm: ENC[AES256_GCM,data:LO/aiINC7yB07Zgigoo2AC2UjEYadRq5p6ii,iv:bPd4cY9H+njNk4EYN3BaG5xTgGIbO6X/OBu8XqSLU3o=,tag:z77mOe9vMtpT52oBaWicKw==,type:str]
-              name: ENC[AES256_GCM,data:zvOZpxVaD4fuIpa7kJgL0FnbE/d1ltI=,iv:2QPPIkXokefCaHFcx9VMi4n/3zfgTIie5EU/eAjV1c4=,tag:FXnBlmwXSKXfo6mT+/bf2Q==,type:str]
-              snets:
-                - ENC[AES256_GCM,data:sz7otRxtHAcVUh1WjtE2yC+BmLeb7+Hwp1VTPuOZE9lYXE3N8Y2jnLAHx0+XDB1kd9Rkn189nN+j5c6BZbtx5W6nUGhpD6M08+i4WLqdEA5YhwoXwNH4pYQv1WyycNDcUKDHkEHzminePT5rqucA/zccV2KLWvz4dXW6bofuekbu2m+xQm2H5OUjnxs5w7hDY8DfWd+OyC+6++0Z8USFrLrUDISF5QF5ckRsT7+ciTdwRuckeRKtvbV/UzExlkAvlSY=,iv:XBBWZwE9/AZPCyBvIrkOr/+vlKyfGaza/b19x1j+lJ8=,tag:TTr6aoFIFcHFWUvCJiHdeA==,type:str]
 sops:
-    lastmodified: "2026-05-14T22:50:58Z"
-    mac: ENC[AES256_GCM,data:ipCf14ishSW+rwnXP4/alWoDhpLwXmE8vLnn7YP2lj6gXnPEHoRrhc9h5gO/CE+QCPavVqsTJW0FrDSTGNll3gKFahF0xvMo6hVPneHWnJIpJbDujmWQpbIRq6f6hZyPjG9uzGNO2oP51BEk2BrbqDJ2eZEcqzYM3hoGTKObBwI=,iv:MXMKVdP0rcdNaTdzjdHfPitjvlygVXa3vO7v9I6p6HU=,tag:GabMdLxn76K0L0nKDGkr0Q==,type:str]
+    lastmodified: "2026-05-14T22:51:47Z"
+    mac: ENC[AES256_GCM,data:kQS0UzQlQA8DvqaNuo1C4XIJ9ZDid+/YppC+gYdIVRmaCr3dmvfxkqqD4SvUF4TaJKKn8g6mn+dxqUf74Y5Amf24JnPZKbUC6OXWpuMwnKDW2MfBh9+SAILJT1RW7MhBeagq5MF7c3B44hKSxvCdVFCaY7PyGUkFxsjm2YBXEQA=,iv:H/ZdUXHox5q0JYXBgzD1udzPbcqJh1vt1bslRW3Kp28=,tag:N26KiNMOL2MhPDGIcGKCbg==,type:str]
     pgp:
         - created_at: "2026-05-14T21:52:08Z"
           enc: |-
