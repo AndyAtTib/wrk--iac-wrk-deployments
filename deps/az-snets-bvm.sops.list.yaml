@@ -5,13 +5,9 @@ accounts:
               name: ENC[AES256_GCM,data:zO/NE2BQlbqv1Fl+a5pd+O9U/OK/CXs=,iv:xAy8ITXyKYnlhDsDQ4KnTBw7+EE4yDkC7j4H6MMrBg8=,tag:BywO9ByNFuP4iTGDTjwu/A==,type:str]
               snets:
                 - ENC[AES256_GCM,data:70sVq/BilOUyOJZpNZI1KFAqRPTcFarMweGcU30hm0OwuWF5DQn+sAP9GhZJuQpjTOT2saeT3W+nLx0qY01MENtzKmr6l6QOkSXA6iFZLp9e5bymHuJ6+c7FCfgXCX4bKUWC6bQLR2wdviLRW+ovKbcpRObFoR/r+FGfI+SIJcDG+NJq6G7N/V6wcOdPpTHGMuLXuR60P+dm5xv7svuyQWfBq6mg9GS/wUxhOrJplR67pYRV3+Xy99XfodHVLmpBO6o=,iv:cY57J9WitIvdCtEP8JTMfbGjeOItroYkYue/cCyp1lY=,tag:9CKvf2u7h9O0LYuKvVSbqw==,type:str]
-            - bvm: ENC[AES256_GCM,data:rA2cNIULcoYyKKvne9tPTg==,iv:qLZXKkAqeCtmcmtYy6DTY8iDN7vzqQfosCUBk+7sQDU=,tag:kHUtsR+y3m8HEF3LJe8OQA==,type:str]
-              name: ENC[AES256_GCM,data:WHGGn2VYucRiEkdzHPjqAILfRkCAMrmI,iv:yhKGQBxxOwU/Vdylpr/2uFflPjxOUCNTn5j3RySQa5Q=,tag:x34bzlVRGZWkL025VbIFMg==,type:str]
-              snets:
-                - ENC[AES256_GCM,data:1hA0,iv:tjic9sRumPO/dHrOk8XO76URqc4/ARsmrriVg69tJq4=,tag:IGKlgktc89TvJd/GtdJZmA==,type:str]
 sops:
-    lastmodified: "2026-05-14T21:52:44Z"
-    mac: ENC[AES256_GCM,data:fpAgaizEOJjo2bTcMa/tzNiNrY56gbXESL7mSm4PLN1vs6yvvnCVwUeUDv6qMomW2XZ8moqpLsH9YLhVNdzP2lA6eg1PuvwuFJwaxs1eXvT9tmFc+ZZY76T7ZwrDdtwiGvYE4fya2VyllKvYqglEZmNV+uDUdsMNx1yk4rlpoO0=,iv:LwBJ0oP3f7NTxrN3Dxy4b4dgV4Hv9OVfI8oY5bwNMbU=,tag:u0jd5oM5UnP2/X/sdAnU8g==,type:str]
+    lastmodified: "2026-05-14T21:57:56Z"
+    mac: ENC[AES256_GCM,data:goVyA/uJ8yJsXdhDvsKwJg/COJz62kMPa9TPHcImHT23/ecXQ7F80d5RPfq9VQosCPiQV1eM8svfrk/s53giBbPSSQzWSMy1jjhkDmkS3oqtt196UAPuHXQl2mYvtcEQaNfsE/LKjWbInYGTox/PXW7CfxsyChmjXNZuNLa4800=,iv:Jo4773eDkKL6v2a17QuIUrQivyimURGPw5cUMOGELTs=,tag:W9b0cvQRH+8gAOH2UZQUNw==,type:str]
     pgp:
         - created_at: "2026-05-14T21:52:08Z"
           enc: |-
