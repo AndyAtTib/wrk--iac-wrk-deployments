@@ -15,24 +15,11 @@ creation_rules:
 
   - path_regex: '^(.+/)?az-[mc]-vm-fleet--.+\.sops\.tfvars\.(yaml|json)$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
-    encrypted_regex: '^(
-    |subscription_id|
-    |region|
-    |naming|
-    |rgs_.+|
-    |vnet_config|
-    |vnet_config_default_config|
-    |nsgr_ssh_inet_src_ipranges|
-    |vm_ssh_key_path|
-    |standard_os|
-    |os_.+|
-    )$'
+    encrypted_regex: '^.+$'
 
   - path_regex: '^(.+/)?.+.\.cloud-config\.yaml$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
-    encrypted_regex: '^(
-    |content|
-    )$'
+    encrypted_regex: '^.+$'
 
   - path_regex: '^(.+/)?dep\.(yaml|json)$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
@@ -42,18 +29,17 @@ creation_rules:
 
   - path_regex: '^(.+/)?cidr-allocations(--.+)?\.sops\.yaml$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
-    encrypted_regex: '^(
-    |name|
-    |org|
-    |cidr|
-    |bits|
-    )$'
+    encrypted_regex: '^.+$'
 
   - path_regex: '^(.+/)?\.env$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
     encrypted_regex: '^.+$'
 
-  - path_regex: '^(.+/)?.+\.sops\.(list)\.(yaml|json)$'
+  # txt files don't use encrypted regex - they are only fully encrypted.
+  - path_regex: '^(.+/)?.+\.sops.txt$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+
+  - path_regex: '^(.+/)?.+\.sops\.(list|fac)\.(yaml|json)$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
     encrypted_regex: '^.+$'
 
