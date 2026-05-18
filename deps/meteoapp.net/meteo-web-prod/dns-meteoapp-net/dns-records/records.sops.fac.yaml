@@ -2,6 +2,13 @@
 # You can retain `---` (start of the document) to indicate an empty document.
 records:
     - ENC[AES256_GCM,data:cbklbrjyjcrBMeQ4q9ODi+k=,iv:Zaa+mjBRDrlRavdIv4a8aAnmvq56CEYcq62uurTzLUA=,tag:QGR62cXhoGWkF5W8tM5hnA==,type:comment]
+    - name: ENC[AES256_GCM,data:dqIamQ==,iv:u0M7oC5kcR7YxNn6H+fgb4q7VViNis7u213T3wbI+Jw=,tag:V3nBxUWSIySZL6PDLAhReg==,type:str]
+      records:
+        - ENC[AES256_GCM,data:qJt8AzroIejZrNjtyKwoqaJ0hpIX,iv:So6KK98kcTUkxjHQJigoqQIYa5Q5wQtTApARSJiOm6U=,tag:HEvKEV6W8uFhY23n9AH/hQ==,type:str]
+        - ENC[AES256_GCM,data:Ec5H/uPO5nakHEeHQ8h4ALuyT+V7,iv:XM2fy18vzIVumb28aWJuWg7UmD5Pz9HaCPmw0f92bew=,tag:apRnP5SfhUgVOVeQrueWqw==,type:str]
+        - ENC[AES256_GCM,data:WnHnHGnVD/zbF/dd/UbJr5JqOpCx,iv:o1rTy4mikQS5wPS6ts78VN0UwQj9gZTA485lr8AOVdA=,tag:6mvvAbzbQWW9VI/YEX0INA==,type:str]
+        - ENC[AES256_GCM,data:aU2v5+76dh136CLFiu/eBgetPtadow==,iv:p1tU4lRBkCK1FUF+CI+kw+KSxYBG7uQH59htDSJHogw=,tag:CAdYiocl1Ye4R3FoncAwRw==,type:str]
+      type: ENC[AES256_GCM,data:hMA=,iv:4YcAemWwXURUylsAeHpgPQbywgGIvuJEagM9jIzU3zA=,tag:r/gh9nDxn6KUXoeJqyt8Dg==,type:str]
     - name: ENC[AES256_GCM,data:rzM=,iv:Kd+cOU9ADTOpxNBMMCfX2xF7jW+ptJ1X3gzUYBasGaI=,tag:sxXoIhJ+kaQI0fdMd7fNrQ==,type:str]
       records:
         - ENC[AES256_GCM,data:o+427T9I/sYUKaA4j8t9/S28NeOR,iv:LJrwLvV5QsA1M4u2nL+RPIn+Pm4m3fY9sjDUTXdcZA0=,tag:frp09UWpYpYjDO+6y1ieAw==,type:str]
@@ -25,8 +32,8 @@ records:
     - ENC[AES256_GCM,data:3HSZcxU=,iv:bMINxeevetw1SMbS2RHx4ZkrCsOl+tFOmcHX4rBgPno=,tag:uqGE5QAmdPqspI71ZzGbJw==,type:comment]
     - zone_def: ENC[AES256_GCM,data:RbsiTAI6I55JSOctxcsXXaKgmQ4kGG6zzoI9nr+Zb9L04TEApmz0nJNWlQ==,iv:V4YacD/vZ3eKnXvpexyYjaPlB618yVlvg6x2fc+rcTw=,tag:h5Xa/KtcrPDzLm0HMz7rdw==,type:str]
 sops:
-    lastmodified: "2026-05-18T15:55:09Z"
-    mac: ENC[AES256_GCM,data:7IjkzYOknM87OEHZvfcCziO5U/QwzK+02FXhe4qQIZpwigeHnGaWx9Hs6pfH3MhLvrbiTnaBn4mjhrP6EfVgblpdoB7fOU/FHFPs3TRkGo5qIYln8Sugl3RzuHbtDY9E0EuxWrkWgWhos7V6DbJCmMBRCIm+QS0YBGlgoIdb6Sk=,iv:FvjfRUgHtWtMch0PIZfJrDcwT/9rr18tvYKqeJJ9kac=,tag:cf+YWGMSc6tZmuIw+hi31g==,type:str]
+    lastmodified: "2026-05-18T18:41:06Z"
+    mac: ENC[AES256_GCM,data:SQlsUYoiYnLzYM6fq8VdK9rUWZN6dyK0grwJb+KnLWt7cZa818jadQCZ1KcQEQnEhrxDn6zoypky6bLHQ6js1sYtGEtF18aCyOHfykrP65iMPbIFCAjCcLC1L+M6wK+HG+mrOyx0TyjYbD3GwZhpqzPXgVneXarrAU4RNw2n1fE=,iv:x6J7CeNUK6jMVG9d2c6IVSisesjaVsCqLb3b/b5Q3Fs=,tag:yUnPCZ7hDkpJnSGKo/woaA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
