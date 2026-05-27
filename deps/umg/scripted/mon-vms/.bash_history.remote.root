@@ -1,0 +1,21 @@
+exit
+
+sudo grep -ni cron /var/log/syslog | less
+watch -n 10 -d "sudo grep -ni cron /var/log/syslog | tail -n 5; echo; echo; sudo find /root/jobs -type f -name \"sendka*\""
+
+ls -al /etc/cron.d/
+ls -al /root/jobs/
+
+cd jobs
+ls -al
+watch -n 10 -d ls -al
+
+less curl_wcf_keepalive.sh
+
+cat /etc/cron.d/dart_dv_curl_wcf_keepalive
+vim /etc/cron.d/dart_dv_curl_wcf_keepalive
+
+cat sendka-dart-sg-mvc02.meteoapp.net.resp.txt; echo
+cat sendka-dart-sg-mvc02.meteoapp.net.execs.log
+cat sendka-dart-dv-mvc02.meteoapp.net.curl.log
+cat sendka-dart-sg-mvc02.meteoapp.net.resp.txt
