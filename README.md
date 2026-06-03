@@ -121,3 +121,15 @@ Now add to .gitattributes a line that configures `diff=` for the file glob you w
 ```
 envs/**/*.sops.tfvars.json text diff=sopsdiffer eol=lf
 ```
+
+# recipes
+
+## search and replace strings in encrypted files
+
+```bash
+old=$(read_val_dflt "old string to replace" "$old"); echo "$old"; \
+ new=$(read_val_dflt "new string" "$new"); echo "$new"; \
+ yn "continue" && \
+  find . -name "?*.sops.*" \
+  -exec bash -c "echo \"\$1\"; pushd \"\$(dirname \"\$1\")\"; EDITOR=\"sed -i 's/$old/$new/g'\" sops -- \"\$(basename \"\$1\")\"; popd" _ {} \;
+```
