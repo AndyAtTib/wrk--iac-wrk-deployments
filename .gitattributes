@@ -347,13 +347,24 @@ dist/*            binary
 .git-template/pre-commit text eol=lf
 .git-template/pre-push text eol=lf
 
-# set *.tfvars.json files in any child folder of envs, which is in the root of the repo, to be text with diff=sopsdiffer
-# this needs ~/.gitconfig to have the entry:
-#   git config --local diff.sopsdiffer.textconv "sops --config $(git rev-parse --show-toplevel)/envs/.dec.sops.yaml -d "
-# or
-# [diff "sopsdiffer"]
-#     textconv = "sops decrypt --config empty-or-other.yaml -d "
-envs/**/env.json text diff=sopsdiffer eol=lf
-envs/**/*.sops.tfvars.json text diff=sopsdiffer eol=lf
-envs/**/*.sops.cloud-config.yaml text diff=sopsdiffer eol=lf
-envs/**/.env text diff=sopsdiffer eol=lf
+# === set diff=sopsdiffer_* for all sops-encrypted files ===
+# This needs ./.git/config to have the entries:
+# [diff "sopsdiffer_deps"]
+# 	textconv = "sops --config /projects/iac-wrk-deployments/deps/.sops.yaml -d "
+# [diff "sopsdiffer_glvs"]
+# 	textconv = "sops --config /projects/iac-wrk-deployments/gl-vars/.sops.yaml -d "
+#
+# or at the command line:
+#   git config --local diff.sopsdiffer_deps.textconv "sops --config $(git rev-parse --show-toplevel)/deps/.sops.yaml -d "
+#   git config --local diff.sopsdiffer_glvs.textconv "sops --config $(git rev-parse --show-toplevel)/gl-vars/.sops.yaml -d "
+
+deps/**/dep.json text diff=sopsdiffer_deps eol=lf
+deps/**/dep.yaml text diff=sopsdiffer_deps eol=lf
+deps/**/*.sops.fac.json text diff=sopsdiffer_deps eol=lf
+deps/**/*.sops.fac.yaml text diff=sopsdiffer_deps eol=lf
+deps/**/*.sops.list.json text diff=sopsdiffer_deps eol=lf
+deps/**/*.sops.list.yaml text diff=sopsdiffer_deps eol=lf
+deps/**/*.sops.tfvars.json text diff=sopsdiffer_deps eol=lf
+deps/**/*.sops.tfvars.yaml text diff=sopsdiffer_deps eol=lf
+gl-vars/**/tool.env text diff=sopsdiffer_glvs eol=lf
+gl-vars/**/*.sops.json text diff=sopsdiffer_glvs eol=lf

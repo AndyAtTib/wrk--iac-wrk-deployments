@@ -1,0 +1,48 @@
+stores:
+  json:
+    indent: 2
+  json_binary:
+    indent: 2
+  yaml:
+    indent: 2
+
+creation_rules:
+  # regex formatting:
+  #   encrypted_regex must be formatted in a single-quoted string, with `'^(`
+  #   at the beginning and `)$'` at the end. Each key must be on a separate line
+  #   surrounded by `|`. This is the only way to workaround the yaml parser swapping newlines
+  #   for spaces when using multi-line strings. Block style and chomping indicators will not work.
+
+  - path_regex: '^(.+/)?az-[mc]-vm-fleet--.+\.sops\.tfvars\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
+
+  - path_regex: '^(.+/)?.+.\.cloud-config\.yaml$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
+
+  - path_regex: '^(.+/)?dep\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^(
+    |st_id|
+    )$'
+
+  - path_regex: '^(.+/)?cidr-allocations(--.+)?\.sops\.yaml$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
+
+  - path_regex: '^(.+/)?\.env$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
+
+  # txt files don't use encrypted regex - they are only fully encrypted.
+  - path_regex: '^(.+/)?.+\.sops.txt$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+
+  - path_regex: '^(.+/)?.+\.sops\.(list|fac)\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
+
+  - path_regex: '^(.+/)?(az-)?[mc]-.+\.sops\.(tfvars|fac)\.(yaml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'

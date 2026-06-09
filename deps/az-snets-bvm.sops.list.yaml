@@ -1,0 +1,31 @@
+accounts:
+    meteoapp_net:
+        METEO-web-dev:
+            - bvm: ENC[AES256_GCM,data:zT4P4cQZsy1qr91DKm/9,iv:w9A2Wmk1koiWruL2YJjBP1PhQwicY0eix2N5e+SJ2no=,tag:PGwLoRdBowuglZMond8jDQ==,type:str]
+              name: ENC[AES256_GCM,data:p8NDo/f2/F8QU24dA9bg8tjLiNp7ed8=,iv:HXFw4cNEa15po6wUERSKmFDHdO5/xbrgXL+sZWnitCs=,tag:hAzeVuuOm3pu3oM9urIV7A==,type:str]
+              snets:
+                - ENC[AES256_GCM,data:Bu/EOXcQX+1hFYbyDmUTzpxZnvhlQ2VrEy3dCMSD0f1eqqxhDV4c8HUeuc7ieHxNY0w3w2AE/a0fJy9+USHPzPKOH11Iqiu4epH194X92j1eJmi0bWf+OL3ylT+4njNIFRdP5O2THozZcX0z1B+dv8SJeXBU880dE2yr6WElRYIBL1B4dplGtmPyzETdqVKo4USI4EHc5Wv0lNA5j58Xz+t5+MTlxMzoHRrDVt4SAb9lXWgdwAA0rrHLPu9E0Wvo3Zo=,iv:Qx/0eZbtD/iTwd9tKFFYv0PhJkyqt+CmmTAKwsbX7CA=,tag:OW4ttoN6YmOgjUz8esJ6MQ==,type:str]
+sops:
+    lastmodified: "2026-05-14T22:01:16Z"
+    mac: ENC[AES256_GCM,data:DLnz3gJ4FeQGU3kaKYsOwOq78BtG5EeVVUNne8hai2yubMGCiO6a31WNXw5wW3VjBUWlhnoIwIf1pikI5ayiwAMZvb9W1dUMulfpZ6riN2V6MS+LiePz15RNsAII/7F/mHtSphK3NsgaDCBn4RkncGBxmPKW4pdsP/Xx9qGqzZE=,iv:wWkBjx6jl5L2a/yfHp9rHnWCTbRHp85tnIXpGd5QrLo=,tag:tek9O3kmItvZ7GDJ4GQl/A==,type:str]
+    pgp:
+        - created_at: "2026-05-14T21:52:08Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQwAst66fRoLSpRBITQF8rGf2AWimEbNbY0txKG8vkY13irp
+            hpHWFL05KRveShoofKoJizWp9jAUXias3qZyY5/ARz0/wa41xPPsG1qgAMg0ukVp
+            gqvZiixxp2w7Fyu/3KCwYfKylBwJDcUh27Xn7x3pykTd++LrzTSrdAc5vjKMFMdt
+            dDfSMpNJW9ncY6EcYLLUt6Wzkbo7xamEfLGCA/X/TFQlGrZukcfcOKU5c9bGnxTQ
+            KDX8hzok9b81rfcQ6L185SYtxzyuEv7yN2WQhVK3nbLnHYY3ZZEv42H7a1aHc1Hj
+            mhcHPF1M/cVdueWJkKpJHic9Pl6hR6X/S+nQBSg9IhnILglBpxFZtpIdS/zub6bk
+            XUSd0W/nlFq6RNCaV+8KT4Kk7SE8u0PWvXIMpzmY2A29MnLbUMHRNtuWgnhCodw1
+            vUQFI+GemyuIUyJW0WBexpBCa2I4h9efIFn83Gefja7r7QOldktOWiQ4gJIrOUwV
+            NzJmMkq0MvBABkQot33R0l4BB94AICMD/WvGP8R6hmCSLx10xvYOBiVdB2pXOoqJ
+            RcymjU28OnyOmRdCU5PrjveLs+NVdlbII7bHwqekcsZK+UeJVB+EisYxU4QQEut/
+            mzMCQRucQkX9PRIgVlW2
+            =PCSr
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^.+$
+    version: 3.12.1
