@@ -1,0 +1,25 @@
+stores:
+  json:
+    indent: 2
+  json_binary:
+    indent: 2
+  yaml:
+    indent: 2
+
+creation_rules:
+  # regex formatting:
+  #   encrypted_regex must be formatted in a single-quoted string, with `'^(`
+  #   at the beginning and `)$'` at the end. Each key must be on a separate line
+  #   surrounded by `|`. This is the only way to workaround the yaml parser swapping newlines
+  #   for spaces when using multi-line strings. Block style and chomping indicators will not work.
+
+  - path_regex: '^(.+/)?env-.+\.sops\.json$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^(
+    |description|
+    |value|
+    )$'
+
+  - path_regex: '^(.+/)?.*\.env$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: '^.+$'
