@@ -6,14 +6,9 @@ records:
       disabled: ENC[AES256_GCM,data:65yOYWE=,iv:Wx7RJ5BVF6mu5zLOaFwrC6x8Cemq3SXqN/HGGIThw38=,tag:Doa875qVEoCP1R9G4k5jOQ==,type:bool]
       records:
         - ENC[AES256_GCM,data:smEQ3oEejCZx,iv:EGiOkFsMqGI+EarwkaaLOt/UbCl2LJeRgHZygMbgh68=,tag:mamJWuTwLjkVFq4yc7dCjQ==,type:str]
-    - name: ENC[AES256_GCM,data:SXKt7w==,iv:xjCO014WRYvX0ASFpOym4a+Cx5LiJHBjTD+mFouMB58=,tag:qBOWRlBmzA307E20RjkPpA==,type:str]
-      type: ENC[AES256_GCM,data:XA==,iv:eNZ2y3tBfgvkw5FKNX/TJte3cUzrFtFA0F3G6rcMXDU=,tag:riVB8OVB808s1H/M1501LQ==,type:str]
-      disabled: ENC[AES256_GCM,data:65yOYWE=,iv:Wx7RJ5BVF6mu5zLOaFwrC6x8Cemq3SXqN/HGGIThw38=,tag:Doa875qVEoCP1R9G4k5jOQ==,type:bool]
-      records:
-        - ENC[AES256_GCM,data:Kk/5+sej6ew=,iv:9E1qSwdVZ+0vudOuG/CSj8QFSfEcmlWmLm4wQETvJpk=,tag:tZGqntXnrnO1LdW8twJUxw==,type:str]
 sops:
-    lastmodified: "2026-06-10T20:37:16Z"
-    mac: ENC[AES256_GCM,data:EemN/vgDSo9sXcZyEwvqoGixgkdJmDijogVS59g5oNFSuFf4jMllXaLcrQdPBMvmb41XSBRc8Cw3xfdxzLaw8GdoBeaCUztp7sz4IH9uIJDlDnw6SKnYsKfcJ1MvZSbKhljJzcCCs1zCH//U+ovtPldU5uMBQt3LQQT+/J7ZgK8=,iv:Td3s1pRBl1cIkNX63zB2TFpYbea14SMoKii/HjKOahY=,tag:CyV2cyZVwHWEoEa98QU7VA==,type:str]
+    lastmodified: "2026-06-10T20:44:35Z"
+    mac: ENC[AES256_GCM,data:iG9mHy48qH6HF4X/RRhK1YbwTu2q2ZBNm6rZo/EqVQ0zXaXyjBMoiXfzyLnCagF3mbM7gwBYWk3nU/VDqGFjGl/MZ29IprAuVKf7NlWeNHuC55ImgkGN1MlOrbSZ5AMEsri0n4DXAsgjoORUANWVO+w5kUfhO/XU5LLmzQkdZlE=,iv:M4Xd4KPbMpMdh3BzlN2WY89bhRUuO59QjjiDkE+54kU=,tag:qO6PQuzGrejIHY1Iz75S1w==,type:str]
     pgp:
         - created_at: "2026-05-14T22:01:53Z"
           enc: |-
