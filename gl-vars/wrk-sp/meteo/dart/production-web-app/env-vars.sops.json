@@ -1,509 +1,509 @@
 {
-  "*": {
-    "AZ_BUILD_VM_NM": {
-      "variable_type": "env_var",
-      "key": "AZ_BUILD_VM_NM",
-      "value": "ENC[AES256_GCM,data:Wk2sUSdWEb0JEbmPI7Kd6rEVrPhZ+RU=,iv:35uujw7eK9j2eUg30ISFu/NnLsWDdhzWlGtbyeZ8p+c=,tag:un9JXuIUKLei+JJoUkcNkw==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "AZ_BUILD_VM_RG_NM": {
-      "variable_type": "env_var",
-      "key": "AZ_BUILD_VM_RG_NM",
-      "value": "ENC[AES256_GCM,data:azIOcc6wF517Jupg0nX+jTsuyueVhCg=,iv:FH2ppA5i+9TXLjats4vm/kgkPRLW4kUkcpg1XOn79dk=,tag:Qeu/SIzijx9VH+CqXgUoig==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "AZ_SP_ID": {
-      "variable_type": "env_var",
-      "key": "AZ_SP_ID",
-      "value": "ENC[AES256_GCM,data:h97/N68VQs3lXcnm2hAu4VXQSsFeJIA1s4X1+JcGgjDeQKLG,iv:qmJU+nkAEFfNktVaIBFxiYF7wf9NU8H+lrcWR8mjNCM=,tag:QgU81hALBHEM4hmE8gXz3A==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": "ENC[AES256_GCM,data:fBvncV8XaQ1P8EqXfwOJesZy2nZvIOmpd7NxkugDnXVvdVoHbhU=,iv:W8iQvMDCQRv/tJ0JZUzoRN4UNzC2xMe5HQpBzT60la0=,tag:SVRREPNBrQ5wVaRtaFyrlA==,type:str]"
-    },
-    "AZ_SP_SECRET": {
-      "variable_type": "env_var",
-      "key": "AZ_SP_SECRET",
-      "value": "ENC[AES256_GCM,data:Edj+A07XIGIm2urO8f7yw5aJ5jTPqngsG51yeA23kjJ4d1S+gMkWww==,iv:p2EuRRQDwLzVO6J7lHjuN2yyKn1OmJIamBtyQYxNFTA=,tag:lPfjmCSMVoXVAq5w7lHAUQ==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": "ENC[AES256_GCM,data:Ru+k3F4EuM9TsmKE0f7iUSceOxYnYyalOFnV9tGhqQlz7+far3n7owFFov9r6/4=,iv:P9ti+7BH4II31rWFMUMQpgEmld3Q3NZHli0ggnmw0tE=,tag:cCx2nYa5XoVW2jALPbUwtQ==,type:str]"
-    },
-    "AZ_ST_CON_NM": {
-      "variable_type": "env_var",
-      "key": "AZ_ST_CON_NM",
-      "value": "ENC[AES256_GCM,data:zevvlTeVVOtQ/PlI7A==,iv:ma21eF0xpAFvV0A7+m20Po3Fk74I+G4xtJMTMGbaoYU=,tag:cFGgsD+h1PFeYdPwKQ+zGg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "AZ_SUB_ID_BUILDVM": {
-      "variable_type": "env_var",
-      "key": "AZ_SUB_ID_BUILDVM",
-      "value": "ENC[AES256_GCM,data:F0x6ZwXVURSnc8zyCfJWmb06wtb/zVVMdhToHV+2CEdMHpwS,iv:aWKt4sLOerF2Kqku8rj9i6mVC3NHzDhGvOVI3wQs+ko=,tag:nk055jLIEDXOQTZ1swnsmA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": "ENC[AES256_GCM,data:HM+zZYaRwQ==,iv:+vKFLnIlAjdcWHqp9U2puBec0P+JGDYmjKGvMQTi+Aw=,tag:zB/Uu9DhEBnKfPAVdMNxUQ==,type:str]"
-    },
-    "AZ_TENANT_ID": {
-      "variable_type": "env_var",
-      "key": "AZ_TENANT_ID",
-      "value": "ENC[AES256_GCM,data:k0iEKcKp/gjv0d869n4V8tVY2KJJoVKH9ym4k30+RpDPHPwT,iv:oTuRVShjsaiJgrRg+VM84CRKIyF72lmSFryEaXXWzBU=,tag:JWxxt+2lWkCHtzKKsF0FRw==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "BUILD_BLOB_COMMON_PREFIX": {
-      "variable_type": "env_var",
-      "key": "BUILD_BLOB_COMMON_PREFIX",
-      "value": "ENC[AES256_GCM,data:WFvnNKZpHVPGTj1JPPv52wj9Le/dCtJuOO0GactIsXU=,iv:Tts9zJVKlEA1Ud273ojUZtBy1ZMPYUlAgLFVUzllOno=,tag:MWdXtsldxR496CRoBRQNVA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "BUILD_CODE_PATH": {
-      "variable_type": "env_var",
-      "key": "BUILD_CODE_PATH",
-      "value": "ENC[AES256_GCM,data:5ux2eQ==,iv:UnC0leioMy1H7eD6nQx8Z82PsfT/dMQEMNNfFKeAuBw=,tag:r415gYsGuZahafRNwITjbQ==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "BUILD_SLN_NAME": {
-      "variable_type": "env_var",
-      "key": "BUILD_SLN_NAME",
-      "value": "ENC[AES256_GCM,data:rJ7Gp0ncSos=,iv:dpBr6GamLkjUCkqW74dAjpeux4ulXTH3waS3yJdFwRA=,tag:VtLRkoxUPbf6VK5ScXtrbQ==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "DISABLE_CI": {
-      "variable_type": "env_var",
-      "key": "DISABLE_CI",
-      "value": "ENC[AES256_GCM,data:eHMjRQ==,iv:/cvRlcBRMbFujT/bzytSk4EMqXPW0YNkaGBE5DvtGpE=,tag:YbPMbgvW02K6PL/YVvzwtg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    },
-    "RUNNER_TAG": {
-      "variable_type": "env_var",
-      "key": "RUNNER_TAG",
-      "value": "ENC[AES256_GCM,data:pQldvttk/+YqkWesE03OhKmM,iv:KyiE+DFBDaQ0rOby7vYOrbI8MxPqf84YPBjWGjPmn/o=,tag:Asj1pnX0nGHrJuZw+DJD+Q==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "*",
-      "description": ""
-    }
-  },
-  "dev": {
-    "AZ_CSES_DEPLOY_ID": {
-      "variable_type": "env_var",
-      "key": "AZ_CSES_DEPLOY_ID",
-      "value": "ENC[AES256_GCM,data:6vPqY7MNfV3H5n5HlQ==,iv:ElO1w31qrkr7Huz8MKe1G5cRGgbSMIrJrMwPXJI7968=,tag:/KFKT0CF71XqFqFoEylMyA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": ""
-    },
-    "AZ_SUB_ID_ASSETS": {
-      "variable_type": "env_var",
-      "key": "AZ_SUB_ID_ASSETS",
-      "value": "ENC[AES256_GCM,data:jEWUJlqwUwxXgEa4+F6mM9M3NUKFnL3SZgNP/K7sOSGiQ42m,iv:jKrL4CD6Ib9rrf89ymMtsHK27oQexU5eeyOlSLosSt0=,tag:SrSVcZWgGx0di8I34K1aWQ==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": "ENC[AES256_GCM,data:ZDuzUo30,iv:VfIIO6e5IJdY+PGaMTBOKpC8faLhwZNMmiKkjxrfzTQ=,tag:lEu+8qHPZHCGAN92CfDlJg==,type:str]"
-    },
-    "AZ_SUB_ID_CSES": {
-      "variable_type": "env_var",
-      "key": "AZ_SUB_ID_CSES",
-      "value": "ENC[AES256_GCM,data:wklKP+FBIgT2jb2KCY08krZJJ1R4tA1BY7qDaeB8x/8S0t4R,iv:eSmlKWvoin5XrUeteUeNrfxXoiylHfsCHk3lvaUwgU4=,tag:NHpeq6FDxa53LiohhaPteg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": "ENC[AES256_GCM,data:wo9VwYbl,iv:rTAK1j0Z+ma6pRrHXOGAFMmiTQVwYi5rAaUaZgQtzTs=,tag:Q/mSeVGfNmvXhklpD8GHLA==,type:str]"
-    },
-    "BUILD_CONFIGURATION": {
-      "variable_type": "env_var",
-      "key": "BUILD_CONFIGURATION",
-      "value": "ENC[AES256_GCM,data:KG3gI5LW,iv:xgyaD49SnUcwB0jQsUdMVJviZ1+B3gGuluyO9obUHEY=,tag:NwnMWR7OqxmUHxqb4t2y9Q==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": ""
-    },
-    "BUILD_CSCFG_PATH": {
-      "variable_type": "env_var",
-      "key": "BUILD_CSCFG_PATH",
-      "value": "ENC[AES256_GCM,data:pShF1ZliBoi4oBPGnN2YgNugcc32NqoEQgXzMyirfg865Cd4Xo1WCtdn96YvqL7bEEzVHg==,iv:bgwuyHqCPrLMGm/zP1EQ1SB2hbGENNN1pgFpoB8DdCQ=,tag:p3ynnn3X4EhEt9jy9T90wA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": ""
-    },
-    "BUILD_RETENTION_DAYS": {
-      "variable_type": "env_var",
-      "key": "BUILD_RETENTION_DAYS",
-      "value": "ENC[AES256_GCM,data:iO0=,iv:TKRnhy3zEQuAEddaXFQY1sSQpgeIS3PGC/bB0QxCldo=,tag:mDskhfzPcPqDhDYc8AfnbA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": ""
-    },
-    "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE": {
-      "variable_type": "env_var",
-      "key": "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE",
-      "value": "ENC[AES256_GCM,data:Q64XCw==,iv:BwAx7bdVwDYNynHyncMDNCuENCguPlGLTEp/9MWG4cA=,tag:dk2Zi6xpcjjkbF0qmwcmJg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": ""
-    },
-    "DEPLOY_WHEN": {
-      "variable_type": "env_var",
-      "key": "DEPLOY_WHEN",
-      "value": "ENC[AES256_GCM,data:YMsMY1IQ,iv:mscBlICt6udWS0H421OvrFqprrja1d58opmOyF36LBw=,tag:Zk0z0F8k3PGcDd3JgWFc1Q==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": ""
-    },
-    "DEPLOY_WHEN_RGX_COMMIT_BRANCH": {
-      "variable_type": "env_var",
-      "key": "DEPLOY_WHEN_RGX_COMMIT_BRANCH",
-      "value": "ENC[AES256_GCM,data:VxokuQZzxUCjVDAcbQ/4aTo=,iv:6wosijFHlOfB79sP4Ulxq1gvXz6E1cNjjfwSoIFqlf8=,tag:zTPqLUW3igspmKL4cBugLg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "dev",
-      "description": ""
-    }
-  },
-  "none": {
-    "AZ_CSES_NM": {
-      "variable_type": "env_var",
-      "key": "AZ_CSES_NM",
-      "value": "ENC[AES256_GCM,data:qUVY7v0oeJY5tt8KNvWxYg==,iv:yeI4HJsJxwOcMvu7bkGg91CUcs8YjVVcIn/+UMbS/lI=,tag:O0ttmuHyQnnzuvMZfuzy6A==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "AZ_CSES_RG_NM": {
-      "variable_type": "env_var",
-      "key": "AZ_CSES_RG_NM",
-      "value": "ENC[AES256_GCM,data:JQy2KUxnDcj3TA==,iv:ARNofr9Mwk6if4Jj3i82mAbb2Wbxa3iNE2oVf2Bu2bM=,tag:pl4fbEcTT+Hr9eCJWGGUUA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "AZ_ST_NM": {
-      "variable_type": "env_var",
-      "key": "AZ_ST_NM",
-      "value": "ENC[AES256_GCM,data:UWycX1KxlSzH,iv:/mqtPfeRiA7PF37AV8ENCyoO0XZcie4jlmnrxaFPW5U=,tag:mTS3KnqEGcPFO064AhhrKA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "BUILD_ALLOW_ARTIFACT_OVERWRITE": {
-      "variable_type": "env_var",
-      "key": "BUILD_ALLOW_ARTIFACT_OVERWRITE",
-      "value": "ENC[AES256_GCM,data:H0vyIA==,iv:jk20jwLtUYyVEuruFzW7JNvQYvKzkUMLH1ynzhJJhGM=,tag:KIUL9w9uqgJkcV19R/y1Sg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "BUILD_AUTO_UPDATE_CSCFG_FULL": {
-      "variable_type": "env_var",
-      "key": "BUILD_AUTO_UPDATE_CSCFG_FULL",
-      "value": "ENC[AES256_GCM,data:lr6xPQ==,iv:RhhlAphDtoA9EehxcBheDcPlNdlcmH9HY6SJDJkoXSc=,tag:zn6yC6HIUrTBhrNFMyHgpw==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "BUILD_SUPPRESS_TRANSFORMS": {
-      "variable_type": "env_var",
-      "key": "BUILD_SUPPRESS_TRANSFORMS",
-      "value": "ENC[AES256_GCM,data:R4Lvzg==,iv:4wiTm2iZ0ivPifUpDQDdM3NleXbd7+rFdOq34OMkY4k=,tag:lDgxs776NrVn3TDvuzE9tA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "BUILD_SUPPRESS_UPDATE_CSCFG_CERT_THUMB": {
-      "variable_type": "env_var",
-      "key": "BUILD_SUPPRESS_UPDATE_CSCFG_CERT_THUMB",
-      "value": "ENC[AES256_GCM,data:CwNn2Q==,iv:QZ3lhFfu4jxXm7MUKZtVMaoecEiQdg3v1cNOWLCq9Ho=,tag:UjZSZ/WZLH+Uj2jhTFDqmg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "DEBUG_PWSH": {
-      "variable_type": "env_var",
-      "key": "DEBUG_PWSH",
-      "value": "ENC[AES256_GCM,data:bAMyAQ==,iv:KJu6CHejDaYwZ57BlIK5J/9FYrJzPFKvZksowzkhgus=,tag:huUIvUNzk1v2ym8gGWhCtQ==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    },
-    "DEPLOY_SUPPRESS_CERT_VERSION_UPDATE": {
-      "variable_type": "env_var",
-      "key": "DEPLOY_SUPPRESS_CERT_VERSION_UPDATE",
-      "value": "ENC[AES256_GCM,data:ylVgZQ==,iv:dpvztpXKy1I4LM6pP8FrqB9ug2PRbNFzvmE/FpZ23Bw=,tag:xYdF1DCNZ0B5ClMVPvF6MQ==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "none",
-      "description": ""
-    }
-  },
-  "prod": {
-    "AZ_CSES_DEPLOY_ID": {
-      "variable_type": "env_var",
-      "key": "AZ_CSES_DEPLOY_ID",
-      "value": "ENC[AES256_GCM,data:mVEBa3oIZmjJg9ExTw==,iv:BSmbcShr1M4wyZxTTnBb2O8xl8W5ngr0m9C1eb1rQaE=,tag:MYBh/yFyqG0JBboS24BQng==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "prod",
-      "description": ""
-    },
-    "AZ_SUB_ID_ASSETS": {
-      "variable_type": "env_var",
-      "key": "AZ_SUB_ID_ASSETS",
-      "value": "ENC[AES256_GCM,data:3bW0Il95SnptJBFM4q4XP0orbg7dViRCLTVF2XYkqBgXzaBT,iv:CLsiBgqY8vizgGZDdv55g3WmrNhLSUp4NwVM6zxoVt4=,tag:XAkPY68U/YPLKmyeubpn8w==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "prod",
-      "description": "ENC[AES256_GCM,data:hfrYvslw,iv:EkAIzammiaUfeglYeH9H2KSk2Bpbqz0rayD8NT6hDpI=,tag:nW8ZtaJFscNQdMCBn6rwIw==,type:str]"
-    },
-    "AZ_SUB_ID_CSES": {
-      "variable_type": "env_var",
-      "key": "AZ_SUB_ID_CSES",
-      "value": "ENC[AES256_GCM,data:8NbJoWF1dZy15yhk9Ue/IA3RtbrC3vhQm7hoWmdt/eYS08Hi,iv:52OqJp0DBRgy3Sca5loRQyXehRwJtMeB7plWJZ2bv6E=,tag:I3/AZQLM6i6Qaa5WSU+ZCw==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "prod",
-      "description": "ENC[AES256_GCM,data:sfoDGliZ,iv:X8JpfqL803nisRbjodbJyDfaDjv9DCL24jm9K6hhT9M=,tag:YqVuiJesLB1lIr0F9bNQAA==,type:str]"
-    },
-    "BUILD_CONFIGURATION": {
-      "variable_type": "env_var",
-      "key": "BUILD_CONFIGURATION",
-      "value": "ENC[AES256_GCM,data:dcjfPNHBbw==,iv:sO2AsSQ9mmUP38UlvNFgmQkB8S3g5faDCrrx27sAsSo=,tag:3oHDNmJyjuevzntZ91+WIA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "prod",
-      "description": ""
-    },
-    "BUILD_CSCFG_PATH": {
-      "variable_type": "env_var",
-      "key": "BUILD_CSCFG_PATH",
-      "value": "ENC[AES256_GCM,data:na1bb6rwTUHIi+c9xIHXXHvwD7Lw1nsXuiEYnKDyi5MOEzC3y8IiAhVgse7qCWvR1lQ9NSo=,iv:AeF8jXOY+kJw3wx+XxKRwEgOu7olUfiJRTToEskocvI=,tag:ne2E1aIX2wx9/vTtPMH4FA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "prod",
-      "description": ""
-    },
-    "BUILD_RETENTION_DAYS": {
-      "variable_type": "env_var",
-      "key": "BUILD_RETENTION_DAYS",
-      "value": "ENC[AES256_GCM,data:SLSx,iv:Aq5AhIlQsMYFpcojLlQ6KtjT4g2ZUGLal+eJm2VhquA=,tag:wZL7emy8sqtx58Z6zdXuXw==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "prod",
-      "description": ""
-    },
-    "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE": {
-      "variable_type": "env_var",
-      "key": "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE",
-      "value": "ENC[AES256_GCM,data:689S2A==,iv:zW/ockE27VihL5khR59E+2cNsbS+4swN15noYHc8XNE=,tag:fBl9wvilVDeQ5px1KrcdSw==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "prod",
-      "description": ""
-    }
-  },
-  "stage": {
-    "AZ_CSES_DEPLOY_ID": {
-      "variable_type": "env_var",
-      "key": "AZ_CSES_DEPLOY_ID",
-      "value": "ENC[AES256_GCM,data:SPbmF5g0HZyObGm0FQ==,iv:uVS0KJ9ENzWhUCl/fGniRSTGtoN0YGfmivVV0l2EY1U=,tag:gYIis18mw9ovnfAtkrLO5g==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "stage",
-      "description": ""
-    },
-    "AZ_SUB_ID_ASSETS": {
-      "variable_type": "env_var",
-      "key": "AZ_SUB_ID_ASSETS",
-      "value": "ENC[AES256_GCM,data:fpeRfNDFurAjvIQHUYGgGjs02QIxDEdf0/OJIQIknK8JETA4,iv:xn7J9D3rsjcPmDZAxOpWwLHTq0BnV6ABaivcTp6hvcQ=,tag:PEb6RrGOAgu3KlcvYtBQGA==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "stage",
-      "description": "ENC[AES256_GCM,data:QjTg6lGt,iv:mYl49oxakn8skva3KTFXKVXBtPBmqDaZmy5bwymiDwQ=,tag:hL6WOxkyCIXtJQd47c8dbg==,type:str]"
-    },
-    "AZ_SUB_ID_CSES": {
-      "variable_type": "env_var",
-      "key": "AZ_SUB_ID_CSES",
-      "value": "ENC[AES256_GCM,data:jbG5NHSwg3cS4aR5cJiAtnn9z23SNtc++jM1jSZ7ryhl9Huf,iv:u5Kpip47PWawMdCFDIM25JvJMlDNzKBdjxtMpARagfg=,tag:x0ZOOjMMsaI6pm0MEZyu2A==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "stage",
-      "description": "ENC[AES256_GCM,data:tTIABYzv,iv:s0CPKJN0cu3LnFDkGKbJzax9g7+/k1LYZoHxRJyxu/I=,tag:xxLhI1vGp7UBYv8mf9UM9A==,type:str]"
-    },
-    "BUILD_CONFIGURATION": {
-      "variable_type": "env_var",
-      "key": "BUILD_CONFIGURATION",
-      "value": "ENC[AES256_GCM,data:y+pT1Oe6GZ4=,iv:BuYXw0PPJmHWX27vy9FjEhZt7xLLoWWwqWvDNLJDO6I=,tag:MVd9Es03Z7IhHnFRUZhh6g==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "stage",
-      "description": ""
-    },
-    "BUILD_CSCFG_PATH": {
-      "variable_type": "env_var",
-      "key": "BUILD_CSCFG_PATH",
-      "value": "ENC[AES256_GCM,data:rJp6qp1QLynxCuWFK37p8cPGjnxBPRGB2Y9WIxM7La/qrhDNsYKu5tqDyr2aoekJqq1ZLq+D,iv:lHqmKFx1wyDFpzh6i89lkiV7SeCDlxmDNq1WDN6DwN4=,tag:H3YQinnOyyPP+KYeLtTA3g==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": true,
-      "raw": true,
-      "environment_scope": "stage",
-      "description": ""
-    },
-    "BUILD_RETENTION_DAYS": {
-      "variable_type": "env_var",
-      "key": "BUILD_RETENTION_DAYS",
-      "value": "ENC[AES256_GCM,data:n4o=,iv:GAQMn8+FF38BnjH9d8Y2Tk7OyqVIgL0uDQBDo/khJUw=,tag:ir4k6p7+K+gHWq1kloa15A==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "stage",
-      "description": ""
-    },
-    "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE": {
-      "variable_type": "env_var",
-      "key": "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE",
-      "value": "ENC[AES256_GCM,data:3y0TGQ==,iv:a8JnKzCUnIL0Q9TwSUvsLjBKlV1S9MouV8LjJC73hr0=,tag:zjy1XbhXavcaxEJdH5Wjzg==,type:str]",
-      "hidden": false,
-      "protected": false,
-      "masked": false,
-      "raw": true,
-      "environment_scope": "stage",
-      "description": ""
-    }
-  },
-  "sops": {
-    "lastmodified": "2026-05-15T08:38:24Z",
-    "mac": "ENC[AES256_GCM,data:WBzC/OJY0QyIowpq1FvWVzb2o4sCUaZUEIu2UeLdN2PyU+r2DDiT8x9XBKN/Gv2rtRTeFcQ7R/wnI3MhbCzXNhC3CtcDRVUggNofbEWssTrzKWG+Xiv5Uqpv1A4q7RVUlvOQDXP+kbKiszuWPPnNC5LaMuCsC/t33xVGuvOckcA=,iv:THHGmziD8YgTLv9AQUHM9MEQuJ682QiBUncqYWLWvG4=,tag:MUr7mMdt6pYbpOPm0NVIEw==,type:str]",
-    "pgp": [
-      {
-        "created_at": "2026-05-15T08:38:23Z",
-        "enc": "-----BEGIN PGP MESSAGE-----\n\nhQGMA4KMO5ZgOOZwAQwApzmnLdztQjA/117CROAc2oWlmhrqdOZV2dnIrj3wb79p\nYBfq9rQett2s8xtAgqp7ouxB3Cu+P4X/BrXOk3Nlq6zM2zKmCWFNKmj2qoKLj3Mb\nLu+642BVPZLK3cuN7sun1VQX6ikgELbhwfVkCH71Qwia9ptrbIs+yD9ZctsMZvnD\n2e/ExqDuz+3hcWf6OZ3a856XsLjiHV92WxQxSPR60aCSwN0rFOriWzA1+OEQwa+x\nsjC3piDZeKJ1RcEaKXp943bB+lQ9lUxQyPL/Gx2baD5JPNQyCI7frOyXzCXtsJVQ\nLzqW6YuiI92Y5cyA/rA39ZxNK/0ksly3J98pU9iOYKLvfg3hX32/Lf47v1zpWwU0\n8N4gmhGKaytXU6MhJRiNcORXsaARSC80TZBtD4s0oIIaVqDZKrWKX72rMIckwg0c\npF5fYv3lIG+l37N7mlYC6xxBykQQjtIuUL8eHKAcsaPBXj0Eb4ZbLe3I2Mt1n/ld\nPKFYRBKqRBZctkx9zh8S0lwBMWIffyAYsHhfFVbAf+qZ5HMN25TnheicHoFKtXO6\n/pyrKWcqh0FxXYyMSi9ctIx2mG/Rg8MzKt0JYiwmOg3VFNtyAulMDyhHXc5n57ca\niIeoiTWRMMrFdvrfTA==\n=vTcD\n-----END PGP MESSAGE-----",
-        "fp": "E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3"
-      }
-    ],
-    "encrypted_regex": "^( |description| |value| )$",
-    "version": "3.12.1"
-  }
+	"*": {
+		"AZ_BUILD_VM_NM": {
+			"variable_type": "env_var",
+			"key": "AZ_BUILD_VM_NM",
+			"value": "ENC[AES256_GCM,data:Wk2sUSdWEb0JEbmPI7Kd6rEVrPhZ+RU=,iv:35uujw7eK9j2eUg30ISFu/NnLsWDdhzWlGtbyeZ8p+c=,tag:un9JXuIUKLei+JJoUkcNkw==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		},
+		"AZ_BUILD_VM_RG_NM": {
+			"variable_type": "env_var",
+			"key": "AZ_BUILD_VM_RG_NM",
+			"value": "ENC[AES256_GCM,data:azIOcc6wF517Jupg0nX+jTsuyueVhCg=,iv:FH2ppA5i+9TXLjats4vm/kgkPRLW4kUkcpg1XOn79dk=,tag:Qeu/SIzijx9VH+CqXgUoig==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		},
+		"AZ_SP_ID": {
+			"variable_type": "env_var",
+			"key": "AZ_SP_ID",
+			"value": "ENC[AES256_GCM,data:h97/N68VQs3lXcnm2hAu4VXQSsFeJIA1s4X1+JcGgjDeQKLG,iv:qmJU+nkAEFfNktVaIBFxiYF7wf9NU8H+lrcWR8mjNCM=,tag:QgU81hALBHEM4hmE8gXz3A==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": "ENC[AES256_GCM,data:fBvncV8XaQ1P8EqXfwOJesZy2nZvIOmpd7NxkugDnXVvdVoHbhU=,iv:W8iQvMDCQRv/tJ0JZUzoRN4UNzC2xMe5HQpBzT60la0=,tag:SVRREPNBrQ5wVaRtaFyrlA==,type:str]"
+		},
+		"AZ_SP_SECRET": {
+			"variable_type": "env_var",
+			"key": "AZ_SP_SECRET",
+			"value": "ENC[AES256_GCM,data:Edj+A07XIGIm2urO8f7yw5aJ5jTPqngsG51yeA23kjJ4d1S+gMkWww==,iv:p2EuRRQDwLzVO6J7lHjuN2yyKn1OmJIamBtyQYxNFTA=,tag:lPfjmCSMVoXVAq5w7lHAUQ==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": "ENC[AES256_GCM,data:Ru+k3F4EuM9TsmKE0f7iUSceOxYnYyalOFnV9tGhqQlz7+far3n7owFFov9r6/4=,iv:P9ti+7BH4II31rWFMUMQpgEmld3Q3NZHli0ggnmw0tE=,tag:cCx2nYa5XoVW2jALPbUwtQ==,type:str]"
+		},
+		"AZ_ST_CON_NM": {
+			"variable_type": "env_var",
+			"key": "AZ_ST_CON_NM",
+			"value": "ENC[AES256_GCM,data:zevvlTeVVOtQ/PlI7A==,iv:ma21eF0xpAFvV0A7+m20Po3Fk74I+G4xtJMTMGbaoYU=,tag:cFGgsD+h1PFeYdPwKQ+zGg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		},
+		"AZ_SUB_ID_BUILDVM": {
+			"variable_type": "env_var",
+			"key": "AZ_SUB_ID_BUILDVM",
+			"value": "ENC[AES256_GCM,data:F0x6ZwXVURSnc8zyCfJWmb06wtb/zVVMdhToHV+2CEdMHpwS,iv:aWKt4sLOerF2Kqku8rj9i6mVC3NHzDhGvOVI3wQs+ko=,tag:nk055jLIEDXOQTZ1swnsmA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": "ENC[AES256_GCM,data:HM+zZYaRwQ==,iv:+vKFLnIlAjdcWHqp9U2puBec0P+JGDYmjKGvMQTi+Aw=,tag:zB/Uu9DhEBnKfPAVdMNxUQ==,type:str]"
+		},
+		"AZ_TENANT_ID": {
+			"variable_type": "env_var",
+			"key": "AZ_TENANT_ID",
+			"value": "ENC[AES256_GCM,data:k0iEKcKp/gjv0d869n4V8tVY2KJJoVKH9ym4k30+RpDPHPwT,iv:oTuRVShjsaiJgrRg+VM84CRKIyF72lmSFryEaXXWzBU=,tag:JWxxt+2lWkCHtzKKsF0FRw==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		},
+		"BUILD_BLOB_COMMON_PREFIX": {
+			"variable_type": "env_var",
+			"key": "BUILD_BLOB_COMMON_PREFIX",
+			"value": "ENC[AES256_GCM,data:WFvnNKZpHVPGTj1JPPv52wj9Le/dCtJuOO0GactIsXU=,iv:Tts9zJVKlEA1Ud273ojUZtBy1ZMPYUlAgLFVUzllOno=,tag:MWdXtsldxR496CRoBRQNVA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		},
+		"BUILD_CODE_PATH": {
+			"variable_type": "env_var",
+			"key": "BUILD_CODE_PATH",
+			"value": "ENC[AES256_GCM,data:5ux2eQ==,iv:UnC0leioMy1H7eD6nQx8Z82PsfT/dMQEMNNfFKeAuBw=,tag:r415gYsGuZahafRNwITjbQ==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		},
+		"BUILD_SLN_NAME": {
+			"variable_type": "env_var",
+			"key": "BUILD_SLN_NAME",
+			"value": "ENC[AES256_GCM,data:rJ7Gp0ncSos=,iv:dpBr6GamLkjUCkqW74dAjpeux4ulXTH3waS3yJdFwRA=,tag:VtLRkoxUPbf6VK5ScXtrbQ==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		},
+		"RUNNER_TAG": {
+			"variable_type": "env_var",
+			"key": "RUNNER_TAG",
+			"value": "ENC[AES256_GCM,data:pQldvttk/+YqkWesE03OhKmM,iv:KyiE+DFBDaQ0rOby7vYOrbI8MxPqf84YPBjWGjPmn/o=,tag:Asj1pnX0nGHrJuZw+DJD+Q==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "*",
+			"description": ""
+		}
+	},
+	"dev": {
+		"AZ_CSES_DEPLOY_ID": {
+			"variable_type": "env_var",
+			"key": "AZ_CSES_DEPLOY_ID",
+			"value": "ENC[AES256_GCM,data:6vPqY7MNfV3H5n5HlQ==,iv:ElO1w31qrkr7Huz8MKe1G5cRGgbSMIrJrMwPXJI7968=,tag:/KFKT0CF71XqFqFoEylMyA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": ""
+		},
+		"AZ_SUB_ID_ASSETS": {
+			"variable_type": "env_var",
+			"key": "AZ_SUB_ID_ASSETS",
+			"value": "ENC[AES256_GCM,data:jEWUJlqwUwxXgEa4+F6mM9M3NUKFnL3SZgNP/K7sOSGiQ42m,iv:jKrL4CD6Ib9rrf89ymMtsHK27oQexU5eeyOlSLosSt0=,tag:SrSVcZWgGx0di8I34K1aWQ==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": "ENC[AES256_GCM,data:ZDuzUo30,iv:VfIIO6e5IJdY+PGaMTBOKpC8faLhwZNMmiKkjxrfzTQ=,tag:lEu+8qHPZHCGAN92CfDlJg==,type:str]"
+		},
+		"AZ_SUB_ID_CSES": {
+			"variable_type": "env_var",
+			"key": "AZ_SUB_ID_CSES",
+			"value": "ENC[AES256_GCM,data:wklKP+FBIgT2jb2KCY08krZJJ1R4tA1BY7qDaeB8x/8S0t4R,iv:eSmlKWvoin5XrUeteUeNrfxXoiylHfsCHk3lvaUwgU4=,tag:NHpeq6FDxa53LiohhaPteg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": "ENC[AES256_GCM,data:wo9VwYbl,iv:rTAK1j0Z+ma6pRrHXOGAFMmiTQVwYi5rAaUaZgQtzTs=,tag:Q/mSeVGfNmvXhklpD8GHLA==,type:str]"
+		},
+		"BUILD_CONFIGURATION": {
+			"variable_type": "env_var",
+			"key": "BUILD_CONFIGURATION",
+			"value": "ENC[AES256_GCM,data:KG3gI5LW,iv:xgyaD49SnUcwB0jQsUdMVJviZ1+B3gGuluyO9obUHEY=,tag:NwnMWR7OqxmUHxqb4t2y9Q==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": ""
+		},
+		"BUILD_CSCFG_PATH": {
+			"variable_type": "env_var",
+			"key": "BUILD_CSCFG_PATH",
+			"value": "ENC[AES256_GCM,data:pShF1ZliBoi4oBPGnN2YgNugcc32NqoEQgXzMyirfg865Cd4Xo1WCtdn96YvqL7bEEzVHg==,iv:bgwuyHqCPrLMGm/zP1EQ1SB2hbGENNN1pgFpoB8DdCQ=,tag:p3ynnn3X4EhEt9jy9T90wA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": ""
+		},
+		"BUILD_RETENTION_DAYS": {
+			"variable_type": "env_var",
+			"key": "BUILD_RETENTION_DAYS",
+			"value": "ENC[AES256_GCM,data:iO0=,iv:TKRnhy3zEQuAEddaXFQY1sSQpgeIS3PGC/bB0QxCldo=,tag:mDskhfzPcPqDhDYc8AfnbA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": ""
+		},
+		"DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE": {
+			"variable_type": "env_var",
+			"key": "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE",
+			"value": "ENC[AES256_GCM,data:Q64XCw==,iv:BwAx7bdVwDYNynHyncMDNCuENCguPlGLTEp/9MWG4cA=,tag:dk2Zi6xpcjjkbF0qmwcmJg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": ""
+		},
+		"DEPLOY_WHEN": {
+			"variable_type": "env_var",
+			"key": "DEPLOY_WHEN",
+			"value": "ENC[AES256_GCM,data:YMsMY1IQ,iv:mscBlICt6udWS0H421OvrFqprrja1d58opmOyF36LBw=,tag:Zk0z0F8k3PGcDd3JgWFc1Q==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": ""
+		},
+		"DEPLOY_WHEN_RGX_COMMIT_BRANCH": {
+			"variable_type": "env_var",
+			"key": "DEPLOY_WHEN_RGX_COMMIT_BRANCH",
+			"value": "ENC[AES256_GCM,data:VxokuQZzxUCjVDAcbQ/4aTo=,iv:6wosijFHlOfB79sP4Ulxq1gvXz6E1cNjjfwSoIFqlf8=,tag:zTPqLUW3igspmKL4cBugLg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "dev",
+			"description": ""
+		}
+	},
+	"none": {
+		"AZ_CSES_NM": {
+			"variable_type": "env_var",
+			"key": "AZ_CSES_NM",
+			"value": "ENC[AES256_GCM,data:qUVY7v0oeJY5tt8KNvWxYg==,iv:yeI4HJsJxwOcMvu7bkGg91CUcs8YjVVcIn/+UMbS/lI=,tag:O0ttmuHyQnnzuvMZfuzy6A==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"AZ_CSES_RG_NM": {
+			"variable_type": "env_var",
+			"key": "AZ_CSES_RG_NM",
+			"value": "ENC[AES256_GCM,data:JQy2KUxnDcj3TA==,iv:ARNofr9Mwk6if4Jj3i82mAbb2Wbxa3iNE2oVf2Bu2bM=,tag:pl4fbEcTT+Hr9eCJWGGUUA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"AZ_ST_NM": {
+			"variable_type": "env_var",
+			"key": "AZ_ST_NM",
+			"value": "ENC[AES256_GCM,data:UWycX1KxlSzH,iv:/mqtPfeRiA7PF37AV8ENCyoO0XZcie4jlmnrxaFPW5U=,tag:mTS3KnqEGcPFO064AhhrKA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"BUILD_ALLOW_ARTIFACT_OVERWRITE": {
+			"variable_type": "env_var",
+			"key": "BUILD_ALLOW_ARTIFACT_OVERWRITE",
+			"value": "ENC[AES256_GCM,data:H0vyIA==,iv:jk20jwLtUYyVEuruFzW7JNvQYvKzkUMLH1ynzhJJhGM=,tag:KIUL9w9uqgJkcV19R/y1Sg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"BUILD_AUTO_UPDATE_CSCFG_FULL": {
+			"variable_type": "env_var",
+			"key": "BUILD_AUTO_UPDATE_CSCFG_FULL",
+			"value": "ENC[AES256_GCM,data:lr6xPQ==,iv:RhhlAphDtoA9EehxcBheDcPlNdlcmH9HY6SJDJkoXSc=,tag:zn6yC6HIUrTBhrNFMyHgpw==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"BUILD_SUPPRESS_TRANSFORMS": {
+			"variable_type": "env_var",
+			"key": "BUILD_SUPPRESS_TRANSFORMS",
+			"value": "ENC[AES256_GCM,data:R4Lvzg==,iv:4wiTm2iZ0ivPifUpDQDdM3NleXbd7+rFdOq34OMkY4k=,tag:lDgxs776NrVn3TDvuzE9tA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"BUILD_SUPPRESS_UPDATE_CSCFG_CERT_THUMB": {
+			"variable_type": "env_var",
+			"key": "BUILD_SUPPRESS_UPDATE_CSCFG_CERT_THUMB",
+			"value": "ENC[AES256_GCM,data:CwNn2Q==,iv:QZ3lhFfu4jxXm7MUKZtVMaoecEiQdg3v1cNOWLCq9Ho=,tag:UjZSZ/WZLH+Uj2jhTFDqmg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"DEBUG_PWSH": {
+			"variable_type": "env_var",
+			"key": "DEBUG_PWSH",
+			"value": "ENC[AES256_GCM,data:bAMyAQ==,iv:KJu6CHejDaYwZ57BlIK5J/9FYrJzPFKvZksowzkhgus=,tag:huUIvUNzk1v2ym8gGWhCtQ==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"DEPLOY_SUPPRESS_CERT_VERSION_UPDATE": {
+			"variable_type": "env_var",
+			"key": "DEPLOY_SUPPRESS_CERT_VERSION_UPDATE",
+			"value": "ENC[AES256_GCM,data:ylVgZQ==,iv:dpvztpXKy1I4LM6pP8FrqB9ug2PRbNFzvmE/FpZ23Bw=,tag:xYdF1DCNZ0B5ClMVPvF6MQ==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		},
+		"DISABLE_CI": {
+			"variable_type": "env_var",
+			"key": "DISABLE_CI",
+			"value": "ENC[AES256_GCM,data:JVFZCQ==,iv:mN6k5UH+3haJdgAF1GWz+iP1vy8WegAr9TjP0hhowlM=,tag:uiAEMX/kzoVOSbzCHTKPBg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "none",
+			"description": ""
+		}
+	},
+	"prod": {
+		"AZ_CSES_DEPLOY_ID": {
+			"variable_type": "env_var",
+			"key": "AZ_CSES_DEPLOY_ID",
+			"value": "ENC[AES256_GCM,data:mVEBa3oIZmjJg9ExTw==,iv:BSmbcShr1M4wyZxTTnBb2O8xl8W5ngr0m9C1eb1rQaE=,tag:MYBh/yFyqG0JBboS24BQng==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "prod",
+			"description": ""
+		},
+		"AZ_SUB_ID_ASSETS": {
+			"variable_type": "env_var",
+			"key": "AZ_SUB_ID_ASSETS",
+			"value": "ENC[AES256_GCM,data:3bW0Il95SnptJBFM4q4XP0orbg7dViRCLTVF2XYkqBgXzaBT,iv:CLsiBgqY8vizgGZDdv55g3WmrNhLSUp4NwVM6zxoVt4=,tag:XAkPY68U/YPLKmyeubpn8w==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "prod",
+			"description": "ENC[AES256_GCM,data:hfrYvslw,iv:EkAIzammiaUfeglYeH9H2KSk2Bpbqz0rayD8NT6hDpI=,tag:nW8ZtaJFscNQdMCBn6rwIw==,type:str]"
+		},
+		"AZ_SUB_ID_CSES": {
+			"variable_type": "env_var",
+			"key": "AZ_SUB_ID_CSES",
+			"value": "ENC[AES256_GCM,data:8NbJoWF1dZy15yhk9Ue/IA3RtbrC3vhQm7hoWmdt/eYS08Hi,iv:52OqJp0DBRgy3Sca5loRQyXehRwJtMeB7plWJZ2bv6E=,tag:I3/AZQLM6i6Qaa5WSU+ZCw==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "prod",
+			"description": "ENC[AES256_GCM,data:sfoDGliZ,iv:X8JpfqL803nisRbjodbJyDfaDjv9DCL24jm9K6hhT9M=,tag:YqVuiJesLB1lIr0F9bNQAA==,type:str]"
+		},
+		"BUILD_CONFIGURATION": {
+			"variable_type": "env_var",
+			"key": "BUILD_CONFIGURATION",
+			"value": "ENC[AES256_GCM,data:dcjfPNHBbw==,iv:sO2AsSQ9mmUP38UlvNFgmQkB8S3g5faDCrrx27sAsSo=,tag:3oHDNmJyjuevzntZ91+WIA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "prod",
+			"description": ""
+		},
+		"BUILD_CSCFG_PATH": {
+			"variable_type": "env_var",
+			"key": "BUILD_CSCFG_PATH",
+			"value": "ENC[AES256_GCM,data:na1bb6rwTUHIi+c9xIHXXHvwD7Lw1nsXuiEYnKDyi5MOEzC3y8IiAhVgse7qCWvR1lQ9NSo=,iv:AeF8jXOY+kJw3wx+XxKRwEgOu7olUfiJRTToEskocvI=,tag:ne2E1aIX2wx9/vTtPMH4FA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "prod",
+			"description": ""
+		},
+		"BUILD_RETENTION_DAYS": {
+			"variable_type": "env_var",
+			"key": "BUILD_RETENTION_DAYS",
+			"value": "ENC[AES256_GCM,data:SLSx,iv:Aq5AhIlQsMYFpcojLlQ6KtjT4g2ZUGLal+eJm2VhquA=,tag:wZL7emy8sqtx58Z6zdXuXw==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "prod",
+			"description": ""
+		},
+		"DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE": {
+			"variable_type": "env_var",
+			"key": "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE",
+			"value": "ENC[AES256_GCM,data:689S2A==,iv:zW/ockE27VihL5khR59E+2cNsbS+4swN15noYHc8XNE=,tag:fBl9wvilVDeQ5px1KrcdSw==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "prod",
+			"description": ""
+		}
+	},
+	"stage": {
+		"AZ_CSES_DEPLOY_ID": {
+			"variable_type": "env_var",
+			"key": "AZ_CSES_DEPLOY_ID",
+			"value": "ENC[AES256_GCM,data:SPbmF5g0HZyObGm0FQ==,iv:uVS0KJ9ENzWhUCl/fGniRSTGtoN0YGfmivVV0l2EY1U=,tag:gYIis18mw9ovnfAtkrLO5g==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "stage",
+			"description": ""
+		},
+		"AZ_SUB_ID_ASSETS": {
+			"variable_type": "env_var",
+			"key": "AZ_SUB_ID_ASSETS",
+			"value": "ENC[AES256_GCM,data:fpeRfNDFurAjvIQHUYGgGjs02QIxDEdf0/OJIQIknK8JETA4,iv:xn7J9D3rsjcPmDZAxOpWwLHTq0BnV6ABaivcTp6hvcQ=,tag:PEb6RrGOAgu3KlcvYtBQGA==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "stage",
+			"description": "ENC[AES256_GCM,data:QjTg6lGt,iv:mYl49oxakn8skva3KTFXKVXBtPBmqDaZmy5bwymiDwQ=,tag:hL6WOxkyCIXtJQd47c8dbg==,type:str]"
+		},
+		"AZ_SUB_ID_CSES": {
+			"variable_type": "env_var",
+			"key": "AZ_SUB_ID_CSES",
+			"value": "ENC[AES256_GCM,data:jbG5NHSwg3cS4aR5cJiAtnn9z23SNtc++jM1jSZ7ryhl9Huf,iv:u5Kpip47PWawMdCFDIM25JvJMlDNzKBdjxtMpARagfg=,tag:x0ZOOjMMsaI6pm0MEZyu2A==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "stage",
+			"description": "ENC[AES256_GCM,data:tTIABYzv,iv:s0CPKJN0cu3LnFDkGKbJzax9g7+/k1LYZoHxRJyxu/I=,tag:xxLhI1vGp7UBYv8mf9UM9A==,type:str]"
+		},
+		"BUILD_CONFIGURATION": {
+			"variable_type": "env_var",
+			"key": "BUILD_CONFIGURATION",
+			"value": "ENC[AES256_GCM,data:y+pT1Oe6GZ4=,iv:BuYXw0PPJmHWX27vy9FjEhZt7xLLoWWwqWvDNLJDO6I=,tag:MVd9Es03Z7IhHnFRUZhh6g==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "stage",
+			"description": ""
+		},
+		"BUILD_CSCFG_PATH": {
+			"variable_type": "env_var",
+			"key": "BUILD_CSCFG_PATH",
+			"value": "ENC[AES256_GCM,data:rJp6qp1QLynxCuWFK37p8cPGjnxBPRGB2Y9WIxM7La/qrhDNsYKu5tqDyr2aoekJqq1ZLq+D,iv:lHqmKFx1wyDFpzh6i89lkiV7SeCDlxmDNq1WDN6DwN4=,tag:H3YQinnOyyPP+KYeLtTA3g==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": true,
+			"raw": true,
+			"environment_scope": "stage",
+			"description": ""
+		},
+		"BUILD_RETENTION_DAYS": {
+			"variable_type": "env_var",
+			"key": "BUILD_RETENTION_DAYS",
+			"value": "ENC[AES256_GCM,data:n4o=,iv:GAQMn8+FF38BnjH9d8Y2Tk7OyqVIgL0uDQBDo/khJUw=,tag:ir4k6p7+K+gHWq1kloa15A==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "stage",
+			"description": ""
+		},
+		"DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE": {
+			"variable_type": "env_var",
+			"key": "DEPLOY_ALLOW_CSCFG_CSES_PROFILES_UPDATE",
+			"value": "ENC[AES256_GCM,data:3y0TGQ==,iv:a8JnKzCUnIL0Q9TwSUvsLjBKlV1S9MouV8LjJC73hr0=,tag:zjy1XbhXavcaxEJdH5Wjzg==,type:str]",
+			"hidden": false,
+			"protected": false,
+			"masked": false,
+			"raw": true,
+			"environment_scope": "stage",
+			"description": ""
+		}
+	},
+	"sops": {
+		"lastmodified": "2026-06-05T07:26:37Z",
+		"mac": "ENC[AES256_GCM,data:nZeTsCqS6ZBf5L0uLNx7Iae0YR1+7thkpRfbwLAI0c1mFmWxFFVMmaIvg3/71eEqc4nj7y8aL8dTA3DI62hBzwXPZIXi6s2k0TlWJFLVbXE6IFPlr80cAQJ1RS3dfyaxQZP3+lpPtCU34jE2QU4XPtyebCME5cxaAlJ2NEhbJNM=,iv:PrldAIsxPTqkwcsXiZY9N8tjH3knL6xVDlNipiHEfHg=,tag:FAstbip5PfdOKoustO0ulA==,type:str]",
+		"pgp": [
+			{
+				"created_at": "2026-05-15T08:38:23Z",
+				"enc": "-----BEGIN PGP MESSAGE-----\n\nhQGMA4KMO5ZgOOZwAQwApzmnLdztQjA/117CROAc2oWlmhrqdOZV2dnIrj3wb79p\nYBfq9rQett2s8xtAgqp7ouxB3Cu+P4X/BrXOk3Nlq6zM2zKmCWFNKmj2qoKLj3Mb\nLu+642BVPZLK3cuN7sun1VQX6ikgELbhwfVkCH71Qwia9ptrbIs+yD9ZctsMZvnD\n2e/ExqDuz+3hcWf6OZ3a856XsLjiHV92WxQxSPR60aCSwN0rFOriWzA1+OEQwa+x\nsjC3piDZeKJ1RcEaKXp943bB+lQ9lUxQyPL/Gx2baD5JPNQyCI7frOyXzCXtsJVQ\nLzqW6YuiI92Y5cyA/rA39ZxNK/0ksly3J98pU9iOYKLvfg3hX32/Lf47v1zpWwU0\n8N4gmhGKaytXU6MhJRiNcORXsaARSC80TZBtD4s0oIIaVqDZKrWKX72rMIckwg0c\npF5fYv3lIG+l37N7mlYC6xxBykQQjtIuUL8eHKAcsaPBXj0Eb4ZbLe3I2Mt1n/ld\nPKFYRBKqRBZctkx9zh8S0lwBMWIffyAYsHhfFVbAf+qZ5HMN25TnheicHoFKtXO6\n/pyrKWcqh0FxXYyMSi9ctIx2mG/Rg8MzKt0JYiwmOg3VFNtyAulMDyhHXc5n57ca\niIeoiTWRMMrFdvrfTA==\n=vTcD\n-----END PGP MESSAGE-----",
+				"fp": "E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3"
+			}
+		],
+		"encrypted_regex": "^( |description| |value| )$",
+		"version": "3.12.1"
+	}
 }
