@@ -1,13 +1,13 @@
 accounts:
     meteoapp_net:
-        METEO-web-dev:
-            - bvm: ENC[AES256_GCM,data:zT4P4cQZsy1qr91DKm/9,iv:w9A2Wmk1koiWruL2YJjBP1PhQwicY0eix2N5e+SJ2no=,tag:PGwLoRdBowuglZMond8jDQ==,type:str]
-              name: ENC[AES256_GCM,data:p8NDo/f2/F8QU24dA9bg8tjLiNp7ed8=,iv:HXFw4cNEa15po6wUERSKmFDHdO5/xbrgXL+sZWnitCs=,tag:hAzeVuuOm3pu3oM9urIV7A==,type:str]
+        METEO-web-prod:
+            - bvm: ENC[AES256_GCM,data:6lRQAG6uQ0v6dMiGIN//JyHtVfpFWWVadXsp,iv:AC9EpBPDu+3J+Qi9gLrIsBxjyalbclzLKGT1cUI0kA4=,tag:Awa1ZHPO8A3H7h10/EE+DQ==,type:str]
+              name: ENC[AES256_GCM,data:GAzsgfQ9T+QjIwwd1d/B5otGpZq2nKw=,iv:z/joZXZ/e8n18kfpdvJumwg69ql6jodLduL/tVljmYY=,tag:rOtw/IzHv2Ko4OuWqjLTJQ==,type:str]
               snets:
-                - ENC[AES256_GCM,data:Bu/EOXcQX+1hFYbyDmUTzpxZnvhlQ2VrEy3dCMSD0f1eqqxhDV4c8HUeuc7ieHxNY0w3w2AE/a0fJy9+USHPzPKOH11Iqiu4epH194X92j1eJmi0bWf+OL3ylT+4njNIFRdP5O2THozZcX0z1B+dv8SJeXBU880dE2yr6WElRYIBL1B4dplGtmPyzETdqVKo4USI4EHc5Wv0lNA5j58Xz+t5+MTlxMzoHRrDVt4SAb9lXWgdwAA0rrHLPu9E0Wvo3Zo=,iv:Qx/0eZbtD/iTwd9tKFFYv0PhJkyqt+CmmTAKwsbX7CA=,tag:OW4ttoN6YmOgjUz8esJ6MQ==,type:str]
+                - ENC[AES256_GCM,data:5qPSHZUqu94MJlsI50QJTiYGXUny2hlHynE/3Rw/JC7/OydnTqboH91A24tPgEv+7Y3JaMVkg9eQRTnLUCYdjaCg0RIz1F34nhnWvCy97diql7ui5Mw6ZSScrb0d90zDwnmYYMYVaDxuEgMVKGV/1PDkjFS8FfgPA3gRG2lsPEcSAW687yF+dap6thV8QO5FHHiKpnjvwCp33jnMuJl9WUVw5Fjy4jRDG2SWuZUHarxa9N6K3ZhWMwmFjiJDIIGkvOI=,iv:CN38jASwxuWKJ8kv3qOjJIHiKDuLTb9udEw+VRPm5nM=,tag:1pOLgLpu6DovHxyHvyhQog==,type:str]
 sops:
-    lastmodified: "2026-05-14T22:01:16Z"
-    mac: ENC[AES256_GCM,data:DLnz3gJ4FeQGU3kaKYsOwOq78BtG5EeVVUNne8hai2yubMGCiO6a31WNXw5wW3VjBUWlhnoIwIf1pikI5ayiwAMZvb9W1dUMulfpZ6riN2V6MS+LiePz15RNsAII/7F/mHtSphK3NsgaDCBn4RkncGBxmPKW4pdsP/Xx9qGqzZE=,iv:wWkBjx6jl5L2a/yfHp9rHnWCTbRHp85tnIXpGd5QrLo=,tag:tek9O3kmItvZ7GDJ4GQl/A==,type:str]
+    lastmodified: "2026-05-14T22:51:47Z"
+    mac: ENC[AES256_GCM,data:kQS0UzQlQA8DvqaNuo1C4XIJ9ZDid+/YppC+gYdIVRmaCr3dmvfxkqqD4SvUF4TaJKKn8g6mn+dxqUf74Y5Amf24JnPZKbUC6OXWpuMwnKDW2MfBh9+SAILJT1RW7MhBeagq5MF7c3B44hKSxvCdVFCaY7PyGUkFxsjm2YBXEQA=,iv:H/ZdUXHox5q0JYXBgzD1udzPbcqJh1vt1bslRW3Kp28=,tag:N26KiNMOL2MhPDGIcGKCbg==,type:str]
     pgp:
         - created_at: "2026-05-14T21:52:08Z"
           enc: |-
