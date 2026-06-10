@@ -1,0 +1,96 @@
+nano .tmux.conf
+nano .bashrc
+tmux
+
+df -h
+
+cd vm-dartcert
+# fn=wip.sh; rm -f $fn; nano $fn; . ./$fn
+fn=wip.sh; . ./$fn
+
+get_vm
+get_vm_nm -g $rg_nm; echo $vm_nm
+get_vm_nm -g $rg_nm; get_nsg_nm -g $rg_nm -n $vm_nm; read_vm_ip
+
+get_nsg_nm -g $rg_nm -n $vm_nm; echo $nsg_nm
+rule_nm=$(az network nsg rule list -g $rg_nm --nsg-name $nsg_nm --query "[].name" --output tsv | grep "ssh-cloud"); echo $rule_nm
+set_fwr -g $rg_nm -s $nsg_nm -n $rule_nm -a Allow
+
+az account show
+sub_nm=$(az account list --query "[?name == '$sub_filt'] | [].name" --output tsv); echo $sub_nm
+az account set -n $(az account list --query '[0].id' -o tsv);
+az account show;
+az policy state trigger-scan --no-wait
+az account set -s $sub_nm
+
+az vm list -o json --filter '[name]' | q
+for rg in $(az group list -o json --query '[].name' | jq -r '.[]') do; az vm list -g $rg -o json | jq; done
+for i in `az account list  -o tsv | awk '{print $3}'`; do az vm list --subscription $i --query [].[name] --output tsv; done
+for i in `az account list  -o tsv | awk '{print $3}'`; do for vm in `az vm list --subscription $i --query '[].{name, resourcegroupname}' --output json | jq -r '.[]'`; echo $vm; done; done
+
+az vm image list-offers --location northeurope --publisher Canonical --query "[?contains(id, '22')]"
+az vm image list-offers --location northeurope --publisher Canonical --query "[?contains(id, 'jammy')]"
+az vm image list-offers --location northeurope --publisher Canonical --query "[?contains(id, 'server')]"
+az vm image list-skus --location northeurope --publisher Canonical --offer 0001-com-ubuntu-server-jammy
+az vm image list -l $loc --publisher Canonical --offer 0001-com-ubuntu-server-jammy --sku 22_04-lts-gen2 --all --query "[0]" --output json
+az vm image list -l $loc --publisher Canonical --offer 0001-com-ubuntu-server-jammy --sku 22_04-lts-gen2 --all --output table
+
+
+sed 's/dartdv/dartpd/g' vm-create.sh
+grep -ie 'vmtest' vm-create.sh
+grep -ie 'dart' vm-create.sh
+
+. ./test-clin/vm-create.sh
+. ./vm-create.sh
+fn=vm-create.sh; rm -f $fn; nano $fn; . ./$fn
+
+
+az group list --query "[].name" --output tsv
+az group list --query "[?contains(name, 'dartmon')].name" --output tsv
+rg_nm=$(az group list --query "[?contains(name, 'dartmon')].name" --output tsv); echo $rg_nm
+
+read loc
+loc=$ACC_LOCATION; echo $loc
+read vm_nm
+ssh_un=azureuser
+
+az network public-ip list -g $rg_nm --output json | jq -r '.[0].ipAddress'
+vm_ip=$(az network public-ip list -g $rg_nm --output json | jq -r '.[0].ipAddress'); echo $vm_ip
+read vm_ip
+cat .ssh/config.tmpl | sed "s/IP_ADDR/$vm_ip/g" > .ssh/config; less .ssh/config
+
+
+setupAzure.sh
+setup_env
+
+
+delete_vm -g $rg_nm -n $vm_nm
+az vm delete -g $rg_nm -n $vm_nm --yes
+ssh-keygen -f "/home/andrew/.ssh/known_hosts" -R "$vm_ip"
+
+create_vm -g $rg_nm -n $vm_nm -l $loc -p Canonical
+create_vm -n $vm_nm -g $rg_nm
+
+az vm start -g $rg_nm -n $vm_nm
+ssh dartuser@$vm_ip 'sudo shutdown 0'
+az vm stop -g $rg_nm -n $vm_nm
+az vm deallocate -g $rg_nm -n $vm_nm
+az vm list -g $rg_nm --query "[].[name,provisioningState]"
+
+watch -n 10 -d "ssh -o ConnectTimeout=5 ${ssh_un}@${vm_ip} 'ls -al'"
+ssh dartuser@$vm_ip 'ip -f inet addr show'
+ssh -o ConnectTimeout=5 ${ssh_un}@${vm_ip}
+
+read pfx_fn
+scp $ssh_un@$vm_ip:~/dartcert/$pfx_fn ./
+scp $ssh_un@$vm_ip:~/dartcert/*.pfx ./
+
+
+nsg_nm=$(echo ${nsg_id/*/}); echo $nsg_nm
+
+create_fwr -g $rg_nm -n $vm_nm -p 80 -d "allow port 80 ssh" -f "allow-http-azcl-ne" -o 901
+create_fwr -g $rg_nm -n $vm_nm -p 80 -d "allow port 80 to VM"
+create_fwr -g $rg_nm -n $vm_nm -p 22 -d "allow port 22 ssh"
+az vm open-port -g $rg_nm -n $vm_nm --port 80
+
+curl -v http://$vm_ip
