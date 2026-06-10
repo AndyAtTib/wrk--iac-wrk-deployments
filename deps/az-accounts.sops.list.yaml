@@ -29,11 +29,16 @@ accounts:
               id: ENC[AES256_GCM,data:gxX+/TvsYrDSDJ9JkR6XWVCu4cyo8G2uau4xNFiLcpTRWpqT,iv:LljW8Fukx95q1rzVSoA2DuuMPLXazAt8RdDch0SeHS8=,tag:ey70ENwVk7HZJQhUAhiA1Q==,type:str]
             - user_label: ENC[AES256_GCM,data:N5ELjw5+wbSKj46eO50WuLT/pU48bKfOeFcAKNBtOkWQT2q3hDVyiEDGRUKo+D8akCikXYvC8hV5uWIZzgJryoRAuQVmPNtqMz0=,iv:YM0vDLvEJPgC2qZ0z83RfUMPYtxfjtgXe/v9X0hXds4=,tag:hh2URknbsLq9yb7JPtv5ew==,type:str]
               id: ENC[AES256_GCM,data:zmbfmKvH6oSMP3AJk2QXH1Z+3KlptILuSXHiAnRexdnW8lUO,iv:qwFNw/BEcL3uc5Xy9zHfY8cpPeZbNlCIgZ55zJ+H2yU=,tag:YFKZCkbT0gYx05fOaM0x3A==,type:str]
-        - managed_identity_principals: []
-        - service_principals: []
+        - managed_identity_principals:
+            - user_label: ENC[AES256_GCM,data:XXmxcrG1qPOqO/DTtN3GOHysHlckLRV9,iv:9c7oiTF1kp5luYFQbEGOwvIMx2Zx9iEJwlnItDoiHPY=,tag:DNhv5VNig+l6r0b8RzMDBA==,type:str]
+              id: ENC[AES256_GCM,data:KztpXMIIRbLLungj6ET07hvXf4VQBhsgUjxum5aUwC5+nrSB,iv:Yymp6A2GLwPGcgCabvWPNeOfamnLLARt8w2Mgx827Z4=,tag:rTow9TZttyzwok72PHqx9A==,type:str]
+              subscription: ENC[AES256_GCM,data:RTpnyg6qglho8WaZDg==,iv:4EB6Xr2lNYFL/rx3KDYF12GS8dv1IxpMxcKERfBMZLc=,tag:eehnhsm6JJIqTNyVnogM9g==,type:str]
+        - service_principals:
+            - user_label: ENC[AES256_GCM,data:6H1Sr/MOvO2jVES72oN27Aq4Letsj7p98QnjOFQNTLF2xJuKvbs=,iv:2Kt1COnFMm7AGQKZ/ZjTECsmRfZlG4sk1vdeNhQXL4A=,tag:jx+folpW6Al1/IzfFtGYrQ==,type:str]
+              id: ENC[AES256_GCM,data:I61/D7l8w1gqI9MYivBa13QXOrMXhe2RUJVmyN0EmCSTX562,iv:q2c5q2HyaUFxH3eIM/obxMyeWKfUftSArwXE6nfzrsM=,tag:F52deInXiLouSnhON5v1IQ==,type:str]
 sops:
-    lastmodified: "2026-05-14T22:51:39Z"
-    mac: ENC[AES256_GCM,data:M+BzhNfybliubnQG0tCFcYMuww5+owOrIvkIec0wQ26zmLQ9Jtdnaw68rpVumGn6iUVL0c7w5760oJrjyPeUoYl1dpbC7Rr7IOIvDXpl+rk5+3GIPbyK/+AhTSQ3AShYaBXYjxsQWyCLnIMprUPyKXNkzpK/q36PGZGiPLXNMsY=,iv:6mReF6d3JI3yzKD2RlKv1yPXxvJPBdutz/JYHBC+jD4=,tag:D52qxPmYTnt83c6nfR8wgg==,type:str]
+    lastmodified: "2026-05-14T23:04:56Z"
+    mac: ENC[AES256_GCM,data:JSEhePVqywU4NKWq+nrBbtsZ1nwirRJimVkyUSG9HWGYCLiowBaK6dgp+rMa0f++3cC9OJkTflDDzGs3jHox6Bz3vJiy/jwOqEpN12HjxowoCtZ9g3S3NNcJQJkpi7H3UZ4S2kuWLpMTJi8B0VQuhbHYyeHeYSqqNj9QhB8avN4=,iv:jXGw2N5zpjMSLc8e6HZfbEA1kLk04AFLMx+soMVnqm8=,tag:8ZANPtKRfDc5L9V+M/7yGw==,type:str]
     pgp:
         - created_at: "2026-05-14T21:51:08Z"
           enc: |-
