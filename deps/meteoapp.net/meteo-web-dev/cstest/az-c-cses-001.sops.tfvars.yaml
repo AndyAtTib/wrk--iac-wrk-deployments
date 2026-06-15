@@ -6,7 +6,7 @@ location: ENC[AES256_GCM,data:nSXZwoQHeeNoxjPr,iv:WQWwR0GfueJsOdhUUd2laUDmJYa9YN
 tag_contact_name: ENC[AES256_GCM,data:GDxIsq5jrkr+e1I=,iv:KSgGxDrEJ1IRDFgMT1BFzeQpSZTgTLxIBVLNsMEkzb0=,tag:U2FgnDMy1XQ08zl5ndDQaA==,type:str]
 project_name: ENC[AES256_GCM,data:MyzBCIwz,iv:zU93WNzJgEKWK52N637cOS30/RrRGTtHLz6n9Odmzg0=,tag:PEHIifNRbWwCfniDW4e0AQ==,type:str]
 cses_deploy_id: ENC[AES256_GCM,data:kRLya7MDBlw0DEOQkw==,iv:jNGZ2bkpeNmQrf/mAyEYzZ97qNXOB3g8F5QLAKnB0Uo=,tag:PqSKm6zeDexvB7nsZLZVrg==,type:str]
-phase: ENC[AES256_GCM,data:AulY,iv:YEJhhSPTXoZkPuNprRVGscCUwfpEe1sTJ9uY5NhPg6Q=,tag:pVWUHND3Ieek7e29NcpkqQ==,type:str]
+phase: ENC[AES256_GCM,data:r2fs,iv:HnDGvPE4a4rrYAfUg5SHe3PWgEhj09Mrv8Rdy9jDEIg=,tag:7np33tUb7Tms89khOW+2lA==,type:str]
 tf_operator_principal_ids:
     - user_label: ENC[AES256_GCM,data:nu3fGk1TaE2fhKdD3YxXSQUWwG3Y0ui4df/RV1Qt,iv:V/84dZVAcR24Mrol8nWfYJj3427TD/RXDl35JO+3qig=,tag:6RjiC+l1ELK3z4sP2RlG5g==,type:str]
       id: ENC[AES256_GCM,data:M7E2e1EXdxKHDCemqz61ZHFABb4RwwVq/P7E7iwyLoN8nKzv,iv:uZ6DtfB7L6QDMcHbcic7SPyaivM+AzuQvXeTk414tRo=,tag:BSo/XlNrpOfdBjxVWv3H3Q==,type:str]
@@ -45,8 +45,8 @@ subnet_address_prefixes:
     - ENC[AES256_GCM,data:BnN8/F6OykJNxe0=,iv:1VzlthXCDr4XxJ9Fzazek7AjrzJ98ODeqxGuUmx8Pm8=,tag:7am/DqIUeK+5dV8q1oFrDQ==,type:str]
     - ENC[AES256_GCM,data:WFROXxfQFSu13N/k,iv:7Z7in7HUYcn6JuS6aOwDuF9Oiy8dr954R/1PM9rsFPA=,tag:7B4PK/diIuD8dsCV55hNlQ==,type:str]
 sops:
-    lastmodified: "2026-06-15T12:25:08Z"
-    mac: ENC[AES256_GCM,data:WF158+Yat0Z7la8NdgFZ/q4oQ3X1XTtW7fHjxsvWi6XswqkBO3XD82q+oQzijq8Ujf5hxrCezOWbqrCRGvcL2vmWpHAg6JIzSr5n1oF2WWMlYiAANLMpVPE/mH/csYr/erCLvZ/Oeh5RE3SDHy0gpfeIlvxNkMxuyvBEJTq2394=,iv:UVMFR7uJ/NvwQipIfC2ERXJQyszwdz8FhLV+oo4ICB0=,tag:4EGoCtNsf4qDyubV3RDTbQ==,type:str]
+    lastmodified: "2026-06-15T13:45:26Z"
+    mac: ENC[AES256_GCM,data:n7O9d45T4Vgdvl/7BnjheWYDNwaU0NrYjmdUZKcJ8M56Z0B094v63gWH304wR92ryXO8YCgXwzpyOK+yZ5n9f3uay5TrNv5Ue2FxGPR6O46dx0C10+j/0ZpBFGx+DL/3I0JqR43xNg4+nCwc5P0BX0HLdLW2wdqPiwFhKSynP/U=,iv:2uILh2s9rsOLvPK+xUmcxE/B0aeumXu3zg9Uc+o9YmU=,tag:ma90VbJpBKmqzeCOGGC5bQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:02:26Z"
           enc: |-
