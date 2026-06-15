@@ -1,7 +1,7 @@
 deployment_name: meteo-web-dev-sample001
 configs:
-    description: 1.0.0+Branch.master.Sha.978f28b3383e7962521897df0b0f40f268c8e4f7
-    version: 978f28b3383e7962521897df0b0f40f268c8e4f7
+    description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
+    version: acba4d69ea24849f474d5606d9504e68669b84ee
 layers:
     "1":
         config: helpers/sample
@@ -12,8 +12,8 @@ layers:
         apply_args:
             e: sample
 sops:
-    lastmodified: "2026-06-09T20:16:32Z"
-    mac: ENC[AES256_GCM,data:O8q8gTH7dK548quSNsYAS4753/pRBUTxlX48DSSlWvthtWfQf4zByB24QYjsOoxu3doh8VaYUxlWk2x9D9TgPuEg4Fk131aadEgeEJuVWv7A5BXxuMkDXbPCxPJqmd404J+Hsffd5U1UcjzunHJHu2pVHlXy+AUx4U8lYHK7yV0=,iv:J0kGvaPcO4agioMABZ+ow9jMqk1apc83vMWZ+JioTiA=,tag:Fup1q8v7vx/sAHfN6/6sZg==,type:str]
+    lastmodified: "2026-06-15T13:28:18Z"
+    mac: ENC[AES256_GCM,data:NmOpLPBbAm0FOir+cUXQ3yjWrCnbUT2FqI79FdePnZhBFg2AXG8SOZUt80GblsOosNM1CA2dnHMUMaBtmwCmt8N7Kk72AODzX1Uom8k/ZF5Rs0eY3cfkXr7gL7oW2uNFVvRbeiL+zg83z6QBIa9YXmRGd6tSKMMHz7klP2YNm/o=,iv:nMk4Tq2mpSjVYh6ucBhVXs/kbuLFUQxqub+uXRR/0Zc=,tag:EvDx7lJQAokk73MWimur+g==,type:str]
     pgp:
         - created_at: "2026-05-14T22:07:29Z"
           enc: |-
