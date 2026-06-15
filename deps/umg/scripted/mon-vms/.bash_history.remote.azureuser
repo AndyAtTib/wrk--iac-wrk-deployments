@@ -1,0 +1,23 @@
+sudo -i
+exit
+
+
+sudo ls -al /root/jobs/
+sudo less /root/jobs/curl_wcf_keepalive.sh
+
+watch -n 10 -d "sudo grep -ni cron /var/log/syslog | tail -n 5; echo; echo; sudo find /root/jobs -type f -name \"sendka*\""
+
+
+path="maintenance/maintenance/preload"
+port="8081"
+env="dv"; # dv|sg
+host="dart-$env-mvc02.meteoapp.net"
+
+for dn in "dart-dv-mvc02.meteoapp.net" "mp-dv.dart.meteoapp.net"; do echo $dn; dig @8.8.8.8 $dn A; done
+
+nslookup $host
+curl --connect-timeout 10 -m 20 --get "https://$host:$port/$path"; echo
+
+
+systemctl list-unit-files | grep -i -E "(nxlog|splunk|run)"
+vim ~/.ssh/authorized_keys

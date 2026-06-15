@@ -1,0 +1,351 @@
+name: on-push-run-precommit
+run-name: $${{ github.event_name }} $${{ github.ref }} $${{ github.actor }}
+
+permissions:
+  contents: read
+
+on:
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+      - support/*
+      - release/*
+    type:
+      # ref. https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request
+      # ... the base branch of a pull request was changed.
+      - edited
+      # A pull request was created
+      - opened
+      # A pull request's head branch was updated. For example, the head branch was updated
+      #   from the base branch or new commits were pushed to the head branch.
+      - synchronize
+      # A previously closed pull request was reopened.
+      - reopened
+      - closed
+  push:
+    branches:
+      - main
+      - master
+      - develop
+      - support/*
+      - release/*
+jobs:
+  trigger-summary:
+    name: trigger-summary
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: PR Summary
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          pr_from: '${{ github.event.pull_request.head.ref }} at ${{ github.event.pull_request.head.sha }}'
+          pr_to: '${{ github.event.pull_request.base.ref }} at ${{ github.event.pull_request.base.sha }}'
+        run: |
+          echo "PR from $pr_from"
+          echo "  to $pr_to"
+
+      - name: Push Summary
+        if: ${{ github.event_name == 'push' }}
+        env:
+          push_before: '${{ github.event.base_ref }} at ${{ github.event.before}}'
+          push_after: '${{ github.event.after }}'
+        run: |
+          echo "Push from $push_before"
+          echo "  to $push_after"
+
+  pre-commit-terraform:
+    name: pre-commit-terraform
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          # default=1 is ok for tj-actions/changed-files with pull_requests
+          #   but to check for fast-forward merge, we need to fetch the base branch
+          #   and we also need 0 to check on push after pull_request is closed.
+          fetch-depth: 0
+          persist-credentials: true # needed for tj-actions/changed-files with fetch-depth=1
+
+      - name: Detect changed files
+        id: file_changes
+        uses: tj-actions/changed-files@716b1e13042866565e00e85fd4ec490e186c4a2f # v41.0.1
+
+      - name: List all changed files
+        env:
+          ALL_CHANGED_FILES: ${{ steps.file_changes.outputs.all_changed_files }}
+        run: |
+          for file in "$ALL_CHANGED_FILES"; do
+            echo "$file was changed"
+          done
+
+      - name: get tf config changes
+        id: tf_config_changes
+        env:
+          ALL_CHANGED_FILES: ${{ steps.file_changes.outputs.all_changed_files }}
+        run: |
+          import os
+
+          def set_output(name, value):
+            with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+                print(f'{name}={value}', file=fh)
+
+          print("Current working directory: {0}".format(os.getcwd()))
+          fds = set(os.path.dirname(file) for file in os.environ['ALL_CHANGED_FILES'].split())
+          # python list-comprehension using the os.walk solution to get all lock_file paths
+          rcds = set(os.path.relpath(os.path.dirname(lock_file), '.') for root, dirs, files in os.walk('.') for file in files if file == 'main.tf' for lock_file in [os.path.join(root, 'terraform.lock.hcl')])
+          tds = fds.intersection(rcds)
+          # print the fds
+          print("File directories: {0}".format(fds))
+          # print the rcds
+          print("Root directories: {0}".format(rcds))
+          # print the tds
+          print("Terraform directories: {0}".format(tds))
+          # print the tds as a space separated string
+          print("Terraform directories: {0}".format(' '.join(tds)))
+          set_output('tf_dirs', ' '.join(tds))
+        shell: python
+
+      - name: List all changed tf configs
+        env:
+          TF_DIRS: ${{ steps.tf_config_changes.outputs.tf_dirs }}
+        run: |
+          IFS=' ' read -r -a dirs <<< "$TF_DIRS"
+          for dir in "${dirs[@]}"; do
+            echo "$dir was changed"
+          done
+
+      # https://github.com/antonbabenko/pre-commit-terraform/blob/8d41a13/.github/workflows/pre-commit.yaml#L33
+      # Need to success pre-commit fix push
+      # - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      #   with:
+      #     fetch-depth: 0
+      #     ref: ${{ github.event.pull_request.head.sha }}
+
+      # TODO: this may need revisiting as tflint plugins may auto-update
+      #   maybe delete the cache every 24 hours?
+      #   https://stackoverflow.com/a/73556714
+
+      # TODO: manually do cache as it depends on both precommit config and pip requirements
+      - name: Install python
+        id: cp
+        uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5.0.0
+        with:
+          # Most efficient if python version matches that in the runner image
+          #  ref. https://github.com/actions/setup-python/#basic-usage
+          #  ref. https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2204-Readme.md
+          python-version: '3.10'
+          cache: 'pip'
+          cache-dependency-path: requirements/dev-requirements.txt
+
+      - name: python cache hit
+        run: echo '${{ steps.cp.outputs.cache-hit }}' # true if cache-hit occurred on the primary key
+
+      - name: pip install
+        run: pip install -r requirements/dev-requirements.in
+
+      - name: Install dependencies - terraform-docs/terraform-docs
+        uses: jaxxstorm/action-install-gh-release@c5ead9a448b4660cf1e7866ee22e4dc56538031a # v1.0.0
+        with:
+          repo: terraform-docs/terraform-docs
+          tag: v0.17.0
+          cache: enable
+
+      - name: Install dependencies - terraform-linters/tflint
+        uses: jaxxstorm/action-install-gh-release@c5ead9a448b4660cf1e7866ee22e4dc56538031a # v1.0.0
+        with:
+          repo: terraform-linters/tflint
+          tag: v0.50.0
+          cache: enable
+
+      - name: Terraform init all directories
+        # TODO: tf init for automation:
+        #   https://developer.hashicorp.com/terraform/tutorials/automation/automate-terraform?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS
+        env:
+          TF_DIRS: ${{ steps.tf_config_changes.outputs.tf_dirs }}
+        run: |
+          set +e
+
+          IFS=' ' read -r -a dirs <<< "$TF_DIRS"
+          for dir in "${dirs[@]}"; do
+            if [[ -z "$dir" ]]; then
+              continue
+            fi
+            echo "::group::terraform -chdir=$dir init -input=false"
+            echo -e "\n'$dir'"
+            terraform -chdir=$dir init -input=false
+            echo "::endgroup"
+
+            res=$?;
+            if [[ $res -ne 0 ]]; then
+              echo "'terraform init -chdir=$dir -input=false' failed" >&2;
+              exit $res;
+            fi
+          done
+
+      - name: Execute pre-commit
+        uses: pre-commit/action@646c83fcd040023954eafda54b4db0192ce70507 # v3.0.0
+        env:
+          SKIP: no-commit-to-branch
+          # Do not use this, it causes tflint to fail due to missing plugins when it runs on the root configs
+          # TFLINT_PLUGIN_DIR: ~/.cache/tflint/.tflint.d/plugins
+          # Debug tflint with:
+          # TFLINT_LOG: 'debug'
+        with:
+          # this uses hook-stage=pre-push so as to trigger checkov, but manual may be better for that
+          extra_args: --color=always --show-diff-on-failure --hook-stage=pre-push --files ${{ steps.file_changes.outputs.all_changed_files }}
+
+      # TODO: pre-commit may do it's own caching, check the logs
+      # TODO: tflint caching - see https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/plugins.md#plugin-directory
+      # TODO: checkov caching?
+
+      # - name: Restore pre-commit cache
+      #   uses: actions/cache/restore@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3.3.2
+      #   with:
+      #     # ref. https://pre-commit.com/#managing-ci-caches
+      #     path: .pre-commit
+      #     key: ${{ runner.os }}-pctf-${{ env.img_sha }}-${{ hashFiles('.pre-commit-config.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pctf-${{ env.img_sha }}
+
+
+      # - name: Save pre-commit cache
+      #   uses: actions/cache/save@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3.3.2
+      #   with:
+      #     path: .pre-commit
+      #     key: ${{ runner.os }}-pctf-${{ env.img_sha }}-${{ hashFiles('.pre-commit-config.yaml') }}
+
+  check-ff-merge:
+    name: check-ff-merge
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged != true }}
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout PR HEAD first parent
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          # this fetches the proposed merge head, and the HEAD^, which should be the base branch
+          #   whereas HEAD^2 should be the PR branch
+          fetch-depth: 2
+
+      - name: Checkout PR HEAD parents and branch commits
+        uses: ./.github/actions/checkout-full-pr
+
+      # checks the result of git-merge-base to see if a fast-forward merge is possible
+      # if it is not, then fail the workflow
+      - name: Check if fast-forward merge is possible
+        id: ffwd
+        run: |
+          git merge-base --is-ancestor ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+        shell: bash
+
+  check-commits:
+    name: check-commits
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged != true }}
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout PR HEAD first parent
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          # this fetches the proposed merge head, and the HEAD^, which should be the base branch
+          #   whereas HEAD^2 should be the PR branch
+          fetch-depth: 2
+
+      - name: Checkout PR HEAD parents and branch commits
+        uses: ./.github/actions/checkout-full-pr
+
+      - name: Check for banned filenames
+        # by convention, we used env.override.json for local development. It's useful to commit it
+        # for dev workflows, but by the time we merge to develop it should only be set using
+        # the configs.version property in env.json. This task checks we remembered to remove the dev file.
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged != true }}
+        id: banned-filenames
+        run: |
+          set +e
+
+          echo "setting commit range"
+          from_sha="${{ github.event.pull_request.base.sha }}"
+          to_sha="${{ github.event.pull_request.head.sha }}"
+
+          echo "testing commits range: $from_sha..$to_sha"
+          all_commits=$(git log --name-status ${from_sha}..${to_sha})
+          res=$?; if [[ $res -ne 0 ]]; then echo "'git log --name-status ${from_sha}..${to_sha}' failed" >&2; exit $res; fi
+
+          echo "searching for banned filenames in commit messages"
+          commits=$(echo "$all_commits" | grep -iE '\/env\.override\.json')
+          res=$?
+
+          echo "::group::commits matching disallow pattern"
+          echo -e "commits match banned filenames patterns: \n$commits\n"
+          echo "::endgroup::"
+
+          if [[ $res -eq 0 ]]; then
+            echo "banned filenames detected"
+            exit 1
+          fi
+          exit 0
+        shell: bash
+
+  check-no-autosquash:
+    name: check-no-autosquash
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged != true }}
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout PR HEAD first parent
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          # this fetches the proposed merge head, and the HEAD^, which should be the base branch
+          #   whereas HEAD^2 should be the PR branch
+          fetch-depth: 2
+
+      - name: Checkout PR HEAD parents and branch commits
+        uses: ./.github/actions/checkout-full-pr
+
+      # checks the PR commits to see if any autosquash commits are present
+      - name: Check for fixup, squash or amends
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged != true }}
+        id: fixups
+        run: |
+          set +e
+
+          echo "setting commit range"
+          from_sha="${{ github.event.pull_request.base.sha }}"
+          to_sha="${{ github.event.pull_request.head.sha }}"
+
+          echo "testing commits range: $from_sha..$to_sha"
+          all_commits=$(git log --pretty=format:%B ${from_sha}..${to_sha})
+          res=$?; if [[ $res -ne 0 ]]; then echo "'git log ${from_sha}..${to_sha}' failed" >&2; exit $res; fi
+
+          echo "searching for disallowed pattern in commit messages"
+          commits=$(echo "$all_commits" | grep -iE '^(fixup|squash|amend)!')
+          res=$?
+
+          echo "::group::commits matching disallow pattern"
+          echo -e "commits matching disallow pattern: \n$commits\n"
+          echo "::endgroup::"
+
+          if [[ $res -eq 0 ]]; then
+            echo "fixup, squash or amend commits detected"
+            exit 1
+          fi
+          exit 0
+        shell: bash

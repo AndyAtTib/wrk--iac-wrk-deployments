@@ -1,0 +1,36 @@
+configs:
+    description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
+    version: acba4d69ea24849f474d5606d9504e68669b84ee
+layers:
+    "1":
+        config: az/test/c-sp-test-create
+        entry_point: apply.sh
+        tfvar_files:
+            - az-c-sp-test-create-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:8yYKd2q1fHc0KIjnSezSQPp1arhGKTYvLXF929L+rYBZEgWMwoHZeYoteV6WxM2u+HpRlwpw2rop9Bkt2J7BewClCk/qt8xhbazhI0iYao4L1iPTMrRw9SsUkvzcbjmKi4yaHiBdR/rQ/VCatKKW0ahgTjOStER2ODFQi5R2KmpJ2nDiCoxZUQfxqO6PJYyDNi+jEdlRYypZaDc=,iv:ih5apCk3DTX3EwbnB+Og7udRyLty7EfBT9Eq/LBYjnI=,tag:v+TBGCijcLBsELtiQgUEqQ==,type:str]
+        apply_args:
+            e: layer01
+sops:
+    lastmodified: "2026-06-15T13:28:20Z"
+    mac: ENC[AES256_GCM,data:q0My7DSrfltbw9PpeYQIZfGDYeVjErHowI7QWsHLFlDzeSwi92O619V0DqBULtq2s5QqnwCDucC8oZb1oY2dBT38aLesxbPDvK1vOOf3h5rWq2sLx/Etyu5P0IGApz8UqejWbmISea8M3CJDzB86raIameeoAPG5IensQi8OIfk=,iv:fABJF9xGhvshmJpc8luwcvY/tTn2PUpebGHQTHko1hM=,tag:vMCa1DHw78NFDkIuvtd7fQ==,type:str]
+    pgp:
+        - created_at: "2026-05-14T21:52:04Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQv/dn+D9thk0O/oH1KIQf7lb3EKTjYL++zzCDv+M8bqXf3R
+            4s07JBTEweAu+aoWtlnWWweuvQr83zKB5SB+p5ihe5KVUcYg+W0FaDkCPL8Hc+Vf
+            HTWch8JjTjIv8SJuD72snA5mJbN4wg0VgRJd7UWpU9cVXh9uUiGMcGUssh7x5gjh
+            vlNuukkzMFKNaEoCwPh2Bzx6qgpcvri04AS49R8S4AwcijbpqkFlu8MK2Y1ED2Fg
+            J49pSYsAwoEx96EFwr7wWwnj6oQyNdkhLMtCOWRn0iPjUODClMdUvUpwAK8NL0/S
+            oZdNWdJw6uzOt5hAordpddiaF8H0hDkYlc7OZqdlxFfCAvcLj22ZHqJ6WxIY19cV
+            IhUEc7N5rwH8SymyIampUJ3x+PHOWhkakjqfWNmgsFrioSL+uuFY5AGU970zUhqP
+            T1oBJQrfShiF3xqotPoD4QdvplxeDOYbrFJ3D2pTm0ul4j7GYmRTF1t+HENDApaG
+            f/ms0czOPBz5Uk+p24Bs0l4Br0oBYBwIsM6UWHe6GXKGu710TpH6+kWuCkMBnTOy
+            G4wEl8BR4qakwehEaGOFSjGxkxSH6QDgPkumRCG7Hf3/uA+s3ZicigfBKdDvsfFU
+            P4DxfZfCJFpJAw4jfQYs
+            =I0wZ
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^( |st_id| )$
+    version: 3.12.1
