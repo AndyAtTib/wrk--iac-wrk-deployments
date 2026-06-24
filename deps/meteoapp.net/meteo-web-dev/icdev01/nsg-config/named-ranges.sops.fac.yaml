@@ -1,0 +1,29 @@
+# Terraform will be unable to decode this file if it does not contain valid YAML
+# You can retain `---` (start of the document) to indicate an empty document.
+vm_admins:
+    - description: ENC[AES256_GCM,data:VupLaql8h5Nr3aCMNVbkODzlluUwVYAsovGCrnLZ,iv:SMspnRxmIHmkLYEtg8y42nLrhxrligR0YrPugFIu3QI=,tag:aBPTPovt7X357aZ/tvRj3A==,type:str]
+      value: ENC[AES256_GCM,data:HlCk4zwkKVwIo3f32v7AJjE=,iv:7Qz11aVbKxqEaoQNHRdSIAWckVw6VK4rom100A3OSnw=,tag:YB1pDt5rWA/E5wDNOrI9lg==,type:str]
+sops:
+    lastmodified: "2026-06-24T10:23:57Z"
+    mac: ENC[AES256_GCM,data:eO/ITGcZT3jSaqBm9ERSQJUlCsJ42NfrJegnta7rHjKwigpaTtLUEFKLBSh0XM9MmlUAAMDhcynqVXSCC2+SKTQC/cHyphcqorflTNwWvg57W5fipStEQH0tPwhDLQa+cPBoABosVNEm842Ewe6GciVKgygK+uOIYX8rt5HzI3Y=,iv:46hn10tiYTAZdEAHi0WIO4sLAFRIUb9bVU99r8XFpEc=,tag:biiSrUdnyy57nURxocSpYA==,type:str]
+    pgp:
+        - created_at: "2026-05-14T23:05:29Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQv9G8Y6dApyNapOslEsHxrRaCvd6dXyIM4ptxyWrQy9W6Pp
+            eCA63lPznorKP9Fnht+yBnHXcCRLzVRFAdiLvBQ3om0Tn7vP7yrPOtaqlaoBRcO1
+            uh5MVD5uNkn1ChfH9wwL3HG3i+ZC84lNudnhdgyLVLI6snW+QISlUBGApKyhNQH9
+            D8awk8ha5XYeXy9NKc1dWxTMpM0qYHoEWlINDJ3oiyXDHfM6D/5AdnzdK1dtuqf2
+            oDQYIgKtV5m7cQ3lQDIsF0o7lHGu1PHRPQtqb6Bq+p7AkJcFI79byLJqooqc2wUv
+            k17+Ma41zlelKAjGb4AcnMDbwLU8AVD36FGv6Baf3h+iHiTJgihL4gtZTv9OuqYR
+            ThGRq3Ti0AW/xpqiqtDIaYtEITQ33juVefBrx+pFY0aEdzg7AIR5b/i43Iwcnrqz
+            T7HNptWxjawXlwMyJOqUnf3ungCM3j6xlCTey/vmhejk3usMnD0TIJ4mNziM2/eT
+            DocyTqR7IIBMek88k4fy0l4BsPXcq7yrj5255+1+IjCXHYZTWOvp2IAeZqmfkYlM
+            bG/8AQTcnZnkiZ+HlZ9469b9irF+bdFtdcwMW+I5+MgS27Fq1rad7TvNf7HGCcSk
+            3HnBe+If6rA2QzU5LIix
+            =vv9F
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^.+$
+    version: 3.12.1
