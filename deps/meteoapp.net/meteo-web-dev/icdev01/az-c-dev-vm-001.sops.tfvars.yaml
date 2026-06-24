@@ -15,7 +15,7 @@ nsg_factories_config:
     named_ranges_file: ENC[AES256_GCM,data:ANsO12x8qc5P25gafNcut5KMEBdnYvm7CxKEUpPvTdgZv/A6ajKxYbCX8gGAfA==,iv:RP1dVWcnDbau76djLGuUgHPK3/eKr00tbg5SQQxG3w4=,tag:B7wgLKTFFE8oBVi+kRXRyg==,type:str]
 vnet_address_space: ENC[AES256_GCM,data:PbmWDVsmnvZaMPA=,iv:DuQWJoDfYihAQcbRCQX41m7OKy4Z77qvSNKuigfBQPM=,tag:BM0ZVYLUsVCz58Um1laMhA==,type:str]
 subnet_address_prefix: ENC[AES256_GCM,data:noKewhxchvKowsM=,iv:5VI65YJfmVMXVt/iDu9GiP8z6ops+uNk4Oe1YKOQUU4=,tag:51/qohy3X5S++Iw1ui8VOg==,type:str]
-vm_size: ENC[AES256_GCM,data:lFFVbo4df355bVZ0CCpclg==,iv:O6I5UDxJ6cIKC5iix2VBAlYpDsnPh5wkbXxNIIro7+8=,tag:WhUOVaXUV5uEutUDtADDOQ==,type:str]
+vm_size: ENC[AES256_GCM,data:E1CfqFoi9717+L7So4OMfA==,iv:gVVrSA1W9/W7oy+yTyuhRaVQtZxjwirDj13IztzKXOw=,tag:KAeXWiFuyNeBn/e3lzEfOA==,type:str]
 admin_username: ENC[AES256_GCM,data:J2azew==,iv:qMlnWDmo47r6hbOqClzbjzJCy0e1dC779JCz4FVS69U=,tag:G+Qpdn+WWrMUftYn6tqxxA==,type:str]
 admin_ssh_public_key: ENC[AES256_GCM,data:lo33u/2VZcgw6ym1rdS3FgRdb4W0XSneIcvbDDJp06fs6loGUJSCjLoJTMsMCBmHTzKKAC+rMMRBz61uSbL0ciaEBcSrVb4dKkh2jAFmyb0orAo=,iv:Spc2Le/Fh4qF8SYlyF++pstVLjo08k1R33c9aoP6m9U=,tag:0YdR2u7Xmi+K8pHkS8p2qA==,type:str]
 source_image_reference:
@@ -27,8 +27,8 @@ vm_tags:
     deployed_os: ENC[AES256_GCM,data:9WwbRNkT69K13A==,iv:Xm3eGvC14AOfLjiukEgDL87QiDwRKlT6b/YrIurkbbg=,tag:viCxUBwTB+AbhUpFDH5dxA==,type:str]
 cloud_init_file: ENC[AES256_GCM,data:PVgKmErJs0w33X1LjJlOKuFHIIWe3ir8BWMbhhPUzV2iD7w=,iv:gdqMm020OeOFFOAicrarYZLD4PlceCGWKkQquO1r1cc=,tag:f8oTI5J6ocgJbMuKwfVb9Q==,type:str]
 sops:
-    lastmodified: "2026-06-24T10:39:54Z"
-    mac: ENC[AES256_GCM,data:W6n4gcsyQbYXNf0iG9ir+ZDt+V/p7vKlwPF4OFtA/i2yCjwvPyJiUgq0SrvCGYTRi6e1+Rmx5dSl/9Uo383SiXClafAJfgo88eNA2zGw1SMT3fg6d9rBxvMIRqQKIzfJgGxpFArFzQopf8r38xhlN3PDT6/E2TXp2sTO+ElrudU=,iv:5GY9eKIiCHBj4kY7XBIpOsiluFzMgMCQ8pzgnP4MoWw=,tag:jgv03Wt9UB/j94AHtv0m4g==,type:str]
+    lastmodified: "2026-06-24T10:49:01Z"
+    mac: ENC[AES256_GCM,data:PJy4ZOsHZdtX3OOjKgNUcADncs5dq2bBIwHAyBi3Aknh+030yjUdsBDLTZljAoPkjRoSmnNd5adIzfam/D2bZnw/hlqLKLCXnK/tsl1jImH1kcltwwy7LDXgAt0xCQXJEu0nEIBZATQ3y0vy7DSJv2HyacvTikszBtF01WqYZYs=,iv:X4qh7f3uN5fNLcjBGT58/isVMRe/Vu7vmopS0n92/IQ=,tag:MefMhssN/KiyQU3EGgFJwg==,type:str]
     pgp:
         - created_at: "2026-05-14T23:05:20Z"
           enc: |-
