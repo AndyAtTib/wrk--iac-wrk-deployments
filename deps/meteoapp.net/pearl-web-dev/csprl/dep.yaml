@@ -1,4 +1,4 @@
-deployment_name: odyssey-web-dev-csprl
+deployment_name: pearl-web-dev-csprl
 configs:
     description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
     version: acba4d69ea24849f474d5606d9504e68669b84ee
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-06-15T13:15:56Z"
-    mac: ENC[AES256_GCM,data:uLqPE3iiteTop6swQAWpgYgtb/kLxQ2QR3oxB4QESg4nIHFD9Pher7vzZ00Ic6uyAuITu9oT+ndWeAYfUrILq5mqXXxtjBIsMBbIv1YeSuWPaLD6t3gFZsDlQJyfWF43N/agBTUxjetvsK/5o4RrCcxHHinckpR/W/t4pax7fcI=,iv:T0Jt1SOdc0tNnmU9+GLhIt/wEfchCeWYJoYOPNRrLdo=,tag:eHjJlDg/Jf10uaKRhqciHQ==,type:str]
+    lastmodified: "2026-06-29T16:42:16Z"
+    mac: ENC[AES256_GCM,data:VAiou9rxzqCh1CBs6CF4CwBzYt+KdvWCY+QuR5/CaNdcOcqxd02cYecZVc5gd76oZiBw2rSNjoaSOYA8+xTbJaLkMRh3bxicIXErFjNeeRfqxX2u4GpNhlLhOGXD9oZzPyfyEbx088TrNl/qHTDinCgsPPTl5/IfQZ8pM8V2w5c=,iv:XU1AM7dpz8dzQoPZ50YueE4M7a9erF1h+kvZVxlwLHk=,tag:4gIMA0IjSN9i+nusDEAK9w==,type:str]
     pgp:
         - created_at: "2026-05-14T22:53:35Z"
           enc: |-
