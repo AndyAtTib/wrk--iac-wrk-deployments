@@ -5,12 +5,12 @@ subscription_id: ENC[AES256_GCM,data:zyUvz9is4GNlmT9Nc3B7Hl+3X3ohTOkuWXVNS62VNir
 location: ENC[AES256_GCM,data:1dDH14yIsnGx0qig,iv:FBuRvoothS1LIQhml0/lziJy8m0RNHXJ/0CnPU+DKEg=,tag:uZVDnjcgvliGC7/zkVIkdQ==,type:str]
 tag_contact_name: ENC[AES256_GCM,data:nALkNxtBXaOkcjw=,iv:4XzXQr3+YQcsbMxJRaXlB4r+7etx5sEUwmHsFjPpZxE=,tag:HXv1hnhVl1c19AljXV0ITA==,type:str]
 project_name: ENC[AES256_GCM,data:fDL855cJoA==,iv:/ifwg9gAPwlTny0kbD467MpusEd3rvbzXVEQ7A3JXJk=,tag:qIsc8Ks0YJ7czaCjdtfI4Q==,type:str]
-zone_id: ENC[AES256_GCM,data:mQ4sfUY/9OPATQndUpJ/8ZrW/6Mtp5VUf5ltOBOdc1emntjonNsAKnSKqfSeJp9Pjl3drp22jesb7Qf3Uh2KWLrxEdGnM4ucvvuh7uSaQoltFRD6WTeI0PEibD7F3AOBPSmakzGnIy6XLHrdxe5GgiX87BqwaEIJtUp5qZhm4XRoO8Bgc7Q/D6F39P5DUuagCn8=,iv:gT5mD7WE+V59w21XSeMRaK7WCxhdGSMlPI39NAz2wzY=,tag:mthAL4O/kzrWeETa/iqwmg==,type:str]
-zone_name: null
+zone_id: null
+zone_name: ENC[AES256_GCM,data:VYyL/jMU7XQ1lgC+NSHD07u64NWQ,iv:MgP/KgjupPpuM1CBFR5OOfzOoMhzhwzXG5U7Xf3zi/w=,tag:sMvbbEFkvxjBLoSOASdKbg==,type:str]
 records_folder: ENC[AES256_GCM,data:vWpKOh0iw6sA9tE5quJBnkxSC5M=,iv:ToDwC5l7FJcbTKeMxQA+4tpmWJBwpPKrXxJ7KKhUmXk=,tag:BztADSBeT4PlA9V0Wya80Q==,type:str]
 sops:
-    lastmodified: "2026-07-02T10:53:59Z"
-    mac: ENC[AES256_GCM,data:vCrsNslSktxa63BzIYI6//uBjVWeyaOtWMuzQtT1o6xbhOMgsB3EA4yfHcSR51QIQcOOSc9DLH0LFsD19KNDQh+9DOaLzZ0wdQnCRvtie+NEzaaFn8FT2Fb7VoT7kLi4HqHAvKmU5V4XRQXF97g53L4csL9u/d/+6InVUopE59Y=,iv:TgS/jp5cqAklILh0fGq8FETRvw0u2l8M317LrNUTGUs=,tag:wcsOsOw3pUoX6shtZM7j7Q==,type:str]
+    lastmodified: "2026-07-02T17:13:13Z"
+    mac: ENC[AES256_GCM,data:VvCp0SAUAMYFjqEqjcS/NbK/eIbTH3jJDfyEQ8lId3y20rky7Pi4ul1dkTJpVdLh1xbAsw+BQOkHlyq6QN772k6zqc+B70sJsP8G8Hv3UAYsPgFaaGKu/UoaC860iSg+lrPKL0YNg1N+TmLgNZ+Hj8VHlQd8mmhXCRnvSWC3qWY=,iv:dMug81ABWt/OfYTsk6jDHPrevn79Vmdfn2+VjGgcUVQ=,tag:TcGJYmldiYBiEfIcws0QrQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:00Z"
           enc: |-
