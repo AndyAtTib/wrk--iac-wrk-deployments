@@ -58,12 +58,12 @@ records:
     - ENC[AES256_GCM,data:vtpCBtlr,iv:EJzclJVhPo8pZLew6h2tCuKkDXsC/RYLeKL6/Omv4mw=,tag:GDHVttIfdrvl3qhs5Jy+EA==,type:comment]
     - zone_def: ENC[AES256_GCM,data:4z465xiFlM6oZv+82y+d3U/mIFpr1GajnuRXyMk7xvnVK3Qmtx4vTT2wkUI=,iv:Ny5t7Oz1ipbeei/N1byNEckkxAMAwMG6trmuiFjBi54=,tag:uusGxZxvAO2nOEFA7fJy8Q==,type:str]
     - zone_def: ENC[AES256_GCM,data:JFHrrkVhDn9W0kKrm97VXuqVQGf44emjj+cwOcIZZ2UYt4Hq0q2Tnk567jLUTw==,iv:RFWDnkyOZbM3nJwO1CnCB9kozviDn/5BR4BSkFvioNc=,tag:tHiXOpCosGdvQoG9rd+Q5A==,type:str]
-    - zone_def: ENC[AES256_GCM,data:EBCuiIcuezkocS+1DDTH8UyVZMIOd27dz47kf+Yqu+kNdtGK5CszMmpA/sOABf3+,iv:1THXZS/kwAZD0ATl+S5XZ8h02rUbs+qlT9PT0PCWIhk=,tag:RT8eSrc3xjQHXFZpl0XZYA==,type:str]
+    - zone_def: ENC[AES256_GCM,data:QCT2+43RCo9i/O9lTaj0kmAWEEaB4J0bzfZoQPSeXKzQnmgMy55RpSk=,iv:Al1iyn91UtXm2QfnduqN1wTMv7tq9tTD/gmOcH/WNKk=,tag:aWhBTw3RXG0KRz3qcPmxlw==,type:str]
     - ENC[AES256_GCM,data:3HSZcxU=,iv:bMINxeevetw1SMbS2RHx4ZkrCsOl+tFOmcHX4rBgPno=,tag:uqGE5QAmdPqspI71ZzGbJw==,type:comment]
     - zone_def: ENC[AES256_GCM,data:RbsiTAI6I55JSOctxcsXXaKgmQ4kGG6zzoI9nr+Zb9L04TEApmz0nJNWlQ==,iv:V4YacD/vZ3eKnXvpexyYjaPlB618yVlvg6x2fc+rcTw=,tag:h5Xa/KtcrPDzLm0HMz7rdw==,type:str]
 sops:
-    lastmodified: "2026-07-07T15:51:59Z"
-    mac: ENC[AES256_GCM,data:CZ9JTz4PJSqoUIXeofnc4RKDcua4lOYtI/X+nBiVCiyhx7KDv05uIukwYVF1Uzudl8oQ7FHNDoMmEt6MO4qrph8RkR5Mn+4z4YjFYoyagkEfqf60L5Xg2OL61U3bcLxod36cFyeiyxX58BFd4DHvJglhQ8DfOQymcoHv+mSq1n4=,iv:Os+Gue1NVK+MNA1Nep44xbwXrj4OxLHcpteMGe5tXd4=,tag:ujE2h7koktUroxWjfORGmg==,type:str]
+    lastmodified: "2026-07-08T07:38:18Z"
+    mac: ENC[AES256_GCM,data:m3qFCCxpkC9QQK8imNsYYGNxaCD/vlOfPBSJDGNgOKk5orE/zlBRV5WhotzBwXojUih21EEf45RJu9fb0BaRjol3bb1QGv9gAhjb1TbKURS2MLgUa/K2493BMA0K6ey831gIy7BpqGHRcVv+FneM3HC2KcChD9Sc4UBanJLe+E8=,iv:jHglrXtzVTzERJnoTY8YPuGFOTNvPoB9joLmB/SjEHM=,tag:e9ALtMCCOsLuGox0V9usZA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
