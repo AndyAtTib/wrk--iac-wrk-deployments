@@ -3,14 +3,14 @@
 # IMPORTANT:
 # - ttl of alias records MUST match the target resource
 records:
-    - ENC[AES256_GCM,data:GEV6ADfky68BRM/d,iv:5PUXNN/rzFE6UFsL5Nct6RRWkeANBHS+Tr7PwOArLNY=,tag:OgyrTGXZVGM4qzf6kcnh4A==,type:comment]
-    - ENC[AES256_GCM,data:mXD0Euyv0EXtokBVlgkBIESkGj2HDs0=,iv:Qbkt0f45IatAqDoRifjiYI9R1YIrmKWhlrnjxWNWdqY=,tag:pimuLAKDNwwpRIGzRPfmSQ==,type:comment]
-    - zone_def: ENC[AES256_GCM,data:A9DZwx57DEeFBSbARMsuxGQGO52BAkFH1q6d6m9kV2LoXMNz3/k1FYp65eov6SR/g/SReg==,iv:fUiMKm+Blxy0Mi6XY5Wy29dXBsvoJC/Bsiuu3mukfCg=,tag:b9j9js2dSZDOQtEjz1F6pg==,type:str]
-    - ENC[AES256_GCM,data:dA0JcewtnwNaYwGXc/vMmH5E59axoKe8,iv:nL1eNO9BM1zlSx3rCLmh01X4ywTPd4gaDKF7q6CtZi4=,tag:igpbAyDKmd8UC7W87iHMYQ==,type:comment]
-    - zone_def: ENC[AES256_GCM,data:S+RILvBXfuwpwVk/OPvnzER062ZU0Xbym4KiMWrF6fXbiWuzlJ8aoHaODjRBquYJMCPOiBNiNpETo63AvTIFYJYKfT13brq8kIgWO9nMMI5KxbI+1xuv+11NaeaD9orDdutXykCIF5ltgH5hbRXg6ApaxqHDw5QAhMpWm6AHNf0fB+1pVgwLrAHNe7PAw3OpwaDZ4bVgzWuJjybHbdxtLBvRil/24aWnsyxwJPgbOD+o354CKz0B4exJKf6pNPQy3Pj74au2li/TVbOj+qPw8A==,iv:IXVn+YBlYBnq6/OgHS0RUrC6ueZnKOrikYSDESxRerg=,tag:K8MUwj4dqORu8yYZN3Qh7A==,type:str]
+    - name: ENC[AES256_GCM,data:RmV00GOotQh8INk=,iv:LQxy9sxJ9bOxPRX5gMDB3tsTxvbC+dVcF1rCnw2qwrg=,tag:fSZNTt3UHJsTc5WI1LCEZQ==,type:str]
+      type: ENC[AES256_GCM,data:rw==,iv:i/tgorDyVCrChv5iIJcL2TgtnkccZehPdIjLoi5rKpw=,tag:pD1DydqojU5IPSzhwUknzg==,type:str]
+      disabled: ENC[AES256_GCM,data:m+RP0A==,iv:5ETojhn1BDpjnqFB8JZLJ7klfI/zw+wVspg0ZBm1Tk8=,tag:cjOm7wliDK3Xa0C5yOKx1A==,type:bool]
+      records:
+        - ENC[AES256_GCM,data:rDVHX0e/bOKJ,iv:aA9l5hzSznMsY1i3Ckk5+XU63W1eAJuJyfcDWuyxtZM=,tag:lFZd8ULySBwkVcj9dSi0cA==,type:str]
 sops:
-    lastmodified: "2026-07-06T21:02:58Z"
-    mac: ENC[AES256_GCM,data:oVfeKSRZbb2nRNbrMzvi2GUS+T09bjq9Eb88xvVTJkeQg4tcSq8JCqsBYD7qlo1XkHiLfyhtnNilHl3iGJKB+0LUvzeqHaKztqSVxYxGBdGbR5sJIBEJVu2AxbDGcmj5D1SVD8VrkQ7EZ/ONoM6yffjpb33X3ETzO9Xe08fmXAo=,iv:bCZtWJ8WE3LhWKKCxteNHgUR+J01FEZxPot3kxMMRb0=,tag:1tj2GWsxt6n0oVuHerFpDA==,type:str]
+    lastmodified: "2026-07-08T07:40:10Z"
+    mac: ENC[AES256_GCM,data:2wZpZOxOJkrBq8eilXVO94R6yq8KgGci307LcIhjYk+d/H0gp0rzfC/INPImABEy69I7lxT47Zj2dw2RomaFTH9SP+z+CPK+1eejHG2/LshR0RTf0pIlUFoh59/uoE3gw9h6DOxAbLds1xv0ZlwXfbmHB9qjLJfRTduHZ04IRSU=,iv:aDF2FcVY4bNAZsORTKTdug0QNve5wfUICroQRi/WMqc=,tag:CeAqFFfNV/WE17o2gw6+RQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
