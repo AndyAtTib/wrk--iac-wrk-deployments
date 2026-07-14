@@ -3,6 +3,14 @@ configs:
     description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
     version: acba4d69ea24849f474d5606d9504e68669b84ee
 layers:
+    "1":
+        config: az/c-dns-zone
+        entry_point: apply.sh
+        tfvar_files:
+            - az-c-dns-zone-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:hbtxbgWoQbroNvqtZh7c9evOCSBzcjw8d6wdrl33G5rxLeY2xglUXE+mu4pfSRiwROs9TkdHKbAVQyFN5TWb1sFivkRWPnSXiSRbdSSntfPrCW23oeRIB4PaqNBI+oS2v9EL1h3DfWkQvU+gNPq87JE40O5U3IVise0UDlq4gbIq2dI05YF6NOXeNoGGiEm+za4ZaRwZqPk9Qs8=,iv:rQFKblalqJ74UUZmV6aB40n4/cK8oXvM7xUzp04zTag=,tag:dP9CUq8Q39H1ne608cPoIQ==,type:str]
+        apply_args:
+            e: layer01
     "2":
         config: az/c-dns-zone
         entry_point: apply.sh
@@ -12,8 +20,8 @@ layers:
         apply_args:
             e: layer02
 sops:
-    lastmodified: "2026-07-14T22:55:48Z"
-    mac: ENC[AES256_GCM,data:/gJ/I2ojGfqbAiv0hn4AQ0WeGSQKkmCJWYqGpJZcJwoyR7lg2PWoR+8i5JXpIg+x327GGHBspt1e52pBRhBixQrM6kzQIMVox+iV7KhXXWNSHxiZowmKHbCSaFWTk7eUFz6dTC5ejkn8eiLN3cX8ngEfP/lE74QgwKJ/m6eIQ8c=,iv:2YtEHbLGcQfyqMZNmWoLK8RQtv09lbroh6EeILNEVM8=,tag:xhXGE6Xsm11o8VMHN5OvKw==,type:str]
+    lastmodified: "2026-07-14T23:17:33Z"
+    mac: ENC[AES256_GCM,data:jbXwUatbRLZ2dObpzTlADkZf3sl9H9wX5jhdV96grVAsLBcpdDQIiEPMmmC/7iK/Z1bVBeCsswpQ8FXr+TnuPXem/Seqv+yIWzBrf1MYqj7lUlNxAF7SjV6h5lrMsrkArxCjNLNg+lZ7pelJeCxCiAaYahZw1Cle4yilPNPYDWs=,iv:M178aeA+fPHmcYCazOGZziW7JhBKR+pyyD9ERWpbgYw=,tag:jejC5y+AjK6QNAtD3BqACA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:03Z"
           enc: |-
