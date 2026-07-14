@@ -11,17 +11,9 @@ layers:
         st_id: ENC[AES256_GCM,data:ByTR3IKA+HkAcFvL9cZFVuDU6XWWzPKhMJbK6+1jrfiZACDB77SF/NuyD6wWEn2pGWE0kgdGLwebccJp55Ye1vUamopLBmTo28YqZWunevDUVoodjVbdjmiTzbpiGEQhVmq+7BNqS90q0a7k9lIequPgCN/flPIdZfNvM7qs0tqmYzfvzu3SJsD4WseEHMiuot72akFmi2ia76w=,iv:1Gcpo+2fijU5wDTEr7ltHBymsMEZcbnF0R/Z4O7TMCg=,tag:P58saSZYOsD+sRXwLcOZ3Q==,type:str]
         apply_args:
             e: layer01
-    "2":
-        config: az/c-dns-zone
-        entry_point: apply.sh
-        tfvar_files:
-            - az-c-dns-zone-002.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:Gt7l3J4xprrODqywTNfqdidNnhBS1SKxHLZdZ8cCvUFJD2ZOtfwIAiRtXps6bzvcTDWkU1bmiT8p6R8RsrVyCu7qqYXML3P2a7UbqlLfANHbUVTrs+DIEbC+sX3Zg2mpLbInkfGE4g64lUcxQ9Pyd0LE//deO5QkLHFFnZ1Q2JlBMviuTQoYt8/zkr01yhU4j65o97tlM5L5PCg=,iv:gtwfpzsvPNkMXmEKB7C37LA/HEMFMzYy79qJmqiRyvw=,tag:Igp9EoGUB1JdGCKhtCpixQ==,type:str]
-        apply_args:
-            e: layer02
 sops:
-    lastmodified: "2026-07-14T22:29:20Z"
-    mac: ENC[AES256_GCM,data:FBoGiebMverDU4mxy+B/MNBMgR5etZ+qhBDaj08S7um4th5bgy7ErZbOT1tPIS4jjSfjbnOK+S8g1FTzVI0zlHiiMIJaYuoxLxpC7lqO29PEWom79HlQCLynw4typA35fxsH8hHthOUTckUh7xwxyjil9fghf9XvrMaDclkNwVo=,iv:B5GpxaVHqlMLGDnTmBcs/d7LI85dhg9wv4WDL1WwARU=,tag:SOEbWEc6M6+0U5d0vEtrfQ==,type:str]
+    lastmodified: "2026-07-14T22:51:14Z"
+    mac: ENC[AES256_GCM,data:v0lqqU6xHGkgsBFe5NcVaUQRd+NPdDnPNY5NLsPVxpHI/tE98PKQLSeuM2FQEgi4wRK7Uaees7IbJDdflU6zskrC/gZ+sRFXiVDoofThEDp/U3ZBJslWkTHal+pifyCj4nZGbT6AlKgrsccZxbx8ZHewMhs2a4LIAjQ9S7owEL0=,iv:pataEl5uTFhwtOb2/8tDs9N0CX/KN/R6Id714236im8=,tag:YFDiyyVCZNoFjLPvmgug5g==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:03Z"
           enc: |-
