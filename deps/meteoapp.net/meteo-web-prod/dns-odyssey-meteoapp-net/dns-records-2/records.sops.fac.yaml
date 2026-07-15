@@ -1,0 +1,32 @@
+# Terraform will be unable to decode this file if it does not contain valid YAML
+# You can retain `---` (start of the document) to indicate an empty document.
+records:
+    - name: ENC[AES256_GCM,data:QRiK,iv:JSXW1jhQZmksk0BRWMFuijBJtgBexPkJiancn6oUmiU=,tag:gyQtQ4eA1R7pl51BU6FvmA==,type:str]
+      type: ENC[AES256_GCM,data:3w==,iv:EtO3pdYd9GvXX8djtksQfrCAF5GXehzjxbZoJm4AF5g=,tag:eY7yfFwCKhD1HfqvBgwZnw==,type:str]
+      disabled: ENC[AES256_GCM,data:lKLZRg==,iv:0p81r/hxUAXBIhBjWVVpWeOCnONPfNUpCRE9iO4pBuo=,tag:JpBaY9/bFXfDReQEG9Km/w==,type:bool]
+      records:
+        - ENC[AES256_GCM,data:NFSxc/nuV2O8,iv:EqOa4cP6gn72EtFmuodzjF0BJv720f5Zl39II0+RWsI=,tag:w3GIi0fwHqS5LjMlc1pIUw==,type:str]
+sops:
+    lastmodified: "2026-07-15T09:28:00Z"
+    mac: ENC[AES256_GCM,data:WwP7uNtgcg0JHWjCGLPMoknTwOSLj5VjgZiZvko4UFbg5i3pdH5Mz5s9fynwYXHRCdcU419BHsFhCQQH+RwJjI/i5MAnm5e/vEjAPhdgUjvRu6jyhN/9cU2kNVpQSdSET3xQJpVp6/4xXS9l4zfZTeiGvy8VZgUc6Kcnqksyi80=,iv:VTfOE3+DpirC24uQLSQeJSvoqNHE4ST0LJqAPn9LS8Q=,tag:yW0Ai5m3zBde9hReM5pI/Q==,type:str]
+    pgp:
+        - created_at: "2026-05-14T22:08:04Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQwAjl1qN5nKBujefyq9NcQD/4u3Kk9/XqDuMcnelzLQAzFK
+            hpqRJs/mIhV/tw6CGAy7uq2ZQW2sPFyWQstX/2gnSwoRC3oYImSv4mJGAuZKk5+C
+            fLzVFOw5NEBdRuSwGWfVy72gdoQYxmvRDgZgCj/kntmCAHFjVBdb6jZZ60WqionT
+            9H3EJLO/hBFWuxA05RnrWM47FgtlNHcs5AugofW/zIH7F6MsGCK3+zIxUhGqlGuM
+            hYYLoNZke9ksL8W5T6yIJmxf5YUFJR0AJVDiIvnoBPKHs6UoZIQDtd0uVP+w+Ptw
+            a1WaNPe6naFOYReN6r57DSctVTwtEWYOnjcjvSzdBLemM+6Z2W/Q4i5Ef8D/N66O
+            9C1K1giAxGr1jZUZ7Kl/a2GksLyGe2X5IHziVkmMi125f5MCLjb4VgnuUIFv4vSh
+            /pqz+928mXhbIQDvrQBsVQK14wnrsZuzVSsZESWBLf6kzfac+wkqwKdh7A0avCVH
+            G/oxXjx1FDMeGen+b4AQ0l4B/6f5i/QIG914hgwP3tDozi9fcXuwB6ZLKA2j7bvC
+            5kBa8HRplUJzoLi+mPQiUYsw7sQtoX7Pt7I7rrV1UZ2KDiXp2sHUeLTVe8g9sH+j
+            edHWb9PmmhDMD+ACYdbk
+            =aLRW
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^.+$
+    version: 3.12.1
