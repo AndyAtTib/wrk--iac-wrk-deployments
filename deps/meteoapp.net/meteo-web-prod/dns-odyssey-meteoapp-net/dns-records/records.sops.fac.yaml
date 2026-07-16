@@ -16,16 +16,11 @@ records:
     - zone_def: ENC[AES256_GCM,data:M/S4KjITE5GYkki2TWil/wn7BgtLjinQDaiuDA1Kdxnn4hf7L7oeb9jVmu9KvpSXots45iq4quCIoF6QMzMXaDX/Rw==,iv:WGgM5u8JT7BRZBhAC2zrP/ZbCT5okWRp0zI8rQFutRI=,tag:BAjT4OeKzo0ba+I+7Z3MpQ==,type:str]
     - zone_def: ENC[AES256_GCM,data:B6QjM1kDxb5aQ7puha4bDyEdvG8uwlmW9B7iOeo7W3OxrOecH2WlVMSkOea8mn0kCOpvN/268+K8udRdYg==,iv:QBEctAxTaugynRwUoxi8W84OV4rdNqboj66FTXXoFa8=,tag:Ctyt17YAftHZ2FZ+hJEysQ==,type:str]
     - ENC[AES256_GCM,data:VyTZZ/J/vV7eXJtRWFAmVv9v7eVB,iv:qexKSCIUN3Cm6MvvCR7Ny38DRe8z9RQ74t08I+Wy/fw=,tag:KtdRbIFSxgijf3p6ICrrdQ==,type:comment]
-    - ENC[AES256_GCM,data:dThQxi6w0zNJwdIEy06NkFKUbemhmg62YHcALCl6BhB1Sv49/v+FTiJzoQsQviCAtiiuukG/i9j4BtVaSXaa1FM/2GlXGhwe3l42+zU/bKsCRMPtFR+BMVN5vJIQX3XRqyLlw57jvqjiczKhQI/Pc2eGpPue/FsyjDi+xgbbS7YWOfe92Iv96k1BuXMbhshyLTnXYvNYu2JJwlMO4LmOsqLxbFWJucwSA1KJ1X2HXdrLO013B/YbBzh+U3zsMnv0+P14duYR66dr3hsM0Tk9WFv7gXaj7HuHQkmliftc6ACbxI4=,iv:2N65fDwma9jJGFEqHeSH7Zntv2KzuTHeiKRXm2x4Duc=,tag:/QsVcXw0FLKEmBR/hP6A7A==,type:comment]
-    - ENC[AES256_GCM,data:Xp966iPwXoB3ah1LEkrvvjqZKW6iiPuDQbyZV00uzleDstjW0DKqucOn5J1ReXWxodNxVsRe3zjMNjTXANG7tatrBJ/vKf1JkgVIs13UctgHm2YE+CFkXnynhXsJOQsYK/Ghn2NsjwOW5cSRa5EzUMDoyPSCTkTeTeIfoqC64Rg18bB4qxYwao9L7UDDMoAWHiWn8gG81byxGb7XlsGQeslo53MRZJsyFqpsl/CVgt18JX1nYClWi8zKDcojjBeJMOLgM6fEk11QQJ4CgoX6IJlvJ56NcGZjTvwnvZbS7Qi/Z9Q=,iv:930ZkepCWN6YIiEeQH68TAZwtJ+9RbcwfRTiUP56i0I=,tag:vGR7+R4bURzQ2RuQYAR69A==,type:comment]
-    - name: ENC[AES256_GCM,data:yKrLJN3voRA=,iv:CT9b8B4unvAK3FhjCoEgIuWwbvwlzFOW/6DcEjLziz4=,tag:ImgdZUmMmqnM7J7JMhO4Yg==,type:str]
-      type: ENC[AES256_GCM,data:3w==,iv:EtO3pdYd9GvXX8djtksQfrCAF5GXehzjxbZoJm4AF5g=,tag:eY7yfFwCKhD1HfqvBgwZnw==,type:str]
-      disabled: ENC[AES256_GCM,data:lKLZRg==,iv:0p81r/hxUAXBIhBjWVVpWeOCnONPfNUpCRE9iO4pBuo=,tag:JpBaY9/bFXfDReQEG9Km/w==,type:bool]
-      records:
-        - ENC[AES256_GCM,data:NFSxc/nuV2O8,iv:EqOa4cP6gn72EtFmuodzjF0BJv720f5Zl39II0+RWsI=,tag:w3GIi0fwHqS5LjMlc1pIUw==,type:str]
+    - zone_def: ENC[AES256_GCM,data:As/s6UVxJzYW618ILTaqr3joLNow2/67y7TVhW+/NRCoEZbzm8v2D/Ij87QRPEHYrOVjFKN10iayQouPcpHbN9yCSygcM3Fj4nk2Fiit/veyxroz1SA6Vce5OAECiKW/Rvzv2941Zsg2G7HTAu+6LWvwulKkQ1dp1LmJ2SlZrxZ+uj4h1enq1LtYjJork7RY77YFfoCCrcsHD6f7vRNdnBsKahDM0kRi1odblw6grHmKnpl+RGsDBvFSlde0CTarVQhzUyTwtLJT/BS80Z0/32srJeFqPRE=,iv:YGICa97wrX3p8T3JXe1vHy7785FZ3JX7kfPrVccJ4Wo=,tag:f/PbGRy0td7jORox+dzFgA==,type:str]
+    - zone_def: ENC[AES256_GCM,data:1Nsq/ouVmzwkauf33AKh6uvRew6SBinx+sYXT/X1lj4bn8AYIu41+A4fO4sN+fxb0d6dehYmBZwN1GmgTgO29iziF40uySCYj/V+9BgTtoIvdZK8qlW9GQk5+A8iaAvUWjdxFnjdDd4uofqKRJ1Bra2UvyC2kF0L1m1S33Do4TRT+90+0KdDUeokO2fVtEW1gQX1sPPMEgSo46Y+SfxYoXHqWv1tOy5Fku0ItuIyNNxu9o8RuBxtJQ6a+ZrBjbJciNNn1TIGB4fUMFNZH3Q+4WiK/oCl7u4=,iv:jXzj8Ci6KYkxFk3YuPL9Sa52leNi3/H1+2XRCF5hduU=,tag:Yg/HX3FMW6Rd6SdLShs/Xg==,type:str]
 sops:
-    lastmodified: "2026-07-16T10:38:38Z"
-    mac: ENC[AES256_GCM,data:V5L3vs/PMTp9U0Aw0y8aXtiAJLAQNTqd45/y+aL8bKNIKqxxS/rDegp/C/d9E2qXMSnIjcu5+PgtG1bAOub92hCG/T/sNBOQ9h3bOxr+vMogQ/WgXF5KxnJ2QKmvS2vnlTrpVmBgFBOJtVV4eu/zzw62kJG4UzmhKlc5KrIW30A=,iv:mEc4cH3jgNSSuWMQZ3Nz0ZJVwcaoFlrcCKYeWL1oDp4=,tag:pmr341wvRB7Va5z00pG4fg==,type:str]
+    lastmodified: "2026-07-16T10:43:43Z"
+    mac: ENC[AES256_GCM,data:lrGXTqtbCrXGwMszB87lzkUpdvPUZntx35+E0nz6WsckVM/vXa2RClrYkhYJ8sbT7x5nunGBZkoIVQ0N6uLcWW7CO15tr5jWZiW3oqhOZUwBQtdiSAJUC/Pd2sJy+oFnX0E6rfkIz7ddfUuz6RZRCLy2OUVeujUUjHUICIPgTno=,iv:fB8GyIbu45qugX1whc048Kl0vU9fCBdQ1Wy/frfI0JI=,tag:IA4/JBqrnfJAZ5DiCX5kFQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
