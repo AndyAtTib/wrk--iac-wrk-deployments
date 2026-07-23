@@ -7,14 +7,12 @@ records:
       records:
         - ENC[AES256_GCM,data:6inf831RS6N9,iv:R6wV+7FpSGtstObtUqi70ymR1xFBvBtTga3ehe+QoGA=,tag:sHdgtObno4qtwM6k8NO5BQ==,type:str]
     - ENC[AES256_GCM,data:eAR7FJGu71hh2HOZnbgeAcZrF0OmgU2Za5Q=,iv:5caKMLExS8lXn8in1Ogjtd0wOjyaAmmat3m/XqIbC3k=,tag:/eB7uwzHa+dwZR3Fm4ujfA==,type:comment]
-    - zone_def: ENC[AES256_GCM,data:NDtHb5IQndN2ed+NN2sLBsyREQ1xqzB+xB3gBpwOFsAp1u1T3XrPIo0M+qzYkCkOVw==,iv:kI00ge0/c/l2vvYq3OyxdKTIiQmHIinRc6dUmDY3bZs=,tag:hvmhU15otZbiUHO8YoCvig==,type:str]
     - zone_def: ENC[AES256_GCM,data:r32fvNm1aGuGGM7d3567feePkmr++nsX7qpOh637P141L3rwSXhqXBOzt0/WMr6vKA==,iv:nCBmBW764KdIqeWRJEyuve/jqMCpsRzluZrH0K/0QFY=,tag:2Syqu1JsU2Qca5NTCrgJIw==,type:str]
     - ENC[AES256_GCM,data:yZ40JmbVI6i4Z+9BsN7m,iv:JuwQRNxeCylCSqSzzjTQ3ei/R5xhenLA4SxmK7A6sNI=,tag:DKtH0DwxoRQo/XY9FidDXg==,type:comment]
-    - zone_def: ENC[AES256_GCM,data:w8veH12aQ4hdmJgRpyQ60p3XIInA+cFf0FjndCUWClH0vV/q31xuEO5nrb/6pu9UhOFpIanOIyN4dDstSX2Wf2Sk+l0EIZGu9isJ1xSldBb12gyK/A1e7QaMmi8ZO+zAb6XBZ7VtNl4SBVhZPDtMR3CT0wtC0RumUHji3eP+RKXQSHbVUrwyLqofhHG/PHOSP4O1eYAPgSILd++5ZD7fsxZoB+81jzAGV9FgdPN18nRSn6No4Sg1F55YW5+aow+G4cMjTcWYaSFVHA==,iv:KUe6feHpq68vV+pWmmpRDB1DaUa9YwtLnQfyQcyxHfk=,tag:cAjRBoH846sez/vPeBpFhg==,type:str]
     - zone_def: ENC[AES256_GCM,data:csGweXD4lpvos1x/tyw8O8bg5Q9m23PuRxIHU0mdGcN7yu4np+GxyynYL2cozZV45dqEoHvH27ZL+DXr5/sFXkKCM05Phes3kcSHklqIK2fj+OZ9NjEFiIv/Wr3/TbZsKbLGns1Nc0wk1+e6XMbMfywDqnH7mF7rnrMjq2zbz9Tk/KlqzILGxhajrfKHkIVsUeH316MRNYXYr61wtf/IWo5G0NuCRp3uLo//5wlpR1cljMQx/RONT7p2AuBPCCTu1/BPaX1TXYzA4w==,iv:3qWEhnD0GHqcqZE9dcc69QuHc/kiBLkfs9GlKzvXRFc=,tag:QR0a184QMwV0o4bCxt565A==,type:str]
 sops:
-    lastmodified: "2026-07-23T14:27:25Z"
-    mac: ENC[AES256_GCM,data:Ny/l/QMlOLtpQev+Xj8Z0CYPxhOTzA2dAPJIQ1RY4pVCQyrCoGe+VHXEpJ3Vrjr3Foa7a0ldVG1FBkdaUGg2ZYt0gwkU4WX8Zgezs4dfDGBKz67d94WlDVyOQYtL1ZyKPIyvScMUeEpZ+FW4mvs97z9SNOffT4zcmrhAcY/KT+k=,iv:3hCA/s7mZ8kBAd4bn5tp9QEFLJnx0TGzPJtL7Y0M/lc=,tag:LaGKGv8VOvmErugTZdXZrg==,type:str]
+    lastmodified: "2026-07-23T14:31:12Z"
+    mac: ENC[AES256_GCM,data:TjzsHE6Oez/5o6OqV84Ttw7DmMn3TfuHZkdS5FzTfVtvBliVvy/sbjOi+K6+vMXHwTHx08mh34vGaoRBgQ74RZS/1rv0dEDbNZm4LcDoHSJQqL7YrMrdPLD3+cG33QY84/mZ66pWuYYgC3eZd/W3ka7aMB+njAKfpWJVwurTl5g=,iv:3r2cdZydlJHFBLMURPMlP4VyfIiaR1Wf+KfC/BAfcw4=,tag:iEdX3hqsLZo37SBYlfgtcQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
