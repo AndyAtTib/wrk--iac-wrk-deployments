@@ -1,7 +1,7 @@
 deployment_name: spin-web-prod-csspn
 configs:
-    description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
-    version: acba4d69ea24849f474d5606d9504e68669b84ee
+    description: 1.1.0+Branch.master.Sha.c05c075bddba7462b6cf9b9ab50a61e985328479
+    version: c05c075bddba7462b6cf9b9ab50a61e985328479
 layers:
     "1":
         config: az/c-cses
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-07-14T08:28:35Z"
-    mac: ENC[AES256_GCM,data:c8HV1YxJablsjvOO8J9PiV/3hS/X3Je7gfJXyiGEWph2jaUCbS3gjF5Ie92/aU6tJkh81lfgkLsn1j8t6nJEI7rBNORcn0TYoWrKpxaiTZZGSrkvn+yIbgj8OAyYum7Oqfdd/PgGvUYZ+BmjVmPGyY55oxGicGH5pNCDljNTwz0=,iv:DTCcCvBMEaR2rNveswIpoCdk5Di3g+uVXyYDNnMDbzM=,tag:DgZ1ko738NQ/ko/UJ4mxLA==,type:str]
+    lastmodified: "2026-07-23T15:12:26Z"
+    mac: ENC[AES256_GCM,data:OaI6dbbc1hfIh8b4kywOFEjpYtoIhQXRcVUYORsoeChAtx+atWJ3EhE29eldDGPo1vv82Rd/VOfrV3xbC0N23lylOaETFNMQcecC5xJqqKM1K4dvIQOdMZZltOrSrzt4qFaGvY7URsFtKrph8aEreVpr0u7yJrcZzJg8/sw+nOM=,iv:xVtEVKNZZ34eW2jSP1RrYKmWYBFRzgFw+id6YqL/Eoo=,tag:KMSsBIB1N0GWKRRfBoLbHQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:56:12Z"
           enc: |-
