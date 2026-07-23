@@ -1,4 +1,4 @@
-deployment_name: pearl-web-dev-csprl
+deployment_name: pearl-web-stage-csprl
 configs:
     description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
     version: acba4d69ea24849f474d5606d9504e68669b84ee
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-06-29T16:42:16Z"
-    mac: ENC[AES256_GCM,data:VAiou9rxzqCh1CBs6CF4CwBzYt+KdvWCY+QuR5/CaNdcOcqxd02cYecZVc5gd76oZiBw2rSNjoaSOYA8+xTbJaLkMRh3bxicIXErFjNeeRfqxX2u4GpNhlLhOGXD9oZzPyfyEbx088TrNl/qHTDinCgsPPTl5/IfQZ8pM8V2w5c=,iv:XU1AM7dpz8dzQoPZ50YueE4M7a9erF1h+kvZVxlwLHk=,tag:4gIMA0IjSN9i+nusDEAK9w==,type:str]
+    lastmodified: "2026-06-29T14:06:02Z"
+    mac: ENC[AES256_GCM,data:/FHv9Zszb0KqcctQkrsL7b/QhLF7bGrE4/7O9ao1zwUC1tcLPfBbZVmd4eTwh2PGGLaiy1B6hEcxA3EI+hYmvqBJHm16NgX+RV9UIODNOmPM+TCpKLBX8oPO5O3nf/0+ug1gHqhvAIEny4V0Kbx/WogIs4ACjI6CqkGBIU9OM1U=,iv:0/VhPm9N3ISPH9XACB0TOpLsRbMr7KIiFCF3J5pvrHc=,tag:blhm1jtG35woKfF4kzfdAA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:53:35Z"
           enc: |-

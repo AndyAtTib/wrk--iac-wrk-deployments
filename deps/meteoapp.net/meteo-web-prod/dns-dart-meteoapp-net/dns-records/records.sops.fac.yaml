@@ -28,10 +28,12 @@ records:
     - zone_def: ENC[AES256_GCM,data:xbkM74K3a1yOgqKKBXuP54J8kDUUCeTuezuXzVreyLANWMSalLVosJvuS8QylJzOztXfkyVgHc6CeGUsdjklJKuMPD/aoFTzmhvanE4NRNeClXTXt9Tp+iV41uHc85QkGqcM0XFWcUEgTZWFE7YVRlHg6AWtQDOfat7cNTs8CuF5POzh9NfDDbVLNVbUXlsiyxA0B+JEfJk0dDioopAZh7KvNJ0r4HmjKdRhBchvsB7BdVGV/zFhX1sE4sBZUEAFz0ZczMZxNUnX,iv:2F+Ay4Le5tfNbgJlMjIjQy3un1ev6hDzcKdwSwFpmzw=,tag:8hPI0Vx8R92u6qbsNdPcAw==,type:str]
     - ENC[AES256_GCM,data:uH2J+v+usDeCAbHiRW7FI1tdHQw=,iv:XcJglDpvRG4FWD+a3RKrFEbi3hrFCOISolmYiIbMi2E=,tag:rOu7NN/v5wlfC6JxL4mgEg==,type:comment]
     - zone_def: ENC[AES256_GCM,data:+SXYlp30BXCpev2KHrCS0XOfRy+NM6FyLMV4PxhUQHr2vhJfu/mZJhZhCAoGZSoB3kpfr4kME5LNPBbevpZoof+k9lITxIqYLoxHJkQERs2xPYb9YDr16uG8skQ=,iv:RNog15ZwK2UNvfK6+PgbCHujl9jlXlCEtZ67DnOA0iY=,tag:8+228+vKMe4P6qA1SADlYA==,type:str]
+    - zone_def: ENC[AES256_GCM,data:vgMJqirXPFaKzHugoXcJBdmfEdFBihwDfkTxikofIVVY1I4LByHlNRT0MGb3kh79VHF7sIqPJxsai8dlP+QAFDSe0OTsgeHhwbLRc5WDVaJhJomQ0CfngWOyv60=,iv:36QT1+mRwKR6vxrZ62X4En6QEtxgGXVLKa58iJdX59k=,tag:1ilY3ZbuzW2VSQ8f8zWi7g==,type:str]
+    - zone_def: ENC[AES256_GCM,data:pdyWDcipd6qJ5TiwBIV7TrC45a5xROa5to723l/ZjdIIQURMV1D1MhKpGBA192eJ3yapzMfic2Q15CyUa/dfDhF4IJX8e69LlBoerrfUZ9/5vPs8PFIiDs8bLEc=,iv:030zTjIx9lgA9VC7dVSVTVX/D5ZfNlc/n6Z9VvEeobw=,tag:aEj4rE+5orhUa3u6vMRuzg==,type:str]
     - zone_def: ENC[AES256_GCM,data:7vDCjqnvqQEu5TTxkEK8dQRtbnBwRJ4pc+WlxlVw5CCoQ3VDZi2VQh1mtqGGg4QI+VtWlfHGWoGaE4qgpLdBFMLfJ2ESKHqMltzxgWA99qz823hPc9TMHmO4,iv:19Ohz5y/G1EgB9OeV5pduXrSSkuPL7NPNpmXvBxD7NE=,tag:o1sQ1Cc4jZ7r8L5WSEb+gg==,type:str]
 sops:
-    lastmodified: "2026-06-08T10:54:13Z"
-    mac: ENC[AES256_GCM,data:H5p/8ONpaa/AVWDZD3sBbCS6SwPl2Ez2enM4lhnb7g/c8oOaP+EdzsDVZ2LjZNkfo3aAZn/b3yRpkwBHhASucil9gqmwTW1fZpJV3YS1/AejJhrpskC8x3HNLsbETMMgycd2CQhloMS516UHZ1nFvahQyy03FKZ/RxCU2hIMK24=,iv:nn4qz21ces3gckQEQiNuCbSwsDLHRL9hXhxNzE1jgtQ=,tag:575a5H4V4PUGPepM5gt6LA==,type:str]
+    lastmodified: "2026-07-07T13:44:47Z"
+    mac: ENC[AES256_GCM,data:Ihdjo28swjh+UpdFFgiUu88XXOfefC6ncE31fa2iI1jZ0JwISFIfSHNFAAPTfhlrkYKi/UYLP8wrscnCK16oG49hw8cqtF4m0lM+WZHmKzZApOr+kCQY5Tvqfncs7JAb80Hm/N1BaFt/39qiyOE6TtYZSoOFedJ35Dpeekewirs=,iv:ep7WE+OB3b3G43sbitDsOAg/6AZGWyvJa7ciDe6pe+I=,tag:hgcA77ygVA5X42IoRFbA0w==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
