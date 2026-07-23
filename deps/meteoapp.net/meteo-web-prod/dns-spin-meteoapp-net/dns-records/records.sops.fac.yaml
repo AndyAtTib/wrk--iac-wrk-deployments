@@ -1,0 +1,42 @@
+# Terraform will be unable to decode this file if it does not contain valid YAML
+# You can retain `---` (start of the document) to indicate an empty document.
+records:
+    - name: ENC[AES256_GCM,data:xq4x,iv:BYaLyJeqGy7I2K4yeJFLBXA6YUr5upBQPSYsnVlCrk8=,tag:AqWMTPl+wbd5GrXFbEb80Q==,type:str]
+      type: ENC[AES256_GCM,data:7w==,iv:STr9NFLXBjGsF1npH15JfFrqs9LAj/7FWfprc1eZdCo=,tag:7IktFl6eWUrpabYqXIVTVA==,type:str]
+      disabled: ENC[AES256_GCM,data:lX/BdA==,iv:CyPaLPgKCnrzWTFvTz4SJJYXqP4SLfKfnoGWXJ+ANz8=,tag:STpXnCKGMLgot9p6ZqTIOw==,type:bool]
+      records:
+        - ENC[AES256_GCM,data:6inf831RS6N9,iv:R6wV+7FpSGtstObtUqi70ymR1xFBvBtTga3ehe+QoGA=,tag:sHdgtObno4qtwM6k8NO5BQ==,type:str]
+    - ENC[AES256_GCM,data:eAR7FJGu71hh2HOZnbgeAcZrF0OmgU2Za5Q=,iv:5caKMLExS8lXn8in1Ogjtd0wOjyaAmmat3m/XqIbC3k=,tag:/eB7uwzHa+dwZR3Fm4ujfA==,type:comment]
+    - zone_def: ENC[AES256_GCM,data:NDtHb5IQndN2ed+NN2sLBsyREQ1xqzB+xB3gBpwOFsAp1u1T3XrPIo0M+qzYkCkOVw==,iv:kI00ge0/c/l2vvYq3OyxdKTIiQmHIinRc6dUmDY3bZs=,tag:hvmhU15otZbiUHO8YoCvig==,type:str]
+    - zone_def: ENC[AES256_GCM,data:r32fvNm1aGuGGM7d3567feePkmr++nsX7qpOh637P141L3rwSXhqXBOzt0/WMr6vKA==,iv:nCBmBW764KdIqeWRJEyuve/jqMCpsRzluZrH0K/0QFY=,tag:2Syqu1JsU2Qca5NTCrgJIw==,type:str]
+    - ENC[AES256_GCM,data:qG31FRXbNROK1PwL3A==,iv:86609YTVIC0D+9NGghY+nHllO21MxhJSb0AP2PWzrcE=,tag:PzebHZi0d/IhDZrn7sIe6g==,type:comment]
+    - zone_def: ENC[AES256_GCM,data:J+ovEJZqttMxWdSoZp8xGv/PwFYXFWrGl/l7ve1yC4rc7eb4f9pgo5e6RtdLaq9NOagim9iMCDtalYzB,iv:fgs4rgPJNrK2ZeMEOOlwY3bsHoV4Aasa4PtycucpuPY=,tag:t7mXpXvUE5BzUhkZEDTNMw==,type:str]
+    - ENC[AES256_GCM,data:yZ40JmbVI6i4Z+9BsN7m,iv:JuwQRNxeCylCSqSzzjTQ3ei/R5xhenLA4SxmK7A6sNI=,tag:DKtH0DwxoRQo/XY9FidDXg==,type:comment]
+    - zone_def: ENC[AES256_GCM,data:ybYkCfwHE8/EbNPPX7/bZXWogpm74ot7sRORLMX4Bds4hiYxg1QFTQQQqVPsEhrE5jQfQv7cYSWfo0WHbFTQX85X,iv:iNpdGS5RIEc8E3iVGr7DBbTGVgtEAZj8xxlGWI4j9Nc=,tag:h+d6JG7Ds/ZP+7/FWwpPjQ==,type:str]
+    - zone_def: ENC[AES256_GCM,data:9Upwstu+jjIRGLFZiURaXYXXwHLoQgR1DDhuIhH5gcxbNMTCTmAq/6WxbDw6lQFzBMLXGQzWJ8G0og==,iv:y1BAEU2//eJYNNDMl+rBBqC6EKyrVQUhtzNeBqMXinE=,tag:v67ObVGmQn406Q8g9huUwQ==,type:str]
+    - ENC[AES256_GCM,data:45NI2Lsvn0gBOfa61F5HNtssnA8=,iv:6g8sJUOOPgcnfZQoEUuYDYgEJGKKGUgxnFQEtZkQD8g=,tag:RCViaByfON9za7kS+2dQzQ==,type:comment]
+    - zone_def: ENC[AES256_GCM,data:Dwv5gULivGQszwCFUFiYGfk8yWDmAkF2XHs17qQ0O1a6ferd+oyB96RX6SffB6JIJBlv432VrWMgMo0bX80zgbXbrz/uZ3soGoySL0HTu9/ipybZ+TMD8daFeg99KaAKUAFATWJVRsrmjdM5ykQwB1ghWVr1xSZ8iFFQVMD3K1CYMqecIiZGSp89avkGrFgUtEkYbklI9kSL7pgtZilJ0RbIMOv4ggFFLkt3xsbn1ZxgMowt3PmXbIE9C5YxvLSodpSM8xkOKaQC3wPd2KpMqsYTXs1bjw==,iv:C1w8N0NFQMNPF0kV0QD6/Qbp4qoP/F+6P1eU0qzb6iA=,tag:gHIxkvMmZmv/hzZ9OoSLmw==,type:str]
+sops:
+    lastmodified: "2026-07-23T14:10:55Z"
+    mac: ENC[AES256_GCM,data:Uzl94Hf6zq5H6oHuUGRqXiEVv/swvtP5b7eAET2GEOm6v8/YfO0nq2Wqqv3JaVgb85QRHqjM8z0GaUKxVMb2e7hPAtYYYmCku8s+6e5cmsvbcN+gsWZWKG6Hkv5cklQi4V4UxuYOfDizyN/hD7RQazremn1SfMOfrnSVSX1fAaY=,iv:fHIeUPpkThjm9TVcQS3949TU9sIQdGAAvE6b5/Ft4Z4=,tag:xj4EY5nQU9EQoit3OILvyA==,type:str]
+    pgp:
+        - created_at: "2026-05-14T22:08:04Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQwAjl1qN5nKBujefyq9NcQD/4u3Kk9/XqDuMcnelzLQAzFK
+            hpqRJs/mIhV/tw6CGAy7uq2ZQW2sPFyWQstX/2gnSwoRC3oYImSv4mJGAuZKk5+C
+            fLzVFOw5NEBdRuSwGWfVy72gdoQYxmvRDgZgCj/kntmCAHFjVBdb6jZZ60WqionT
+            9H3EJLO/hBFWuxA05RnrWM47FgtlNHcs5AugofW/zIH7F6MsGCK3+zIxUhGqlGuM
+            hYYLoNZke9ksL8W5T6yIJmxf5YUFJR0AJVDiIvnoBPKHs6UoZIQDtd0uVP+w+Ptw
+            a1WaNPe6naFOYReN6r57DSctVTwtEWYOnjcjvSzdBLemM+6Z2W/Q4i5Ef8D/N66O
+            9C1K1giAxGr1jZUZ7Kl/a2GksLyGe2X5IHziVkmMi125f5MCLjb4VgnuUIFv4vSh
+            /pqz+928mXhbIQDvrQBsVQK14wnrsZuzVSsZESWBLf6kzfac+wkqwKdh7A0avCVH
+            G/oxXjx1FDMeGen+b4AQ0l4B/6f5i/QIG914hgwP3tDozi9fcXuwB6ZLKA2j7bvC
+            5kBa8HRplUJzoLi+mPQiUYsw7sQtoX7Pt7I7rrV1UZ2KDiXp2sHUeLTVe8g9sH+j
+            edHWb9PmmhDMD+ACYdbk
+            =aLRW
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^.+$
+    version: 3.12.1
