@@ -4,6 +4,7 @@ records:
     - ENC[AES256_GCM,data:g+92rB0Kmy/vwN5c5hDfU8c=,iv:c5VmqNGu6tR7mMzqH1NGT3J3t/nYa4JcuYxw8hUgK+s=,tag:Yk0L6B8AKqoPNKmqVQ6OTA==,type:comment]
     - name: ENC[AES256_GCM,data:c4o=,iv:mDtc/pooXkGZK3buc/AyV2xVD7z1TkHStTFJlT3b3PI=,tag:NF4EWgw/szozfoqtSs5xGA==,type:str]
       type: ENC[AES256_GCM,data:LA0=,iv:LSrRoXJiCBHrGXyL2SZAhD/HR9V2coVGBE7BOLVl5fc=,tag:YX/VmPwIPW+NysCFLS3ofg==,type:str]
+      ttl: ENC[AES256_GCM,data:hFclQneP,iv:4g7V3jo+iOZH3vu3XPIdEo1/QcJCyI3cxJqRt7e0njI=,tag:RsKEsplcDtswQkaoZd1AFw==,type:int]
       records:
         - ENC[AES256_GCM,data:7tMhCHIZHh+C5S0fn3pyYLD/3AYu,iv:nfbdNTcJT1qbtMyAR5CNoTCGYzs8WVcaam/RdD2zrBo=,tag:hoRRJzUoYZxkUt6woBD4sQ==,type:str]
         - ENC[AES256_GCM,data:Omsc4yrKuECYWo08HcH+WrjBUw1Y,iv:Tz10jsitJ7D8IcymJyfC29vjImbxCjZcAxo+W4q8Tqk=,tag:LuS6Tg/Fxrh8XfQsZwLE4A==,type:str]
@@ -32,8 +33,8 @@ records:
     - zone_def: ENC[AES256_GCM,data:pdyWDcipd6qJ5TiwBIV7TrC45a5xROa5to723l/ZjdIIQURMV1D1MhKpGBA192eJ3yapzMfic2Q15CyUa/dfDhF4IJX8e69LlBoerrfUZ9/5vPs8PFIiDs8bLEc=,iv:030zTjIx9lgA9VC7dVSVTVX/D5ZfNlc/n6Z9VvEeobw=,tag:aEj4rE+5orhUa3u6vMRuzg==,type:str]
     - zone_def: ENC[AES256_GCM,data:7vDCjqnvqQEu5TTxkEK8dQRtbnBwRJ4pc+WlxlVw5CCoQ3VDZi2VQh1mtqGGg4QI+VtWlfHGWoGaE4qgpLdBFMLfJ2ESKHqMltzxgWA99qz823hPc9TMHmO4,iv:19Ohz5y/G1EgB9OeV5pduXrSSkuPL7NPNpmXvBxD7NE=,tag:o1sQ1Cc4jZ7r8L5WSEb+gg==,type:str]
 sops:
-    lastmodified: "2026-07-07T13:44:47Z"
-    mac: ENC[AES256_GCM,data:Ihdjo28swjh+UpdFFgiUu88XXOfefC6ncE31fa2iI1jZ0JwISFIfSHNFAAPTfhlrkYKi/UYLP8wrscnCK16oG49hw8cqtF4m0lM+WZHmKzZApOr+kCQY5Tvqfncs7JAb80Hm/N1BaFt/39qiyOE6TtYZSoOFedJ35Dpeekewirs=,iv:ep7WE+OB3b3G43sbitDsOAg/6AZGWyvJa7ciDe6pe+I=,tag:hgcA77ygVA5X42IoRFbA0w==,type:str]
+    lastmodified: "2026-07-28T12:10:37Z"
+    mac: ENC[AES256_GCM,data:NYbK9K242qayNfpCDeycy/dQ5jlHruaqpSci7q30z9+usmU9ol0DTGG1wlMLN272AiMmfKm9k+sqyQd/5hWTQfn3c7NOhlL8CjO7RiJiEsfI305Ih8/L/8mbqmTGD3M63TZaF4LGwSjgdjuVeHIvlwVlys8ObbF9iJeva7YLyes=,iv:4pAT/PYAUTK0sgPDCPDC39ux35jIVg/ceW3DpdYD2W8=,tag:HM3abjLSUAj0oxRr8f9m1g==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
