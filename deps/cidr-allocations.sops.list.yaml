@@ -114,7 +114,9 @@ deployments:
       ref: ENC[AES256_GCM,data:Bp1zKsUeK+vvKlOkwmSECJqrq34B+/iI+bmMi2EUyEKryKKFOGSKHlvcwJ7fTs5QPu88yA10nGyz,iv:3NJFbjJZUav3tw4YDPPFNfY2X8u3vHVUhJc3ShniZow=,tag:6uDj7k2JBOZd26saLkV7yA==,type:str]
       cidr: ENC[AES256_GCM,data:XoZaAI8BRTdpSNjn,iv:qnhyRnq2a9KT/8vCNTAZ40z9MIVZQxcdFc2KmT0hp+s=,tag:E6X2vgfRRThBIMRdobqXoQ==,type:str]
       subnets:
+        - ENC[AES256_GCM,data:iKD+UfGNCw==,iv:d0+sxbOnxo9SWwYKXFkrAjaQkmfrTZVZ9LTM4LV44FI=,tag:EvJZeQ8mdtP6XwUFirVr4A==,type:comment]
         - ENC[AES256_GCM,data:YTdZ8ZzqivMDnYtP,iv:Y4Szhwo/ZhfUc+5UbmrHFXGuXzUYtraQ2I/SCDBTVUA=,tag:whDOoB27WIItUNrJExTzcA==,type:str]
+        - ENC[AES256_GCM,data:r/XP8GF5thxG331mhpmGsVjuX9L6mGmQnP8=,iv:bOd5HtEeR1y0s/t9FhDficPZnk71y/wpRxQMa+XCXzI=,tag:yWpLoLswa4arHHRu/Runyg==,type:comment]
         - ENC[AES256_GCM,data:Y6SaLxjZNMCmW7Ow,iv:0WAL0ksHbgfUyHZo/rBztiAs5g4cymjHiWgKPitCslo=,tag:769ZlLYBYBA9OkVBph94BA==,type:str]
     - name: ENC[AES256_GCM,data:hVuFMK3WBjRAyf7n0ZPlwMrFwvc6vQ==,iv:z8KnbgYB41BHDH5WxKcE7xiVkpymklLlaJQ3qRe3/J4=,tag:7YfLAR45XgBBhWyHERAgyw==,type:str]
       notes: ENC[AES256_GCM,data:52gQOxC1Dd9D/g==,iv:G1YLEeLx+i30iS1WIasWRsvB+Sf5RvPnjHdsBnikfWc=,tag:ipKS8nmNuSmEmAYy0gLrKQ==,type:str]
@@ -141,8 +143,8 @@ deployments:
       subnets:
         - ENC[AES256_GCM,data:sRw3Ir+09dYY+60=,iv:HVQvF7VYZkDgfMQX4RgRc+9rcd/HZbDJ1x8MdQn2iyw=,tag:tH0YAaNj4RX9xk2DItNKmQ==,type:str]
 sops:
-    lastmodified: "2026-07-14T08:33:45Z"
-    mac: ENC[AES256_GCM,data:Om/irPc65ILyoaPNa8UyJlZGAfCR79E5aCOTHfkatf66zi/jzMnGCj0+lb1CpiWFS4KWHdmSmHT2Yw9K7gyoRuggWhctSnTw6vh8q2JpbXUh02egyeLi72FuVaguci+DV4WeWeo+CFiV0q0NEpVHcMIrrfQTdAmapZjJdQy862w=,iv:wzDHJjoY4YC8JQi/KfpGsr4HtPbFuN0GAws9OINJQkg=,tag:ZwnSb86Gmhk50vMx2h0HoA==,type:str]
+    lastmodified: "2026-07-28T13:29:42Z"
+    mac: ENC[AES256_GCM,data:uexIvgmE7VXUy92gInWYlANQEu+DazJTE7j9LTgq4/SZQ9B8Hds6+0IUnyOktoZgHxQIpJ7VMp7qyJchU5MoKAHk9USUDog71wTYLzbS80IrsKsYYdBA6Qt6TdNdaL0wzbq8kaQ9ZaFOUW0exOoG/k9V+IiMIQZT7s7GTPhWn7c=,iv:XI0SySYSzcRiLLDDYo7oOqv2DbGrIpKnjRT+s6cSEug=,tag:zRrkNWJw1T5T8r6WNavQbQ==,type:str]
     pgp:
         - created_at: "2026-05-14T21:49:26Z"
           enc: |-
