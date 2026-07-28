@@ -37,6 +37,7 @@ kv_policy_assignments:
 storage_use_azuread: ENC[AES256_GCM,data:xNo9NA==,iv:DoLMqeaQKMj05JnNr4c6TFH4zwFH2dmQ0G4PoOAP3m0=,tag:AqUUOT4g5gaEGt6dxRXjbQ==,type:bool]
 dns_zone_id: ENC[AES256_GCM,data:Xhr8jS+PTKO6/4bBldHz+eTbUz3F4fpR+KhW+a8SYoJs6Aezv/eKa9MsqQTDnFvafKsKggIAcd0FHsbgWHDyk0gsKlt2Zkqz+zJXFyaZNg+2quvRiCh/phGR/WbuGze6gMcjsvKrcj60HXuXwggn1R6tT2jbHzqorKLV5gtb+DvSavKIn7Yk4ulLPEsbxQJDfwhP9IbnKw==,iv:PQ1xhcfmhWAQ8yjwEAFDZNHeBsu/7SDhmJYC/pnGgIg=,tag:kaFDkH46xDB1MMMHcOG7Pg==,type:str]
 dns_record_name: ENC[AES256_GCM,data:V3iX,iv:CLA77oFCo39EPkVxoGiLa9ZRkCfQr/0ywQI4rW2ZSxk=,tag:uMFpHOdukUzS0H4Bo1avHw==,type:str]
+dns_record_ttl: ENC[AES256_GCM,data:UKgG5A==,iv:vk0bRRP5CpbFgDw+oZjxZeD4m+Edv1Sk9XSYi0P1hOE=,tag:5LHMVGN/17yEv6YjQ7O9dQ==,type:int]
 build_vm_subnet_ids:
     - ENC[AES256_GCM,data:gHAms01BP6EkffNG7J9Ihxl7TrxlRDAPp4oQZRLts2I35GMV5EF5fupAYGVVY2RgKAsWTu0rsvGQD8rInRJEEmh+yfRc0/q9I3VigHAzOibS5iFXVP7QVA+bCetFQAz3Aih/fWSOSYeqrbvJKmPS1bLc6tquPWUIjj6S9AhNR9XEBes1r95ewua1vbrT+HiaToQSxXik2fNduOw/oud3n45WUgxufDd+a46cBSoRsRJbx9AzgnRa6Y7ZQBteVkKh050=,iv:NnX3I/FCGa1xjVwReXclF0GxxQZxs/BTKZvEwKygERk=,tag:PFT9VosYievRw0rz4ZVJFg==,type:str]
 vnet_address_space:
@@ -44,8 +45,8 @@ vnet_address_space:
 subnet_address_prefixes:
     - ENC[AES256_GCM,data:z186G1TguxjB5f3w,iv:ATL/R7KRQVu06CccL6sUSIglMDAw1NjJlmMGifxENz8=,tag:DfQJ2zt7GO+JwUyhObz+DA==,type:str]
 sops:
-    lastmodified: "2026-07-28T13:04:33Z"
-    mac: ENC[AES256_GCM,data:PN4Wf3vrNoSs9iMvjv1ronaQcnKFw4Csq0N+vuD3C5XoS0Vxzz95Iw7BVsPYoyvsSoRukVq3n7gIclZiDyFD9pCz/ZbZWl5jHe6lA7Jq0GjoLT5wCoCbEwUWMvto0a4aFCg7WAU2e8I/fxTfAvEBUAy92+JKGILyex1FXFXnAx8=,iv:SedKmBlyVZGSt3nN3kslgfAuF/3VZAtJLDvdTp3Kjbs=,tag:4ouuQibS/eZFc/Pu9MMC6w==,type:str]
+    lastmodified: "2026-07-28T14:29:21Z"
+    mac: ENC[AES256_GCM,data:5OurCleRa2i240CflRo5yhR5cxxEXWudsVO6bO+qV4iw2LB9afYCcfakO6u3ZCwJ9b3EeKvV07yha57ol4RBtu7vPCNceZPUAGX+iM6d4t8lBksKNK+kFphiwf3Vu09WrvxtLBMr7dqILUjcLnO9KV+2ppNXIc9gFEFrx3Y1OSI=,iv:N0lALRCbbuyEJ8WlChqUNpGzHz0dHdd8vaoTcfj2Q4M=,tag:xAdLBzk27emQ7pyhnoz8mA==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:25Z"
           enc: |-
