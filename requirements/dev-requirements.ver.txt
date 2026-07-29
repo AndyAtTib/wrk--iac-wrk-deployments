@@ -93,7 +93,7 @@ dockerfile-parse==2.0.1
     # via checkov
 dpath==2.1.3
     # via checkov
-filelock==3.13.1
+filelock==3.24.3
     # via virtualenv
 frozenlist==1.4.1
     # via
@@ -259,12 +259,13 @@ tqdm==4.66.1
     # via
     #   checkov
     #   openai
-typing-extensions==4.9.0
+typing-extensions==4.15.0
     # via
     #   checkov
     #   pycep-parser
     #   pydantic
     #   pydantic-core
+    #   virtualenv
 unidiff==0.7.5
     # via bc-detect-secrets
 update-checker==0.18.0
@@ -276,7 +277,7 @@ urllib3==2.0.7
     #   botocore
     #   docker
     #   requests
-virtualenv==20.24.6
+virtualenv==20.36.1
     # via pre-commit
 wcwidth==0.2.12
     # via prettytable
