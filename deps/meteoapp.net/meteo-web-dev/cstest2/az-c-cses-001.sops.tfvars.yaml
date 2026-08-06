@@ -52,9 +52,10 @@ nsg_config:
     factories_config:
         rules_folder: ENC[AES256_GCM,data:y3EjGDvDgto1GUwsVMi2S8c2kQvCk/o=,iv:SrO3TVA3gosSWfyE9wa2vUXQljK+T9jRqxF67powOBU=,tag:XL6j3zuhy+BAQRrksNAEfQ==,type:str]
         named_ranges_file: ENC[AES256_GCM,data:xNYCXu3pumLmJUFBxSfCKE0Zunh42usyW8QznnvKetOSkTnsvyiLauK40fGXaQ==,iv:K6T0Gsp/Hpwt2yvDL91zR9Y9Hv5TMs8AiRRa18NwQUY=,tag:YsUx+Y1zA5DGJE8J+O1kUA==,type:str]
+peering_config: null
 sops:
-    lastmodified: "2026-08-06T10:19:35Z"
-    mac: ENC[AES256_GCM,data:7le1NmZhsIoUguoY3o2Lpn/cb/Hms1Vg3ezOJQo8XAQgCE6YGsqrPKEhYsfZOiogYuJwBxzkO4TcafaAnAm6rt9UTyJTk+f7hF+U1dwjNUfhwYkBlCPIpbas4R26TNAZbJ4g8geKQlCVK8yfrAZ+g8qZX42M89/SgXb9TYPXEBc=,iv:Gy+UrSEJyfq/dW6ioo9TYDSWjT0MZVEyxAuBoKUcXYA=,tag:/yr0WY0knMPKhaSi9Wb88w==,type:str]
+    lastmodified: "2026-08-06T12:01:01Z"
+    mac: ENC[AES256_GCM,data:qtRB5zcJeh3b9xN0kS0vRXdgByju690+sRm2FDWZnnZktTymA89HKNEWw/9W3UQpdOcT+zhRVr8WTh51mv72EzsCVFtROxu519tj28bzNu3Mk5cKHLnCVye2ESb2HozfLAjm8OXtQKM+hEZyTutfKRIRSwqDPXF2zqL3jdsiaX0=,iv:NtAmnmByEfeEX86eyOPacMQd0M6N1YF3ZgQBR+ayZTU=,tag:sPgjbdsVAK18dw1y2f+dEA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:02:26Z"
           enc: |-
