@@ -19,9 +19,10 @@ vnet_address_space:
 subnet_address_prefixes:
     - ENC[AES256_GCM,data:ebH0xFEc2z+OdMA=,iv:TH3jIXJTgnQjldrvDU4USb89Xx9qBo7kh/E+xqTgu+E=,tag:wYmMKBFKxg2/C+5FWcsG8g==,type:str]
     - ENC[AES256_GCM,data:VW7dRIazt78/1GIA,iv:4BwmT9fqVhP/CAyXQpoviTam9uBMcpQtJphVwwf9z0s=,tag:RvDka+HrvNI7tGpbmcREEw==,type:str]
+peering_config: null
 sops:
-    lastmodified: "2026-08-06T09:56:23Z"
-    mac: ENC[AES256_GCM,data:x2P0W3NSvZS+ZCfFHlOKwQLKdSgwWMjNsWN18Df7BHYrcGiG/KP6xzleS1mD1Q8x/fdwKemmAM4/H6Q5NoueH3zvzNAM2EWq7Vl4uAVYUBDapWXDFhwXQD5j98RuvZVl30eRuQIcDAhwlIG8wMcJi/hGGjQ18LAplAerqQyaSCc=,iv:EJdsQ97ZMlU2SnIp5sGTpzKDZy3ei8D6UGBu7d0o8mo=,tag:S+tNXBuXs5o+J8IZm9hiRQ==,type:str]
+    lastmodified: "2026-08-06T11:58:47Z"
+    mac: ENC[AES256_GCM,data:HmaBGvHI1T/OH1Y/sDN+RhlKkQLKg6RpRo2l/vu/SHujgjD8f6Y43EOB0c/sPX87pcLcz/RPKcFHy+09+LbaKfT0VGs5R75Zz1Tk4OHGET9n+/WkuW0L7ALB6LGUQPzvKVpor7b+L11oJKHxXZTPFveVqlqo3mDV8h0BjHql2LA=,iv:51q8qYRMuI3IjY9ixcC/ILkkfaGjwwhW+7SB6xIuwHc=,tag:aQQ6cPtPHI2HHTLgG4mZTQ==,type:str]
     pgp:
         - created_at: "2026-05-14T21:51:54Z"
           enc: |-
