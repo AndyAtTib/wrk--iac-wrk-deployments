@@ -7,6 +7,7 @@ layers:
         config: az/c-cses
         tfvar_files:
             - az-c-cses-001.sops.tfvars.yaml
+            - az-c-cses-001-ilb.sops.tfvars.yaml
         st_id: ENC[AES256_GCM,data:Sx5shK5n09Gxpa6vajJ7r0YKvyG4Jc2YIJSbTvt4DnwhT+JOs4P6YN43KWuCdWxST9WanoxYtHek3MTHR8+RZ5WWTfzPZpmZfNO2JMOX8kXhPE4lKDMzoMqJz10rOqUJ+cRMcNVBx67qwCJF2iml+yMrWZIFs5hNCHQj8/y+uti2W2EXOIsxs+rdA0hJsU5kiGjN6tMxpIRTR3w=,iv:Ef9nfJVLKKGSYTWBlo1GcBkTt8ppkdbci1NNcLOH1cE=,tag:a7qQoMJ++i5ucMAJzuk3Ig==,type:str]
         apply_args:
             e: layer01
@@ -20,8 +21,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-08-06T10:28:44Z"
-    mac: ENC[AES256_GCM,data:SWAj09qgb/C9/ig4oqOsWTq5xkZ0u2AHi9ChSvv1v8z92u2PD4cIuIsg4z5RBhSc/o4PpZwXjuTDwQc1dxKh8XeqBkmftA69tKsi58LRPCKg4vUEDcRfXqCzS8wv4Os293yvvSJEHGn1NWSCWDHeAUvAHkQGAiZS3MPz7rCLzZ0=,iv:Iicv80zmaLq1heE3V9G0PR9SjxQd9CAhKWdGc0pje2I=,tag:0jEBNsCZrzXksCdGaPNzug==,type:str]
+    lastmodified: "2026-08-07T14:36:48Z"
+    mac: ENC[AES256_GCM,data:MM7nz/2rO4x4uQySC/7Ouxt7w3c++sydFxSoA7fboDWQ0BHOvBtwos8PQ1EsipBR86MOI8omKTKIZqNL3wO++R4DV/6dGiPwfG6QYy0tHEo0kL0NP7zeOqoW8/aRRxOfqGn1g25Va4t8nenS8D3wZieEfJFdTyQMhpeVUuBF8Gw=,iv:EMFeP3WeplW6H1iMsT/aho8+yUkGUA8U3Kd1e8ObWi8=,tag:k2+/Vc+b0lkHwrHzNkkZAQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:48:47Z"
           enc: |-
