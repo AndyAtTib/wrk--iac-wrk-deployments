@@ -123,7 +123,7 @@ function _do_run_precommit_hook() {
 #       "${args[@]}"
 # EOF
     #  -a stdout -a stderr \
-    echo "$input" | ${docker_sudo:+sudo} docker run -i \
+    echo "$input" | DOCKER_HOST=unix:///var/run/docker-host.sock ${docker_sudo:+sudo} docker run -i \
       --rm \
       -e "USERID=$userid" \
       -e "GITHUB_TOKEN=$gh_tkn" \
