@@ -1,7 +1,7 @@
 deployment_name: odyssey-web-prod-csody
 configs:
-    description: 1.1.0+Branch.master.Sha.c05c075bddba7462b6cf9b9ab50a61e985328479
-    version: c05c075bddba7462b6cf9b9ab50a61e985328479
+    description: 1.2.0+Branch.master.Sha.6c0bc2d333d0fc6d1172ed432284fa5f9e9c4ddf
+    version: 6c0bc2d333d0fc6d1172ed432284fa5f9e9c4ddf
 layers:
     "1":
         config: az/c-cses
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-07-21T10:36:08Z"
-    mac: ENC[AES256_GCM,data:ZN/slD/HJ0kATgCNsOY2JVk4aE8NuC/aG225zL/Ep+HQnjHv39jLX6w1ZE5gbY8COcZTVJrzC13n96TMqaEj+dgCGDE+mB1ufpQvFPdEc6Kds/Xp8zmMPK4pEST7kfjxu+7eT1WCSf0ZMMNjRqcIw7lqUQPv8KETHwTW9lslNF0=,iv:3hp65ZlvVNOI00dd+LbX7E7ylZ1zCpE6t8CderYmn3c=,tag:ctBS1kHr/xAiJsbsca/igQ==,type:str]
+    lastmodified: "2026-08-10T17:14:44Z"
+    mac: ENC[AES256_GCM,data:vnR1UA6s9tyQGvjVLPgCzTTDR+ZbReoPkC1ArTrh5DMNp6+9toFYAobFM5H4QQT7K5t6vwd9gZQyp/l5YadIuGyxTMcbsQYWQ7GmFzwil5ky2/NL3D2LMHqgJhdbqgPwZeZ7Y00wb5a93ZvQWrxBLFDV0MT3LCMzRr3lhUZDOA4=,iv:72me/Gu80vd1XLgPIrhm2J9jonJbPn7v2HAeqXqZiwg=,tag:Oi8YH9AZ7NYoDlhKFU7hGg==,type:str]
     pgp:
         - created_at: "2026-05-14T22:42:28Z"
           enc: |-
