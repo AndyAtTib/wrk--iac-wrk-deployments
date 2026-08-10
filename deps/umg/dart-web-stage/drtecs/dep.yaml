@@ -1,7 +1,7 @@
 deployment_name: dart-web-stage-drtecs
 configs:
-    description: 1.1.0+Branch.master.Sha.c05c075bddba7462b6cf9b9ab50a61e985328479
-    version: c05c075bddba7462b6cf9b9ab50a61e985328479
+    description: 1.2.0+Branch.master.Sha.6c0bc2d333d0fc6d1172ed432284fa5f9e9c4ddf
+    version: 6c0bc2d333d0fc6d1172ed432284fa5f9e9c4ddf
 layers:
     "1":
         config: az/c-cses
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-07-28T12:48:52Z"
-    mac: ENC[AES256_GCM,data:iyHjDkYKy0FKloJNkrfKbZhszPkl47n/ZScvOixvROfK7OihM2ZZ6M7Kx57ruh8vnisRpeDdCXcYVcRvjJP1aQO61J9BYkUoH1YRSZK+T/anap5CzD8ZptbNM35KZcO9Pa4xYSuuACdZ3zAnqcN1eauIFKV1w2rIo3/pTZwKczg=,iv:cJvHsFE66Ya5mwuktSaUoAlDbxmuc1hoTLsHZSrSX+E=,tag:8DhFQ499HrWPYCSQhnQS8g==,type:str]
+    lastmodified: "2026-08-10T18:47:47Z"
+    mac: ENC[AES256_GCM,data:t+T1C3FPIDttH35CHj36Hxvcm8W292XXUpXS5ybjjGioih48ArfcT9H77Uhi2yh81bbXeKr2CZZ63Kzw2n34FqDw/Y/yHECZ6sLuPXz7QiNCZN9Wag3ehFUr7NkKlVsMr0V5RrnBwjmwW/OCbBGTfX2QBOzAEiqIEhrXkRPYq9U=,iv:KxkHbWz3k63yiMi+/QrsDbjraeebshi0/Posr4vzF1k=,tag:KBkCyMIICvkaoztYrCBvqQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
