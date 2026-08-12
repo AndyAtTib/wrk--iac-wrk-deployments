@@ -1,0 +1,37 @@
+deployment_name: meteo-web-dev-cdvm-test-02
+configs:
+    description: TODO=1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
+    version: TODO=acba4d69ea24849f474d5606d9504e68669b84ee
+layers:
+    "1":
+        config: az/c-cirrus-docker-vm
+        tfvar_files:
+            - az-c-cirrus-docker-vm-001.sops.tfvars.yaml
+            - az-c-cirrus-docker-vm-001-peering.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:bp2MY4VqbP/zQ1TPsSTuONHKzqy0MetHfmBg+uX2V1Blwg3srf/7KD6e+VfxTfBO7uBXMGY2EpNJqss4/aq3hfR+rabcZtSdlx40puCROoOII2oF/KnB8F1WoYeAHordC/VY+dXu6neXTQVQH84SnRizX4iZOJNuTD/Q+JV5FtuLYZFPpDtWkWXA1K5vdCp1d9W/pOtg2Wfwa5o=,iv:7BDx/1SwEapB62XJZ02Yniyn7FxtsR07umnbVaHMk2s=,tag:MyfzqRGX8uAAS2vfzfXEDg==,type:str]
+        apply_args:
+            e: layer01
+sops:
+    lastmodified: "2026-08-12T10:33:31Z"
+    mac: ENC[AES256_GCM,data:MUOI7cdB/avQuH7v1J1M1TFXfQ7OZeSPj389Se1OlHbfJ+wmwk6ANVJwh+5BhyKbCZYgc6/QhSKb69Az+85pPqQo3gkG/f50iEadj5iZEnbDOHc9pAipLsTjssVLF5aI8Kms3Ms4Mxd6ZoVn91pW32Q+7eftU2BUhjBaeJ+QErY=,iv:k2eYPSbwEM7S+zlJ225nZsKuSCNXjyHfYB9Dlw/AM9A=,tag:xpRYsOjv88ImRFTbnRi6bg==,type:str]
+    pgp:
+        - created_at: "2026-05-14T23:05:25Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQv+J9aV6d3hHBslLXx44EJ/NyzEeCbEd41RYrsFHCztVeLm
+            P5Iccu4acWHKdxkqBChJT1ED+gzqrlodxfUQzQko3jKD9tgswvKKzM57qvAhU+XL
+            qeAFvXiwWi2HSmHiq6Jxucr+3tpP7EMj8fKNbMc4Rm61eEs6B08A4aLI52GeCuSd
+            DvKnHkcVOde/5CB5F7FsH50qiua+DTVJouK+cKHtr6L0MRAoq8VTjzIPHVTSfhRU
+            HubbU2QvUSOSPkgre7yLiEpURK4oouSW3cuYQgebTbI8/ZBrLwVM5h2ecYWND2yS
+            vnsXNSHdda292NPZK/L9jd4WHnSYYTFR1gFSNZYJPpUS58D0KItqDv11omwBe9pN
+            wMpbm2ZOOsLajdzJHRywygGkngpTudfFBVK7gT3JG2zFdFSVKuds2gkSA2ndkL1g
+            H0rZFu1AsekEjc7YiVAxywDFfvvNF9ZdzmdxP5ed7JvBLhXMIYE/N0S169lr5BCO
+            5LxjWFXGHUeL3z7V0u4m0lwBDXnytEBZv+3pWcjZosaZzXQAmZ10Zoi4rwO9Ny9t
+            9s59ZmP/7537VV7Z2jnW+XBaOrjx3PcZS5R0IHte2eya9SyjlrBQfzBXbWgHKGDf
+            GBO4RjMCkXKOjAwG3A==
+            =Zj5L
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^( |st_id| )$
+    version: 3.12.1
