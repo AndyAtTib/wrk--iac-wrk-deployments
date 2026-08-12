@@ -1,7 +1,8 @@
-peering_config: null
+peering_config:
+    remote_vnet_id: ENC[AES256_GCM,data:tlygjvpkRLiRQ05ExJjkqubXsl+SXe3w58jw9E9RKmZgZOdwIUIXQaXSEtb45qWkC5Qn92/sCP2Ui2TFcJ/YWq550tFINsrZBSbqrow83iQZvf7Tw3h1VGprld0JaATuCgjb8XBOXx2egTt/aNJhFcOPB1Y+QWS5vqr82ximelf57+F5tbQyviYC6AUldJC7hoNHg0OaqiXa3Tg7dGM=,iv:xLcBqfyx6Xe0ZWrlcOJI1/VNlAVBLP1LyRykhoD8XRo=,tag:Cs1OQY1XjIOhJUVyqpTOQg==,type:str]
 sops:
-    lastmodified: "2026-08-11T20:36:53Z"
-    mac: ENC[AES256_GCM,data:dCJVdaHZXa28ImJHghQ+0FfzrgcJ2/cjrpVD0lyV9dtSvwpTxTR5LgbYRsvDW7GcczzHjCRSJ60weghEETIRw9SWPg25OCssXNI5OEGOpRP5ews3c7h93SZfI21sIIZfGDvh76mQuZlnVCNiqFccJLMAyhIeJfJHN0pKU0zyfSY=,iv:LpkGV1THtRAsY/3A3hFquX8O1O2BTMAoPgJLI0sWxnQ=,tag:AsPj5OUG7IOvOZg9l2nKjA==,type:str]
+    lastmodified: "2026-08-12T10:32:57Z"
+    mac: ENC[AES256_GCM,data:AiXLRIeI1TSgE0+VQ9tHIlgMHG/H2030hv5Hpry47lrrPHhJErlO/MwC/3BEYWMtMQq3YZWdZTpaMDxPMcuWNas7eonMRd4sluSM1FgPQ6t0dbCuYSIBVKx6gjTs8hSrLAuCSjmZxmkip687mMrEbp9L8WwjxMbRwJKYLRfdUVQ=,iv:2PbNXJ3HyCZNg02n04iyQD2ZaJdN4Tyz9HbJJhc8ZDw=,tag:S1TxX+Zs/YVZSNq4uInWsw==,type:str]
     pgp:
         - created_at: "2026-05-14T23:05:20Z"
           enc: |-
