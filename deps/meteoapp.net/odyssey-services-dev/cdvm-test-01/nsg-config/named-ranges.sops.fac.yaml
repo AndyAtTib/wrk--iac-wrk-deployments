@@ -7,11 +7,11 @@ pinhole_clients:
     - description: ENC[AES256_GCM,data:HVvvt37+V3hVZU47wI+hCIMZ75SoV0WLGrAMw1U+QS1Ute0N3gTYqw==,iv:/U7ysp+Lh5wSJRBv9eM6Bl6k8krIV1ssqHUyhEoel3Y=,tag:mKgcWasNessByEePrYLCDQ==,type:str]
       value: ENC[AES256_GCM,data:BBLe8fQ5xPIsqP5t0lrUYPNu,iv:PXjYfAewBhLcx8ETCmu8JCKdvVq+cKPpb2qKL+PcfME=,tag:Xi4qNm9SmYhp8vPdf9/cGQ==,type:str]
 peer_vnet_subnet:
-    - description: ENC[AES256_GCM,data:TWoy4XYoznL7N+5mAEqPVyRcmw0RZB7gtGkUG6ToNMEXLBXdaRr7a1DNxYHFKsISp8/n4amdR70ubZGp60zRh6bx3W8qQxKQTp4=,iv:RI9UwW7JeutwzQrTXAIT4Hrr9vdwaJzwy7uVnxMBC04=,tag:79hhGZwH6R3dZ3odkQ3CAg==,type:str]
-      value: ENC[AES256_GCM,data:uD48RPh6PnTqJlGd,iv:zjf9UO3h3gGMSSGG/VqQaqFS1WHs3iAVpG/RRRbuSzE=,tag:R3iGaRqjMD5IHe8cTaFZUQ==,type:str]
+    - description: ENC[AES256_GCM,data:qvO1xO7QOsn4NaWoOrI8nGnVMIOuw1g3YylqNrsyPaIZsA==,iv:IRYfhFM0/E/Gw1POOzTTprPrxM5DTJDsmwXRnlGNIVE=,tag:uYBBzuXvA4qmkZ2Z1syCvQ==,type:str]
+      value: ENC[AES256_GCM,data:UdwhRo0F/5gnRRQ=,iv:ryX2Xkzq/M1gLGKqcygvBT3t5A/l+Lk+86KbycjTBbc=,tag:X4eLC3mtt3eF5CVbYfQQjA==,type:str]
 sops:
-    lastmodified: "2026-08-12T09:42:00Z"
-    mac: ENC[AES256_GCM,data:OdghAF0aPVWf9kg3VVUOPPy51EbfETAb/heMEw9tjelEcaDOSyKzMHTtkKI4MaucrAzLtV63g+bJhlw7n0eX/JHiRBc3qyb/H1Vv8YADm69oR0Xa6cUz2mFnT2p+8dNX9RoaXIF6EXIXCJT1Pdy2WQ0faZxr+8ccM6oh/4KpGlw=,iv:9c8ZZDnQgcIHbTOPa+5XA843mH71NU7NAEMxOV5TxWM=,tag:wYymH/lpB627+MxOHhzBvw==,type:str]
+    lastmodified: "2026-08-22T16:53:49Z"
+    mac: ENC[AES256_GCM,data:4gA1wBGj7XHsK20dnjzMATWmDByIpsYhN0J9Ch8EzInQ8tODP0AxzjF5a9FwBgGWXQqjJpJH11o/t1NnMwyW9VWKe9c9IZJ8zYpi2SETHtWE3YjJCKTSLvc0odU/On3oOzo/vEC/7MtuIE0elaCU9GLGfQyfzZ2ieDrvqVbtk1w=,iv:7vIelAPe7wXqcc5He5A14Cb8OZuiTVnkhvBS9CUEs4w=,tag:X36p/ucjCd/IPn4U4E/BWQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:05:29Z"
           enc: |-
