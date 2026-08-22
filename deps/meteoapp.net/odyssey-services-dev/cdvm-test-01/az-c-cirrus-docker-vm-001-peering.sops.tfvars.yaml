@@ -1,8 +1,8 @@
 peering_config:
-    remote_vnet_id: ENC[AES256_GCM,data:U4AFzWZk6/r0GNZFO0VV2iGWiTurL1GiaPKxS0BCKKwAmERFvAJsYnBqC51JV53+MzLz6xWDnwgUbEFzExI4dyKL4hjyycsFKdJpDV/tj+QfBmzCG4WxnwEwFb1MCGdktLFsbiFOZ8O7dUxz0MwCHZOZRx70jjA47lmOfMX+fk3VrqoMWlxXd5FrfdClKBXkv002JfMxPwJ2+irDeZ2YU3vnm4xMR8kud1k=,iv:gEhBSI17K/ZyFDzOinBPo4WFwhGTQQ4y8rA4t4TWRa8=,tag:mtlMtzKADKyv+u/AKLgkUw==,type:str]
+    remote_vnet_id: ENC[AES256_GCM,data:4TmYFXU+vsCM/Fpob3eP8F/tlvLrluFSp7MT3MRO0j13So5y90Yk+xkyeGGnRF280qS9buy0rWOE35OhAKkrkn8h7VX4vE7Juu5s+GVni7ey1xmdEe386hNSg69HC2RjLm4g4Cgw/aSB0ZLhhQrB6MonCkEgts6d/CGGU+W74c2TJvWzLC7Ys318uPM5UwBcaGKpY/wyfbyQME6NepknRd4Jf+T9TqpRlX0=,iv:dfaz0YNdAq3Z/TOYxirz7iKMn5jF0qzV6f6qa6JquUk=,tag:PsHfbODjiCRFwBiwSbDx1w==,type:str]
 sops:
-    lastmodified: "2026-08-22T12:55:48Z"
-    mac: ENC[AES256_GCM,data:As41t52+qyabjw84L70FkdBlr8wcLIEIaLy8u2zdFZiTfSg42a9ZZK0/TdKo5n9Ftqug2Z3igDA6vQu+hTbcm3UE+iymbtzkwpoijolloEDIBqDkxFABjXt9EYn3sqWlkNhZGLc+ewhGQT5kVrkDV50/minWjxcU50oRJqAShSI=,iv:DFFXEaAQ/nMretrTfgHgMKyfMDNpCWzJQUbXp6kfLwo=,tag:3mkVpcsNtGoRDSw/g1HzIA==,type:str]
+    lastmodified: "2026-08-22T14:44:14Z"
+    mac: ENC[AES256_GCM,data:GX8KAZTM/kweONHx1dNK1rCYsYYMYbMK9F7Hzix4KLLjhmKjeO27UPnLu6JT08DV1D+GmakiLRn43++W93B5BJ4umGS9cLpzhTR23Pkzebq2na3jftvY8ZGT85DxdHp8jziFFTDd6Nch/JXunkoSU4jXXPw/AWk5Gwze10DHI7M=,iv:7SzMErTQQ6Re09nkrF2VSOUx2vZliw84nnsvnwdZ7rg=,tag:6OX9+qjSgwoEAk8S/tTlbQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:05:20Z"
           enc: |-
