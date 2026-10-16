@@ -53,8 +53,11 @@ services:
       - proxy
     labels:
       - traefik.enable=true
-      # catch-all: answer for whatever host/ip the load balancers deliver, but means that the traefik cert will not be valid for all hosts
-      - traefik.http.routers.echo.rule=PathPrefix(`/`)
+      # one host per name the load balancers present. traefik requests a single
+      # acme cert from these (first host = cn, the rest = sans) so https validates
+      # for every name without -k. ports in the host header are ignored when
+      # matching, so :8443 etc still route. anything else (eg. requests by ip) 404s.
+      - traefik.http.routers.echo.rule=Host(`cdvt1.mydomain.com`) || Host(`cdvt2.mydomain.net`)
       # web is plain http; websecure gets tls from the entrypoint default
       - traefik.http.routers.echo.entrypoints=web,websecure
       - traefik.http.services.echo.loadbalancer.server.port=8080
