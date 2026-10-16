@@ -16,11 +16,13 @@ providers:
 entryPoints:
   web:
     address: ":80"
-    http:
-      redirections:
-        entryPoint:
-          to: websecure
-          scheme: https
+    # no http->https redirect: plain http is routed to echo as-is
+    # (kept in step with the command list in docker-compose.yml)
+    #http:
+    #  redirections:
+    #    entryPoint:
+    #      to: websecure
+    #      scheme: https
   websecure:
     address: ":443"
     asDefault: true
