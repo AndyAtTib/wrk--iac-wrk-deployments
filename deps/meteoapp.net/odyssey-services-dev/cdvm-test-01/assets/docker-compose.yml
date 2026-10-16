@@ -53,13 +53,24 @@ services:
       - proxy
     labels:
       - traefik.enable=true
-      # one host per name the load balancers present. traefik requests a single
-      # acme cert from these (first host = cn, the rest = sans) so https validates
-      # for every name without -k. ports in the host header are ignored when
-      # matching, so :8443 etc still route. anything else (eg. requests by ip) 404s.
-      - traefik.http.routers.echo.rule=Host(`cdvt1.mydomain.com`) || Host(`cdvt2.mydomain.net`)
-      # web is plain http; websecure gets tls from the entrypoint default
-      - traefik.http.routers.echo.entrypoints=web,websecure
+      # one router per hostname so each gets its own acme cert and a failed
+      # validation on one name does not block the other. ports in the host
+      # header are ignored when matching, so :8443 etc still route.
+      # web is plain http; websecure gets tls from the entrypoint default.
+      - traefik.http.routers.echo-cdvt1.rule=Host(`cdvt1.mydomain.com`)
+      - traefik.http.routers.echo-cdvt1.entrypoints=web,websecure
+      - traefik.http.routers.echo-cdvt1.service=echo
+      - traefik.http.routers.echo-cdvt2.rule=Host(`cdvt2.mydomain.net`)
+      - traefik.http.routers.echo-cdvt2.entrypoints=web,websecure
+      - traefik.http.routers.echo-cdvt2.service=echo
+      # low-priority catch-all so health probes (which arrive by ip, not
+      # hostname) get a 200 instead of a 404. priority 1 loses to every host
+      # router above, whose default priority is its rule length. no host in
+      # the rule means no acme request; https probes get the default cert.
+      - traefik.http.routers.echo-probe.rule=PathPrefix(`/`)
+      - traefik.http.routers.echo-probe.priority=1
+      - traefik.http.routers.echo-probe.entrypoints=web,websecure
+      - traefik.http.routers.echo-probe.service=echo
       - traefik.http.services.echo.loadbalancer.server.port=8080
   # replaced with echo:
   # whoami:
