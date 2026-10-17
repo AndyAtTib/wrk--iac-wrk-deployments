@@ -2,8 +2,9 @@ services:
   traefik:
     image: traefik:v3.7
     ports:
-      # every http host port lands on the web entrypoint (:80),
-      # every https host port on the websecure entrypoint (:443)
+      # http redirects to :80
+      # https redirects to :443
+      # traefik then redirects those to the http/https echo ports via dynamic discovery/routing config
       - "80:80"
       - "81:80"
       - "8080:80"
@@ -27,13 +28,14 @@ services:
       - --providers.docker.network=proxy
       - --providers.docker.exposedByDefault=false
       - --entrypoints.web.address=:80
-      # no http->https redirect: plain http is routed to echo as-is so the
-      # url-tests get a 200 (not a 308) and the echo shows the http request
+      # no http->https redirect, although the effect is the same either way.
       #- --entrypoints.web.http.redirections.entrypoint.to=websecure
       #- --entryPoints.web.http.redirections.entrypoint.scheme=https
       - --entrypoints.websecure.address=:443
       - --entrypoints.websecure.asDefault=true
       - --entrypoints.websecure.http.tls.certresolver=myresolver
+      - --certificatesresolvers.myresolver.acme.email=andy.brown+cdvt@technologyinbusiness.co.uk
+      # - --certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/
       - --certificatesresolvers.myresolver.acme.tlschallenge=true
       - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
     labels:
@@ -46,46 +48,27 @@ services:
   echo:
     image: mendhak/http-https-echo
     restart: always
-    # no host ports: traefik publishes them and reaches echo over the proxy
-    # network on its plain-http listener (8080). echo's own https listener
-    # (8443) is unused because tls terminates at traefik.
+    # traefik discovers ports using dynamic/routing config
     networks:
       - proxy
     labels:
       - traefik.enable=true
-      # one router per hostname so each gets its own acme cert and a failed
-      # validation on one name does not block the other. ports in the host
-      # header are ignored when matching, so :8443 etc still route.
-      # web is plain http; websecure gets tls from the entrypoint default.
+      # one router per hostname. Each hostname gets its own cert.
+      # One cert failure doesn't mean all fail
       - traefik.http.routers.echo-cdvt1.rule=Host(`cdvt1.mydomain.com`)
       - traefik.http.routers.echo-cdvt1.entrypoints=web,websecure
       - traefik.http.routers.echo-cdvt1.service=echo
       - traefik.http.routers.echo-cdvt2.rule=Host(`cdvt2.mydomain.net`)
       - traefik.http.routers.echo-cdvt2.entrypoints=web,websecure
       - traefik.http.routers.echo-cdvt2.service=echo
-      # low-priority catch-all so health probes (which arrive by ip, not
-      # hostname) get a 200 instead of a 404. priority 1 loses to every host
-      # router above, whose default priority is its rule length. no host in
-      # the rule means no acme request; https probes get the default cert.
+      # low-priority catchjall so health probes (use ip, not hostname)
+      # - returns 200, not 404, priority 1 so other rules take priority.
+      # - https probes get the default cert.
       - traefik.http.routers.echo-probe.rule=PathPrefix(`/`)
       - traefik.http.routers.echo-probe.priority=1
       - traefik.http.routers.echo-probe.entrypoints=web,websecure
       - traefik.http.routers.echo-probe.service=echo
       - traefik.http.services.echo.loadbalancer.server.port=8080
-  # replaced with echo:
-  # whoami:
-  #   image: traefik/whoami:v1.11
-  #   networks:
-  #     - proxy
-  #   labels:
-  #     - traefik.enable=true
-  #     - traefik.http.routers.mywhoami.rule=Host(`whoami.example.com`) || Host(`www.whoami.example.com`)
-  #     - traefik.http.services.mywhoami.loadbalancer.server.port=80
-
-  #     # next lines are optional to redirect www to non-www
-  #     - traefik.http.middlewares.mywwwredirect.redirectregex.regex=^https://www\.(.*)
-  #     - traefik.http.middlewares.mywwwredirect.redirectregex.replacement=https://$${1}
-  #     - traefik.http.routers.mywhoami.middlewares=mywwwredirect
 
 networks:
   proxy:
