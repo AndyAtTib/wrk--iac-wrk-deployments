@@ -138,9 +138,10 @@ records:
     - zone_def: ENC[AES256_GCM,data:iTyAJ1vV4d+fzyTVhDD7eFj2i8mOam/EFHuE+OZ0zkQvzBy6+9F3sO/XQZyjJ/nI97CPVrU8,iv:sHGUdv5YKoaboxUVI4lhDL6mOShPwpv6tcvHyVkBGo0=,tag:e4z33G7CAI/DgS/XnlytMQ==,type:str]
     - zone_def: ENC[AES256_GCM,data:Ao9Eo1fZVsRvuFGmGzQ90Qs7ILUeGgYU3jya1/QgACArJPnryfHPeiBsqiX8YF/9J0S6fdY=,iv:xl0stKXjhna0al6I4H/9pWHrR6oVhzaMM0wi1scFraM=,tag:OSLyPQpp74H1IfhF1AfpSQ==,type:str]
     - zone_def: ENC[AES256_GCM,data:e0AQbe5cbeO2jDwGLj1A+rSiLUm+fIR+/of6+UJuljWdizVNtnpedfx7jx3eRUJrlZI66/I=,iv:bFGVDBSuaUIWTs/sSlus4D5Ud05V7YTSuJQvX7aSW0c=,tag:H/4lNUHTBgVtN1HjRA/Qkg==,type:str]
+    - zone_def: ENC[AES256_GCM,data:viMnmwqP5RE5MpO7NxQSWxM3nfmTnlL39N1e+ltFSOMLINVC5g8rlvY92Lu850vGx9e+2rkNwYDTMj5DLF64+X3FChm9RsH/Wi0HRChJi/Lb3vVrNHUkwXFkeBldTWcV8e/p,iv:ALALsQN+Ggfxmy+VQSBu+xzmgNuH12JG0VtLwolVv7o=,tag:/UJc/1y2t0g+IB89QGLusg==,type:str]
 sops:
-    lastmodified: "2026-07-23T17:44:04Z"
-    mac: ENC[AES256_GCM,data:5ZwR3HoXbdH3ZGU6HJ33+slrdJA4xjjALW7lB4fS38TnR60JCbX0L7rTRaPCyk4DQP8875l1ROBtrPxJUnAGMfFXEeuKuaio2STpIitaykYF6zeshgztV0WXO0bd/gApcCAigY03oknn5FJldnpkHTHXOs1pzpx+LD9+a/0WKHc=,iv:JHju/RDx/7OvzvmlSbjityx+1IcWLOnP/kMODy8nWbk=,tag:clrpQBTnExy/KAUtWZX3Ag==,type:str]
+    lastmodified: "2026-10-17T22:33:32Z"
+    mac: ENC[AES256_GCM,data:I4/jhnW4qdIrq5wmF248gwOeuaFHZo+K4+XTOnYrI3flVslHUVQxvIrS0NirA9Hmkdy8HLGSJghJr6mEsIM6jB5z866p5wkmX+q9wxC0oSW79jHx2GscOkAad0uTjqueK9MiqPjYPVcXRlDeXZUflUzvMmT5UXkr/0yJ0VRXeGY=,iv:wI03r+K2EtH+JZG+JAP72RRF3vMo67zgYAwoKk+wkmM=,tag:oZsrKst/LcKGJhajjXI6uw==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
