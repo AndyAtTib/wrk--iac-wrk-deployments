@@ -55,10 +55,10 @@ services:
       - traefik.enable=true
       # one router per hostname. Each hostname gets its own cert.
       # One cert failure doesn't mean all fail
-      - traefik.http.routers.echo-cdvt1.rule=Host(`cdvt1.mydomain.com`)
+      - traefik.http.routers.echo-cdvt1.rule=Host(`public-cdvt1.test.cirrus.pw`)
       - traefik.http.routers.echo-cdvt1.entrypoints=web,websecure
       - traefik.http.routers.echo-cdvt1.service=echo
-      - traefik.http.routers.echo-cdvt2.rule=Host(`cdvt2.mydomain.net`)
+      - traefik.http.routers.echo-cdvt2.rule=Host(`split-cdvt1.test.cirrus.pw`)
       - traefik.http.routers.echo-cdvt2.entrypoints=web,websecure
       - traefik.http.routers.echo-cdvt2.service=echo
       # low-priority catchjall so health probes (use ip, not hostname)
