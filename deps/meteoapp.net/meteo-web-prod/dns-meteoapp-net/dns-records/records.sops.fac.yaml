@@ -146,12 +146,13 @@ records:
     - zone_def: ENC[AES256_GCM,data:iTyAJ1vV4d+fzyTVhDD7eFj2i8mOam/EFHuE+OZ0zkQvzBy6+9F3sO/XQZyjJ/nI97CPVrU8,iv:sHGUdv5YKoaboxUVI4lhDL6mOShPwpv6tcvHyVkBGo0=,tag:e4z33G7CAI/DgS/XnlytMQ==,type:str]
     - zone_def: ENC[AES256_GCM,data:Ao9Eo1fZVsRvuFGmGzQ90Qs7ILUeGgYU3jya1/QgACArJPnryfHPeiBsqiX8YF/9J0S6fdY=,iv:xl0stKXjhna0al6I4H/9pWHrR6oVhzaMM0wi1scFraM=,tag:OSLyPQpp74H1IfhF1AfpSQ==,type:str]
     - zone_def: ENC[AES256_GCM,data:e0AQbe5cbeO2jDwGLj1A+rSiLUm+fIR+/of6+UJuljWdizVNtnpedfx7jx3eRUJrlZI66/I=,iv:bFGVDBSuaUIWTs/sSlus4D5Ud05V7YTSuJQvX7aSW0c=,tag:H/4lNUHTBgVtN1HjRA/Qkg==,type:str]
+    - zone_def: ENC[AES256_GCM,data:o66O4Swo1lE4d5x+i/K6Iuyp1ZEkuzv3NlqOVi6wOF7m+PpO0Dv6ahNjuI7nxq0u+Klhp1AZzucYOmBM/MsxxzkIXLsanFH2WBndiGZSkJrihAwxOlS3jj3VgwjZ6HmmjQk8,iv:8ptzdI+0tyc3dJe+ET5FY83STYzaba7OuWPa/esWVts=,tag:gBTef8u/v/PtgZeBkVRqbg==,type:str]
     - ENC[AES256_GCM,data:lusuEgpl8fDPnJs=,iv:Byz1OAIGKERWlQc4ko6+CJ6botdh0NmtUhHn0e9IZck=,tag:edUG+jOOH/EOCcpDe2FPQA==,type:comment]
     - zone_def: ENC[AES256_GCM,data:PlEL3LTaBTSTjOFHokjg4t9BOe8QAIDDQBk=,iv:PyuGA//YoXTWKexbU6pgAAKyyLHj0y14sVmhTujWCUY=,tag:Z0xFQ+deZqJSWku0TYHvSA==,type:str]
     - zone_def: ENC[AES256_GCM,data:95Zh110NNGrEVrlfUzocS/+jJMf+KoEYERTKnns9+pHTmd8YSg==,iv:Mb9JBNJkcznJ33YVv2dQLv745F6l5V44uHPGupaIh9M=,tag:kddfb0OqJ+mAp9h3LBHVlQ==,type:str]
 sops:
-    lastmodified: "2026-10-20T13:51:26Z"
-    mac: ENC[AES256_GCM,data:MB1zgiv/RnG/DDgub17I51G2JtvZK3B9YezWQbv9U9/c0yNYIFICleX2WOjPuB+l9jkmO4LlLO9RCgnYHAO6Q1gEJJQantJktkZpZaMscqx0F9/gcthoSKkM7oI3/eCb0cDD5Lin120IXn3F2pOI/Kg5vaktBjbwoOz9uzRrSbk=,iv:+r7NtJhZmCaTHs6BYtgZnz+E+8zn/zQ5AcbwmwdZhQE=,tag:MQM3MM8lca0NIH7a/z4wcQ==,type:str]
+    lastmodified: "2026-10-20T14:28:00Z"
+    mac: ENC[AES256_GCM,data:X3s+ZBjItd3WdquiFSkIJ/ffSl1qEgCg8qvWxi4ZiO2UROUa99yNB3tDwCpIkqBzPGK1fSEbHW5imuRyRWAsVdrn7ppFSdbFWDufoYPjf2W2od2xt6unHEQV9z2dzWueruf2EhSxFaOVwcVzljqnUi34ROZ4tF5QisVsZsapu/Y=,iv:OVPmLsor4yr8kjE4YThiYIvaoVUX4P8Sqz2oY80sSbo=,tag:fVUmZpUvl08UlnXW1FG8DQ==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:04Z"
           enc: |-
