@@ -118,7 +118,8 @@ write_files:
             # - --certificatesresolvers.myresolver.acme.eab.kid=
             # - --certificatesresolvers.myresolver.acme.eab.hmacEncoded=
             - --certificatesresolvers.myresolver.acme.email=andy.brown+cdvt@technologyinbusiness.co.uk
-            - --certificatesresolvers.myresolver.acme.caServer=dv.acme-v02.test-api.pki.goog;
+            # - --certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
+            - --certificatesresolvers.myresolver.acme.caServer=https://dv.acme-v02.test-api.pki.goog/directory
             - --certificatesresolvers.myresolver.acme.tlschallenge=true
             - --certificatesresolvers.myresolver.acme.storage=/acme/acme.json
           labels:
