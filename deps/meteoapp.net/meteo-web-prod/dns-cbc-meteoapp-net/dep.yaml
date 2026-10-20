@@ -1,0 +1,41 @@
+deployment_name: meteo-web-prod-dns-cbc-meteoapp-net
+configs:
+    description: 1.3.0-alpha.16+Branch.develop.Sha.cc66596fc1c4c72483b4ffc97aaba21868f94ace
+    version: cc66596fc1c4c72483b4ffc97aaba21868f94ace
+notes: |
+    This DNS zone is used for ACME verification for hostnames hosted by the Cirrus docker VMs. These VMs
+    generate their own certificates, and can use DNS-01 acme verification for this. Therefore it is safer
+    to use a dedicated DNS zone for ACME verification rather than use the `cb.meteoapp.net` zone.
+layers:
+    "1":
+        config: az/c-dns-zone
+        entry_point: apply.sh
+        tfvar_files:
+            - az-c-dns-zone-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:FfS+nxDHdN7e/ZfK2bcemk5+96V7nLf9Wa9YkYuZ/T9qPmh6bhdlTWZmxxRnK8Hjv/DOLxvZXk2TOGvuV6YF5wD5IxkfNaALF3IKdsqahNbsMpFBszjgoZkzKyp64Q/VL6tl/FsrgUH9UQ8rTTpkeT08ddulRaI9P3tY6sbzmo903aaQf2nVysjJO4FBa6I7Pj/5hMgKZ/zWnRQ=,iv:mG2l/MxCyHH50m0LzFknarJboUTohSYvaVwbbC0krbo=,tag:1tYk8Kvl6P+BS1kiaZ6UKA==,type:str]
+        apply_args:
+            e: layer01
+sops:
+    lastmodified: "2026-10-20T14:15:20Z"
+    mac: ENC[AES256_GCM,data:1nci0VDYrlvRgngSIHZ6IkCDf7RHFYxZG0YWjRL7tiFfhJzTaUsS/2TDwb/27H1hpM3mqZXhnxjkjGEHB/ghRW3+YcWfgsg5anW6FNQIuAEaXa4YL342Ro9L7SoZRUxAh9tmRHWEoP9BkYH1+BEKJUmuWwe/oMrbRZdVAAJEBKM=,iv:oVUEK2uwS185WLM5kQ39hsGGUnp74u7HG5tbyVWW2Pc=,tag:6UpCcjuznU3q4O+vLDacdA==,type:str]
+    pgp:
+        - created_at: "2026-05-14T22:08:03Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQv/dc/DUMSNMr5L52VXJqoihAiIcVXQJxy/pOBe4q6XN5ZH
+            6XfR6YIJf/OjzSpi/3fA2HBra+cWGdAsskyA288vIkU/zA9TD8RiJEqRzqWPrI2c
+            8bzh5b/U4CLKmW/lrTZY0hfczSMifXyTXRRn9rK2mU5F85yl7TCJysq0KXtwdVWD
+            L9XRb9Kw+K5s6WV4dwCuCWWuovSs+pOhWCMv+IL/Sm+LHsQHTOLqfBfMhoJdXDKp
+            W2sp9SEcjhvc0Rs39qLPd3ltEC6VlYLYwV8FSL9xUPs31Aczuuw9klqvkRT55UAO
+            dtXlvJXRrTxhHeBJFInYNNH6/Lcu46bahRks+aSf91lDO/8d99gFwLRLYf2tYCrV
+            itvFE4Y9nYkTaohmJJbz/3XQkU86LvwMBxcbUg/wNMfEwvk+ctAZd+hXql9YBbpu
+            37+4ohpmba86BRiDSknewNAkPtVGoHX+udoJvZk4+cWue2VOoRj4Sy8oM/oZ319e
+            14dNW4otMpJqli8edjQp0l4BO8DI3bxLeqKmiSfxPzVYVV6eMP4pMK7UfhRc1gf7
+            5PX9RT8b54MENJu8hoUgyTZbCETFgcow8Oe5dhp+PrpnEp52M211LS46dyoN7/CA
+            L4XPWXrHEc7A1lvszYyE
+            =ZJDK
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^( |st_id| )$
+    version: 3.12.1
