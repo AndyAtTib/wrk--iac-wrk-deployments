@@ -1,7 +1,7 @@
 deployment_name: meteo-web-prod-dns-cbc-meteoapp-net
 configs:
-    description: todo
-    version: todo
+    description: 1.3.0-alpha.16+Branch.develop.Sha.cc66596fc1c4c72483b4ffc97aaba21868f94ace
+    version: cc66596fc1c4c72483b4ffc97aaba21868f94ace
 notes: |
     This DNS zone is used for ACME verification for hostnames hosted by the Cirrus docker VMs. These VMs
     generate their own certificates, and can use DNS-01 acme verification for this. Therefore it is safer
@@ -16,8 +16,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-10-20T12:44:41Z"
-    mac: ENC[AES256_GCM,data:8twL0ypJ9Qrof+NHzXkUmRj7C6HdrT8OewK/ZYcdO0za9nrioA/z0zyqU1ojgJpGifycDHPoN17eEfDraz6jKflTgueTeE1l1N+ptikB4fvH82h9Kum059CBP/nU66ueVzywCrWzG01zmW8da9DVd+hjksPjfQo0kRqzlzzG7IU=,iv:X9oRa4RcxbAcfGJPuO+7Af5Qd0g8XbP0eq2XTFcuhwA=,tag:dms8HjNJiG+fsLTyJIxJsA==,type:str]
+    lastmodified: "2026-10-20T14:15:20Z"
+    mac: ENC[AES256_GCM,data:1nci0VDYrlvRgngSIHZ6IkCDf7RHFYxZG0YWjRL7tiFfhJzTaUsS/2TDwb/27H1hpM3mqZXhnxjkjGEHB/ghRW3+YcWfgsg5anW6FNQIuAEaXa4YL342Ro9L7SoZRUxAh9tmRHWEoP9BkYH1+BEKJUmuWwe/oMrbRZdVAAJEBKM=,iv:oVUEK2uwS185WLM5kQ39hsGGUnp74u7HG5tbyVWW2Pc=,tag:6UpCcjuznU3q4O+vLDacdA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:03Z"
           enc: |-
