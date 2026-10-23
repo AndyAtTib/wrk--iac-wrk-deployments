@@ -39,6 +39,9 @@ creation_rules:
   - path_regex: '^(.+/)?.+\.sops.txt$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
 
+  - path_regex: '^(.+/)?assets/.+\.sops.(txt|yaml|yml|json)$'
+    pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+
   - path_regex: '^(.+/)?.+\.sops\.(list|fac)\.(yaml|json)$'
     pgp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
     encrypted_regex: '^.+$'
