@@ -30,6 +30,13 @@ the next task. The download is plain Blob REST with an IMDS bearer token
 NOTE: azure.azcollection's azure_rm_storageblob also reads the account through ARM, which that role
 does not allow, and needs the Azure SDK in the image.
 
+custom_data size: Terraform's azurerm_linux_virtual_machine caps custom_data at 87380
+characters. The cloud-init file therefore carries no explanatory comments - they all live in
+this README - so the limit is spent on configuration only.
+
+ufw is deliberately NOT configured: Docker publishes container ports through iptables' nat
+table ahead of the filter chain, so a ufw rule would not gate them; the subnet NSG is the gate.
+
 Re-run after boot with /opt/cirrus/bin/run-ansible.sh (extra arguments go to ansible-playbook,
 e.g. -v); the image is reused, `docker rmi cirrus-ansible:local` forces a rebuild. Output goes
 to `/var/log/cloud-init-output.log` at first boot.
@@ -41,6 +48,10 @@ to `/var/log/cloud-init-output.log` at first boot.
 One-off Ansible controller image, built at first boot by run-ansible.sh. python:3.13-slim is
 Debian trixie, whose util-linux provides the nsenter binary the community.docker.nsenter
 connection plugin runs. ansible-core 2.21: controller python 3.12-3.14, target 3.9-3.14.
+
+`path: /opt/cirrus-ansible/ansible.cfg`
+
+Settings for the controller container, selected through ANSIBLE_CONFIG in run-ansible.sh.
 
 `path: /opt/cirrus-ansible/inventory.yml`
 
@@ -54,12 +65,29 @@ The only Terraform-rendered Ansible file: the init-files storage account and, ke
 the layout file's vm_init_files, each file's uploaded path within the container (`blob`), its
 destination on the VM (`dest`) and its mode (`mode`).
 
+`path: /opt/cirrus-ansible/site.yml`
+
+First-boot configuration of the VM. Every task runs on the host (see inventory.yml).
+
+- `vm_init_blob_base` is the public-cloud blob endpoint of the init-files storage account.
+- The IMDS token task gets a storage access token for the VM's single user-assigned identity,
+  which IMDS serves by default, so no client id is needed. It is retried because IMDS can lag
+  a few seconds after boot.
+- The downloads use Blob REST with the bearer token, which needs only Storage Blob Data Reader
+  on the account. They are retried because the identity's role assignment can take minutes to
+  propagate after a from-scratch apply. `no_log` keeps the Authorization header out of the
+  output, and the rescue block reports what failed.
+
 `path: /opt/cirrus/bin/run-ansible.sh`
 
 Build the controller image on first use, then run the playbook against this VM.
 `--pid=host --privileged` are what the nsenter connection needs to enter the host's
 namespaces; the default bridge network is enough for the controller side, since every task
 runs in the host's network namespace.
+
+## runcmd
+
+Enable docker at boot and start it now, then run the first-boot playbook with run-ansible.sh.
 
 
 ## using azcollection

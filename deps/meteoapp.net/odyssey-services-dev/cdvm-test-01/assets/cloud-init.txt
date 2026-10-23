@@ -1,7 +1,4 @@
 #cloud-config
-#
-# ufw is deliberately NOT configured: Docker publishes container ports through iptables'
-# nat table ahead of the filter chain
 
 package_update: true
 package_upgrade: true
@@ -36,7 +33,6 @@ write_files:
   - path: /opt/cirrus-ansible/ansible.cfg
     permissions: "0644"
     content: |
-      # Settings for the controller container (ANSIBLE_CONFIG in run-ansible.sh).
       [defaults]
       inventory = /ansible/inventory.yml
       nocolor = true
@@ -82,8 +78,8 @@ write_files:
           blob: "${compose_file}"
           dest: /opt/cirrus/docker-compose.yaml
           mode: "0400"
+      vm_init_final_compose: "/opt/cirrus/docker-compose.yaml"
 
-  # First-boot configuration of the VM. Every task runs on the host (see inventory.yml).
   - path: /opt/cirrus-ansible/site.yml
     permissions: "0644"
     content: |
@@ -94,11 +90,8 @@ write_files:
         vars_files:
           - /ansible/vars/vm-init-files.yml
         vars:
-          # Public-cloud blob endpoint of the init-files storage account.
           vm_init_blob_base: "https://{{ vm_init_storage_account }}.blob.core.windows.net/{{ vm_init_storage_container }}"
         tasks:
-          # Token for the VM's single user-assigned identity, which IMDS serves by default (no
-          # client id needed). Retried: IMDS can lag a few seconds after boot.
           - name: Get a storage access token for the VM's managed identity from IMDS
             ansible.builtin.uri:
               url: http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F%2Fstorage.azure.com%2F
@@ -122,10 +115,6 @@ write_files:
 
           - name: Download the init files as the VM's managed identity
             block:
-              # Blob REST with the bearer token: needs only Storage Blob Data Reader on the
-              # account. Retried: the identity's role assignment can take minutes to propagate
-              # after a from-scratch apply. no_log keeps the Authorization header out of the
-              # output; the rescue below reports what failed.
               - name: Download each init file
                 ansible.builtin.get_url:
                   url: "{{ vm_init_blob_base }}/{{ item.value.blob | urlencode }}"
@@ -181,6 +170,5 @@ write_files:
         "$image" ansible-playbook /ansible/site.yml "$@"
 
 runcmd:
-  # Enable docker at boot and start it now, then run the first-boot playbook.
   - systemctl enable --now docker
   - /opt/cirrus/bin/run-ansible.sh
