@@ -21,9 +21,10 @@ network and systemd - exactly as a locally installed Ansible would.
 - ansible-pull was not used: it needs a git remote reachable from the VM, whereas the
 storage account is already the file channel and the playbook is small enough to ship in custom_data.
 
-For now the playbook only downloads the init files, as the VM's managed identity, into
-/tmp/vm-init-files (root, 0600, uploaded paths preserved); installing them and starting the
-compose stack are the next tasks. The download is plain Blob REST with an IMDS bearer token
+For now the playbook only downloads the init files, as the VM's managed identity, straight
+to their final paths: each vm_init_files entry gives the blob, its `dest` and its `mode`
+(owner root; missing parent directories are created root 0755). Starting the compose stack is
+the next task. The download is plain Blob REST with an IMDS bearer token
 (uri + get_url), which needs nothing but the identity's Storage Blob Data Reader role.
 
 NOTE: azure.azcollection's azure_rm_storageblob also reads the account through ARM, which that role
@@ -50,7 +51,8 @@ namespaces, so modules run as root with the host's python on the host's filesyst
 `path: /opt/cirrus-ansible/vars/vm-init-files.yml`
 
 The only Terraform-rendered Ansible file: the init-files storage account and, keyed as in
-the layout file's vm_init_files, each file's uploaded path within the container.
+the layout file's vm_init_files, each file's uploaded path within the container (`blob`), its
+destination on the VM (`dest`) and its mode (`mode`).
 
 `path: /opt/cirrus/bin/run-ansible.sh`
 

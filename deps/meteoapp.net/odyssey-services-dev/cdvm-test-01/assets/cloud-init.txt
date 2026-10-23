@@ -23,6 +23,7 @@ system_info:
     groups: [docker]
 
 write_files:
+  - path: /opt/cirrus-ansible/image/Dockerfile
     permissions: "0644"
     content: |
       FROM python:3.13-slim
@@ -61,11 +62,26 @@ write_files:
       vm_init_subscription_id: "${SUB_ID}"
       vm_init_resource_group: "${RG_NAME}"
       vm_init_files:
-        compose_file: "${compose_file}"
-        acme_gts_staging: "${acme_gts_staging}"
-        acme_gts: "${acme_gts}"
-        acme_le_staging: "${acme_le_staging}"
-        acme_le: "${acme_le}"
+        acme_gts_staging:
+          blob: "${acme_gts_staging}"
+          dest: /opt/cirrus-acme-gts-staging/acme.json
+          mode: "0600"
+        acme_gts:
+          blob: "${acme_gts}"
+          dest: /opt/cirrus-acme-gts/acme.json
+          mode: "0600"
+        acme_le_staging:
+          blob: "${acme_le_staging}"
+          dest: /opt/cirrus-acme-le-staging/acme.json
+          mode: "0600"
+        acme_le:
+          blob: "${acme_le}"
+          dest: /opt/cirrus-acme-le/acme.json
+          mode: "0600"
+        compose_file:
+          blob: "${compose_file}"
+          dest: /opt/cirrus/docker-compose.yaml
+          mode: "0400"
 
   # First-boot configuration of the VM. Every task runs on the host (see inventory.yml).
   - path: /opt/cirrus-ansible/site.yml
@@ -78,7 +94,6 @@ write_files:
         vars_files:
           - /ansible/vars/vm-init-files.yml
         vars:
-          vm_init_files_dir: /tmp/vm-init-files
           # Public-cloud blob endpoint of the init-files storage account.
           vm_init_blob_base: "https://{{ vm_init_storage_account }}.blob.core.windows.net/{{ vm_init_storage_container }}"
         tasks:
@@ -96,14 +111,14 @@ write_files:
             until: imds_token.status == 200
             no_log: true
 
-          - name: Create the init files directories
+          - name: Create the init files' destination directories
             ansible.builtin.file:
-              path: "{{ vm_init_files_dir }}/{{ item }}"
+              path: "{{ item }}"
               state: directory
               owner: root
               group: root
-              mode: "0700"
-            loop: "{{ vm_init_files | dict2items | map(attribute='value') | map('dirname') | unique | list }}"
+              mode: "0755"
+            loop: "{{ vm_init_files | dict2items | map(attribute='value.dest') | map('dirname') | unique | list }}"
 
           - name: Download the init files as the VM's managed identity
             block:
@@ -113,15 +128,15 @@ write_files:
               # output; the rescue below reports what failed.
               - name: Download each init file
                 ansible.builtin.get_url:
-                  url: "{{ vm_init_blob_base }}/{{ item.value | urlencode }}"
-                  dest: "{{ vm_init_files_dir }}/{{ item.value }}"
+                  url: "{{ vm_init_blob_base }}/{{ item.value.blob | urlencode }}"
+                  dest: "{{ item.value.dest }}"
                   headers:
                     Authorization: "Bearer {{ imds_token.json.access_token }}"
                     x-ms-version: "2023-11-03"
                   force: true
                   owner: root
                   group: root
-                  mode: "0600"
+                  mode: "{{ item.value.mode }}"
                   timeout: 60
                 loop: "{{ vm_init_files | dict2items }}"
                 register: vm_init_download
@@ -135,13 +150,13 @@ write_files:
                   msg: >-
                     init file download failed -
                     {% for r in vm_init_download.results | default([]) if r is failed %}
-                    {{ r.item.key }} ({{ r.item.value }}): {{ r.msg | default('no message') }}
+                    {{ r.item.key }} ({{ r.item.value.blob }}): {{ r.msg | default('no message') }}
                     {{ r.response | default('') }};
                     {% endfor %}
 
           - name: Report the downloaded init files
             ansible.builtin.debug:
-              msg: "{{ item.key }}: {{ vm_init_files_dir }}/{{ item.value }}"
+              msg: "{{ item.key }}: {{ item.value.blob }} -> {{ item.value.dest }} ({{ item.value.mode }})"
             loop: "{{ vm_init_files | dict2items }}"
             loop_control:
               label: "{{ item.key }}"
