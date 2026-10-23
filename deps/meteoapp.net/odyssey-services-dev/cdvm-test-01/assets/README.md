@@ -77,6 +77,12 @@ First-boot configuration of the VM. Every task runs on the host (see inventory.y
   on the account. They are retried because the identity's role assignment can take minutes to
   propagate after a from-scratch apply. `no_log` keeps the Authorization header out of the
   output, and the rescue block reports what failed.
+- The last task starts the stack from `vm_init_final_compose` with
+  `community.docker.docker_compose_v2` (`state: present`). That is the module's equivalent of
+  `docker compose -f <file> up -d`: it runs `docker compose up --detach` in the file's
+  directory, so the project name is the directory name, as with the plain command. It runs on
+  the host through nsenter, so it uses the host's docker CLI and compose plugin from the
+  `docker.io` and `docker-compose-v2` packages; the module needs compose plugin 2.18.0 or later.
 
 `path: /opt/cirrus/bin/run-ansible.sh`
 
@@ -87,7 +93,8 @@ runs in the host's network namespace.
 
 ## runcmd
 
-Enable docker at boot and start it now, then run the first-boot playbook with run-ansible.sh.
+Enable docker at boot and start it now, then run the first-boot playbook with run-ansible.sh,
+which also starts the compose stack.
 
 
 ## using azcollection

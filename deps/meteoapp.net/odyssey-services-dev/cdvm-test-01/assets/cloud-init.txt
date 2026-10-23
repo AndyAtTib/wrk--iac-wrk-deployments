@@ -150,6 +150,13 @@ write_files:
             loop_control:
               label: "{{ item.key }}"
 
+          - name: Start the compose stack
+            community.docker.docker_compose_v2:
+              project_src: "{{ vm_init_final_compose | dirname }}"
+              files:
+                - "{{ vm_init_final_compose | basename }}"
+              state: present
+
   - path: /opt/cirrus/bin/run-ansible.sh
     permissions: "0755"
     content: |
