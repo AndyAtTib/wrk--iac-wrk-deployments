@@ -22,17 +22,12 @@ network and systemd - exactly as a locally installed Ansible would.
 storage account is already the file channel and the playbook is small enough to ship in custom_data.
 
 For now the playbook only downloads the init files, as the VM's managed identity, into
-/tmp/vm-init-files (root, 0644, uploaded paths preserved); installing them and starting the
-compose stack are the next tasks. The files are downloaded one by one with
-azure.azcollection's `azure_rm_storageblob` (`auth_source: msi`, `auth_mode: login`), each
-chmod'ed to 0644 as soon as it lands (tasks/download-init-file.yml).
+/tmp/vm-init-files (root, 0600, uploaded paths preserved); installing them and starting the
+compose stack are the next tasks. The download is plain Blob REST with an IMDS bearer token
+(uri + get_url), which needs nothing but the identity's Storage Blob Data Reader role.
 
-NOTE: `azure_rm_storageblob` runs where the Azure SDK is, i.e. in the controller container
-(`delegate_to: localhost`), not on the host like the other tasks; run-ansible.sh bind-mounts
-/tmp/vm-init-files at the same path so the files land on the host. Besides Storage Blob Data
-Reader the VM identity needs the Reader role on the storage account: the module reads the
-account's properties through ARM (`Microsoft.Storage/storageAccounts/read`) to find the blob
-endpoint before it touches the data plane with the identity's token.
+NOTE: azure.azcollection's azure_rm_storageblob also reads the account through ARM, which that role
+does not allow, and needs the Azure SDK in the image.
 
 Re-run after boot with /opt/cirrus/bin/run-ansible.sh (extra arguments go to ansible-playbook,
 e.g. -v); the image is reused, `docker rmi cirrus-ansible:local` forces a rebuild. Output goes
@@ -45,9 +40,6 @@ to `/var/log/cloud-init-output.log` at first boot.
 One-off Ansible controller image, built at first boot by run-ansible.sh. python:3.13-slim is
 Debian trixie, whose util-linux provides the nsenter binary the community.docker.nsenter
 connection plugin runs. ansible-core 2.21: controller python 3.12-3.14, target 3.9-3.14.
-azure.azcollection is installed with its full `requirements.txt` (the collection's module_utils
-imports most of the Azure SDK at load time, so a subset does not work); that is the bulk of the
-image and of the build time.
 
 `path: /opt/cirrus-ansible/inventory.yml`
 
@@ -60,20 +52,13 @@ namespaces, so modules run as root with the host's python on the host's filesyst
 The only Terraform-rendered Ansible file: the init-files storage account and, keyed as in
 the layout file's vm_init_files, each file's uploaded path within the container.
 
-`path: /opt/cirrus-ansible/tasks/download-init-file.yml`
-
-Included once per init file by site.yml: download the blob with `azure_rm_storageblob`
-(delegated to the container, with retries for IMDS lag and RBAC propagation), then set the
-file's owner and mode (0644) on the host.
-
 `path: /opt/cirrus/bin/run-ansible.sh`
 
 Build the controller image on first use, then run the playbook against this VM.
 `--pid=host --privileged` are what the nsenter connection needs to enter the host's
 namespaces; the default bridge network is enough for the controller side, since every task
-but the delegated downloads runs in the host's network namespace (the downloads reach IMDS and
-the storage account from the bridge network). /tmp/vm-init-files is bind-mounted at the same
-path for those downloads.
+runs in the host's network namespace.
+
 
 ## using azcollection
 
