@@ -23,6 +23,7 @@ system_info:
     groups: [docker]
 
 write_files:
+  - path: /opt/cirrus-ansible/image/Dockerfile
     permissions: "0644"
     content: |
       FROM python:3.13-slim
@@ -30,7 +31,8 @@ write_files:
           PIP_DISABLE_PIP_VERSION_CHECK=1 \
           PIP_ROOT_USER_ACTION=ignore
       RUN pip install ansible-core==2.21.5 \
-       && ansible-galaxy collection install community.docker:==5.4.0
+       && ansible-galaxy collection install community.docker:==5.4.0 azure.azcollection:==4.1.0 \
+       && pip install -r /root/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
 
   - path: /opt/cirrus-ansible/ansible.cfg
     permissions: "0644"
@@ -38,6 +40,9 @@ write_files:
       # Settings for the controller container (ANSIBLE_CONFIG in run-ansible.sh).
       [defaults]
       inventory = /ansible/inventory.yml
+      # The container's python, for tasks delegated to localhost; the vm host sets its own in
+      # inventory.yml.
+      interpreter_python = /usr/local/bin/python3
       nocolor = true
       callback_result_format = yaml
       retry_files_enabled = false
@@ -67,7 +72,8 @@ write_files:
         acme_le_staging: "${acme_le_staging}"
         acme_le: "${acme_le}"
 
-  # First-boot configuration of the VM. Every task runs on the host (see inventory.yml).
+  # First-boot configuration of the VM. Every task runs on the host (see inventory.yml) except
+  # the blob downloads, which tasks/download-init-file.yml delegates to the container.
   - path: /opt/cirrus-ansible/site.yml
     permissions: "0644"
     content: |
@@ -78,66 +84,25 @@ write_files:
         vars_files:
           - /ansible/vars/vm-init-files.yml
         vars:
+          # Bind-mounted from the host at the same path by run-ansible.sh, so downloads made
+          # inside the container land on the host.
           vm_init_files_dir: /tmp/vm-init-files
-          # Public-cloud blob endpoint of the init-files storage account.
-          vm_init_blob_base: "https://{{ vm_init_storage_account }}.blob.core.windows.net/{{ vm_init_storage_container }}"
         tasks:
-          # Token for the VM's single user-assigned identity, which IMDS serves by default (no
-          # client id needed). Retried: IMDS can lag a few seconds after boot.
-          - name: Get a storage access token for the VM's managed identity from IMDS
-            ansible.builtin.uri:
-              url: http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F%2Fstorage.azure.com%2F
-              headers:
-                Metadata: "true"
-              return_content: true
-            register: imds_token
-            retries: 10
-            delay: 15
-            until: imds_token.status == 200
-            no_log: true
-
           - name: Create the init files directories
             ansible.builtin.file:
               path: "{{ vm_init_files_dir }}/{{ item }}"
               state: directory
               owner: root
               group: root
-              mode: "0700"
-            loop: "{{ vm_init_files | dict2items | map(attribute='value') | map('dirname') | unique | list }}"
+              mode: "0755"
+            loop: "{{ ([''] + (vm_init_files | dict2items | map(attribute='value') | map('dirname') | list)) | unique }}"
 
-          - name: Download the init files as the VM's managed identity
-            block:
-              # Blob REST with the bearer token: needs only Storage Blob Data Reader on the
-              # account. Retried: the identity's role assignment can take minutes to propagate
-              # after a from-scratch apply. no_log keeps the Authorization header out of the
-              # output; the rescue below reports what failed.
-              - name: Download each init file
-                ansible.builtin.get_url:
-                  url: "{{ vm_init_blob_base }}/{{ item.value | urlencode }}"
-                  dest: "{{ vm_init_files_dir }}/{{ item.value }}"
-                  headers:
-                    Authorization: "Bearer {{ imds_token.json.access_token }}"
-                    x-ms-version: "2023-11-03"
-                  force: true
-                  owner: root
-                  group: root
-                  mode: "0600"
-                  timeout: 60
-                loop: "{{ vm_init_files | dict2items }}"
-                register: vm_init_download
-                retries: 20
-                delay: 15
-                until: vm_init_download is succeeded
-                no_log: true
-            rescue:
-              - name: Report the failed downloads
-                ansible.builtin.fail:
-                  msg: >-
-                    init file download failed -
-                    {% for r in vm_init_download.results | default([]) if r is failed %}
-                    {{ r.item.key }} ({{ r.item.value }}): {{ r.msg | default('no message') }}
-                    {{ r.response | default('') }};
-                    {% endfor %}
+          - name: Download the init files one by one as the VM's managed identity
+            ansible.builtin.include_tasks: /ansible/tasks/download-init-file.yml
+            loop: "{{ vm_init_files | dict2items }}"
+            loop_control:
+              loop_var: init_file
+              label: "{{ init_file.key }}"
 
           - name: Report the downloaded init files
             ansible.builtin.debug:
@@ -145,6 +110,39 @@ write_files:
             loop: "{{ vm_init_files | dict2items }}"
             loop_control:
               label: "{{ item.key }}"
+
+  # One init file: download it, then set its mode. azure_rm_storageblob needs the Azure SDK,
+  # which is in the controller container and not on the host, so the download is delegated to
+  # localhost (the container) and writes through the vm_init_files_dir bind mount; the chmod
+  # runs on the host like every other task. Retried: IMDS can lag at boot and the identity's
+  # role assignments can take minutes to propagate after a from-scratch apply.
+  - path: /opt/cirrus-ansible/tasks/download-init-file.yml
+    permissions: "0644"
+    content: |
+      ---
+      - name: "Download {{ init_file.key }}"
+        azure.azcollection.azure_rm_storageblob:
+          auth_source: msi
+          subscription_id: "{{ vm_init_subscription_id }}"
+          resource_group: "{{ vm_init_resource_group }}"
+          storage_account_name: "{{ vm_init_storage_account }}"
+          container: "{{ vm_init_storage_container }}"
+          blob: "{{ init_file.value }}"
+          dest: "{{ vm_init_files_dir }}/{{ init_file.value }}"
+          auth_mode: login
+          force: true
+        delegate_to: localhost
+        register: vm_init_download
+        retries: 20
+        delay: 15
+        until: vm_init_download is succeeded
+
+      - name: "Set the mode of {{ init_file.key }}"
+        ansible.builtin.file:
+          path: "{{ vm_init_files_dir }}/{{ init_file.value }}"
+          owner: root
+          group: root
+          mode: "0644"
 
   - path: /opt/cirrus/bin/run-ansible.sh
     permissions: "0755"
@@ -154,14 +152,19 @@ write_files:
 
       dir=/opt/cirrus-ansible
       image=cirrus-ansible:local
+      # Where the playbook puts the init files (vm_init_files_dir in site.yml), bind-mounted at
+      # the same path so the downloads the container makes land on the host.
+      init_files_dir=/tmp/vm-init-files
 
       if ! docker image inspect "$image" >/dev/null 2>&1; then
         docker build --pull -t "$image" "$dir/image"
       fi
 
+      mkdir -p "$init_files_dir"
       exec docker run --rm --name cirrus-ansible \
         --pid=host --privileged \
         -v "$dir":/ansible:ro \
+        -v "$init_files_dir":"$init_files_dir" \
         -e ANSIBLE_CONFIG=/ansible/ansible.cfg \
         "$image" ansible-playbook /ansible/site.yml "$@"
 
