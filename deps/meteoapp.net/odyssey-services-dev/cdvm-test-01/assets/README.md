@@ -41,6 +41,17 @@ Re-run after boot with /opt/cirrus/bin/run-ansible.sh (extra arguments go to ans
 e.g. -v); the image is reused, `docker rmi cirrus-ansible:local` forces a rebuild. Output goes
 to `/var/log/cloud-init-output.log` at first boot.
 
+## site.yml
+
+site.yml is hosted as a public gitlab snippet in order to reduce the size of the cloud-init file. We use
+the terraform template to create the vars file for that script. The script is dupliated in the `ansible/site.yml`
+file, and verified using `shasum -c site.yml.256`, where the checksum file is hardcoded into the cloud-init
+file. The checksum is generated using:
+
+```bash
+pushd $(dirname $fn); bn=$(basename $fn); echo "$(shasum -a 256 $bn)" > $bn.sha256; sha256sum -c $bn.sha256; popd
+```
+
 ## Files written
 
 `path: /opt/cirrus-ansible/image/Dockerfile`
@@ -85,6 +96,13 @@ First-boot configuration of the VM. Every task runs on the host (see inventory.y
   `docker.io` and `docker-compose-v2` packages; the module needs compose plugin 2.18.0 or later.
 
 `path: /opt/cirrus/bin/run-ansible.sh`
+
+Before anything else it downloads the playbook from the GitLab snippet
+(https://gitlab.com/-/snippets/6071269/raw/main/site.yml) over the placeholder site.yml, with
+retries, then checks it with `sha256sum -c site.yml.sha256` in /opt/cirrus-ansible. A failed
+download or a hash mismatch stops the script with an error before the image is built: on a
+mismatch the downloaded file is deleted so it cannot be run by hand later. Changing the
+playbook therefore means updating the snippet and the hash in site.yml.sha256 together.
 
 Build the controller image on first use, then run the playbook against this VM.
 `--pid=host --privileged` are what the nsenter connection needs to enter the host's
