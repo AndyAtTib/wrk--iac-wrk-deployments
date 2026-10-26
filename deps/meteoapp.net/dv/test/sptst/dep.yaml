@@ -1,6 +1,6 @@
 configs:
-    description: 1.3.0-bump-ver.1+33.Branch.bump-ver.Sha.bcd8fef8845a2f48d0231ab117e4fc16aee890cc
-    version: bcd8fef8845a2f48d0231ab117e4fc16aee890cc
+    description: 1.3.0-alpha.47+Branch.develop.Sha.e72d37b3ff03b32f00181235216d498cbc9a3614
+    version: e72d37b3ff03b32f00181235216d498cbc9a3614
 layers:
     "1":
         config: az/test/c-sp-test-create
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-10-26T17:12:17Z"
-    mac: ENC[AES256_GCM,data:xXXB1N5hN/SRKfsHbiRu287lM32pcXxYMuZnZDW+0efQhw3RKFYGGdxqE5mFC9qnKYeHv4ojc0FIyiJyirDQwF3He+wsfqStcgh5ACJqHjwdjjBqi9I0Yos/Kd+h71vKkoZd2ZMCjU1b8jn5JdVuRkqcf1gcu4Dh0Fti/n2ICOI=,iv:jH+vxhYUHk4qha9M3wx8lvuI7zn1FZ4ouzVmnN/ImVg=,tag:YV5bixV2LnpukPLLhpzwMw==,type:str]
+    lastmodified: "2026-10-26T19:21:26Z"
+    mac: ENC[AES256_GCM,data:zC4HiEFMp/5VxzgIckX0/4UrcW92VaCy+VVcl8GcWFHIGHXxTr29roFuVX8fwoAy9Zi9h3CYwhuqQ4Sr8fL4lDXMcKl73/ImBugFsaoPsDeH7Uf4P3tO+3cTBt1k7y0TZzGpGEuFwcruTcu/3k8XQEdqWwEi/7s+6QUxoFLdx6I=,iv:QsuQQR/o9BMfKZoBGsauunxtLO5geOsefSm3A4Y/3qM=,tag:BdhuSAfJHQWtds3e0p+cPg==,type:str]
     pgp:
         - created_at: "2026-05-14T21:52:04Z"
           enc: |-
