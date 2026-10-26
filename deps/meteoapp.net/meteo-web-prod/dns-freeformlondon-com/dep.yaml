@@ -1,7 +1,7 @@
 deployment_name: meteo-web-prod-dns-freeformlondon-com
 configs:
-    description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
-    version: acba4d69ea24849f474d5606d9504e68669b84ee
+    description: 1.3.0-bump-ver.1+39.Branch.bump-ver.Sha.702e95943ff5059e86608207260524a0d1a44a5c
+    version: 702e95943ff5059e86608207260524a0d1a44a5c
 layers:
     "1":
         config: az/c-dns-zone
@@ -12,8 +12,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-06-18T14:14:19Z"
-    mac: ENC[AES256_GCM,data:zSLZ7wVYEtva8kMxEJdcn0eaOPpLIzJSiL+FUWl2JDMTUk8kvbTWVv05mYq5G10YxEZ7DxC35iEAjEpIriU3ezeZrQ/J69I+fftwmSlqdkaIknpU9eaZJm2qrH5hqLinMbdKYfDeq/fknb3sATKxoBRQfGW0ZOLtSSlPTdZ/J64=,iv:BZrCjKkHzGPHoktLaIhIPhLY+C/JClPd0OZqrmKNCXs=,tag:LhOoXQTahEh73Qcpc6Ma6Q==,type:str]
+    lastmodified: "2026-10-26T17:49:43Z"
+    mac: ENC[AES256_GCM,data:eaJr3k9jcqpotQNEiPd5DvoRq9cfFKcm327m48cKUXoFt99TMqhhxPLvKgR1Httgz3jZXDN4CMFzL8O35LvFFr3Hl2ceMQX8yxd1UK9EUw7nzyi2h/sHDkOj9P509QRLWd9gcdj5w2zdSrDK2aM3hAR4gvyA61Cictvpt1jrgXc=,iv:u69feAY1VgJw2vgb0KpLriTHi4ANVj3qdLuG0qkKY40=,tag:D6jG3+VjMiGVuT9XJdSMQA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:03Z"
           enc: |-
