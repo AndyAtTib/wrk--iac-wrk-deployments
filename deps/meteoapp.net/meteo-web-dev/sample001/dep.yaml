@@ -1,7 +1,7 @@
 deployment_name: meteo-web-dev-sample001
 configs:
-    description: 1.3.0-bump-ver.1+31.Branch.bump-ver.Sha.5485277b4daf8a4df32d05566a1e3d88de3d45d6
-    version: 5485277b4daf8a4df32d05566a1e3d88de3d45d6
+    description: 1.3.0-bump-ver.1+33.Branch.bump-ver.Sha.bcd8fef8845a2f48d0231ab117e4fc16aee890cc
+    version: bcd8fef8845a2f48d0231ab117e4fc16aee890cc
 layers:
     "1":
         config: helpers/sample
@@ -12,8 +12,8 @@ layers:
         apply_args:
             e: sample
 sops:
-    lastmodified: "2026-10-26T17:08:51Z"
-    mac: ENC[AES256_GCM,data:+L5XNURSp1B+DDt455oUurGt0PVreuujIJ0qWV+gNM/+T1I7oHb0qmKrTjC8OiK30IqrpUMV9D40E2umkryy/09PIdNGtI5pR96cAFISu+N333GqiKZXQoPeietkE5ePRYJ5bEQ6s1kSpLBxvHNczIvYZLTyc1E5OmKHP3i0daY=,iv:76rStdoUTmSzNXrXO5DNiHpnzP0qeBxiKZnRB1MA8lQ=,tag:DogqzM6FqaAio3e3L0f1Kw==,type:str]
+    lastmodified: "2026-10-26T17:09:52Z"
+    mac: ENC[AES256_GCM,data:hieaqCDb+L6Gpes4UuOBwd6zjyljXjt/ATjkmEHf8541IsxCr5Bfjh6VX1qPhWtogALewHRc9ivuISW0+vCP2cGlrwPp90qTUP41dOG/1pmYJfl1zkm5GrtXG1AV7xyBWVcarjHvN3LqMLWI7ESXyXqGJL6O1dAXE8D02m7pACQ=,iv:Vfh5iLjEOPF3OXKBInCqHaA4EW9cYc7bdEJ4AzFdsw0=,tag:PiglKpscnyQwoFAOuv2A2Q==,type:str]
     pgp:
         - created_at: "2026-05-14T22:07:29Z"
           enc: |-
