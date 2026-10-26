@@ -1,7 +1,7 @@
 deployment_name: dart-web-prod-tfstate
 configs:
-    description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
-    version: acba4d69ea24849f474d5606d9504e68669b84ee
+    description: 1.3.0-bump-ver.1+36.Branch.bump-ver.Sha.1486c160b03894ae930c324f3d4f86f95dd3c399
+    version: 1486c160b03894ae930c324f3d4f86f95dd3c399
 layers:
     "1":
         config: az/c-tf-remote-state-acc
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: boot
 sops:
-    lastmodified: "2026-06-15T13:28:16Z"
-    mac: ENC[AES256_GCM,data:GrAYz7RB2bo6LhwNpV/GuqZrwnc5lgkvdTVnvSVHd78EjuwuwYRT0mug63IzOa4PGKslQVtbCWhrZh+69dg3QCOhtbEv9gkUBhbsUWvcfRkOHb+3pLG9ZZFWNW/Ch2U6ICBvAImfpGYtkoubD32TyNsZ8I4IVfQ6TLtYvoAeAeg=,iv:Ab1sgDE9vXvPUBPJsEBfPGw5QEz2Z7jt/aY00qPo9Bw=,tag:8crFYWeS12ZtmCLaSyk7Kg==,type:str]
+    lastmodified: "2026-10-26T17:35:25Z"
+    mac: ENC[AES256_GCM,data:g5mn4DSYE4AqAIEBHeLLHyuJUfhB+lcPGg2tH87nZmEiLHJVXlJ+a1SORblXirXeoQ4bLDXcd7qVp/8i7D4oKYAHEJ3LTjSygdjB652RmBbo0Bdd8Vtz2C9B+G23UzQ3386AlCcyuzUcbNnPXNLUUn7PZBwnNs+apJL33HUe6iw=,iv:ocYAO5dQPgh9Hgz7zjxuiRR1HSfpiP7zr/JGJsaTSl8=,tag:28IGPQuyx/mNK1CZg3PT7Q==,type:str]
     pgp:
         - created_at: "2026-05-14T23:04:39Z"
           enc: |-

@@ -1,7 +1,7 @@
 deployment_name: meteo-web-prod-tfstate
 configs:
-    description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
-    version: acba4d69ea24849f474d5606d9504e68669b84ee
+    description: 1.3.0-bump-ver.1+36.Branch.bump-ver.Sha.1486c160b03894ae930c324f3d4f86f95dd3c399
+    version: 1486c160b03894ae930c324f3d4f86f95dd3c399
 layers:
     "1":
         config: az/c-tf-remote-state-acc
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: boot
 sops:
-    lastmodified: "2026-10-25T13:54:27Z"
-    mac: ENC[AES256_GCM,data:b+sXiSQxvwimS0SPw/AavyQQcgflRN4QAdZjmyeR/cAaKmXsD9Nbvm10GBE5Vb5VaUhTU4jbwlgkgYkf/iHoh3ImRKD4Jsv02NFCCvvQFsNX9/fqLyLREf+nie8lKe+ceey72uRlkYpChw3BLmu05t6xbRfsxHBG7Xy4odtAddM=,iv:5xLGRBgtEANbq3sGdVH9g0c14kB6dsnEFCkMGvvEVgQ=,tag:eDZMcF9YM0ObWN2OW+LJlw==,type:str]
+    lastmodified: "2026-10-26T17:17:49Z"
+    mac: ENC[AES256_GCM,data:bSkIaTY0RvvIuK87CHNDlyes6jNGkFtS1f8rQZIVtUNpRsWOXNKAC2ySEP9DJpPLmRfBeBJr37zBOPsuzC0nessbIUU3yf3g0/wPtl16s005/gbGwanBHDoYXogs/9CCrx+Fd+ElgVF2kq8IRZeydtpziAatNHnPsCNIntnDht4=,iv:XboB5mfu2nv7LS+Ul7b9XpI93SHxaTUdjdGF940G2tk=,tag:4gd4+HmEh5OdR5zW4KHYfw==,type:str]
     pgp:
         - created_at: "2026-05-14T22:06:30Z"
           enc: |-
