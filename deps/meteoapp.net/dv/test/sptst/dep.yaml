@@ -1,3 +1,4 @@
+deployment_name: meteo-web-dev-sptst
 configs:
     description: 1.3.0-alpha.47+Branch.develop.Sha.e72d37b3ff03b32f00181235216d498cbc9a3614
     version: e72d37b3ff03b32f00181235216d498cbc9a3614
@@ -11,8 +12,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-10-26T19:21:26Z"
-    mac: ENC[AES256_GCM,data:zC4HiEFMp/5VxzgIckX0/4UrcW92VaCy+VVcl8GcWFHIGHXxTr29roFuVX8fwoAy9Zi9h3CYwhuqQ4Sr8fL4lDXMcKl73/ImBugFsaoPsDeH7Uf4P3tO+3cTBt1k7y0TZzGpGEuFwcruTcu/3k8XQEdqWwEi/7s+6QUxoFLdx6I=,iv:QsuQQR/o9BMfKZoBGsauunxtLO5geOsefSm3A4Y/3qM=,tag:BdhuSAfJHQWtds3e0p+cPg==,type:str]
+    lastmodified: "2026-10-27T17:39:33Z"
+    mac: ENC[AES256_GCM,data:uWv6bL671Xr3HneroNsEOQlX6cF4w6hyyDn2WnnwmPzJMg7+D1GGqwL6Lt6ATZezXEmoRQ11VdofquQpe38M/+lM3zmHsslbvv/V+dX5b1FSyX7OxqR88736ESnvGZz4gUSMN372VLa7rvT4VN3gKcK0xB70j/+AqcuWIe9bNqE=,iv:L1yvXuU1r8CGrvKH2CuCj+0wEwj5NCZo5z9Xf9lhnRQ=,tag:A6vQ59Z+C9GrtydyqqfRHA==,type:str]
     pgp:
         - created_at: "2026-05-14T21:52:04Z"
           enc: |-
