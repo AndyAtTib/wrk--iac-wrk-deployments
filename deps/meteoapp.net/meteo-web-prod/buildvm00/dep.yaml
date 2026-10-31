@@ -1,7 +1,7 @@
 deployment_name: meteo-web-prod-buildvm00
 configs:
-    description: 1.0.1+Branch.master.Sha.acba4d69ea24849f474d5606d9504e68669b84ee
-    version: acba4d69ea24849f474d5606d9504e68669b84ee
+    description: 1.3.0-alpha.59+Branch.develop.Sha.01a8bbe0d394e491a9ab39b2a10f8ad5cb26a6fb
+    version: 01a8bbe0d394e491a9ab39b2a10f8ad5cb26a6fb
 layers:
     "1":
         config: az/c-build-vm
@@ -11,8 +11,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-06-15T13:28:19Z"
-    mac: ENC[AES256_GCM,data:bn6Pmx77dQ7a/jyxtmxyw1//UgIhALy/TtMqMpyVD5B9BTvkO4akMT01G8GaZYxNj7AhKSqVHoNokhCIYUZyuuR680CsuSfwVPnakzOXGHI+2QV1B38Pn8ZQpu5MX40h6qCl7l0DnmSdk26bKv2RM8BTyPTGEEJzIwWEJlLgdlI=,iv:7jn6YxC9tdoHT/O79f0u8WqSQa4hs1L+HNmYjA1ss9E=,tag:FexYqkU2DKfhYh3BYkmbXQ==,type:str]
+    lastmodified: "2026-10-31T14:21:19Z"
+    mac: ENC[AES256_GCM,data:8yFF2r5Dc1dyqHyePYQ6sQuaIsyxMws2lKsLFBPxdC5V5GFAaN0DTYu2HYiJWaBxnUb4jTioH7Furo7S2JbfarhJ+k4XfqmdC0Y5CiIk7/m0MbIQfpsfo8QuZubNASBUheXaOI+zjiSd3LwUqbFOk8ThIQbnvSCyf/jSyOzKO5g=,iv:U0LFX6YatNwxgfl/EKuhYGuC9oN8jQFU2rinK3Oa6bU=,tag:3ifxwd1f0v5vn7NbyAtayA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:51:14Z"
           enc: |-
