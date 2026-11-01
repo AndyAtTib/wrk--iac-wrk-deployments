@@ -1,13 +1,13 @@
 # Terraform will be unable to decode this file if it does not contain valid YAML
 # You can retain `---` (start of the document) to indicate an empty document.
 vm_admins:
-    - description: ENC[AES256_GCM,data:nFFlGH4W8uVPkFw/QIacQIvDUROMwSueChfKwBAY,iv:3JzmQuIVVtCG0MGZE+ZXWSFHAzqq6z1Jo0uL3CxZr3c=,tag:cdowKtw4dX4ans7ZZ5Oqcg==,type:str]
-      value: ENC[AES256_GCM,data:gYjcq99xYl+9dIf4Y+5fTRA=,iv:cIPmPId4SmtsU8zuf1aKLWYyfnLkuELys2aIj//CFgA=,tag:D3lwYA+YrCVEh03V0Ws3/Q==,type:str]
+    - description: ENC[AES256_GCM,data:Do0aDDcrYFYwNSlKXyZAb5p0uHWO4FTzCZucnhgt,iv:yrNeKK26HiFYT7dpG9PRVUIdrm6g2yAMAlEk8o3/mTA=,tag:N+e4Lnrt78F/C/05GXfMag==,type:str]
+      value: ENC[AES256_GCM,data:wOUvpjrQEDDQVp8StDV1YHXE,iv:lLqwg1H+RkwBLYU5iuRxUYRcG5/OZKRPnXr4sKCe6kk=,tag:y+lVg5LJ+ZWeK6aa2bGtNw==,type:str]
     - description: ENC[AES256_GCM,data:BnIIn0+LhT67KiYWZa+4P6RY5comLoDQZ3b0CCgiaz4JTKOBeg==,iv:b/Y1/7+G4h2R2FhQj0p6ARB+019pqB1FURPPMv39Eow=,tag:CNx6I/Rl7LNHGTVb2hizsw==,type:str]
       value: ENC[AES256_GCM,data:vGvGjXVb8XQeLITnhpsrpSY=,iv:4jF/wz14g3kVps+vaXLBFiqrwCGxM3qeQAsz+ThqsRE=,tag:u1jWLoiqaItmK9XvABV6jA==,type:str]
 sops:
-    lastmodified: "2026-06-03T12:24:33Z"
-    mac: ENC[AES256_GCM,data:Zb+EOZH7kDqkdA/Rg4TxHde6IZ/CAaBN/IzKdzQ8lwkY9o+Xs1FK0zOFrqT87C1TXCnkd2vjnaSTLlv9x54vodywJNYctllB8Nv3gFQSuW14+r90enufwifrQU8uKs1xDtU+Ispvy/HLErKyxOE1G7l21DowtKucdRSqaENOeUk=,iv:2DF0sx/du+1e4Ymw4ZnTKNrCJ/G27FPPQ9wEnvW6aAc=,tag:xLpoV3L4eKKB5OVzDiWfGQ==,type:str]
+    lastmodified: "2026-10-31T14:16:35Z"
+    mac: ENC[AES256_GCM,data:zC/VrYlK5U1hiU/qAV53r7iQMqHGdjmwPbEDL53IirwkA59GlyT6TYj4JQsrSJ37ejCPt29vFq+GNQZBVy4Dj0lgidaAeijaeOw9MZGfhjeqBJ7eiTzke5p4ZJhXkx6OUVqTvh/Z/9V1Alabsu08XIbtFl2JmscL3Ncc7PyNcAA=,iv:DwbQy+XvaTfnlgqocZwxmeYMGIVbQTB27fCnTkk9k4o=,tag:WCE5ajge08AthzsjVBs5VA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:51:16Z"
           enc: |-
