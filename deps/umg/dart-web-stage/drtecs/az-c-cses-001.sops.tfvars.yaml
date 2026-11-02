@@ -41,12 +41,12 @@ public_dns_config:
 build_vm_subnet_ids:
     - ENC[AES256_GCM,data:gHAms01BP6EkffNG7J9Ihxl7TrxlRDAPp4oQZRLts2I35GMV5EF5fupAYGVVY2RgKAsWTu0rsvGQD8rInRJEEmh+yfRc0/q9I3VigHAzOibS5iFXVP7QVA+bCetFQAz3Aih/fWSOSYeqrbvJKmPS1bLc6tquPWUIjj6S9AhNR9XEBes1r95ewua1vbrT+HiaToQSxXik2fNduOw/oud3n45WUgxufDd+a46cBSoRsRJbx9AzgnRa6Y7ZQBteVkKh050=,iv:NnX3I/FCGa1xjVwReXclF0GxxQZxs/BTKZvEwKygERk=,tag:PFT9VosYievRw0rz4ZVJFg==,type:str]
 vnet_address_space:
-    - ENC[AES256_GCM,data:47YdGnuXjeDUjE73,iv:KAIy+IwSw7jfow86vXAEIOeMPttHgZbzAzbD1FtItmQ=,tag:5MS+sGVAqmsgkriVqPZToA==,type:str]
+    - ENC[AES256_GCM,data:aBftiFI4l22XGjIe,iv:Pnzgl3STXrLrxIsw4Igu6f8E6prKve2iv6PDgAkBqV8=,tag:eUAEB+EG/QLuuLBRYc7wWQ==,type:str]
 subnet_address_prefixes:
-    - ENC[AES256_GCM,data:z186G1TguxjB5f3w,iv:ATL/R7KRQVu06CccL6sUSIglMDAw1NjJlmMGifxENz8=,tag:DfQJ2zt7GO+JwUyhObz+DA==,type:str]
+    - ENC[AES256_GCM,data:/k9PY6KnVLYwRNZT,iv:zg6llrNrIqhCH8ObVjkYLZ0i8hDBJSPURyEsUwmlXi8=,tag:VigwlzS+DbTkVhne0h2WPQ==,type:str]
 sops:
-    lastmodified: "2026-11-02T16:39:40Z"
-    mac: ENC[AES256_GCM,data:CosXit0FMb/M5g6z8eg3wI5E8c4VyDYzsXGivQcBV+ITySOUcKwOsIv0Wyw0CRgW03yHoFwERAounyOD+zLGI9K0XudrqcAOqXo7SZTFg0xZwrxZhNbZy2XW7IOY4xNhnMf4zyWHqKWvMybvNnQG6iHKOaQvaYK4HTDhf+bGL5s=,iv:7nrBmpBgcroXrgfiJ86EsnNhlh84RBfm92cxHr4Z6HQ=,tag:AtvJOHQScf8rkp0sroFOmw==,type:str]
+    lastmodified: "2026-11-02T21:26:20Z"
+    mac: ENC[AES256_GCM,data:lUt+QVcSCvYAvjFULjfWnbx9Pv7eMTNhR4r+XVB3Hgj2x48kSaLsiB1lJHqg2ETYiqbudo6DvkSem7gsWCdovFS8YykPcZUrBJzWKTxqXkzfnrwdlzPR3WFoqmQIbYQQfNLX8OB5rELM8pke3dIUgGnkytKResseFUxTsgFQtww=,iv:B9CQ5wLA8WtwwPCK3Lbz/MkwwOR731Rdv911daUJDN4=,tag:XfEjdViv+LTnNLu+JBJA2g==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:25Z"
           enc: |-
