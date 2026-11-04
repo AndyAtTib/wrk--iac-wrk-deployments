@@ -211,7 +211,7 @@ referencing==0.32.0
     #   jsonschema-specifications
 regex==2023.12.25
     # via pycep-parser
-requests==2.31.0
+requests==2.33.0
     # via
     #   bc-detect-secrets
     #   checkov
