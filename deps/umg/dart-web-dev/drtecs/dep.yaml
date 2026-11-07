@@ -1,7 +1,7 @@
 deployment_name: dart-web-dev-drtecs
 configs:
-    description: 1.4.0-tfapply.1+62.Branch.tfapply.Sha.44d303796633b23acce49805edd007d50e295590
-    version: 44d303796633b23acce49805edd007d50e295590
+    description: 1.4.0-alpha.63+Branch.develop.Sha.92423064d8e2ce94e54f936d10259938d4c591f7
+    version: 92423064d8e2ce94e54f936d10259938d4c591f7
 layers:
     "1":
         config: az/c-pip-basic
@@ -17,16 +17,9 @@ layers:
         st_id: ENC[AES256_GCM,data:vvjECCHx46VRT5qaIW7p0gUuZYIONpyWMNsboJI0b3BmClBXnM4Ev8yIOJApoZ5xVysPJH/+YyGp9e6njyny1EPpuzrGMRQtGowYXiIBcolsLSI3Yd1/D04k+bAE5zdk34W36s/rdDR8hIkzaYnFPwbpRIoSCITZUTzCzGl3Se9LNqJkR+ioN0SfVfIgwXqCeqVSpu6v/ufNZgc=,iv:XSFu8aVNyaxpkgroqrz7c5+S0PXRoRPXSIAlQAJzhZs=,tag:vzW2kyohjVBYZEcdqjT65Q==,type:str]
         apply_args:
             e: layer01
-    "3":
-        config: az/c-cses-names
-        tfvar_files:
-            - az-c-cses-names-001.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:PNOHK/bLd87A4NR6e90dpmz2QXopTM1NvK/UwSmzZ/wEyXxDLmHDZyfEsEH0Naj3epD+JUsaxaUnqM8FUhQIktIaTuVMNi/dxysDIMFODZlBzNyDuI6EGFfZgUKTEBWhX7KqhX6Vepi9MkFN7Pl0dHW8TmxB6cWkjc6OWexgu5Z8Qb9w5q0S8IJCM8yqL/BHXaJ17fjN00GjrY8=,iv:dWewEeWMp3Bvo+8WwlIot6N3c+0ADSFMCpnazmRVMxM=,tag:UX4kdEUMd+DZcoQwqj1Ibw==,type:str]
-        apply_args:
-            e: csesnames
 sops:
-    lastmodified: "2026-11-07T01:40:16Z"
-    mac: ENC[AES256_GCM,data:8LC7id0pVjNXIZPP3Q2p8tDWkxeRPRq+GPXlbTeGFEUoaz2Rf/zzfAsMTo0mKCKnYK+rZNimfCA6QKp+aEMMkeyMDeE6tclFTy2QHu6drTbxHyiDDvoEo2NHECWwVDz1aPjQPMKxzerne8VuunhNYZBkvBD1OVV1Pk0P8/kWTlQ=,iv:JLaFibW6zf2Ou2xA7+gYcpyZMX1WcnLjfAKfrh7+u7Y=,tag:JR/pzoM8TZBqPmenGgs/Ng==,type:str]
+    lastmodified: "2026-11-07T01:47:15Z"
+    mac: ENC[AES256_GCM,data:syhhViBn/aTnvMpVl8PUByqZ8uXw4xL+Nt0VcnMrjIM6OUJW3hUrovi/gX1NwBf+wKpkq7m5jmXTuOwEnXGCAtPC1PaMgKEHOeY/H2pomzu1x40GXEd9vUGU7XnvXYOJyNxaU1Ak+J4+fLW994V1/Gp+/lRTzLF11kMq4nWBhB8=,iv:J2IzqvJpiL9VUBQjF1DszQ6Utxrper2nILFnDHCZ05c=,tag:RroGbAIrD0ohEWFUFjufwA==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
