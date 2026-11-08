@@ -48,9 +48,12 @@ vnet_address_space:
 subnet_address_prefixes:
     - ENC[AES256_GCM,data:b2FS52D43ysczVE/,iv:76wgffzPM+VaIyCGnAcltG8QPSKGzaG0hCuc14jb3WY=,tag:kCFiRo46W6m0xDZ0ww0ojw==,type:str]
     - ENC[AES256_GCM,data:0ssU2JeEnvHNlVzD,iv:t3gt4FtNAetmYglpsEAFyiHP8wqG4YQ7Bxrxbk0ZACU=,tag:fnbAu0bvbPStoMS6688Hxw==,type:str]
+pip_basic_config:
+    public_ip_id: ENC[AES256_GCM,data:JI1DF/kiodtOnVhrhubwWdI0xP/xipOb5b0dm9RCYT1cbHGbfG1BZ0FNsJY3Eamj1vrqC7Cc6gkmD1on9jcKHHoC7a651QQoAbJ/tWQFuDWK/q95UC6ihOltVBuBExLOzPpTx3X1hVcvQAeeoYFUiuZV7IQTl81vflUcsLvAK44k4ymhWKep8tWpSw50vrmAvdOCD0O5AO691INyMbSi3ATRDCyDaEreWk84dPk=,iv:uZjdGh1NUmlkvmQFj7NfSaTYrsQAJbez3QYyONSOKoQ=,tag:n4Qdp+UZ1HEs8TPfpD6vSQ==,type:str]
+    resource_group_id: ENC[AES256_GCM,data:s+gZh1b6nYI2rYdp2G8HzSKclsmxlYEr2dt/POGY4Qp3QgEIxyKrenxpBSfv653jGHySifwuReLuaR6VYbJowSocAmP/VtL+zSHODvDRKyhFfv//SrC/C/4gZN+ldVo=,iv:DYdGHv6BMrWodFver0r3YqCYic/cC3st8URJZb8Og/w=,tag:HsMTyFU1vUzjebvqLw4xcQ==,type:str]
 sops:
-    lastmodified: "2026-08-10T18:39:59Z"
-    mac: ENC[AES256_GCM,data:apak81rHk1BJ9KtQhBqbX9aIZ1/x/26rmL50qHnHjEwvBdznoFYk08TIY1kvGL8GVXxoW5LZayCSJY3RbuG9KF1ylz4Xi8fuu3D5OQ8LZlus7OnIVf1rRFO/THCXgabSjwqH1+tF7Khr2vaND21mEVdmHuWiqrdfwOY3p47Ff/U=,iv:54/fYd1PEv5CnRqR9/hT6JtlfwCuZ2eePKpINPsgyxo=,tag:N1hE03237LtbuBqoRa8wOQ==,type:str]
+    lastmodified: "2026-11-08T17:35:22Z"
+    mac: ENC[AES256_GCM,data:ROyhYCr7ofGFK5x62X6tX6JAbdgZLrxpf3rGefiUGEm4xuFV3ZJvh3vPbCWwD8tbMpPWCVmFuCkM2WE72JwCpnnUnzjIakOpIFIbxRYR8t35naeeOHpjfKIPecMSAcLlp7B3C7PvTG2AXqHtiFVSTCqvmDZDIJHyamwTQBv3aN4=,iv:+lWww248NIcpkniZn2AM7y+LzA04olDgH0+U6ClDmsQ=,tag:ZCZbOy3tlj1S+4mXmswKAw==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:12Z"
           enc: |-
