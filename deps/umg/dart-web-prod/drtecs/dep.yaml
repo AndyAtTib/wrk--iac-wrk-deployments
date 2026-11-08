@@ -1,25 +1,32 @@
 deployment_name: dart-web-prod-drtecs
 configs:
-    description: 1.4.0-tfapply.1+56.Branch.tfapply.Sha.e0cf5015421ce5333373645240f1a79f8aaace39
-    version: e0cf5015421ce5333373645240f1a79f8aaace39
+    description: 1.4.0-tfapply.1+58.Branch.tfapply.Sha.8d9ea50f52c9c62a28edb46cd8ad84e181bf295c
+    version: 8d9ea50f52c9c62a28edb46cd8ad84e181bf295c
 layers:
     "1":
+        config: az/c-pip-basic
+        tfvar_files:
+            - az-c-pip-basic-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:rKxvSeBOywT+jdA9ghjNMfNHxYv44u7Mmsq5kNa9z61GlO54GK6zfrAg+YO6DNGReovotnnJqd8XS5g+UQ/DI5Sn0igbUjovlsQoeXTWJ5q0UGF9imW5/ao6Xs4OKge2i66nfh6VEzGXoJDRNt8OQ6lolnxRa/heKsf0IbwrRW0cQW3DFziI52i+/nNC2sx6w/a/c5NWml8U014=,iv:bNFWK/4pqEl+i3xHjpyryVRu9cs1lg7RASnhIC19zuY=,tag:klvlWeZrcf25XTnLqJ+bmA==,type:str]
+        apply_args:
+            e: layer01pip
+    "2":
         config: az/c-cses
         tfvar_files:
             - az-c-cses-001.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:rKxvSeBOywT+jdA9ghjNMfNHxYv44u7Mmsq5kNa9z61GlO54GK6zfrAg+YO6DNGReovotnnJqd8XS5g+UQ/DI5Sn0igbUjovlsQoeXTWJ5q0UGF9imW5/ao6Xs4OKge2i66nfh6VEzGXoJDRNt8OQ6lolnxRa/heKsf0IbwrRW0cQW3DFziI52i+/nNC2sx6w/a/c5NWml8U014=,iv:bNFWK/4pqEl+i3xHjpyryVRu9cs1lg7RASnhIC19zuY=,tag:klvlWeZrcf25XTnLqJ+bmA==,type:str]
+        st_id: ENC[AES256_GCM,data:lJCCSoodXC9E5/umGmOizQ6rnhcnTRZ2loGS+To8MguWFhflKSgnxTCOoT8rL9z7L8WZI9gEm3S+aWkz6oXsZdXaTtyTk9fLhzd3Z74xQBzaGfRNqAKYDiuE9BUBAwQpQ4nSd1MGCmKkOHzWi4QG0jp5YQPSptbcTGqA/IEPyC3Ki//toMftE634B2vqfB5SbT26w0137pkw5Uo=,iv:rN1JwfVod4MFNkJkvY9h2FypLrLMEdpL2/BhOpe9MZI=,tag:jecukvyGIhaoaT4D86OAig==,type:str]
         apply_args:
             e: layer01
-    "2":
+    "3":
         config: az/c-cses-names
         tfvar_files:
             - az-c-cses-names-001.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:lJCCSoodXC9E5/umGmOizQ6rnhcnTRZ2loGS+To8MguWFhflKSgnxTCOoT8rL9z7L8WZI9gEm3S+aWkz6oXsZdXaTtyTk9fLhzd3Z74xQBzaGfRNqAKYDiuE9BUBAwQpQ4nSd1MGCmKkOHzWi4QG0jp5YQPSptbcTGqA/IEPyC3Ki//toMftE634B2vqfB5SbT26w0137pkw5Uo=,iv:rN1JwfVod4MFNkJkvY9h2FypLrLMEdpL2/BhOpe9MZI=,tag:jecukvyGIhaoaT4D86OAig==,type:str]
+        st_id: ENC[AES256_GCM,data:S4l1WupKgLihyqItYtw+QePrntU0aRUuuSH03uhA3gnMY4+R7K5QxrUYuMoLLOPm6b6wMqzzge82ymgvFAxORxf4CRZTz6p4Xb9x4aKtkWuGZ3uGz0LE7BKFdGcav38ULF+ELk1vkkFVmDC0+0Wc/UxKjoun2MXv1W4NH6bXWM+bQmkPWNnty8cdJowocTfSkOHAUGcn9Zduq+4=,iv:NjTeYGi/7u1js2J6kVdth/og50ksPKEJKUpcvGlxbp4=,tag:AYx2ioa+HkP2L/rxtOx1yw==,type:str]
         apply_args:
             e: csesnames
 sops:
-    lastmodified: "2026-11-08T13:05:47Z"
-    mac: ENC[AES256_GCM,data:1PgcggIl6BHUNighGS0VhpUDzeEEG7KarKsgRuKW/tehxBkgYquVMYush/r67zNTrnSiJZ0e5RCWEY97X1Ly8/IT7GR2DYekaFJ9CJC+nSuowPEvoAp6OTyRw9jnJ+u9euleB2ptLMACZGWW9LqpPw8KHf7bpX4qalCbNwrdDgk=,iv:if685Ak/P6n7JBxV4iO9Nlj5/PK9GIQGo3QUPJa9VTA=,tag:VZRNlz+n+1pdrG7RLflOvg==,type:str]
+    lastmodified: "2026-11-08T13:21:54Z"
+    mac: ENC[AES256_GCM,data:imdKdtf8nWNchTbMl8tRcjRv6fGB0EF9Ev9hLXtPIPkyEB0jG6WndEI5oQwmn5zhhlEiS0fTMiAH0hLnTzPmO4tQtXIkXRQEKNreoxWukfvUrNsQ8vZhXYgAOte6+Y+7nNDYmxLeBcp9aB09xrLk1czH2YyRH8/vZsnkLA5GAVE=,iv:OlIRSPd9otVHKn0fwQ5ebwXJOjyo6TtDigTt3sV7xzs=,tag:yBHsMYwrm+kXE0j9zWhwUQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
