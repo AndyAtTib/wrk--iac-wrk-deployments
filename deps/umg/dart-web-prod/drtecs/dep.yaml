@@ -10,9 +10,16 @@ layers:
         st_id: ENC[AES256_GCM,data:rKxvSeBOywT+jdA9ghjNMfNHxYv44u7Mmsq5kNa9z61GlO54GK6zfrAg+YO6DNGReovotnnJqd8XS5g+UQ/DI5Sn0igbUjovlsQoeXTWJ5q0UGF9imW5/ao6Xs4OKge2i66nfh6VEzGXoJDRNt8OQ6lolnxRa/heKsf0IbwrRW0cQW3DFziI52i+/nNC2sx6w/a/c5NWml8U014=,iv:bNFWK/4pqEl+i3xHjpyryVRu9cs1lg7RASnhIC19zuY=,tag:klvlWeZrcf25XTnLqJ+bmA==,type:str]
         apply_args:
             e: layer01
+    "2":
+        config: az/c-cses-names
+        tfvar_files:
+            - az-c-cses-names-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:lJCCSoodXC9E5/umGmOizQ6rnhcnTRZ2loGS+To8MguWFhflKSgnxTCOoT8rL9z7L8WZI9gEm3S+aWkz6oXsZdXaTtyTk9fLhzd3Z74xQBzaGfRNqAKYDiuE9BUBAwQpQ4nSd1MGCmKkOHzWi4QG0jp5YQPSptbcTGqA/IEPyC3Ki//toMftE634B2vqfB5SbT26w0137pkw5Uo=,iv:rN1JwfVod4MFNkJkvY9h2FypLrLMEdpL2/BhOpe9MZI=,tag:jecukvyGIhaoaT4D86OAig==,type:str]
+        apply_args:
+            e: csesnames
 sops:
-    lastmodified: "2026-11-08T12:25:14Z"
-    mac: ENC[AES256_GCM,data:7XxHyVPiR8UwDukMbRD8NcdwHxuqr9rUrJElHWVeRghaj9XPviLwTbC1oePlpo+a11lbjEfAKEZ/gxmGAyP26lIGU2aMFDiaxw4HHSeTYM0GqrIOfeNa9x4gNSUVjEFih2DWiuToH1gkEl8Ze8WGAkkrUtVcKKXTFRb2+6aO4lo=,iv:R/wbUQ050WKTck3uP3vVXH1gb7gyV6ELljWZ06uoBL4=,tag:+8eUENrnOEekwBl42QGeiA==,type:str]
+    lastmodified: "2026-11-08T13:05:47Z"
+    mac: ENC[AES256_GCM,data:1PgcggIl6BHUNighGS0VhpUDzeEEG7KarKsgRuKW/tehxBkgYquVMYush/r67zNTrnSiJZ0e5RCWEY97X1Ly8/IT7GR2DYekaFJ9CJC+nSuowPEvoAp6OTyRw9jnJ+u9euleB2ptLMACZGWW9LqpPw8KHf7bpX4qalCbNwrdDgk=,iv:if685Ak/P6n7JBxV4iO9Nlj5/PK9GIQGo3QUPJa9VTA=,tag:VZRNlz+n+1pdrG7RLflOvg==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
