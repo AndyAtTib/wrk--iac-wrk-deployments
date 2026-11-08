@@ -30,10 +30,10 @@ cses_deployer_principal_ids:
 #endregion RBAC
 #region Network Inputs
 vnet_address_space:
-    - ENC[AES256_GCM,data:/scaMRVjpRI6AFVo,iv:FUWXKhyC5UTLkZcknZ+mULy6dCspcDXR9huIR7GLA7Q=,tag:kIwjjUtq0Zy1H0NGKC5jZQ==,type:str]
+    - ENC[AES256_GCM,data:OrmKz0eEWevgTdA=,iv:c1R2/5A3t3FEHLF8gFtCgp65ZJl00ouFukKIn8QoWIw=,tag:FujtiCHn0dRRY4zRhwpjzQ==,type:str]
 subnet_address_prefixes:
-    - ENC[AES256_GCM,data:b2FS52D43ysczVE/,iv:76wgffzPM+VaIyCGnAcltG8QPSKGzaG0hCuc14jb3WY=,tag:kCFiRo46W6m0xDZ0ww0ojw==,type:str]
-    - ENC[AES256_GCM,data:0ssU2JeEnvHNlVzD,iv:t3gt4FtNAetmYglpsEAFyiHP8wqG4YQ7Bxrxbk0ZACU=,tag:fnbAu0bvbPStoMS6688Hxw==,type:str]
+    - ENC[AES256_GCM,data:DavZP6w2o8Eb2TU=,iv:hx0MKvwDFqq8OW7nF7GKQEfD0/ek1+2EZXJ+GndjJ+M=,tag:DLhtI02+CTd3REs/Zmqmww==,type:str]
+    - ENC[AES256_GCM,data:XmuT8v6R936VLN+I,iv:CkE4wJUxNwo15LN7ew+ds3xJq4Iyo0efALYJ8QpY0Js=,tag:uAEZhmJI4vEUX3m2ESBuaA==,type:str]
 internal_lb_config: null
 nsg_config: null
 peering_config: null
@@ -85,8 +85,8 @@ naming:
         - ENC[AES256_GCM,data:Pcdf,iv:n1DtuO03TvGWbtqQgcL+KPcoO0HTTfKjxPFLrZle7PY=,tag:zIcUOfy33v6bDHzKinxHqw==,type:str]
 #endregion Naming Inputs
 sops:
-    lastmodified: "2026-11-08T18:45:07Z"
-    mac: ENC[AES256_GCM,data:mHN5+hfKxaLUSlLi/Rmc4XpvC+XwzvDgzMrdrTl2jdCGY7TO0pOfJ2PTt0ZmfuaLCSwqd8g/6MxwvUwA6ZzDIrrziJ+K1UZO7yYR0l3AA761RjS3qEoZAImH34TCj+B5guL3tNhH/JlQAr5p2ofrlW/64hIMhIz5nQ+D22sVp/0=,iv:PHYCW1wXda3Z3VaaKOvUQQKAGbG/imfevIYeoc2gzOA=,tag:v9jcOXvbDLFq7xZEP0LTpA==,type:str]
+    lastmodified: "2026-11-08T22:33:15Z"
+    mac: ENC[AES256_GCM,data:Ikc6FgUBVvgOTtxmpYQT0KZ7IVqKIC4Ik4AxwUEGcjL/xj10FNRbqjXz2GoBnedNvxliKFQThMn9kqLiOG7tlMJLopUp2Zz8SuL+QCINBdaB1WU4+mTnegic5Z0D1rpcWYdBffeDPx2j97bCBbEmLxh04htEc3YXlUIB0sungpU=,iv:5583to0lrInHIsaynNk5Q5kt9GanNb1hY6s69wtot6s=,tag:bVOkaMps24zMvXyhQkE6fA==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:12Z"
           enc: |-
