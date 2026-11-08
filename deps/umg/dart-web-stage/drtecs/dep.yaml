@@ -1,18 +1,25 @@
 deployment_name: dart-web-stage-drtecs
 configs:
-    description: 1.3.0-alpha.33+Branch.develop.Sha.bcd8fef8845a2f48d0231ab117e4fc16aee890cc
-    version: bcd8fef8845a2f48d0231ab117e4fc16aee890cc
+    description: 1.4.0-tfapply.1+63.Branch.tfapply.Sha.92423064d8e2ce94e54f936d10259938d4c591f7
+    version: 92423064d8e2ce94e54f936d10259938d4c591f7
 layers:
     "1":
+        config: az/c-pip-basic
+        tfvar_files:
+            - az-c-pip-basic-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:hOqeDHkhxptTU3saOVAAee8aigrU9LnOeMLg0nnm5B/S/AIAMscympvfQ5WzTn5MRzal6JZHpdtTClczEpQsok0tR0BsTCF3t9CRh6JLCC6fIXuxQNtC7Fq+LhLdV7Kgx0Ao2XTIo4965SQhq3308cFahLBLejU/MkjN22KKHmglHdH7jluepdZuEIW0/wn02EZoanV3xe9OlJE=,iv:RY9N3qt8JfxZWYUDzIk57rbS/OCQeCtOXdXhNfm89S4=,tag:HV95CzaGkXHcntzpldWsNg==,type:str]
+        apply_args:
+            e: layer01pip
+    "2":
         config: az/c-cses
         tfvar_files:
             - az-c-cses-001.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:hOqeDHkhxptTU3saOVAAee8aigrU9LnOeMLg0nnm5B/S/AIAMscympvfQ5WzTn5MRzal6JZHpdtTClczEpQsok0tR0BsTCF3t9CRh6JLCC6fIXuxQNtC7Fq+LhLdV7Kgx0Ao2XTIo4965SQhq3308cFahLBLejU/MkjN22KKHmglHdH7jluepdZuEIW0/wn02EZoanV3xe9OlJE=,iv:RY9N3qt8JfxZWYUDzIk57rbS/OCQeCtOXdXhNfm89S4=,tag:HV95CzaGkXHcntzpldWsNg==,type:str]
+        st_id: ENC[AES256_GCM,data:8VA2abuQm4Wsr6+euiwpQztx4jsxJX7XLX5Kl6HcgeWqeu8onPYha2UDDf2R0A6UDxt0TzoDpppj3B23PKutEyZRT6cUMlW4l4MMuZ+EGbEXXwOdc/E5o8wRPQHQo/i9rCBE8E3ZMm1aZF+JnMpSEEW1ocD56A3RXGogBBGGjqp17jg/4TVidAoe7oMxTjsCEpbgmD2s4vgiPz8=,iv:IHnEv2ljLUYpi6JzTZS7H3aZo0y5d9M3/rHMXbN80MI=,tag:ToN1OpQv5RpByArw26cFfg==,type:str]
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-11-02T17:14:37Z"
-    mac: ENC[AES256_GCM,data:jfcKzDHjP0aKaeQ6FAYEffcllXYwW2+MiT3lPbMXgdNDQXiRkCbjXPPUcKR6YOhgX1Fm0orulLxPg/6bXklDWB4Ht0BDOb/e0zj/hYAGzndbEfjz6nwvtvDQkPcthPptfhU/NNsjiDnW7MW1bsXTVLsJAgYhlwbiKxxY3TYuErE=,iv:8ZfZJThwxMDhn/az9iCczqFhJyU+/7py+YYt2/56FGg=,tag:h0GsWKobxIeC88wkELQGbw==,type:str]
+    lastmodified: "2026-11-08T11:54:17Z"
+    mac: ENC[AES256_GCM,data:LO/ROTqIqxLudgFR9yDejdsRHBwriQptAmxM4sNJ0UE56l88YtIy9UnY5a6h2MjkWDg0hyHP/cUy01ZGtCSeMuU+ia3PtcS2tVz62hawEUTGiy2MXbt9zhVcXYBeRN8qpSHWhQUaGndWYoMnFmotkHkGSeIdOJPs/V9IReW9qZE=,iv:2QaQPyAxUqDcxmI/10J/53z7yvn09VwywAmauoLtDeY=,tag:SGinOcgRqrrnmaU8uMZxxg==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
