@@ -1,18 +1,25 @@
 deployment_name: dart-web-dev-drtmp
 configs:
-    description: 1.2.0+Branch.master.Sha.6c0bc2d333d0fc6d1172ed432284fa5f9e9c4ddf
-    version: 6c0bc2d333d0fc6d1172ed432284fa5f9e9c4ddf
+    description: 1.5.0+Branch.master.Sha.2b438381f02bf3cdc771615b5d7394a52414eb84
+    version: 2b438381f02bf3cdc771615b5d7394a52414eb84
 layers:
     "1":
+        config: az/c-pip-basic
+        tfvar_files:
+            - az-c-pip-basic-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:ukaTAwFdAHuaT69jtzOwx8qUSStOCBh1Mhf1KrLPI40TZQfxYc/nPmGoRxBfAHc3adqSMCofYpvEXWoRJ0vCFd8sihn2dhREa4rPWE91yz5E0cd5qVzeROQUEYMtjzekhiaHjVHRksStQKJuIVPUyhsXfp2Z88LGX1m5MrkkgvBjy+wcBLCe3x9FRuoTeUnxUD6BC+Lbacv6YyA=,iv:HPH0twH+FN5rnO0ilRjoglsOLS2XX5hANzxKncvd//0=,tag:i8B1P0rt5vEg5/AYXK64EA==,type:str]
+        apply_args:
+            e: layer01pip
+    "2":
         config: az/c-cses
         tfvar_files:
             - az-c-cses-001.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:ukaTAwFdAHuaT69jtzOwx8qUSStOCBh1Mhf1KrLPI40TZQfxYc/nPmGoRxBfAHc3adqSMCofYpvEXWoRJ0vCFd8sihn2dhREa4rPWE91yz5E0cd5qVzeROQUEYMtjzekhiaHjVHRksStQKJuIVPUyhsXfp2Z88LGX1m5MrkkgvBjy+wcBLCe3x9FRuoTeUnxUD6BC+Lbacv6YyA=,iv:HPH0twH+FN5rnO0ilRjoglsOLS2XX5hANzxKncvd//0=,tag:i8B1P0rt5vEg5/AYXK64EA==,type:str]
+        st_id: ENC[AES256_GCM,data:14SJV/m9bd+JcOkPot0OwXphYSpkTm57emMeAc3hodhi6ddo5LwqGo4R88t+2ChF502x+pIS9YRKxzIONJm+sG37nHE1XdeZFre7f3SyD5w5Q5Wedxkgoabj3Vi7hSlIy0CXIyN8MJxl5wqgzzi9dEVIkN9sNZvH4shWhJs7DQU0cUAHJLK6ploXhKk8lzBJ2QZk8hFPwvqP8ls=,iv:MNqJ1Wv3Ijd+9UrzBxMX4HqDLUfQyRy41gFBm3p6Pl0=,tag:uTwnt0/Fd7LvUpHkaylb8A==,type:str]
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-08-10T18:36:34Z"
-    mac: ENC[AES256_GCM,data:rMVXVkyAgP6GufZ33LLImOYJGlcFhd0CpD0HIaSXK75xqG15Y6/OqfyxQw4X/HRW7QzIQ/lZQXtGYglcG+6hnKZC6db/0RlVTQUNeMYH434X7r4A2oy4VFvlSwPq2d+Eq+2d85YPmY7OPTvuyccrNxJT2gayQhoBXO3AT0FJBUo=,iv:PPnyV4HQfMgJ+EdULPGT3iHpLpfV1vEMNr8+QmMWwwQ=,tag:1cIFEE1qU1o05+ziSn5BbQ==,type:str]
+    lastmodified: "2026-11-09T10:21:18Z"
+    mac: ENC[AES256_GCM,data:EVjzgJbdt5NGINZPKKEbfLT/uia64sUQNaZKV4nbZ2OD613qaC3STa7fDVOwOiRbWzNYES0uL5SBD9dwmqbwYK5fYI2SwXavgxGXivBnCBX07K+ZYZzcewjVJrosQQLXaffaQ3EhJw/BljfZ4ss0nK0N1nkqjtx3dQ8WvDQM5vw=,iv:K9q0+cMFopVVa+ljCu21gmBCA8SPOb5WmqNvntlt+BY=,tag:Bc+XoJDH/arjj/I5kftBXQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:03Z"
           enc: |-
