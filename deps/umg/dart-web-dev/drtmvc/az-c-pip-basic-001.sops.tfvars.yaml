@@ -1,12 +1,17 @@
+#region Standard Inputs
 env: ENC[AES256_GCM,data:GD4=,iv:hINlxwWg7zmEVcxNydpcjZrqf/ra1H4ZSbX149WjCxY=,tag:WifMSTuhFDg/BJz8a6thwA==,type:str]
 tenant_id: ENC[AES256_GCM,data:T64+kY4wlI5jDgHRZvEOdk8/z3J/fHQJEVMLEelVlEmpTmbd,iv:TFJxlOwxH37OnQNQuwJaHLFlXF4h3ZJjEPGXCYgKPkA=,tag:gvmP+qJSdSwfmsZ6gssQuA==,type:str]
 subscription_id: ENC[AES256_GCM,data:MKenXeriqotqt5w/TALE3I40A7kSSBRiUtHaG7egMGBsdi4R,iv:2R9+NAvIxfvtVv4Lfc50mcUoL8FIBRW7/wTCAaBw7WM=,tag:o9EwZDuJ3w4FgRLJQQYdeA==,type:str]
 location: ENC[AES256_GCM,data:PDvBFPWf6O7Ys7aV,iv:2rWKpaDQrc6Jc22LfDtoVRy8NdkkJXvsieDk9BkLNtM=,tag:UHZv5VAR+9SdzPJKfZl5dw==,type:str]
 tags: {}
 tag_contact_name: ENC[AES256_GCM,data:bKqWbg1KyO+zE9Y=,iv:gGmIPV9JojVSaImCJN90/6R5DjQegE2SLGV6CtYbNCs=,tag:LPM/axSnPpap3zvd14y54g==,type:str]
+#endregion Standard Inputs
+#region Project Inputs
 project_name: ENC[AES256_GCM,data:EwYYtT2L,iv:851bD1ESbLB8YLRs0Cyv7fB1t22yok3rcus90M+yKJ0=,tag:xEITockTzfe/ags+hpQ4KA==,type:str]
 cses_deploy_id: ENC[AES256_GCM,data:ctYFJ4oVH6mRnD7LQQ==,iv:VIej8ImfrFroJY6kSyTj8iw4U9Cw4uopQHyQ9bT+G+k=,tag:q/wGoHVL4191DHWBts34Ig==,type:str]
 phase: ENC[AES256_GCM,data:j63B,iv:dk+yhDmFt8zWTAxcmD4A8Pb39DoJ3p+bkCAuOjUnsxM=,tag:fGIjbm/zeKfffdOQ86dQkw==,type:str]
+#endregion Project Inputs
+#region Naming Inputs
 naming:
     pip_random: ENC[AES256_GCM,data:Fpk=,iv:zZ2ImdcFok+YptiEyRwTLDF9Pk8HRwW4nb88CoBv1AY=,tag:cjiQ5WMERYnGNI+aVRGROQ==,type:str]
     random: ENC[AES256_GCM,data:8Gg=,iv:lrxc6RSTljkwtP9aY1+nXinhIaIh5TdYPiXMsPyiZ54=,tag:odUoqckM13zPbdJbT/g63g==,type:str]
@@ -18,9 +23,10 @@ naming:
 adopt:
     public_ip_id: ENC[AES256_GCM,data:Zg2/sedpYdQiQOPuyuWkvBp+GEH9A5BYoEXEZlsAPYS01NtjrvPx84Z0AzzRE4LgszRpK+h0pt5E4A0U0XPlkRrq02AzrpWk2+jjSZ+e4KZRnajeF5KIE4kCsvN/RUyYdffUG7GzfxXYDMZBHUH4Iqfvw00g2UzhMYoI5C80CKFvhLaUpnOopvNV8kea1OZXEJ28MhMU5RDxyDVF0qvaEnghF1PJp8RZFkPIkQA=,iv:hoWNK2hqtZgJ+1Akd3jv1S+wag+F3jG2lA2qqFUi2DI=,tag:T4fU9061G4x5MGtk30QKTA==,type:str]
     resource_group_id: ENC[AES256_GCM,data:4jAQ/OrFKD7A+YCPOMoX4DOPJDIupLCay6sIVFGESywVyoIukSQFN2gkwNzzKnl7J0zVny4/QMnd4RyQTtYxoa+B1gkIuF/V8n1njvVRqeV8bwYQ+qpjIfUYp1JBMjY=,iv:FCw/Ru4S17Lf597w5SqTDjtIum/+3QJ2VFfyMijU1mI=,tag:lM8fDHKFiGBYB4oKEHJBQA==,type:str]
+#endregion Adoption Inputs
 sops:
-    lastmodified: "2026-11-08T16:48:29Z"
-    mac: ENC[AES256_GCM,data:OGimlTkD/lsr8s8SU4i9Im7BT+aSDdyWQ/XDqOg9bWCtWzD/yBH6ioBIGi1bvfbRUCQMPQSnNCDlXJRUnCXgaXULt/T/Cw49EJiLoGUhRlAdo0POpBjr7H1zDXy4yeDt1yhEaIY8jmiUhfw7KUanOHJKQEoDtUSq/4kEach8VWI=,iv:V+CAag+OAZ6NTsKXiZzWYwsOQofm7/1+fLU/zelW+n8=,tag:Y5BQsIF+OPFYsTmX9IOgng==,type:str]
+    lastmodified: "2026-11-09T21:22:18Z"
+    mac: ENC[AES256_GCM,data:3heWZc1bgbidpDPPo4wB1kzJyxJmlQ1EsqQE0fmkxR89yXk1KvEFyqlievpQTzU/Rk7jtMc0+U9X7/HbdHM4zi0FeVVJ7iP3fenBoVmfXFw/D3uCw03bvA0zXY6OUVNyUKpkHG89BtmPn4sxBCIWGiVTx/phWXBhwZr7kvTA9wE=,iv:q1g+924HJCq98IIPjrNLw594hx952DACJi9F8qAQdmE=,tag:K5wCyGTQQnpPKRvtTucTdA==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:12Z"
           enc: |-
