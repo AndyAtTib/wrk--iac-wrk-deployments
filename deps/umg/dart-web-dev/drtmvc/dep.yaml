@@ -14,12 +14,13 @@ layers:
         config: az/c-cses
         tfvar_files:
             - az-c-cses-001.sops.tfvars.yaml
+            - az-c-cses-001-ilb.sops.tfvars.yaml
         st_id: ENC[AES256_GCM,data:uEoDx8Qq8fcyEAvUmY6LYz0gBb3NH4YTgxsC6SVyUYT52moBMT+lHIUV0yrhISvdhEuFjjm4HPO6jbrgk4TNOIW1ve3MWGHpjx0ecLPudVzyGk7KErK7elvzQquanII6CQyvjUeEm5VoNrsbNSTIHOONcW77gWNu9DvrYIqOs6/DXVAs6eODWIuTBE92Pje+KuXMGG89JhBIk5M=,iv:UMUNuAgIDo4N83O64ONVztrMUba2fC0hR/5QPBqNtzA=,tag:Ub1LH1f/1P6dtnTlAqLpVQ==,type:str]
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-11-17T12:37:22Z"
-    mac: ENC[AES256_GCM,data:87hvG57Nx3BWqlhqZeyTJR7YujKJ5xSy/6IessfoFPu7jTHUMmMtvypoejFt6Mn25LDFaixJQ0YeL6DmibBj9CXKKkcYaG+3yWoHUssgn/oz5V4fL9X+sYUFXxv36/YHRVl9wrswwiz1DAD2me+UX0o6beR27Urw8RxSfBWFbak=,iv:241s+sPFlbBPP5sQ2vOXqY5SHJy5aO5sJdciUJp2EXc=,tag:VA9ps1CutkMLIYw8TvzxDQ==,type:str]
+    lastmodified: "2026-11-17T12:38:25Z"
+    mac: ENC[AES256_GCM,data:vDcwrVKo4IngJV3S5JE1qYyXwXAUznS7asVcumEjUBmckDDRxoUDEALVy+G4+WQ3bp0DA0//JIN+HCiHqioeeKWK4j3NuvbN6L2XCKXUUJpZNH7Ihv5rUhLn4a+0eYfdq87Nbv7lMo1U3PHP2skwNLRqjtIYvhY+psudJS5C2cY=,iv:Xs7Kiz+nHBU+1sXG+2uq9n2m+WlgsAeOr/aOPI7gSYI=,tag:TaABpeSjt+t+esWN+7i4MQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:15Z"
           enc: |-
