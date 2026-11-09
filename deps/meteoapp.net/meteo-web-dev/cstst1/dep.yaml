@@ -10,9 +10,26 @@ layers:
         st_id: ENC[AES256_GCM,data:Sx5shK5n09Gxpa6vajJ7r0YKvyG4Jc2YIJSbTvt4DnwhT+JOs4P6YN43KWuCdWxST9WanoxYtHek3MTHR8+RZ5WWTfzPZpmZfNO2JMOX8kXhPE4lKDMzoMqJz10rOqUJ+cRMcNVBx67qwCJF2iml+yMrWZIFs5hNCHQj8/y+uti2W2EXOIsxs+rdA0hJsU5kiGjN6tMxpIRTR3w=,iv:Ef9nfJVLKKGSYTWBlo1GcBkTt8ppkdbci1NNcLOH1cE=,tag:a7qQoMJ++i5ucMAJzuk3Ig==,type:str]
         apply_args:
             e: layer01pip
+    "2":
+        config: az/c-cses
+        notes: with ilb
+        tfvar_files:
+            - az-c-cses-001.sops.tfvars.yaml
+            - az-c-cses-001-ilb.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:apKuzIzJ6tSbA3bmzBcSIt5yHCqutkXxw4AGZWBWcfDZudyk6Tb/a9dA76tYcHJlENc0MV7k939oNnLUmkUYRO33kaxbVApQgPjylP5VN2NoIvwvYe1pSvZssUG6NPrqP4LeOAHCDASso+8fZRMezJqO5G8es+O749dTzamkuYhdldtDHgsNPUOskWlJpl3FQ4/ZZAW/XcjZLKI=,iv:aedUVennDnlkABgn5J20Rz38L7Pe3po0J+xirwp5N70=,tag:KVYWfOvd3xhBbMnA1shtKA==,type:str]
+        apply_args:
+            e: layer01
+    "3":
+        config: az/c-cses
+        notes: no ilb
+        tfvar_files:
+            - az-c-cses-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:IZYpdaUMOsWTwWjb+71nzXWnF00ECwgOMgoZmZMc/WI36UvS2y1/qhNccSRuY8AWTqYkqTWxvjsOdZdlYR82BwUCwkPRKTgH5DudqPuvmBfwGo1OuBvqVdUwix8uYYFdHqFXdm2SwBikr49n6ZfWVVEaukYRMDG+wQdwBpdu5SgEFAV9oCP6Grc6fSIfmbfvGAj3w1exHZvzZ+c=,iv:2aNjpELD/NBQ1OSOzJekrFakKwAEF/1CSRrcjzf5064=,tag:ITjif+lNmCmtYsuJnv3W9A==,type:str]
+        apply_args:
+            e: layer01
 sops:
-    lastmodified: "2026-11-09T20:34:44Z"
-    mac: ENC[AES256_GCM,data:m7ARejEQHZZQvsCRYMNue9Y8TS8wgDR86h6ACJiHa6kZWSTByazb2FQ6uFegM9pzNobjfudigXJIqdSixrRm6sYxdSBW7QadQW+8bHnlrf/UyWPMJLbiJgeoquaKcgDrb5MsiDJljGnOW4kzrrVkZxkgc5LNFDad3VTgRD4OLY8=,iv:grFtbT3DFwRt90Q8iiI4X1nZ/jVfKjzGUKNbhsasrC4=,tag:08NZ0He56kd86dp/JhjiQQ==,type:str]
+    lastmodified: "2026-11-09T18:04:06Z"
+    mac: ENC[AES256_GCM,data:pV6OkeG3ZGBm8aB0VeMkHYae1bZ5lCbcmcx2s9IpiRACnxBqkbXqwzrq1QIw+ZmH+3MB9NP/9R7RaCb9lbk5DrEWsThSF3VLN++Nj1Oq6lodohkXCbSgWqhl6tK8Ep0qcaVwoiHv0Ru1hVB3h2Q4/xKQ0eMCaOPBu+SN/5n7Vd8=,iv:hTdPWkg9hlNz9mFUNePZZ21Ia67e1twA/uJE2KJ+d0Y=,tag:GhJrv2qoYH14ktg/DLuMXw==,type:str]
     pgp:
         - created_at: "2026-05-14T22:48:47Z"
           enc: |-
