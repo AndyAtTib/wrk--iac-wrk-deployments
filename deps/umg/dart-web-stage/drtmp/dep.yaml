@@ -10,9 +10,24 @@ layers:
         st_id: ENC[AES256_GCM,data:hOqeDHkhxptTU3saOVAAee8aigrU9LnOeMLg0nnm5B/S/AIAMscympvfQ5WzTn5MRzal6JZHpdtTClczEpQsok0tR0BsTCF3t9CRh6JLCC6fIXuxQNtC7Fq+LhLdV7Kgx0Ao2XTIo4965SQhq3308cFahLBLejU/MkjN22KKHmglHdH7jluepdZuEIW0/wn02EZoanV3xe9OlJE=,iv:RY9N3qt8JfxZWYUDzIk57rbS/OCQeCtOXdXhNfm89S4=,tag:HV95CzaGkXHcntzpldWsNg==,type:str]
         apply_args:
             e: layer01pip
+    "2":
+        config: az/c-cses
+        tfvar_files:
+            - az-c-cses-001.sops.tfvars.yaml
+            - az-c-cses-001-ilb.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:AiLheOnNjIwvM1kWE4n7l0jjDoZJAV1xZ3nMrMsxweSLQ7Nj5QRbWBp7aj4tbFm03icoDBVOLliESd40Lh6OeSVSkfy8oIIrImbWnRSTqiKCc28xTfGM8OpSRxjJuizJE+tbZ8EJO3ojTmMQMJp++XkdpP2XgcxshujjcAQitoNhk5kT0eNI1ziVqDTlUyZwVVwnZvuVKsrv0uA=,iv:bAW/3UNCRqD1iGuir26W7nDME1nusbX8UjHTEwNUv4c=,tag:aZq43K0h6yOFW9B2Jm9gNw==,type:str]
+        apply_args:
+            e: layer01
+    "3":
+        config: az/c-cses
+        tfvar_files:
+            - az-c-cses-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:daVG5ey7Mqh9Hize5tXEI24AXyGnjeOP7Ust/qsfLur+gI7tz8wmG+rUF7BHfccwIf1QJjkf0FgOnVAs8/PjItGUacHwxE9ERc6BuYYR//Pfjq/NHXhTmpneoX54LkXhNHNMz0RpX5KKiLAxeFHQJFO6vyqOlDrQi5USsZIqnsiJIZBzZVqWiRscFH031vowDT0GSXXf2v/CHGQ=,iv:Est8i/M14Rfhlv09VmU90qtw1sBL+HzOsxOK44Zo2cg=,tag:CXAVqVZxpkoqPLoalu7+hw==,type:str]
+        apply_args:
+            e: layer01
 sops:
-    lastmodified: "2026-11-10T11:23:46Z"
-    mac: ENC[AES256_GCM,data:/QosJTOFYAgwr3Hhjx9t3MNPMxGUK/+yucMYPSUl1s9TkFxnEUaYYuNGqYahKunq3Th7whI4CwDgHMzM4vEUwVJLAzinR5nJDMmcIK56xRC0/+Brk7EviojJFguE8ZEcbJNigmGE7ub/R9c7oeHzCvY/fuEEGPCc7DeuAd65Blw=,iv:dqIMpx/UBCYJEwPLaH6rcWPZKYykp9c+LhzyilWQXbE=,tag:AXBVGhAZlzg9s8rS3luNlA==,type:str]
+    lastmodified: "2026-11-10T11:25:08Z"
+    mac: ENC[AES256_GCM,data:6jmHDv+Gs7PIH/+jFWEAZf+PxQIIfwpVp0nvfHRY9iVExbYccJqWQe1bjh6vUrMvKb5eMehJk5hK8gFC5SuKOpd4zFJ9EYYjpTz697aCEvNmpAW4B+U0zGnluFHdxiPzCNK9ULW0QIw9Q7iXhogC05uYRVU1XaRd36al+4F6wfs=,iv:cMQam0+BNJ2OmfczjgRU4dPc1wGCQX7mS9ZW3BB789I=,tag:a42A2qtnvdNp45LKceDklA==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
