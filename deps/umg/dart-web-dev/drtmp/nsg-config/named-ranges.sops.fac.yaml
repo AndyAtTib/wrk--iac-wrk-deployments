@@ -6,9 +6,15 @@ cses_subnet_0:
 cses_subnet_1:
     - description: ENC[AES256_GCM,data:ndBFnO+1EZrLX/5WzwVsFCtYKBupQ5+T1M/4CQF0N55c3/RVMKoaQJ4+1Tk/H0aCmvBGuWg1xuFhO7HPhn8=,iv:K+1Csa9g2+trPouaIDa8AoRgasfomBgPWRFqej/F8Gs=,tag:hhpY3ZPb29jUQurR7APhkw==,type:str]
       value: ENC[AES256_GCM,data:Gw/Kgd9ir6cmWeYY,iv:c7+X6w6D6Wt/6ElePhpaYV1uxPEyxjn+hn7ZjIlta2I=,tag:puiJF0prwmaJ+ReLNxiwrw==,type:str]
+cses_subnet_ilb:
+    - description: ENC[AES256_GCM,data:QQv+C1PrFRnufpf+PFTt1gVxGSl08QjeBwIkLc2XfPtheHQMaiO0YRVUA7rpfHUsh7mRtsQNsyuml8o=,iv:EsEpxhYEZOnmR/VPh7hifuokN5imHxA66YHRBv/Wung=,tag:tfPi2iQd2bt7KDGBMYpXQg==,type:str]
+      value: ENC[AES256_GCM,data:brM+Slw7kR9zlJ/S,iv:Bzsf7BwmeluqYvpPk0bvtllkPKB2xj5SGd7EW/448tg=,tag:cerFOtwUt+mQaypnMd+h8Q==,type:str]
+peered_subnet:
+    - description: ENC[AES256_GCM,data:P+jChploSG+WkEmot03r+oPf5g==,iv:SoiVI/+8OlAMJ8gPebypPdOEQd3k0u3iznLqeQYEx+E=,tag:PBmKQvDLUpfFth0YAvwuAA==,type:str]
+      value: ENC[AES256_GCM,data:od+uNvhv4oNt/cwX,iv:rCXNB1OtEgVc5kVHWXU4YeCopjPbc7CTeLmLCR77+t8=,tag:GmWIpUrTTk8zL8pPsb47rA==,type:str]
 sops:
-    lastmodified: "2026-11-10T09:02:54Z"
-    mac: ENC[AES256_GCM,data:qIhOT822p7sy4ZiixGLpD7h+rRRv7MwfXDJzL7n1EK7T5ub52n18nN/8fQRKkUK8MTsYfQ2nx27cJSGeTq4LBwr5bvN/k9zhjMs64g1+gCHrRfJ9RmLtri5+R92Gc/mf7+ejUm8z4bqzKnx/GGDrvoezvOvTX7bGlPGKayPfYR4=,iv:Rva9oq/pK29WzIuhsBU6rdGiG70NPbp13yHJfgwDSeI=,tag:gmuYIpM3cCBcu4kZtzkgWw==,type:str]
+    lastmodified: "2026-11-10T15:07:28Z"
+    mac: ENC[AES256_GCM,data:1i02dmrgmsPcUzydhYQLJo8cCveNT5gAQpDIjIfZM/q9HKpV0QvS0oRWYJ4Z8/SLjmDon9h2wB/r/i34076vUWHM96PQHr2souVLmYm0SpFzPpkI7RBDc0/5WCcnUSS6PtqCmqAPV0iDg7FzzvV2r87WurV8EqayufVhtIYnlYo=,iv:wz/ZRkPTb9DVWuqZtKCQOWFleWaJrvquFATRU8Fx/Qs=,tag:ohHyWMoQRYO65G2HFBjp0Q==,type:str]
     pgp:
         - created_at: "2026-05-14T22:51:16Z"
           enc: |-
