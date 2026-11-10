@@ -10,9 +10,24 @@ layers:
         st_id: ENC[AES256_GCM,data:zWXywkuBsGMeB3FlU+TpSMKCT698BJTvIYRczJBsEZVvdP+jH8CsGwFcM+va65dCV9FonkSAwTEgOil2ew7fXYNhssB5TEyDBLIL/Y/XSU+JmgpPSYXi3KDAwwA35ghsoQ+pdoxMbikF/szt/uLNik591Z8/cBbmlVdbFnYqUOgYzsAk/n3OBY6OydCOkvR2R2LNLHNphPYUv7Q=,iv:EsMeddyoo3+4xiAithiV4cQxbholKXlotvgvIHeTRRg=,tag:ryxKk5MTqxyfI4cZV86/ng==,type:str]
         apply_args:
             e: layer01pip
+    "2":
+        config: az/c-cses
+        tfvar_files:
+            - az-c-cses-001.sops.tfvars.yaml
+            - az-c-cses-001-ilb.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:7Zqodx26OVToEO0ofeI2qeyAT1QzuTIYIgchAUKa52EYF5NUUIFEggJPb9PB0qQsFpYj0xEzUSZRNhK8HGsg420a7lFJJvBJSMKDiNXSBSc4/+J2i6Vm9yCw6v1MTEwcjX5J7zmFWsL4sVKM/ozmid45HKaVBqH2TtiFv4X5OOPt4HKg4rJpB07gi2NyWnxD45ZHUyaL2n6yvJY=,iv:xHqJNRRtSSkPn/+uuXgIFPJPCkW/GU44gVwebJ8ZNYQ=,tag:ljeo6/mLXhh3Ap9CyS+zHw==,type:str]
+        apply_args:
+            e: layer01
+    "3":
+        config: az/c-cses
+        tfvar_files:
+            - az-c-cses-001.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:egxG+D34IFAN1CsHxsJAV/uuMiJax9rtnA93y4Aq52xRc4HaKcJITCXqjBE57pqd+bX3/WpZlTz5ho/4Qilzj+VxshFa/VMAkp0Jt1WgPbDl2/1qtsSMnMu0bTmLIhCZiKObTGWeKl2g2NmbGgL4YHSqo8+Scsk8CASpH5ov960Wl7SkBZv61Ot9LfecvXzpRXguBXzGRcw+nNE=,iv:Qnq9Iw77E7ZGETWrRv7m1IScEK2Z3VvtBkLkYf49qfQ=,tag:nbjX5evwt5wFpABMZSQBpw==,type:str]
+        apply_args:
+            e: layer01
 sops:
-    lastmodified: "2026-11-09T14:53:42Z"
-    mac: ENC[AES256_GCM,data:NUDpu6onC3Lk+ySGyUzMN2X0Ioey1eh1wIKWI/4sEUmzDS0jbsCznrpUzLYS/4oNn/Y1XZC4iUt7pO1AJVgWehvCb74bw2uDUp1kv/LCal+60SBlrh8m9YmI0ywEUzXBZxfUI2YOCm+C8K6U5BCxqiVcNnE8okOUYBdp8J+eBI0=,iv:S8xCpYdISlr1p7u+Xyp5OqVK51X1f8EJmHkbb1iBSmI=,tag:aNBDFGTc9ktn92C8PD2nIw==,type:str]
+    lastmodified: "2026-11-10T10:57:53Z"
+    mac: ENC[AES256_GCM,data:ve40qpxBrtpVVrvfK5KMbfOW8MwFIxkEHdpz7DDlL8lrOC/h2skS9lKCNRCiZ7GeUFZ6OEnaGd7O+r6wi4v2Tfdg3Av5+maiCBtbnRAXkFaI5lBmhfnP4tjdir1xu8ivpdq9aDWH0uJL163btdMRirq+HXzO1FIjfGepJEz94NU=,iv:1P97GOc/9by5qlS3hZzqL+zoIQqRLagINDszbbAz/uo=,tag:AGk/LVXisDMyAbkqYuyCqQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
