@@ -1,0 +1,37 @@
+deployment_name: dart-services-dev-cdvm1
+configs:
+    description: 1.6.0-no-ref-cdv-arm-5-11.1+27.Branch.feature-no-ref-cdv-arm-5-11.Sha.6973e4900060fc4e72012887e1bf44f0ec0f6963
+    version: 6973e4900060fc4e72012887e1bf44f0ec0f6963
+layers:
+    "1":
+        config: az/c-cirrus-docker-vm
+        tfvar_files:
+            - az-c-cirrus-docker-vm-001.sops.tfvars.yaml
+            - az-c-cirrus-docker-vm-001-peering.sops.tfvars.yaml
+        st_id: ENC[AES256_GCM,data:VAdXucAg4ncdo4GQdMY3U/HF/I5XM3+yXy633gkHDXaPzo5PxYRGGuQyCmbg23CwxDrr4g74xnSJACQY0f0SXKFj/ZvzvO8j6ZPJJHwLJdp2gQ92fb16HKtsiySl/S7hY3/OdeuSWGSoXso1BV6svLEjVx94Z2TJzRAB3ZcEphOXkojziJNPOFFvoFg++9jObq2KmB8n85Tp1g4=,iv:U89JCTGXf3IjHbOe6rKEnmZkgxvj+XJolI2aY7/Gd/U=,tag:LQqzqETherGdCNUw6JP9bw==,type:str]
+        apply_args:
+            e: layer01
+sops:
+    lastmodified: "2026-11-11T14:47:35Z"
+    mac: ENC[AES256_GCM,data:7IOSiBUwwq351rQO2vOJggDmu2HBDRYjfdq2azdeYPmZiwjdfSLQt4vh3RPWumlLQMHYfsUOEljsnu7Xcu/Oi4V3CtvrACGRuX/7ccRpOvuDVasLQbOHjtTcqi5JuQuqz9ADKNLU+cpsXq96rB45yeE4WVm+KGGwT4/IKtCCrNI=,iv:MVg5l4i65Qi0dSTABs8yxFLNmL31o0cOpApsjAavCWg=,tag:tqv3xZd15scLrAvxBEvhyw==,type:str]
+    pgp:
+        - created_at: "2026-05-14T23:05:25Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQv+J9aV6d3hHBslLXx44EJ/NyzEeCbEd41RYrsFHCztVeLm
+            P5Iccu4acWHKdxkqBChJT1ED+gzqrlodxfUQzQko3jKD9tgswvKKzM57qvAhU+XL
+            qeAFvXiwWi2HSmHiq6Jxucr+3tpP7EMj8fKNbMc4Rm61eEs6B08A4aLI52GeCuSd
+            DvKnHkcVOde/5CB5F7FsH50qiua+DTVJouK+cKHtr6L0MRAoq8VTjzIPHVTSfhRU
+            HubbU2QvUSOSPkgre7yLiEpURK4oouSW3cuYQgebTbI8/ZBrLwVM5h2ecYWND2yS
+            vnsXNSHdda292NPZK/L9jd4WHnSYYTFR1gFSNZYJPpUS58D0KItqDv11omwBe9pN
+            wMpbm2ZOOsLajdzJHRywygGkngpTudfFBVK7gT3JG2zFdFSVKuds2gkSA2ndkL1g
+            H0rZFu1AsekEjc7YiVAxywDFfvvNF9ZdzmdxP5ed7JvBLhXMIYE/N0S169lr5BCO
+            5LxjWFXGHUeL3z7V0u4m0lwBDXnytEBZv+3pWcjZosaZzXQAmZ10Zoi4rwO9Ny9t
+            9s59ZmP/7537VV7Z2jnW+XBaOrjx3PcZS5R0IHte2eya9SyjlrBQfzBXbWgHKGDf
+            GBO4RjMCkXKOjAwG3A==
+            =Zj5L
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^( |st_id| )$
+    version: 3.12.1
