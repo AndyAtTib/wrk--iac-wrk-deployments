@@ -1,7 +1,7 @@
 deployment_name: meteo-web-prod-dns-dart-meteoapp-net
 configs:
-    description: 1.3.0-bump-ver.1+39.Branch.bump-ver.Sha.702e95943ff5059e86608207260524a0d1a44a5c
-    version: 702e95943ff5059e86608207260524a0d1a44a5c
+    description: 1.6.0-alpha.15+Branch.develop.Sha.3cd65fd98b4456aa8bb289e42fe31a7cc9d85e37
+    version: 3cd65fd98b4456aa8bb289e42fe31a7cc9d85e37
 layers:
     "1":
         config: az/c-dns-zone
@@ -12,8 +12,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-10-26T17:49:42Z"
-    mac: ENC[AES256_GCM,data:QmzMdIB2EopySzw8Ebjf8FU0PnLe58TuzAL5cH9823mPlVlQaPf+WeI1r0umeSxmy3e8fOjvtQK5tsFKDplLFZZAbSmKlMMtf23te6sadRTE9CZW622BdxsxKqpX7RPPkftqk2BNde8M9mI9DaGPV4bQ/m2Bm5Rk8nZtX6G/YL4=,iv:cCYLji76lgZNLu2zDgg2lKvyN7Kpx0FroetqZq+QfYs=,tag:+EAb+1Z0EzysVAspEHZFww==,type:str]
+    lastmodified: "2026-11-11T11:38:28Z"
+    mac: ENC[AES256_GCM,data:AOK+NfrWCWsnCpbjg3DMLdmoyNom/Px4y8TGM5Ymn08BGjC2sHN76ytsRavWvdnfylCAX3YaNczqyPXAhATh067k1v+vGxVu4ponQSgE9RphRsbXKiAsS+m4Yh8LDK160x1JecR8HijL77k6Aez03FORofQn8G8BGbhX5yUBHtE=,iv:sHoKyiX7NASf5nJqiBaoA8i/iAPqPsQXgIqtEB7UnhY=,tag:rxGzbg5gh0l6d/2DciRiKA==,type:str]
     pgp:
         - created_at: "2026-05-14T22:08:03Z"
           enc: |-
