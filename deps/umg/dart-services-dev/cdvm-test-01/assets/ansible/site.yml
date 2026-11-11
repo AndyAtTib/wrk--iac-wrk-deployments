@@ -1,0 +1,73 @@
+---
+- name: Configure the Docker VM
+  hosts: all
+  gather_facts: false
+  vars_files:
+    - /ansible/vars/vm-init-files.yml
+  vars:
+    vm_init_blob_base: "https://{{ vm_init_storage_account }}.blob.core.windows.net/{{ vm_init_storage_container }}"
+  tasks:
+    - name: Get a storage access token for the VM's managed identity from IMDS
+      ansible.builtin.uri:
+        url: http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https%3A%2F%2Fstorage.azure.com%2F
+        headers:
+          Metadata: "true"
+        return_content: true
+      register: imds_token
+      retries: 10
+      delay: 15
+      until: imds_token.status == 200
+      no_log: true
+
+    - name: Create the init files' destination directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: root
+        group: root
+        mode: "0755"
+      loop: "{{ vm_init_files | dict2items | map(attribute='value.dest') | map('dirname') | unique | list }}"
+
+    - name: Download the init files as the VM's managed identity
+      block:
+        - name: Download each init file
+          ansible.builtin.get_url:
+            url: "{{ vm_init_blob_base }}/{{ item.value.blob | urlencode }}"
+            dest: "{{ item.value.dest }}"
+            headers:
+              Authorization: "Bearer {{ imds_token.json.access_token }}"
+              x-ms-version: "2023-11-03"
+            force: true
+            owner: root
+            group: root
+            mode: "{{ item.value.mode }}"
+            timeout: 60
+          loop: "{{ vm_init_files | dict2items }}"
+          register: vm_init_download
+          retries: 20
+          delay: 15
+          until: vm_init_download is succeeded
+          no_log: true
+      rescue:
+        - name: Report the failed downloads
+          ansible.builtin.fail:
+            msg: >-
+              init file download failed -
+              {% for r in vm_init_download.results | default([]) if r is failed %}
+              {{ r.item.key }} ({{ r.item.value.blob }}): {{ r.msg | default('no message') }}
+              {{ r.response | default('') }};
+              {% endfor %}
+
+    - name: Report the downloaded init files
+      ansible.builtin.debug:
+        msg: "{{ item.key }}: {{ item.value.blob }} -> {{ item.value.dest }} ({{ item.value.mode }})"
+      loop: "{{ vm_init_files | dict2items }}"
+      loop_control:
+        label: "{{ item.key }}"
+
+    - name: Start the compose stack
+      community.docker.docker_compose_v2:
+        project_src: "{{ vm_init_final_compose | dirname }}"
+        files:
+          - "{{ vm_init_final_compose | basename }}"
+        state: present

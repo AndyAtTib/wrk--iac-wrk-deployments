@@ -1,0 +1,32 @@
+all:
+  # tests to be run on cdvt01
+  - host: public-cdvt2.test.meteoapp.net
+    tests:
+      - scheme: http
+      - scheme: https
+      - scheme: http
+        port: 8080
+        expect: timeout
+      - scheme: https
+        port: 8443
+        expect: timeout
+      - scheme: http
+        port: 9080
+        expect: timeout
+      - scheme: https
+        port: 9443
+        expect: timeout
+  - host: split-cdvt2.test.meteoapp.net
+    tests:
+      - scheme: http
+        expect: timeout
+      - scheme: https
+        expect: timeout
+      - scheme: http
+        port: 8080
+      - scheme: https
+        port: 8443
+      - scheme: http
+        port: 9080
+      - scheme: https
+        port: 9443
