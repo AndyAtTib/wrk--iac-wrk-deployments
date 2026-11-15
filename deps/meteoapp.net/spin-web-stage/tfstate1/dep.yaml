@@ -7,12 +7,12 @@ layers:
         config: az/c-tf-remote-state-acc
         tfvar_files:
             - az-c-tf-remote-state-001.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:9uQPMw17M7Ooj+/pyS7ztHtOixb8R5PgksuO3GLhC/XXjj/kkQ35tDC2JQXyVN7tSzhdFD+KOO5FbGmY6p0LgkjEhJ4WnN+8b0S4WHKw1texphygSJjhZxJZGmcml1GH0tU9Ac90I2QogHzht9PJONwdZAD0247GLgBLbmtKcNrDpMKnGl3KzxYXWtOHb6uV77mSiexkoJXTFwQ=,iv:TIQDHlZeIyF9n+oexUd4M9+DGI67NyooVuoNrVMkc5M=,tag:6lNtt8QeMpyvFfpZWKft6w==,type:str]
+        st_id: ENC[AES256_GCM,data:zB4b023v5724LnkkGljaDFVC/KCAfYF7H8BpahmTi2T/8arQYgoLHKu+dKMA3/bLNTduP36H8zN/Quh7UArwjjnleR2c0ez2q9Nu5gDhpGEAZLz4zVOEom+tm8gYiTe489Ia4/s1rkIY5z7Lj6Cm2VMhN9kurq0INVSD13taFWd5MfWBIVM7L70mXsGOkgoHfh3XHJZ6cEh+Vv4=,iv:kQDFCdyaqaiQBRmSACNWU82b9XD0uHub1cbmEYi+3ng=,tag:1UJWq0QlUDJVWBXJBD422Q==,type:str]
         apply_args:
             e: boot
 sops:
-    lastmodified: "2026-11-15T11:28:34Z"
-    mac: ENC[AES256_GCM,data:qfHDR1O988k6KVbGmgMrIdK5RS+SctfN9Vvj2AEjfMBGIf9/8DADxQhKMj9nbWgmoiYlnujGMI3F3pdYRHKyNnBfcu1x/rvrbqb7en0SB7ShZlpdIMuKLbbo5Xxv8Cwv4JqAD7XNb+DmwGydVEKnDx+ZfhPs8mgjd21ioi9eax0=,iv:VtJe2mNjUPwdM7lFWQXhnBi1NvIJhNHRKuGk8++jerE=,tag:QeFlkk6PK+HD+vzBZfs4FQ==,type:str]
+    lastmodified: "2026-11-15T19:25:26Z"
+    mac: ENC[AES256_GCM,data:36X8Y9P6KrAYsd4wU6yxBaE2BoPya5pw4jaamYn1eW4pQwHHQAg+FKBx7ShUszkhBNLJUkuLeh3BgqyiG2B9xtFkhHZ7H1j2QRM3pF/URvTFEodR9IBLFTxJO3hzi1ZII0ffxeYTc42QQ7Rx4XCsn8WEquQad+E1v5eQa8k4Psc=,iv:Y1qxDXGYg/9LIkrOcjJuauAWoc4RyRjLF00qK/Y78nU=,tag:ArtCeD2Cv223eZcJdKHTYw==,type:str]
     pgp:
         - created_at: "2026-05-14T22:06:30Z"
           enc: |-
