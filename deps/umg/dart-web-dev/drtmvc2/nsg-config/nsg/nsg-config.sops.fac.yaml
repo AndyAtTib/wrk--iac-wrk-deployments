@@ -1,0 +1,46 @@
+# Terraform will be unable to decode this file if it does not contain valid YAML
+# You can retain `---` (start of the document) to indicate an empty document.
+# For cses destination ports match the InputEndpoint ${localPort:-$port} attribute value
+# For cses you MUST NOT use source_address_prefix=VirtualNetwork as it includes all peered address space
+#   beyond just the vnet, and also includes on-prem.
+inbound_rules:
+    inbound_rules_webrole:
+        rules_table: ENC[AES256_GCM,data:o9DU6MuL6osPMXmGuOOKrSkj0DXuY6sHf0EENG4169ws8bzCe60kSsDvY+pvdhnUSgJy3auvMUpD8BVjMURHapP6q0D5Jga6MyKAoWfJr6kzsY/w9g2dTYWfCnENfO90ZCUW6TdAcP8nNAEttMME/32a6k4IogAwsFyxE9v1iHs2tc2hVV/JeQhPnaO7Akz+oLTz3mvxY90zZeOlSjAOBI+RsIuZhGM+nqUV0Q7sivuRToRu0CoRZJiYiAsiWE3PtLkn1VIJY2RQKY7W2m7eNf2gS2NVLB8fq4ANa2In2KcRVhh753leqpHWab6LJHmdYFf67y+AMTLCYxGnvhIehd6m/oZGrHBWI5IFGUfOt8Ex58H7WKdtzhj0YgE24RfC2Tmb6cVCZsll85M0uBooija5kAxRahUyYGS+SNPlxWQCij6kBplURDDbz7OhOH+q2nCWPrCZx6PHjDvseUSR8xWbrb4vOvnLgI6IRLzcITACdwIqwqAv/Z8fnCjIlZY5/yJzphNhQQOZHMd+n/VrEUMp43upUMDrr5vh2ePsdIEKOgyNR4h5du/aA+Lm0wHFnt/YYvULEkhjFfprnTLKJ7YjzVwcnnjHKLRCB52gjqaKchw/IGbG+U57ErQttX1YH8dXzJtfsOmcJBz4OLLEhaEKXoetLzV0Pff7CV9njGl6lDbPW2iv0MnaMM7vV+l2NYA0X6ya9HCSd3A+ir9X8fdUB3/xvTl8XUOXDAPQevtmUOpAl367Sr5ZVoyeDT0k9arbhgh5k7mgk6WDU0OR3ICl1Hpb3YauE3Qjvz6CtvrEMGOWYFSTOD+FaPnDxWURGQ7VlVX/RNQRuBDgt71xxsgIDu5l76uH4CdEGUx9OsdnqHmCT1JKwLD9OeCxV3cPFb2IZ44kRMEtjhcu2dYXKijfgWrMscEzee6ruJ3uKzqgk306MkxaofqPjPLnercHAOGvqPPTW9GeTw4pUc9FL09JS33LWVsJ8cJL/nsOcquMtJmHFF/fwciUP5YyCg+KVqOLXjsxUXj32FuwXyKFGgTu2XS7Y/uympeY7aJ0bt6tuOKX8pwzU23mLg==,iv:qBhIdDrT8bXOlcPoDQEXtQWO7o3qFSju6G0mJFXJJVY=,tag:mKb1g83VdWQvOHhxtd1+FQ==,type:str]
+        associations:
+            subnets:
+                - ENC[AES256_GCM,data:1A==,iv:UFP+0HC3qoMBlLL4IgaPx/17OrN3MCOdCROZIxFYBu0=,tag:ZKuVRqfgIlEMbomm6lgEuw==,type:str]
+    inbound_rules_wcfrole:
+        rules_table: ENC[AES256_GCM,data:HizospthfdaBD4ooaP61faEYtsRj2FaorfVdgti7f3AjiFAJVbgx62j7MydLrdA7NbShJb0pDjWQ/sBlw2euhh7WMKPszmC0bz7enZQ5ReHu+HFs5ArF5+nwwlSek3Vbi8nRMEC6v9kmP1MEHIrfNXR6LpobsGbqhaH8y9xxSy5qjl7WW65YDLPB6VYmHPvDmeddWi1RUDBY5F8oldbx8367WeF40fsSq6F+TYTCl6MakCG0BLk6Dsj7kvK+sPdIF61+qy1NVoxBK070ce9uMzAou5C3YRlXO5hHdBXu4PKqpiFevoAdLKziibz4WhnSGaQfJDMnp0Nn5L5Cfmh8h8JUE8QApNuVvQfZJZWDit/m51nOvUh4Z0Vxl9inXuv8w9k4AUiEcPKJglGP1dLioO2i3UvG8PuZ2dL7JB/6Xlo0npQ7MPR0QmgOLre5tAOODlYzEooviIRHUk4aaWeQbCtsF7vXlI4I9NQU8nn1OxVJJeqUy5mRE7HUUplnoDO12vtaoDHsdksexRZnlf3E0I8+gdSo2S4m9AIwmFx54VDjl+CCYacWlILwv6e5VV9i6tU+1crZgZZwMDA7c/jUzrFigufG85a4t+4izOtS6W3vwOogKk/8Z0lDLxaCyZxfK9Pz8Imqq8/hzl0gVZVwLCycStJYIxG/+8bZBepmoNv6XPPWniLtiBXn/o+hjBlvGU+pFXFiqxib3L5Sx6iOaj7oHdN859RRYKsMAbduOgrzbAm+Hv8Azw7Zj4kxNPrikV+USVaHmmDhkyEV1UsjvbqkpNyddU36MUswJsLX+mXjQ3y5fv4Dr1hoFfx0Ol9aAm1TMlULQrSMjzclkLgDE7GwnMW0e4R8hMRZnczRjhrjkr28oFES52jrh2fqdGiFfTV6v7D3x0xQip+JFZPbMtnCgUVet6O5YvaOjsUG6aQb7k3qabb0Nh5L3wJ+6K+lFlLMO9aK44n0pdgsoM2E4s+iZMkHG+iazaxNA4Vz/ZtMxOWRIn43a9Lb+IhMmpOc5lo6HbP7O8d8P9d8Uounc39yGMOwKL0XaY8J3XLO0d63GuANelCZv2UdpiR8GGfENJmNfknb9QLicP9alunNgErKgl8+0EM/LP3KlpVZYomSzTJrgyQP8CKt8Xh1lXY90G0+GoNF3krsm6Sc/j8PBLmUzl4hjUVWh1pTrQ1hlpGNnlDU/QkdiTlJBi38ceVLPCUbjDEUraPwd/znNW+Y30MQTzj1dUMk4GKqTUQrpGppCm4G4jl6BIGLwCHjMgm9A/acDpZrOe8Fuy6vzPCS+64yqs1L/z8sbLWW1nzmqYHughG7OtgLrkF6+WtoOIySSpxF9xm4InSzc1SuW8FIifb1nQNe2y12SYYdSM+y5COWZ0S7UInYABK+f7kQlsqARYnrE6JopyjO3TRhBOClMFybLB1ERmHTnFe0TXfqo8Vzek067sRz,iv:WMCPtviBvoYVuewRs1hDay5r57RNgrOksS6S8Y9aaGc=,tag:9FbK43xrgg132JSZvNPE4g==,type:str]
+        associations:
+            subnets:
+                - ENC[AES256_GCM,data:IA==,iv:D2zXEvnPXy+QPJnS8PgcurGPM0uya3LedNC5S75MHbg=,tag:desu7s7HhF2lF4iQhvgnKw==,type:str]
+outbound_rules:
+    outbound_rules_table:
+        rules_table: ENC[AES256_GCM,data:OErVortlcqlepXQy5MdN6slaWMO3nYeOuzs5B/88dqe11RDUV1XzWBjnxe30I9pr8W/citFWXU0C94YK8NyhwjG8kPl9ffF7NLAniZf5OdvKnZCXCaQlOXbZbb9V3AyxVz1T1boFqPjoJbFbKr5QfcJVbKrUqJLjzXxlBRlxp1QskDz5s313xB1sv93dL7x4O+5CuetH3z6eOUSJbvYE1NScCh6BNcCE6YWAPsaXw0eunMUoHNHCPChMdM+aiQ3zrqD+iAzqyupuYAWm1RIKbrUwk3gzsxHy2Na60zOrC6/IlwbOrp6x1u9jpSKkTrq/qWjtwD+wbK0xnbbEjphSVm28mU8ipFoY142L5Hig7QQiPToEuTttTBx2q2Vki6SgEqiDMn28E8D6OjInSw1yfpQt+Ln+KGQ/kypAcfY4+W4YVRP8GmdvnJa7Ig542XNtNZ7iaLVwGVr3M/pbhA8rdim7vd4Er9FuyDSEoZvrqXuN7MMR/v+c6oxJ/GS1/ATgbHw+0L0UOXBPw19pRWoRh+N64k96UApIyAnKeywdV59pOsjufnuDw+SxapEAe0VpnReoWLJ/IZKLYg0VemUpeQPspf4nF2aCwHz5VKAh0oKqX/yrS/GYuCFejB4tR2JLKK3TOr82xgCVEBG3xDRpXPjPUxO6qPqCYwg14vpzgYD6S9R71R06l2vV7ZFoIhfh0DBPfmABgFq2HZM1mtv6WCpkw2dGhe6oFJZiVusGO5ys8KLKGmERkuPYGd+U5C5aeEuesJgBvO4R9pUu+fgZnCxnXIUSaoX6xUcFBNFv8jLsN4C7vBKITmQKyVvhYOodEySYpb/zJ1U=,iv:d4oE+6/HQSGMIj0DkqRuRiLETunOJ2RUyskGX9by2kE=,tag:dwhgJX1o3RggjUu14KYUfg==,type:str]
+        associations:
+            subnets:
+                - ENC[AES256_GCM,data:osRK,iv:W1IvXS3MI6X92+YGCeuDDnJkxMCMjakeYCWXCrFNgkQ=,tag:c2x0fx/NUpDLt7pzWfl6xA==,type:str]
+sops:
+    lastmodified: "2026-11-14T14:37:20Z"
+    mac: ENC[AES256_GCM,data:skbez6KdA9oXl8draD+rhltAErOPwnEJkL5HeddQBHa/eW8Q3g4A4Z6H7iFDbNrygsgSnFvIC2DcViTYynWtTQBjt/spdEleoLzeJtVuyMMytcEPcse8bJHEflz/WEioXO1/jwS/h9LGWGT+uRcSe+5cKYfC/iL4Q8Az9H/HspE=,iv:ZE6t1FefDNUHwwn5ekLKMQtXrSzhSeQ2ou8iq0d1cg8=,tag:ulZF4QL0Uo/lWpflZfRYFQ==,type:str]
+    pgp:
+        - created_at: "2026-05-14T22:51:17Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQGMA4KMO5ZgOOZwAQwAth4+UpgRxi3h0ePQRKruo6pZYwu2UWcNFSokG1SPGwUs
+            ydJQ4WB4TGxRnEjksvzgEtVgwp8mtu1ZrokDlNCzWchO+yiw8xuv/BkT2oFTcDVP
+            1QF6ytnSXt9ZC/0sIKnHJgElzqMzMnms4aBOznqijOTmM2robA1W9u/79aCoT+IE
+            NVSuJy7TZ/47qggAQLJOyfbBZMxlrHCGAp0P7EW9o7G3dflLHmEUdT6Q/84pOKr7
+            5ISEYstRXqkTIC3FyjXQiF29XkIHzVhPDyk/AcVVfdn+Iwy+xcmfnEjHs7D+/1ym
+            uBL7On2n2ZnCP9ZQ5zExmshY/5N2GjJbIKTJC4psQi3CU/IWHAhCDUwI7W4ohoDg
+            gbFvLudJyZvQli87WscPslEVIfg/WwjPFvPKhyot1808pi1HUcsfPQLejEDhiXQZ
+            scgF72cQuRPLD2qZrfWceEoG4avSi9iQLbmtoVHGMcnFtIbxkSl/fXW9Q//UUSwb
+            IQob1Ps7TALb7hs+8Ddj0lwBrX4PL+bazS4LRRObB+HaxHVPNSTAcaeKjaYjcRYR
+            x5KcjfyTUvZ6Okx/o2+CM/5RB1mVBLWwCb/MIGHPi6bKuC2fYQaPuDmksw9RlAEy
+            QYgvxBZBsGd8ELNKRA==
+            =D1mg
+            -----END PGP MESSAGE-----
+          fp: E751B57856FF4B3B7B4C7F5F3E041E30885ADDC3
+    encrypted_regex: ^.+$
+    version: 3.12.1
