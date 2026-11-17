@@ -1,7 +1,7 @@
 deployment_name: dart-web-dev-drtmvc
 configs:
-    description: 1.6.0-alpha.15+Branch.develop.Sha.3cd65fd98b4456aa8bb289e42fe31a7cc9d85e37
-    version: 3cd65fd98b4456aa8bb289e42fe31a7cc9d85e37
+    description: 1.6.0-alpha.24+Branch.develop.Sha.3e335c097c7c61fdded769720c68ce0bb2c88b71
+    version: 3e335c097c7c61fdded769720c68ce0bb2c88b71
 layers:
     "1":
         config: az/c-pip-basic
@@ -14,12 +14,13 @@ layers:
         config: az/c-cses
         tfvar_files:
             - az-c-cses-001.sops.tfvars.yaml
+            - az-c-cses-001-ilb.sops.tfvars.yaml
         st_id: ENC[AES256_GCM,data:uEoDx8Qq8fcyEAvUmY6LYz0gBb3NH4YTgxsC6SVyUYT52moBMT+lHIUV0yrhISvdhEuFjjm4HPO6jbrgk4TNOIW1ve3MWGHpjx0ecLPudVzyGk7KErK7elvzQquanII6CQyvjUeEm5VoNrsbNSTIHOONcW77gWNu9DvrYIqOs6/DXVAs6eODWIuTBE92Pje+KuXMGG89JhBIk5M=,iv:UMUNuAgIDo4N83O64ONVztrMUba2fC0hR/5QPBqNtzA=,tag:Ub1LH1f/1P6dtnTlAqLpVQ==,type:str]
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-11-08T22:05:22Z"
-    mac: ENC[AES256_GCM,data:EOgCvUqXnBpz0P5TRo557/t7joBOJcmENPNZZS8EtwwYPdkiroTF4xhuHsFHS4u9gNiEPfmbJ9g+G2sY5rDEjNe2M3UX8aAIkIeiKAkKch9rr9anj1O5XPAPegAwzKi3IhT44VPG7crQl01pbDM3Xi+wCOcjZ43z/MSp/O6TGAg=,iv:MJkxsuRPlTOQ96jwW0FNLTLHtPw2NkNAubIxCXLvvnU=,tag:afFS6i2gJuWHkRIiL6un9Q==,type:str]
+    lastmodified: "2026-11-17T12:38:25Z"
+    mac: ENC[AES256_GCM,data:vDcwrVKo4IngJV3S5JE1qYyXwXAUznS7asVcumEjUBmckDDRxoUDEALVy+G4+WQ3bp0DA0//JIN+HCiHqioeeKWK4j3NuvbN6L2XCKXUUJpZNH7Ihv5rUhLn4a+0eYfdq87Nbv7lMo1U3PHP2skwNLRqjtIYvhY+psudJS5C2cY=,iv:Xs7Kiz+nHBU+1sXG+2uq9n2m+WlgsAeOr/aOPI7gSYI=,tag:TaABpeSjt+t+esWN+7i4MQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:15Z"
           enc: |-
