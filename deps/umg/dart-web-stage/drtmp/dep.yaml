@@ -14,20 +14,12 @@ layers:
         config: az/c-cses
         tfvar_files:
             - az-c-cses-001.sops.tfvars.yaml
-            - az-c-cses-001-ilb.sops.tfvars.yaml
         st_id: ENC[AES256_GCM,data:AiLheOnNjIwvM1kWE4n7l0jjDoZJAV1xZ3nMrMsxweSLQ7Nj5QRbWBp7aj4tbFm03icoDBVOLliESd40Lh6OeSVSkfy8oIIrImbWnRSTqiKCc28xTfGM8OpSRxjJuizJE+tbZ8EJO3ojTmMQMJp++XkdpP2XgcxshujjcAQitoNhk5kT0eNI1ziVqDTlUyZwVVwnZvuVKsrv0uA=,iv:bAW/3UNCRqD1iGuir26W7nDME1nusbX8UjHTEwNUv4c=,tag:aZq43K0h6yOFW9B2Jm9gNw==,type:str]
         apply_args:
             e: layer01
-    "3":
-        config: az/c-cses
-        tfvar_files:
-            - az-c-cses-001.sops.tfvars.yaml
-        st_id: ENC[AES256_GCM,data:daVG5ey7Mqh9Hize5tXEI24AXyGnjeOP7Ust/qsfLur+gI7tz8wmG+rUF7BHfccwIf1QJjkf0FgOnVAs8/PjItGUacHwxE9ERc6BuYYR//Pfjq/NHXhTmpneoX54LkXhNHNMz0RpX5KKiLAxeFHQJFO6vyqOlDrQi5USsZIqnsiJIZBzZVqWiRscFH031vowDT0GSXXf2v/CHGQ=,iv:Est8i/M14Rfhlv09VmU90qtw1sBL+HzOsxOK44Zo2cg=,tag:CXAVqVZxpkoqPLoalu7+hw==,type:str]
-        apply_args:
-            e: layer01
 sops:
-    lastmodified: "2026-11-18T16:03:23Z"
-    mac: ENC[AES256_GCM,data:iE7C8la/dy96aLfZaWFmqas0L67ps7WUsp7BqHBP5C6+SAo8Jd30rcOfRbvb8gklb5VhBduYZzp/Z/6wUncQtqSugqjNGkvvKl2oPYAZTrXiBR/xk4xcS7MHFSFN/bmfUFebwbnlRWhNU+NcN3Vk5zYg+2l5ptBqlA++Y7MTCWM=,iv:jttCBcsT96fwOkmN0vPZQvmPOTe3xTOsWdt+XPV4E4U=,tag:5moCrTH1JMZMZ9cIS+jFcA==,type:str]
+    lastmodified: "2026-11-18T16:04:03Z"
+    mac: ENC[AES256_GCM,data:mmLWBMK/N506PLeb6FgRWbAYrM6TZ4zUGnd6YNnWfz+9nxtkyT/TSBzWq+yVi/WeslPBal+LSUpZWWs/MMEG+nUQ39JQLdpMe1cAtX0yug0BxuKeI8eS/FcqFgrRoYwgjzGWJsuCKpQym8Sqd/ml4+XTv/VeTEh38HbO/693akQ=,iv:fM8Y0fbu8nKe1pGiNlFirxSUCY7aJLeJ4Vf0fqCg680=,tag:OIhpHPxjSIcaeW7ToSCQKg==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
