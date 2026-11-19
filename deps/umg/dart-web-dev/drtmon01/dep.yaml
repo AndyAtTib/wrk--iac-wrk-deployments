@@ -1,7 +1,7 @@
 deployment_name: dart-web-dev-drtmon01
 configs:
-    description: 1.3.0-alpha.59+Branch.develop.Sha.01a8bbe0d394e491a9ab39b2a10f8ad5cb26a6fb
-    version: 01a8bbe0d394e491a9ab39b2a10f8ad5cb26a6fb
+    description: 1.6.0-alpha.24+Branch.develop.Sha.3e335c097c7c61fdded769720c68ce0bb2c88b71
+    version: 3e335c097c7c61fdded769720c68ce0bb2c88b71
 layers:
     "1":
         config: az/c-mon-vm
@@ -20,8 +20,8 @@ layers:
             e: layer01
         destroy_action: skip
 sops:
-    lastmodified: "2026-10-31T19:36:33Z"
-    mac: ENC[AES256_GCM,data:qs+eJEkhYLYOC9G6T+KIazPPplbvGLu6xQkazPY71uMOIZyAgeFT3x4UTSc3sibEU8iXjOOhbTokpPM1RUk3HAjAZjZzQ+dSF3IM58Hw9gZvubdaPZ0EAddoEG/uzcULBclkDCCq+1IhBJk8P85xf93w7cTJwks+sFr8YB3y95g=,iv:fJgU2K9z+HupldvVS7Tl0cWB7keN5Qql3NYBxlbMwY4=,tag:7OGEuwg3yQb6kyQj6aZixQ==,type:str]
+    lastmodified: "2026-11-19T13:24:18Z"
+    mac: ENC[AES256_GCM,data:7OEuTBWOnebD50E7xa6lKrbtPct2gY5BONlh/crEj5fN4yJve6W5qEt/etWVXjXQwgjhfyJlagZcZaFBCW2PL7cCXHI1Wh5XXHvN+PBstruQKPFV7o38mmudzdmU3C1lerh8nN7WzbEdDSf7AYUFdWcXW+j6IEn2gsogj2LaZ3o=,iv:91hUA/Rni1wkYc1ssfUQLzBbDyA14dHOFtyq7u6hRao=,tag:cpt9nAKVzKbiYdCXUyshgQ==,type:str]
     pgp:
         - created_at: "2026-05-14T23:05:25Z"
           enc: |-

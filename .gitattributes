@@ -366,5 +366,6 @@ deps/**/*.sops.list.json text diff=sopsdiffer_deps eol=lf
 deps/**/*.sops.list.yaml text diff=sopsdiffer_deps eol=lf
 deps/**/*.sops.tfvars.json text diff=sopsdiffer_deps eol=lf
 deps/**/*.sops.tfvars.yaml text diff=sopsdiffer_deps eol=lf
+deps/**/cloud-init.sops.txt text diff=sopsdiffer_deps eol=lf
 gl-vars/**/tool.env text diff=sopsdiffer_glvs eol=lf
 gl-vars/**/*.sops.json text diff=sopsdiffer_glvs eol=lf
