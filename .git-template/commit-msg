@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
 stage=$(basename "$0")
+
+# Let the default git and git-flow merge messages through without the
+# conventional commit check: "Merge branch '...'" (feature, bugfix, release
+# and hotfix finish) and "Merge tag '...'" (release and hotfix finish merging
+# the tag back into develop). The subject is the first line that is neither a
+# comment nor blank.
+subject=$(grep -v -m1 -e '^#' -e '^[[:space:]]*$' "$1" 2>/dev/null)
+if [[ "$subject" =~ ^Merge\ (branch|tag)\ \' ]]; then
+  echo "$stage: default merge message, conventional commit check skipped"
+  exit 0
+fi
+
 script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 eval "$(cat $script_dir/common-pre-commit-run.sh)"
