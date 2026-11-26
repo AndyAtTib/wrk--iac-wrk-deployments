@@ -1,0 +1,456 @@
+version: '3.5'
+
+x-env-common: &env-common
+  DART_API_KEY: "{{DART_API_KEY}}"
+  #DART_API_KEY: "{{DART_API_KEY}}"
+  DART_API_URL: "{{DART_API_URL}}" # API is on 8081 port
+  DART_FRONT_URL: "{{DART_FRONT_URL}}"
+  DJANGO_SECRET_KEY: "{{DJANGO_SECRET_KEY}}"
+  VIEWER_DJANGO_SECRET_KEY: "{{VIEWER_DJANGO_SECRET_KEY}}"
+  GRAYLOG_AUTH: "{{GRAYLOG_AUTH}}"
+  GRAYLOG_URL: "{{GRAYLOG_URL}}"
+  GRAYLOG_HOST: "{{GRAYLOG_HOST}}"
+  GRAYLOG_PORT: "{{GRAYLOG_PORT}}"
+  #GRAYLOG_AUTH: "{{GRAYLOG_AUTH}}"
+  #GRAYLOG_URL: "{{GRAYLOG_URL}}"
+  INFLUXDB_HOST: "{{INFLUXDB_HOST}}"
+  INFLUXDB_PORT: "{{INFLUXDB_PORT}}"
+  INFLUXDB_USER: "{{INFLUXDB_USER}}"
+  INFLUXDB_PASSWORD: "{{INFLUXDB_PASSWORD}}"
+  #INFLUXDB_HOST: "{{INFLUXDB_HOST}}"
+  #INFLUXDB_USER: "{{INFLUXDB_USER}}"
+  #INFLUXDB_PASSWORD: "{{INFLUXDB_PASSWORD}}"
+  INFLUXDB_DATABASE: "{{INFLUXDB_DATABASE}}"
+  INFLUXDB_DISABLED: "{{INFLUXDB_DISABLED}}"
+  PYTHONUNBUFFERED: "{{PYTHONUNBUFFERED}}"
+  RAVEN_ENV: "{{RAVEN_ENV}}"
+  SBS_CONN_EXTERNAL: "{{SBS_CONN_EXTERNAL}}"
+  SBS_CONN_INTERNAL: "{{SBS_CONN_INTERNAL}}"
+  #SBS_CONN_EXTERNAL: "{{SBS_CONN_EXTERNAL}}"
+  #SBS_CONN_INTERNAL: "{{SBS_CONN_INTERNAL}}"
+  SBS_QUEUE_INTERNAL: "{{SBS_QUEUE_INTERNAL}}"
+  SBS_QUEUE_OUTGOING: "{{SBS_QUEUE_OUTGOING}}"
+  SBS_QUEUE_INCOMING: "{{SBS_QUEUE_INCOMING}}"
+
+x-env-common-master: &env-master-common
+  BUILD_LABEL: "{{BUILD_LABEL}}"
+  DART_FRONT_URL: "{{DART_FRONT_URL}}"
+  DATABASE_URL: "{{DATABASE_URL}}"
+  DJANGO_SETTINGS_MODULE: "{{DJANGO_SETTINGS_MODULE}}"
+  HUEY_REDIS_URL: "{{HUEY_REDIS_URL}}"
+  HUEY_REDIS_URL_SPECIAL: "{{HUEY_REDIS_URL_SPECIAL}}"
+  #HUEY_REDIS_URL: "{{HUEY_REDIS_URL}}"
+  #HUEY_REDIS_URL_SPECIAL: "{{HUEY_REDIS_URL_SPECIAL}}"
+  RAVEN_DSN: "{{RAVEN_DSN}}"
+  #RAVEN_DSN: "{{RAVEN_DSN}}"
+  SITE_URL: "{{SITE_URL}}"
+  SLACK_HOOK_URL: "{{SLACK_HOOK_URL}}"
+
+x-env-common-approvals: &env-viewer-common
+  DATABASE_URL: "{{DATABASE_URL}}"
+  DJANGO_SETTINGS_MODULE: "{{DJANGO_SETTINGS_MODULE}}"
+  JWT_SECRET_KEY: "{{JWT_SECRET_KEY}}"
+  RAIS_URL: "{{RAIS_URL}}"
+  RAVEN_DSN: "{{RAVEN_DSN}}"
+  #RAVEN_DSN: "{{RAVEN_DSN}}"
+  RAVEN_ENV: "{{RAVEN_ENV}}"
+  TUS_URL: "{{TUS_URL}}"
+
+#x-env-backup: &env-backup
+#  AWS_ACCESS_KEY_ID_FILE: "{{AWS_ACCESS_KEY_ID_FILE}}"
+#  AWS_SECRET_ACCESS_KEY_FILE: "{{AWS_SECRET_ACCESS_KEY_FILE}}"
+#  RESTIC_CRON: "{{RESTIC_CRON}}"
+#  RESTIC_PASSWORD_FILE: "{{RESTIC_PASSWORD_FILE}}"
+#  RESTIC_REPOSITORY: "{{RESTIC_REPOSITORY}}"
+
+
+networks:
+  default:
+    driver: overlay
+  web:
+    external: true
+
+#volumes:
+#  postgres_backup_backend: {}
+#  postgres_backup_approvals: {}
+
+secrets:
+  AWS_ACCESS_KEY_ID:
+    external: true
+  RESTIC_PASSWORD:
+    external: true
+  AWS_SECRET_ACCESS_KEY:
+    external: true
+
+configs:
+  cirrus_redis_conf_20211215:
+    external: true
+  #cirrus_redis_conf_v2:
+  #  external: true
+
+
+# master:8478
+services:
+  backend-app:
+    image: local-image-cache/wrk-sp/cirrus/cirrus-api/master:434129281
+    # image: registry.blueprint.pw/cirrus-v2/master-next/master:9219
+    # image: registry.gitlab.com/wrk-sp/cirrus/cirrus-api/pd.blueprint.pw:manuallytaggedlatest
+    environment:
+      <<:
+        - *env-common
+        - *env-master-common
+      CORS_ORIGIN_ALLOW_ALL: "{{CORS_ORIGIN_ALLOW_ALL}}"
+    stdin_open: true
+    tty: true
+    networks:
+      - web
+      - default
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:{{HOSTNAME_CIRRUS_INTERNAL}},{{HOSTNAME_CIRRUS_EXTERNAL}}
+        - traefik.port=9050
+        - traefik.frontend.entryPoints=https
+        - traefik.docker.network=web
+
+  # Cirrus periodic tasks (monitoring mainly)
+  backend-queue:
+    image: local-image-cache/wrk-sp/cirrus/cirrus-api/master:434129281
+    # image: registry.blueprint.pw/cirrus-v2/master-next/master:9219
+    # image: registry.gitlab.com/wrk-sp/cirrus/cirrus-api/pd.blueprint.pw:manuallytaggedlatest
+    command:
+      - ./deploy/docker/queue-entrypoint.sh
+    environment:
+      <<:
+        - *env-common
+        - *env-master-common
+      VIGIL_NODE_ID_QUEUE_STUCK: "{{VIGIL_NODE_ID_QUEUE_STUCK}}"
+      VIGIL_NODE_ID_ZOMBIES: "{{VIGIL_NODE_ID_ZOMBIES}}"
+      VIGIL_PROBE_ID: "{{VIGIL_PROBE_ID}}"
+      VIGIL_TOKEN: "{{VIGIL_TOKEN}}"
+      VIGIL_URL: "{{VIGIL_URL}}"
+    stdin_open: true
+    tty: true
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+
+  # This worker only handles thumbnails.
+  # Layout preflights, pdf preflights and separations are done on Macs,
+  # on workers installed manually and kept under supervisor.
+  worker-thumb:
+    image: local-image-cache/wrk-sp/cirrus/cirrus-worker/master:b25d312a
+    environment:
+      <<: *env-common
+      ALERTA_TOKEN: "{{ALERTA_TOKEN}}"
+      ALERTA_URL: "{{ALERTA_URL}}"
+      CIRRUS_API_TOKEN: "{{CIRRUS_API_TOKEN}}"
+      CIRRUS_MASTER_URL: "{{CIRRUS_MASTER_URL}}"
+      CLEAN_VIEWER_CACHE: "{{CLEAN_VIEWER_CACHE}}"
+      DJANGO_SETTINGS_MODULE: "{{DJANGO_SETTINGS_MODULE}}"
+      HUEY_REDIS_URL: "{{HUEY_REDIS_URL}}"
+      #HUEY_REDIS_URL: "{{HUEY_REDIS_URL}}"
+      PROCESSING_QUEUE: "{{PROCESSING_QUEUE}}"
+      RAVEN_DSN: "{{RAVEN_DSN}}"
+      #RAVEN_DSN: "{{RAVEN_DSN}}"
+      SHARED_DIR: "{{SHARED_DIR}}" # TODO: verify if still used
+      STATUS_UPDATE_MODE: "{{STATUS_UPDATE_MODE}}"
+      GRAYLOG_PORT: "{{GRAYLOG_PORT}}"
+    stdin_open: true
+    volumes:
+      - /mnt:/mnt
+    dns:
+      - 1.1.1.1
+    tty: true
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    deploy:
+      mode: replicated
+      replicas: 4
+
+  # Task queue backend for Cirrus API
+  backend-redis:
+    image: local-image-cache/redis:6.2.6
+    command: redis-server /data/redis.conf
+    stdin_open: true
+    tty: true
+    configs:
+      - source: cirrus_redis_conf_20211215  # a `requirepass` setting
+        target: /data/redis.conf
+        uid: '999'
+        gid: '999'
+      #- source: cirrus_redis_conf_v2  # a `requirepass` setting
+    ports:
+      - 26379:6379/tcp
+
+  viewer-mailhog:
+    image: local-image-cache-mailhog/mailhog:v1.0.1
+    stdin_open: true
+    tty: true
+
+  # Web socket is used to send live progress updates from worker to frontend/browser.
+  # So that user can see which page/layer is processed.
+  viewer-ws:
+    image: registry.gitlab.com/wrk-sp/cirrus/viewer-websockets:c_ff9aa664_p_409026169
+    stdin_open: true
+    tty: true
+    networks:
+      - web
+      - default
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:{{HOSTNAME_CIRRUS_WS}}
+        - traefik.port=9998
+        - traefik.frontend.entryPoints=https
+        - traefik.docker.network=web
+
+  # Minio serves as a gateway to Azure Blob Storage (acts as an S3 from app point of view).
+  viewer-minio:
+    image: local-image-cache-minio/minio:RELEASE.2022-01-08T03-11-54Z
+    environment:
+      MINIO_ACCESS_KEY: "{{MINIO_ACCESS_KEY}}"
+      MINIO_SECRET_KEY: "{{MINIO_SECRET_KEY}}"
+    stdin_open: true
+    tty: true
+    command:
+      - gateway
+      - azure
+    networks:
+      - web
+      - default
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:{{HOSTNAME_CIRRUS_MINIO}},{{HOSTNAME_CIRRUS_MINIO_UPLOADS}}
+        - traefik.port=9000
+        - traefik.frontend.entryPoints=https,http
+        - traefik.docker.network=web
+      mode: replicated
+      replicas: 2
+
+  # Rais image server - caches and serves images. Also their portions (zoomed in viewer).
+  viewer-rais:
+    image: local-image-cache/wrk-sp/cirrus/library/rais-image-server:latest-bak-2023-04-21
+    # image: registry.blueprint.pw/cirrus-svc/rais-image-server:latest
+    # image: registry.gitlab.com/wrk-sp/cirrus/library/rais-image-server/pd.blueprint.pw:manuallytaggedlatest
+    environment:
+      RAIS_MINIOACCESSKEY: "{{RAIS_MINIOACCESSKEY}}"
+      RAIS_MINIOSECRETKEY: "{{RAIS_MINIOSECRETKEY}}"
+      RAIS_MINIOBUCKET: "{{RAIS_MINIOBUCKET}}"
+      RAIS_MINIOENDPOINT: "{{RAIS_MINIOENDPOINT}}"
+      RAIS_IIIFURL: "{{RAIS_IIIFURL}}"
+      RAIS_PLUGINS: "{{RAIS_PLUGINS}}"
+    stdin_open: true
+    tty: true
+    networks:
+      - web
+      - default
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:{{HOSTNAME_CIRRUS_VIEWER_RAIS}}
+        - traefik.port=12415
+        - traefik.frontend.entryPoints=https,http
+        - traefik.docker.network=web
+
+  # Large uploads backend/server for approvals attachemnts.
+  viewer-tusd:
+    image: local-image-cache-tusproject/tusd:v1.8.0
+    environment:
+      AWS_ACCESS_KEY_ID: "{{AWS_ACCESS_KEY_ID}}"
+      AWS_SECRET_ACCESS_KEY: "{{AWS_SECRET_ACCESS_KEY}}"
+      AWS_REGION: "{{AWS_REGION}}"
+    stdin_open: true
+    tty: true
+    command:
+      - -behind-proxy
+      - -s3-bucket
+      - "{{TUSD_BUCKET_NAME}}"
+      - -s3-endpoint
+      - https://{{HOSTNAME_CIRRUS_MINIO}}
+      - -hooks-http
+      - http://viewer-backend:9050/api/tusd-hooks-handler
+      - -hooks-http-retry
+      - '5'
+      - -hooks-http-backoff
+      - '2'
+    networks:
+      - web
+      - default
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:{{HOSTNAME_CIRRUS_VIEWER_UPLOADS}}
+        - traefik.port=1080
+        - traefik.frontend.entryPoints=https,http
+        - traefik.docker.network=web
+      mode: replicated
+      replicas: 2
+
+  viewer-dashboard:
+    image: registry.gitlab.com/wrk-sp/cirrus/viewer-dashboard:c_4b8abc7_p_446693296
+    environment:
+      VUE_APP_API_URL: "{{VUE_APP_API_URL}}"
+      #VUE_APP_GRAYLOG_AUTH: "{{VUE_APP_GRAYLOG_AUTH}}"
+      #VUE_APP_GRAYLOG_URL: "{{VUE_APP_GRAYLOG_URL}}"
+      VUE_APP_WAMP_URL: "{{VUE_APP_WAMP_URL}}"
+      VUE_APP_INFLUXDB_HOST: "{{VUE_APP_INFLUXDB_HOST}}"
+      VUE_APP_INFLUXDB_USER: "{{VUE_APP_INFLUXDB_USER}}"
+      VUE_APP_INFLUXDB_PASSWORD: "{{VUE_APP_INFLUXDB_PASSWORD}}"
+      #VUE_APP_INFLUXDB_HOST: "{{VUE_APP_INFLUXDB_HOST}}"
+      #VUE_APP_INFLUXDB_USER: "{{VUE_APP_INFLUXDB_USER}}"
+      #VUE_APP_INFLUXDB_PASSWORD: "{{VUE_APP_INFLUXDB_PASSWORD}}"
+      VUE_APP_INFLUXDB_DATABASE: "{{VUE_APP_INFLUXDB_DATABASE}}"
+    stdin_open: true
+    tty: true
+    networks:
+      - web
+      - default
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:{{HOSTNAME_CIRRUS_VIEWER_DASHBOARD}},{{HOSTNAME_CIRRUS_APPROVAL_STAFF}}
+        - traefik.port=80
+        - traefik.frontend.entryPoints=https,http
+        - traefik.docker.network=web
+
+  viewer-backend:
+    image: local-image-cache/wrk-sp/cirrus/viewer-api/master:2df7bdde5ff6f1eb28a7a1d416c61403cd1fad8f
+    environment:
+      <<:
+        - *env-common
+        - *env-viewer-common
+      SENTRY_ENV: "{{SENTRY_ENV}}"
+    stdin_open: true
+    tty: true
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    networks:
+      - web
+      - default
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.frontend.rule=Host:{{HOSTNAME_CIRRUS_VIEWER_BACKEND}},{{HOSTNAME_CIRRUS_APPROVAL}}
+        - traefik.port=9050
+        - traefik.frontend.entryPoints=https
+        - traefik.docker.network=web
+      mode: replicated
+      replicas: 2
+
+  # This queue actually executes only periodic tasks (updates users info, )
+  viewer-backend-queue:
+    image: local-image-cache/wrk-sp/cirrus/viewer-api/master:2df7bdde5ff6f1eb28a7a1d416c61403cd1fad8f
+    command:
+      - ./deploy/entrypoint-queue.sh
+    environment:
+      <<:
+        - *env-common
+        - *env-viewer-common
+      EMAIL_URL:
+      VIGIL_NODE_ID_SERVICEBUS_QUEUE_STUCK: "{{VIGIL_NODE_ID_SERVICEBUS_QUEUE_STUCK}}"
+      VIGIL_NODE_ID_WORKER_QUEUE_STUCK: "{{VIGIL_NODE_ID_WORKER_QUEUE_STUCK}}"
+      VIGIL_NODE_ID_INTERNAL_QUEUE_STUCK: "{{VIGIL_NODE_ID_INTERNAL_QUEUE_STUCK}}"
+      VIGIL_NODE_ID_QUEUE_STUCK: "{{VIGIL_NODE_ID_QUEUE_STUCK}}"
+      VIGIL_NODE_ID_ZOMBIES: "{{VIGIL_NODE_ID_ZOMBIES}}"
+      VIGIL_PROBE_ID: "{{VIGIL_PROBE_ID}}"
+      VIGIL_TOKEN: "{{VIGIL_TOKEN}}"
+    stdin_open: true
+    tty: true
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+
+  # Receives "new document" and "update_document" info from Dart and progress updates from worker
+  viewer-backend-sbs-dart:
+    image: local-image-cache/wrk-sp/cirrus/viewer-api/master:2df7bdde5ff6f1eb28a7a1d416c61403cd1fad8f
+    command:
+      - ./deploy/entrypoint-servicebus-dart.sh
+    environment:
+      <<:
+        - *env-common
+        - *env-viewer-common
+    stdin_open: true
+    tty: true
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    networks:
+      - default
+    deploy:
+      mode: replicated
+      replicas: 4
+
+  # Receives progress update "document_update" info from Cirrus/worker
+  viewer-backend-sbs-internal:
+    image: local-image-cache/wrk-sp/cirrus/viewer-api/master:2df7bdde5ff6f1eb28a7a1d416c61403cd1fad8f
+    command:
+      - ./deploy/entrypoint-servicebus-internal.sh
+    environment:
+      <<:
+        - *env-common
+        - *env-viewer-common
+    stdin_open: true
+    tty: true
+    hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    networks:
+      - default
+    deploy:
+      mode: replicated
+      replicas: 3
+
+  #db-backup-backend:
+    #  image: registry.gitlab.com/wrk-sp/cirrus/library/postgres-backup:latest
+    #  # image: registry.blueprint.pw/library/postgres-backup:latest
+    #  # image: registry.gitlab.com/wrk-sp/cirrus/library/postgres-backup/pd.blueprint.pw:manuallytaggedlatest
+    #  environment:
+    #    <<: *env-backup
+    #    HEALTHCHECK_URL: "{{HEALTHCHECK_URL}}"
+    #    POSTGRES_URL: "{{POSTGRES_URL}}"
+    #    RESTIC_TAG: "{{RESTIC_TAG}}"
+    #    RESTIC_CRON: "{{RESTIC_CRON}}"
+    #  stdin_open: true
+    #  hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    #  tty: true
+    #  secrets:
+    #    - AWS_ACCESS_KEY_ID
+    #    - AWS_SECRET_ACCESS_KEY
+    #    - RESTIC_PASSWORD
+
+  #db-backup-viewer-backend:
+    #  image: registry.gitlab.com/wrk-sp/cirrus/library/postgres-backup:latest
+    #  # image: registry.blueprint.pw/library/postgres-backup:latest
+    #  # image: registry.gitlab.com/wrk-sp/cirrus/library/postgres-backup/pd.blueprint.pw:manuallytaggedlatest
+    #  environment:
+    #    <<: *env-backup
+    #    HEALTHCHECK_URL: "{{HEALTHCHECK_URL}}"
+    #    POSTGRES_URL: "{{POSTGRES_URL}}"
+    #    RESTIC_TAG: "{{RESTIC_TAG}}"
+    #    RESTIC_CRON: "{{RESTIC_CRON}}"
+    #  stdin_open: true
+    #  tty: true
+    #  hostname: '{{.Service.Name}}-{{.Task.Slot}}'
+    #  secrets:
+    #    - AWS_ACCESS_KEY_ID
+    #    - AWS_SECRET_ACCESS_KEY
+    #    - RESTIC_PASSWORD
+
+  # Currently both apps keep data in one influx DB
+    #influx-backup:
+    #  image: registry.gitlab.com/wrk-sp/cirrus/library/influxdb-backup:1.7
+    #  # image: registry.blueprint.pw/library/influxdb-backup:1.7
+    #  # image: registry.gitlab.com/wrk-sp/cirrus/library/influxdb-backup/pd.blueprint.pw:manuallytaggedlatest
+    #  environment:
+    #    INFLUXDB_URL: "{{INFLUXDB_URL}}"
+    #    INFLUXDB_DATABASE: "{{INFLUXDB_DATABASE}}"
+    #    AWS_ACCESS_KEY_ID_FILE: "{{AWS_ACCESS_KEY_ID_FILE}}"
+    #    AWS_SECRET_ACCESS_KEY_FILE: "{{AWS_SECRET_ACCESS_KEY_FILE}}"
+    #    RESTIC_PASSWORD_FILE: "{{RESTIC_PASSWORD_FILE}}"
+    #    RESTIC_REPOSITORY: "{{RESTIC_REPOSITORY}}"
+    #    RESTIC_CRON: "{{RESTIC_CRON}}"
+    #    RESTIC_TAG: "{{RESTIC_TAG}}"
+    #  stdin_open: true
+    #  tty: true
+    #  secrets:
+    #    - AWS_ACCESS_KEY_ID
+    #    - AWS_SECRET_ACCESS_KEY
+    #    - RESTIC_PASSWORD
+    #  networks:
+    #    - default
