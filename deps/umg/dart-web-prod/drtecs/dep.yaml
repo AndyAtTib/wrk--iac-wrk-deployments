@@ -1,7 +1,7 @@
 deployment_name: dart-web-prod-drtecs
 configs:
-    description: 1.4.0-alpha.66+Branch.develop.Sha.50178dcef2513c92cb130635c59296f77687c9e7
-    version: 50178dcef2513c92cb130635c59296f77687c9e7
+    description: 1.7.0-alpha.61+Branch.develop.Sha.b4ec682a5bb4ff9f068647ef275706d84428b9fc
+    version: b4ec682a5bb4ff9f068647ef275706d84428b9fc
 layers:
     "1":
         config: az/c-pip-basic
@@ -18,8 +18,8 @@ layers:
         apply_args:
             e: layer01
 sops:
-    lastmodified: "2026-11-08T15:54:08Z"
-    mac: ENC[AES256_GCM,data:aMD+zIap0XzurhEpcEMigaLlchOiJCk/e9Eo8/FStvtI7N9SRRBdLH9d8FdMsRZuTjTzkMSoNyTdBeUjQSl0JgWGLzrcWqGOQP8PgWFcbu8FdjYobsaW9jNqyCMIwMl1V0b2k5i9GjNWJN2UHwExuX2E/Wj/5aWskNesPAUjoqU=,iv:3QySGMVhSuTtUxMuTybqkLlAGGBmytX537uHfcBj0xs=,tag:EBLpoXwTwOfBf3lWQcfl5Q==,type:str]
+    lastmodified: "2026-11-28T12:11:34Z"
+    mac: ENC[AES256_GCM,data:iTfa6pw+j3fCUHi4tum6ysPg7PZwS1TRzQY1AqbqTeanApx961u6jnktWipp6p+aw0PSJPhFBz59knHO83RNEfl+TZnDx2t7LlYkLgqG2WaP7TmBx2EuZajfWhGY3KzL9ASNf5YOCtv/1u9BRepUpUuHgD6xlhoua7sq2t99CK4=,iv:W64x8trPchbgalAUZPlKtJimcXBOXWjE6aXtoJi57w8=,tag:rrGKIHjpi6sxYM2IwiNjvw==,type:str]
     pgp:
         - created_at: "2026-05-14T23:22:28Z"
           enc: |-
